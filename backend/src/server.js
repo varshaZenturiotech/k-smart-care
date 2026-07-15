@@ -18,8 +18,16 @@ import { detectLanguage } from "./middleware/lang.middleware.js";
 dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const app = express();
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || "http://localhost:5173" }));
+// Clean and format CORS origin(s) by removing any trailing slashes to prevent browser preflight mismatch
+const getCorsOrigin = () => {
+  const originStr = process.env.CLIENT_ORIGIN || "http://localhost:5173";
+  if (originStr.includes(",")) {
+    return originStr.split(",").map(o => o.trim().replace(/\/$/, ""));
+  }
+  return originStr.trim().replace(/\/$/, "");
+};
+
+app.use(cors({ origin: getCorsOrigin() }));
 app.use(express.json());
 app.use(detectLanguage);
 
