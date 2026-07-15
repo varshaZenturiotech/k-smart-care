@@ -414,7 +414,8 @@
       "meetingLoadFailed": "Failed to load meetings.",
       "feedLoadFailed": "Failed to load department feed.",
       "aiBriefingFailed": "Failed to refresh AI briefing.",
-      "saveFailed": "Failed to save data."
+      "saveFailed": "Failed to save data.",
+      "demoWarning": "Document processing is unavailable in the demo environment. The ChromaDB vector database and embedding service are hosted only in the local development environment, so PDF ingestion is disabled in this deployment."
     },
     "upload": {
       "pdfOnly": "Only PDF documents are supported.",

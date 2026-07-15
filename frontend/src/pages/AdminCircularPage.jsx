@@ -161,51 +161,8 @@ export default function AdminCircularPage() {
 
   const handleUploadSubmit = async (e) => {
     e.preventDefault();
-    if (uploadFiles.length === 0) {
-      toast.error("Please select at least one PDF file to upload.");
-      return;
-    }
-
-    setUploading(true);
-
-    const formData = new FormData();
-    uploadFiles.forEach(file => {
-      formData.append("files", file);
-    });
-
-    formData.append("circularNumber", circularNumber);
-    formData.append("title", title);
-    formData.append("issueDate", issueDate);
-    formData.append("effectiveDate", effectiveDate);
-    formData.append("departments", JSON.stringify(selectedDepts));
-    formData.append("category", selectedCategory);
-    formData.append("priority", selectedPriority);
-    formData.append("remarks", remarks);
-
-    try {
-      const data = await uploadCircularMutation.mutateAsync(formData);
-
-      // Clear form
-      setUploadFiles([]);
-      setCircularNumber("");
-      setTitle("");
-      setIssueDate("");
-      setEffectiveDate("");
-      setSelectedDepts([]);
-      setSelectedCategory("");
-      setSelectedPriority("");
-      setRemarks("");
-      if (fileInputRef.current) fileInputRef.current.value = "";
-
-      // Start tracking progress
-      const newCirculars = data.circulars || [data.circular];
-      const trackingIds = newCirculars.map(c => c._id);
-      setActiveTrackingIds(prev => [...new Set([...prev, ...trackingIds])]);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setUploading(false);
-    }
+    toast.error("toast.error.demoWarning");
+    return;
   };
 
   const handleDelete = async (id) => {
@@ -323,6 +280,7 @@ export default function AdminCircularPage() {
             </span>
             <input
               type="text"
+              onClick={() => toast.error("toast.error.demoWarning")}
               placeholder="Search circulars, files, tasks..."
               className="w-full pl-9 pr-3 py-1.5 rounded-xl border border-border bg-paper/20 text-xs text-ink placeholder:text-ink-soft/60 focus:outline-none focus:ring-1 focus:ring-teal focus:border-teal font-sans"
             />
@@ -601,6 +559,7 @@ export default function AdminCircularPage() {
                 </span>
                 <input
                   type="text"
+                  onClick={() => toast.error("toast.error.demoWarning")}
                   placeholder="Search title, No, category..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

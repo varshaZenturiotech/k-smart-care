@@ -197,65 +197,8 @@ export default function AssistantWidget() {
   };
 
   async function uploadSingleFile(file) {
-    if (file.type !== "application/pdf") {
-      toast.error("toast.upload.pdfOnly");
-      return;
-    }
-    if (file.size > 10 * 1024 * 1024) {
-      toast.error("toast.upload.sizeLimitExceeded");
-      return;
-    }
-
-    const uploadMessageId = `upload-${Date.now()}`;
-    const initialUploadMsg = {
-      id: uploadMessageId,
-      role: "upload",
-      fileName: file.name,
-      status: "uploaded",
-      progress: 20,
-    };
-    setMessages((prev) => [...prev, initialUploadMsg]);
-
-    const formData = new FormData();
-    formData.append("file", file);
-    try {
-      const response = await client.post("/circulars/upload", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-        onUploadProgress: (progressEvent) => {
-          const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-          const mappedProgress = Math.round(percentCompleted * 0.4);
-          setMessages((prev) =>
-            prev.map((msg) =>
-              msg.id === uploadMessageId
-                ? { ...msg, progress: mappedProgress, status: "uploaded" }
-                : msg
-            )
-          );
-        }
-      });
-      
-      const createdCircular = response.data;
-      if (createdCircular?._id) {
-        pollCircularIngestion(createdCircular._id, uploadMessageId);
-      } else {
-        const { data: circularsList } = await client.get("/circulars");
-        const found = circularsList.find((c) => c.title === file.name || c.filename === file.name);
-        if (found) {
-          pollCircularIngestion(found._id, uploadMessageId);
-        } else {
-          throw new Error("Uploaded record not found.");
-        }
-      }
-    } catch (err) {
-      console.error("Upload error:", err);
-      setMessages((prev) =>
-        prev.map((msg) =>
-          msg.id === uploadMessageId
-            ? { ...msg, status: "failed", error: "Upload failed." }
-            : msg
-        )
-      );
-    }
+    toast.error("toast.error.demoWarning");
+    return;
   }
 
   async function handleFileUpload(e) {
