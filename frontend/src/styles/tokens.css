@@ -1,0 +1,31 @@
+:root {
+  /* Color */
+  --ink: #212B24;
+  --ink-soft: #55625A;
+  --paper: #F5F2EA;
+  --surface: #FFFFFF;
+  --border: #DDD6C7;
+
+  --teal: #2F6F5E;
+  --teal-dark: #1F4C40;
+  --teal-tint: #E4EFEA;
+
+  --ochre: #C08A3E;
+  --ochre-tint: #F7ECD9;
+
+  --sage: #6FA287;
+  --sage-tint: #EAF2ED;
+
+  --alert: #C1553A;
+  --alert-tint: #F8E8E3;
+
+  /* Type */
+  --font-display: "Fraunces", serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Layout */
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgba(33, 43, 36, 0.06), 0 4px 16px rgba(33, 43, 36, 0.06);
+}

@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@theme {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-tint: var(--teal-tint);
+
+  --color-ochre: var(--ochre);
+  --color-ochre-tint: var(--ochre-tint);
+
+  --color-sage: var(--sage);
+  --color-sage-tint: var(--sage-tint);
+
+  --color-alert: var(--alert);
+  --color-alert-tint: var(--alert-tint);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+
+  --shadow-custom: var(--shadow);
+  --radius-custom: var(--radius);
+  --radius-custom-sm: var(--radius-sm);
+}
+
+/* ── Base Overrides ── */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
+    background-color: var(--paper);
+    color: var(--ink);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--ink);
+  }
+
+  button, input, textarea, select {
+    font-family: inherit;
+  }
+
+  /* Custom scrollbars matching the earthy, calm tone */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--paper);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-soft);
+  }
+}
+
+/* ── Custom Utilities ── */
+@layer utilities {
+  .gov-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .gov-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(33, 43, 36, 0.08), 0 10px 20px rgba(33, 43, 36, 0.08);
+  }
+
+  .interactive-btn-primary {
+    background-color: var(--teal);
+    color: var(--surface);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  .interactive-btn-primary:hover {
+    background-color: var(--teal-dark);
+  }
+  .interactive-btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .interactive-btn-secondary {
+    background-color: var(--surface);
+    color: var(--teal);
+    border: 1px solid var(--teal);
+    transition: all 0.2s ease;
+  }
+  .interactive-btn-secondary:hover {
+    background-color: var(--teal-tint);
+  }
+}
+
+/* Custom Scrollbar for Chat Thread */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(33, 43, 36, 0.02);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--teal);
+}
+
