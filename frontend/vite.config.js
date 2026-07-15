@@ -10,4 +10,8 @@ export default defineConfig({
       usePolling: true,
     },
   },
+  preview: {
+    host: true,
+    allowedHosts: ["ksmart-care-frontend.onrender.com"],
+  },
 });
