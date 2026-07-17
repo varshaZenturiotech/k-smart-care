@@ -87,7 +87,15 @@
     "wellnessStatus": "Today's Wellness Status",
     "wellnessPendingShort": "Today's Wellness Check is Pending",
     "wellnessPendingDescShort": "Log today's wellness check to view score details and diagnostics.",
-    "checkinNow": "Check-in Now"
+    "checkinNow": "Check-in Now",
+    "noTasksDue": "No tasks due today",
+    "noTasksDueHelper": "Your schedule will appear here once tasks are assigned.",
+    "oneTaskDue": "1 task due today",
+    "manyTasksDue": "{{count}} tasks due today",
+    "noMeetingsScheduled": "No meetings scheduled today",
+    "noMeetingsScheduledHelper": "Your schedule will appear here once meetings are scheduled.",
+    "oneMeetingScheduled": "1 meeting scheduled today",
+    "manyMeetingsScheduled": "{{count}} meetings scheduled today"
   },
     "feed": {
       "forDept": "For {{dept}}",

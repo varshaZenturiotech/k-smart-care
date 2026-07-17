@@ -217,9 +217,10 @@ IMPORTANT GUIDELINES:
    - You MUST NOT translate this greeting prefix to Malayalam. It must remain in English.
    - Any text following the emoji can be in the target language: {resolvedLanguage}.
 3. For all other fields ("statusMessage", "briefing", "recommendation", "priority", "smartPriorities", "motivation"), you MUST write them in the target language ({resolvedLanguage}). If the target language is Malayalam, follow the Malayalam Response Style Rules: write complete sentences in Malayalam script, but keep the specific English workplace, government, and technology terms (e.g. Tasks, Meetings, Circular, Deadline, Wellness Score, etc.) in English script/characters. Do not translate them to Malayalam.
-4. Return ONLY a valid JSON object starting with '{' and ending with '}'.
+4. Return ONLY a valid JSON object starting with '{{' and ending with '}}'.
 
 Generate a tailored response matching the requested JSON structure. Keep sentences elegant, calm, and tailored to Kerala public service context.
+
 `;
 
     const fullTemplate = `${dailyBriefingSystemPrompt}\n\n${userPromptTemplate}`;
@@ -359,7 +360,15 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
   // Briefing
   let briefing = "";
   if (isMalayalam) {
-    briefing = `ഇന്ന് നിങ്ങൾക്ക് ചെയ്യേണ്ട ${todayTasksCount || 0} Tasks-ഉം Schedule ചെയ്ത ${upcomingMeetingsCount || 0} Meetings-ഉമുണ്ട്.`;
+    if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) === 0) {
+      briefing = "ഇന്നത്തേക്കായി ടാസ്കുകൾ ഷെഡ്യൂൾ ചെയ്തിട്ടില്ല, മീറ്റിംഗുകൾ ഒന്നും തന്നെയില്ല.";
+    } else if ((todayTasksCount || 0) > 0 && (upcomingMeetingsCount || 0) === 0) {
+      briefing = `ഇന്ന് നിങ്ങൾക്ക് ചെയ്യേണ്ട ${todayTasksCount} Tasks ഉണ്ട്. മീറ്റിംഗുകൾ ഒന്നും തന്നെയില്ല.`;
+    } else if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) > 0) {
+      briefing = `ടാസ്കുകൾ ഒന്നും തന്നെയില്ല. ഇന്ന് നിങ്ങൾക്ക് Schedule ചെയ്ത ${upcomingMeetingsCount} Meetings ഉണ്ട്.`;
+    } else {
+      briefing = `ഇന്ന് നിങ്ങൾക്ക് ചെയ്യേണ്ട ${todayTasksCount} Tasks-ഉം Schedule ചെയ്ത ${upcomingMeetingsCount} Meetings-ഉമുണ്ട്.`;
+    }
     if (overdueTasksCount > 0) {
       briefing += ` അതിൽ നിങ്ങളുടെ അടിയന്തിര ശ്രദ്ധ ആവശ്യമുള്ള ${overdueTasksCount} Tasks Pending ആണ്.`;
     }
@@ -367,9 +376,22 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
       briefing += ` കൂടാതെ നിങ്ങളുടെ Department-മായി ബന്ധപ്പെട്ട ${newCircularsCount} പുതിയ Circulars-ഉമുണ്ട്.`;
     }
   } else {
-    briefing = `You have ${todayTasksCount || 0} task(s) due today and ${upcomingMeetingsCount || 0} meeting(s) scheduled.`;
+    const taskWord = todayTasksCount === 1 ? "task" : "tasks";
+    const meetingWord = upcomingMeetingsCount === 1 ? "meeting" : "meetings";
+    
+    if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) === 0) {
+      briefing = "No tasks due today and no meetings scheduled today.";
+    } else if ((todayTasksCount || 0) > 0 && (upcomingMeetingsCount || 0) === 0) {
+      briefing = `You have ${todayTasksCount} ${taskWord} due today and no meetings scheduled today.`;
+    } else if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) > 0) {
+      briefing = `You have no tasks due today and ${upcomingMeetingsCount} ${meetingWord} scheduled.`;
+    } else {
+      briefing = `You have ${todayTasksCount} ${taskWord} due today and ${upcomingMeetingsCount} ${meetingWord} scheduled.`;
+    }
+    
     if (overdueTasksCount > 0) {
-      briefing += ` Note that you have ${overdueTasksCount} overdue task(s) needing immediate attention.`;
+      const overdueTaskWord = overdueTasksCount === 1 ? "task" : "tasks";
+      briefing += ` Note that you have ${overdueTasksCount} overdue ${overdueTaskWord} needing immediate attention.`;
     }
     if (newCircularsCount > 0) {
       briefing += ` There are also ${newCircularsCount} new Kerala Government circulars relevant to your department.`;

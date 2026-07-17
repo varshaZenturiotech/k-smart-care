@@ -123,7 +123,7 @@ function getGreetingPrefix(date, user) {
 
 export default function GreetingBanner({
   greeting, wellnessScore, focusScore, user, moodData, onOpenCheckin,
-  briefing
+  briefing, todayTasksCount = 0, upcomingMeetingsCount = 0
 }) {
   const [showDetails, setShowDetails] = useState(false);
   const { language, t, formatDate, formatTime } = useLanguage();
@@ -299,16 +299,10 @@ export default function GreetingBanner({
             {formatMainGreeting(mainGreeting)}
           </h1>
 
-          {greetingSuffix && (
-            <p className="text-xs md:text-sm font-sans text-white/80 leading-relaxed max-w-2xl line-clamp-1">
-              {greetingSuffix}
-            </p>
-          )}
-
           {/* AI Daily Briefing — condensed to one line */}
           <div className="flex items-start gap-1.5 text-xs md:text-sm text-white/85 leading-relaxed pt-1">
             <Sparkles size={13} className="text-white/80 shrink-0 mt-0.5" />
-            <span className="line-clamp-1">
+            <span>
               {briefing?.briefing || t("greeting.analyzingBriefing", "Analyzing today's schedule and preparing your custom briefing...")}
             </span>
           </div>

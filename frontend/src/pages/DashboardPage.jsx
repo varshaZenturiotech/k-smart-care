@@ -198,6 +198,8 @@ export default function DashboardPage() {
               setIsWellnessModalOpen(true);
             }}
             briefing={summary.briefing}
+            todayTasksCount={summary.todayTasks?.length || 0}
+            upcomingMeetingsCount={summary.upcomingMeetings?.length || 0}
           />
         </div>
       </Hero>
