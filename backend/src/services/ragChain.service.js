@@ -1,7 +1,9 @@
 import { ChatGroq } from "@langchain/groq";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { StringOutputParser } from "@langchain/core/output_parsers";
-import { getVectorStore } from "./vectorStore.service.js";
+import CircularEmbedding from "../models/CircularEmbedding.js";
+import { generateEmbedding } from "./embedding.service.js";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -293,15 +295,56 @@ function buildCitations(docs) {
   return citations;
 }
 
+function buildOfficialCircularPrompt(effectiveLanguage) {
+  const langDirective = buildLanguageDirective(effectiveLanguage);
+  return `You are the K-SMART CARE AI Assistant, helping Kerala Local Self Government employees understand circulars, government orders, and policies.
+
+${langDirective}
+
+Answer the user's question using ONLY the provided context from the uploaded government circulars.
+
+Requirements:
+1. Base your entire response on the provided context. Do not use general knowledge or assumptions not supported by the context.
+2. Structure your response to include:
+   - A clear, direct answer.
+   - A summary of the key points (if applicable).
+   - Bullet points for details or steps.
+3. The response must clearly indicate that this information is based on the uploaded government circulars.
+4. Do not fabricate or invent citations.
+
+Context:
+{context}
+
+Employee's question: {question}
+
+Response:`;
+}
+
+function isGeneralKnowledgeExplicitlyRequested(question) {
+  if (!question) return false;
+  const q = question.toLowerCase();
+  const patterns = [
+    "use general knowledge",
+    "answer using ai",
+    "not from circulars",
+    "ignore uploaded documents",
+    "general knowledge",
+    "using ai",
+    "ignore circulars"
+  ];
+  return patterns.some(pattern => q.includes(pattern));
+}
+
 /**
- * Answer a question using Hybrid RAG.
+ * Answer a question using Hybrid RAG with explicit mode selection.
  * @param {string} question
- * @param {{ circularId?: string, preferredLanguage?: string, userId?: string }} options
+ * @param {{ circularId?: string, preferredLanguage?: string, userId?: string, allowGeneralKnowledge?: boolean }} options
  */
-export async function answerQuestion(question, { circularId, preferredLanguage = "auto", userId } = {}) {
+export async function answerQuestion(question, { circularId, preferredLanguage = "auto", userId, allowGeneralKnowledge = false } = {}) {
   // Resolve the effective language for THIS message:
   // per-message explicit override > profile preference > auto-detect
   const effectiveLanguage = resolveResponseLanguage(question, preferredLanguage);
+  const isMalayalam = effectiveLanguage === "malayalam";
 
   // Fetch wellness data if userId is provided
   let hasWellness = false;
@@ -354,22 +397,28 @@ ${latestCheck.recommendations.map((r) => `- ${r}`).join("\n")}
       question.toLowerCase().includes("sleep") ||
       question.toLowerCase().includes("how am i"));
 
-  const vectorStore = await getVectorStore();
-  const filter = circularId ? { circularId } : undefined;
+  const isGKExplicitlyRequested = isGeneralKnowledgeExplicitlyRequested(question);
+  const isGKAllowed = allowGeneralKnowledge || isGKExplicitlyRequested || isWellnessQuery;
 
-  let docs = [];
-  // For wellness queries, don't prioritize circular matches first, but let's query circulars anyway
-  try {
-    docs = await vectorStore.similaritySearch(question, 4, filter);
-  } catch (err) {
-    console.error("Vector search failed, falling back to general knowledge:", err);
-  }
+  // Case 1: General Knowledge requested/fallback allowed
+  if (isGKAllowed) {
+    const disclaimer = isMalayalam
+      ? "ഈ മറുപടി AI model-ന്റെ general knowledge-ൽ നിന്നും നിർമ്മിച്ചതാണ്, ഇത് അപ്‌ലോഡ് ചെയ്ത ഔദ്യോഗിക Circular-കളെ അടിസ്ഥാനമാക്കിയുള്ളതല്ല."
+      : "This answer is generated from the AI model's general knowledge and is NOT based on uploaded government circulars.";
 
-  // Case 1: No documents found
-  if (!docs || docs.length === 0 || isWellnessQuery) {
     if (!hasGroqKey()) {
       console.warn("GROQ_API_KEY is not configured. Returning local GK fallback response.");
-      return generateLocalGKFallback(isWellnessQuery, wellnessRaw);
+      const fallback = generateLocalGKFallback(isWellnessQuery, wellnessRaw);
+      return {
+        mode: "general_knowledge",
+        answer: fallback.answer,
+        disclaimer,
+        citations: [],
+        sources: [],
+        confidence: null,
+        usedRAG: false,
+        usedGeneralKnowledge: true
+      };
     }
 
     try {
@@ -383,26 +432,147 @@ ${latestCheck.recommendations.map((r) => `- ${r}`).join("\n")}
       const chain = prompt.pipe(llm).pipe(parser);
 
       const answer = await chain.invoke({ question, wellnessContext });
-      return { answer: answer.trim(), citations: [] };
+      return {
+        mode: "general_knowledge",
+        answer: answer.trim(),
+        disclaimer,
+        citations: [],
+        sources: [],
+        confidence: null,
+        usedRAG: false,
+        usedGeneralKnowledge: true
+      };
     } catch (err) {
       console.error("General knowledge answer generation failed:", err);
-      // Fallback locally if LLM invocation fails
-      if (isWellnessQuery) {
-        return generateLocalGKFallback(isWellnessQuery, wellnessRaw);
-      }
+      const fallback = generateLocalGKFallback(isWellnessQuery, wellnessRaw);
       return {
-        answer: "The assistant hit an error generating a general knowledge response. Please try again.",
+        mode: "general_knowledge",
+        answer: fallback.answer,
+        disclaimer,
         citations: [],
+        sources: [],
+        confidence: null,
+        usedRAG: false,
+        usedGeneralKnowledge: true
       };
     }
   }
 
-  // Case 2: Documents found — run hybrid RAG
+  // Case 2: Document search (Mode 1 or Mode 2)
+  let docs = [];
+  let highestScore = 0;
+  try {
+    const queryVector = await generateEmbedding(question);
+
+    const vectorSearchStage = {
+      index: "circular_vector_index",
+      path: "embedding",
+      queryVector: queryVector,
+      numCandidates: 100,
+      limit: circularId ? 50 : 4,
+    };
+
+    const pipeline = [
+      { $vectorSearch: vectorSearchStage }
+    ];
+
+    if (circularId) {
+      pipeline.push({
+        $match: {
+          circularId: new mongoose.Types.ObjectId(circularId),
+        },
+      });
+    }
+
+    pipeline.push({
+      $project: {
+        _id: 1,
+        circularId: 1,
+        chunkIndex: 1,
+        page: 1,
+        text: 1,
+        metadata: 1,
+        score: { $meta: "vectorSearchScore" },
+      },
+    });
+
+    if (circularId) {
+      pipeline.push({ $limit: 4 });
+    }
+
+    const results = await CircularEmbedding.aggregate(pipeline);
+
+    // Map retrieved MongoDB chunks to LangChain Document-like structure
+    docs = results.map((r) => ({
+      pageContent: r.text,
+      score: r.score,
+      metadata: {
+        source: r.metadata?.source || r.metadata?.title || "",
+        circularId: r.circularId?.toString(),
+        circularNumber: r.metadata?.circularNumber || "",
+        page: r.page,
+      },
+    }));
+
+    if (docs.length > 0) {
+      highestScore = Math.max(...docs.map(d => d.score || 0));
+    }
+  } catch (err) {
+    console.error("Vector search failed:", err);
+  }
+
+  // Case 2a: No documents found -> Mode 2 (No Document Found)
+  if (docs.length === 0) {
+    const mode = "no_document_found";
+    const noDocAnswer = isMalayalam
+      ? "അപ്‌ലോഡ് ചെയ്ത Circular കളിൽ പ്രസക്തമായ വിവരങ്ങൾ കണ്ടെത്താൻ എനിക്ക് കഴിഞ്ഞില്ല."
+      : "I couldn't find relevant information in the uploaded government circulars.";
+    const noDocMessage = isMalayalam
+      ? "ഈ ചോദ്യം അപ്‌ലോഡ് ചെയ്ത ഔദ്യോഗിക Document കളിൽ ഉൾപ്പെട്ടിട്ടുള്ളതായി കാണുന്നില്ല."
+      : "This question does not appear to be covered by the uploaded official documents.";
+    const noDocSuggestions = isMalayalam
+      ? [
+          "വ്യത്യസ്തമായ വാക്കുകൾ ഉപയോഗിച്ച് Search ചെയ്യുക.",
+          "പ്രസക്തമായ Circular Upload ചെയ്യുക.",
+          "മറ്റൊരു Department ൽ Search ചെയ്യുക."
+        ]
+      : [
+          "Try different keywords.",
+          "Upload the relevant circular.",
+          "Search another department."
+        ];
+
+    return {
+      mode,
+      answer: noDocAnswer,
+      message: noDocMessage,
+      suggestions: noDocSuggestions,
+      citations: [],
+      sources: [],
+      confidence: highestScore,
+      usedRAG: false,
+      usedGeneralKnowledge: false
+    };
+  }
+
+  // Case 2b: Document found -> Mode 1 (Official Circular Response)
+  const mode = "official_circular";
+
   const citations = buildCitations(docs);
+  const sources = docs.map(d => d.metadata.source).filter((val, idx, self) => self.indexOf(val) === idx);
 
   if (!hasGroqKey()) {
     console.warn("GROQ_API_KEY is not configured. Returning local RAG fallback response.");
-    return generateLocalRagFallback(docs, citations, isWellnessQuery, wellnessRaw);
+    const fallback = generateLocalRagFallback(docs, citations, false, null);
+    return {
+      mode,
+      answer: fallback.answer,
+      citations,
+      sources,
+      confidence: highestScore,
+      usedRAG: true,
+      usedGeneralKnowledge: false
+    };
   }
 
   try {
@@ -412,38 +582,30 @@ ${latestCheck.recommendations.map((r) => `- ${r}`).join("\n")}
       model: "llama-3.1-8b-instant",
       temperature: 0.1,
     });
-    const prompt = PromptTemplate.fromTemplate(buildHybridPrompt(effectiveLanguage));
+    const prompt = PromptTemplate.fromTemplate(buildOfficialCircularPrompt(effectiveLanguage));
     const parser = new StringOutputParser();
     const chain = prompt.pipe(llm).pipe(parser);
 
-    const rawAnswer = await chain.invoke({ context, question, wellnessContext });
-    let answer = rawAnswer.trim();
-    let finalCitations = [];
-
-    if (answer.startsWith("[CONTEXT_ANSWER]")) {
-      answer = answer.substring("[CONTEXT_ANSWER]".length).trim();
-      finalCitations = citations;
-    } else if (answer.startsWith("[GENERAL_KNOWLEDGE_ANSWER]")) {
-      answer = answer.substring("[GENERAL_KNOWLEDGE_ANSWER]".length).trim();
-      finalCitations = [];
-    } else {
-      if (answer.includes("[CONTEXT_ANSWER]")) {
-        answer = answer.replace("[CONTEXT_ANSWER]", "").trim();
-        finalCitations = citations;
-      } else if (answer.includes("[GENERAL_KNOWLEDGE_ANSWER]")) {
-        answer = answer.replace("[GENERAL_KNOWLEDGE_ANSWER]", "").trim();
-        finalCitations = [];
-      } else {
-        finalCitations = answer.toLowerCase().includes("general knowledge") ? [] : citations;
-      }
-    }
-
-    return { answer, citations: finalCitations };
+    const rawAnswer = await chain.invoke({ context, question });
+    return {
+      mode,
+      answer: rawAnswer.trim(),
+      citations,
+      sources,
+      confidence: highestScore,
+      usedRAG: true,
+      usedGeneralKnowledge: false
+    };
   } catch (err) {
     console.error("RAG answer generation failed:", err);
     return {
-      answer: "The assistant hit an error generating a response. Please try again.",
+      mode,
+      answer: "The assistant hit an error generating an official circular response. Please try again.",
       citations,
+      sources,
+      confidence: highestScore,
+      usedRAG: true,
+      usedGeneralKnowledge: false
     };
   }
 }
@@ -487,3 +649,4 @@ ${recs}`,
     citations: [],
   };
 }
+

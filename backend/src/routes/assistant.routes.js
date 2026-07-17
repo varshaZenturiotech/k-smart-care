@@ -41,19 +41,20 @@ const CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes
  * Body: { question, circularId?, preferredLanguage? }
  */
 router.post("/ask", requireAuth, async (req, res) => {
-  const { question, circularId, preferredLanguage = "auto" } = req.body;
+  const { question, circularId, preferredLanguage = "auto", allowGeneralKnowledge = false } = req.body;
 
   if (!question || typeof question !== "string" || !question.trim()) {
     return res.status(400).json({ error: "A non-empty 'question' string is required." });
   }
 
   try {
-    const { answer, citations } = await answerQuestion(question, {
+    const result = await answerQuestion(question, {
       circularId,
       preferredLanguage,
-      userId: req.user?.id
+      userId: req.user?.id,
+      allowGeneralKnowledge,
     });
-    res.json({ question, answer, citations });
+    res.json({ question, ...result });
   } catch (err) {
     console.error("Assistant error:", err);
     res.status(500).json({ error: "The assistant failed to generate an answer." });

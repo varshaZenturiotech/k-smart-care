@@ -9,8 +9,7 @@ Three modules built end-to-end and wired together:
 - **Module 2 — Employee Dashboard**: AI greeting, wellness score, focus
   score, pending tasks/files, today's meetings — all from one
   `/api/dashboard/summary` call.
-- **Module 3 — AI Assistant**: the RAG pipeline (Groq + MiniLM + LangChain +
-  ChromaDB) from before, now behind auth and embedded as a chat panel.
+- **Module 3 — AI Assistant**: the RAG pipeline (Groq + Hugging Face Embeddings + LangChain + MongoDB Atlas Vector Search) behind auth and embedded as a chat panel.
 - Module 4 (Daily Wellness Check) is included too, since the dashboard's
   wellness score and mood check widget need it to mean anything.
 
@@ -29,18 +28,12 @@ k-smart-care/
 ```bash
 cd backend
 npm install
-cp .env.example .env        # fill in GROQ_API_KEY, MONGO_URI if not local default
+cp .env.example .env        # fill in GROQ_API_KEY, MONGO_URI, HF_API_KEY
 ```
 
-Start MongoDB locally (or point `MONGO_URI` at Atlas), then start ChromaDB:
+Start MongoDB locally (or point `MONGO_URI` at Atlas):
 
-```bash
-pip install chromadb
-chroma run --path ./chroma_data
-```
-
-Seed a demo employee with sample tasks/meetings/wellness history, and embed
-the sample circular:
+Seed a demo employee with sample tasks/meetings/wellness history:
 
 ```bash
 npm run seed

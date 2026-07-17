@@ -6,6 +6,19 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
+const MOODS = [
+  { key: "great", emoji: "😀", label: "Great" },
+  { key: "good", emoji: "🙂", label: "Good" },
+  { key: "okay", emoji: "😐", label: "Okay" },
+  { key: "tired", emoji: "😔", label: "Tired" },
+  { key: "overwhelmed", emoji: "😣", label: "Overwhelmed" },
+];
+
+const SLEEP_OPTIONS = ["<4", "4-5", "6-7", "8+"];
+const ENERGY_OPTIONS = ["Very Low", "Low", "Moderate", "High", "Excellent"];
+const STRESS_OPTIONS = ["Very Low", "Low", "Moderate", "High", "Very High"];
+const WORKLOAD_OPTIONS = ["Light", "Normal", "Heavy", "Very Heavy"];
+
 /* ============================================================
    Shared helpers
    ============================================================ */
@@ -114,6 +127,103 @@ export default function GreetingBanner({
 }) {
   const [showDetails, setShowDetails] = useState(false);
   const { language, t, formatDate, formatTime } = useLanguage();
+
+  const [draftAnswers, setDraftAnswers] = useState({});
+  const [tempNote, setTempNote] = useState("");
+
+  const getLocalDateString = () => {
+    const d = new Date();
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  useEffect(() => {
+    if (user?.id) {
+      const key = "wellness_draft_" + user.id;
+      try {
+        const raw = localStorage.getItem(key);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.date === getLocalDateString()) {
+            setDraftAnswers(parsed.answers || {});
+            setTempNote(parsed.answers?.note || "");
+          } else {
+            setDraftAnswers({});
+            setTempNote("");
+          }
+        } else {
+          setDraftAnswers({});
+          setTempNote("");
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  }, [user?.id, moodData?.checkedInToday]);
+
+  const handleSelect = (field, value) => {
+    const updated = { ...draftAnswers, [field]: value };
+    setDraftAnswers(updated);
+    if (user?.id) {
+      const key = "wellness_draft_" + user.id;
+      try {
+        localStorage.setItem(key, JSON.stringify({
+          date: getLocalDateString(),
+          answers: updated
+        }));
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    onOpenCheckin();
+  };
+
+  const getFirstUnanswered = () => {
+    if (!draftAnswers.mood) {
+      return {
+        id: "mood",
+        title: t("wellness.howFeeling", "How are you feeling today?"),
+        type: "mood"
+      };
+    }
+    if (!draftAnswers.sleepHours) {
+      return {
+        id: "sleepHours",
+        title: t("wellness.howManyHours", "How many hours did you sleep?"),
+        type: "sleepHours"
+      };
+    }
+    if (!draftAnswers.energy) {
+      return {
+        id: "energy",
+        title: t("wellness.energyLevel", "Energy Level"),
+        type: "energy"
+      };
+    }
+    if (!draftAnswers.stress) {
+      return {
+        id: "stress",
+        title: t("wellness.stressLevel", "Stress Level"),
+        type: "stress"
+      };
+    }
+    if (!draftAnswers.workload) {
+      return {
+        id: "workload",
+        title: t("wellness.todayWorkload", "Today's Workload"),
+        type: "workload"
+      };
+    }
+    return {
+      id: "note",
+      title: t("wellness.optionalNote", "Optional Note"),
+      type: "note"
+    };
+  };
+
+  const unanswered = getFirstUnanswered();
 
   const [now, setNow] = useState(new Date());
   useEffect(() => {
@@ -225,12 +335,101 @@ export default function GreetingBanner({
           </div>
 
           {!isCompleted ? (
-            <button
-              onClick={onOpenCheckin}
-              className="w-full py-2 bg-teal hover:bg-teal-dark text-white rounded-xl font-semibold transition text-xs active:scale-95 cursor-pointer"
-            >
-              {t("greeting.checkinNow", "Check-in Now")}
-            </button>
+            <div className="flex flex-col gap-2 animate-in fade-in duration-300">
+              <span className="text-[11px] font-sans text-white/80 leading-normal font-medium block">
+                {unanswered.title}
+              </span>
+              
+              {unanswered.type === "mood" && (
+                <div className="grid grid-cols-5 gap-1.5 pt-0.5">
+                  {MOODS.map((m) => (
+                    <button
+                      key={m.key}
+                      onClick={() => handleSelect("mood", m.key)}
+                      title={t("wellness." + m.key, m.label)}
+                      className="flex flex-col items-center justify-center p-1.5 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white transition active:scale-95 cursor-pointer"
+                    >
+                      <span className="text-xl md:text-2xl">{m.emoji}</span>
+                      <span className="text-[9px] text-white/70 mt-1 truncate max-w-full">{t("wellness." + m.key, m.label)}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {unanswered.type === "sleepHours" && (
+                <div className="grid grid-cols-4 gap-1.5 pt-0.5">
+                  {SLEEP_OPTIONS.map((opt) => (
+                    <button
+                      key={opt}
+                      onClick={() => handleSelect("sleepHours", opt)}
+                      className="py-2.5 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white text-xs font-semibold transition active:scale-95 cursor-pointer text-center"
+                    >
+                      {opt} {t("greeting.hoursShort", "hrs")}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {unanswered.type === "energy" && (
+                <div className="grid grid-cols-3 gap-1.5 pt-0.5 text-[10px]">
+                  {ENERGY_OPTIONS.map((opt) => (
+                    <button
+                      key={opt}
+                      onClick={() => handleSelect("energy", opt)}
+                      className="py-2 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white font-semibold transition active:scale-95 cursor-pointer text-center animate-in fade-in"
+                    >
+                      {t("wellness." + opt.toLowerCase().replace(" ", ""), opt)}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {unanswered.type === "stress" && (
+                <div className="grid grid-cols-3 gap-1.5 pt-0.5 text-[10px]">
+                  {STRESS_OPTIONS.map((opt) => (
+                    <button
+                      key={opt}
+                      onClick={() => handleSelect("stress", opt)}
+                      className="py-2 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white font-semibold transition active:scale-95 cursor-pointer text-center animate-in fade-in"
+                    >
+                      {t("wellness." + opt.toLowerCase().replace(" ", ""), opt)}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {unanswered.type === "workload" && (
+                <div className="grid grid-cols-4 gap-1.5 pt-0.5 text-[10px]">
+                  {WORKLOAD_OPTIONS.map((opt) => (
+                    <button
+                      key={opt}
+                      onClick={() => handleSelect("workload", opt)}
+                      className="py-2 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white font-semibold transition active:scale-95 cursor-pointer text-center animate-in fade-in"
+                    >
+                      {t("wellness." + opt.toLowerCase().replace(" ", ""), opt)}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {unanswered.type === "note" && (
+                <div className="space-y-1.5 pt-0.5 animate-in fade-in">
+                  <textarea
+                    value={tempNote}
+                    onChange={(e) => setTempNote(e.target.value)}
+                    placeholder={t("wellness.notePlaceholder", "Share your thoughts...")}
+                    className="w-full p-2 rounded-xl border border-white/10 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-teal focus:border-teal text-xs font-sans resize-none"
+                    rows={2}
+                  />
+                  <button
+                    onClick={() => handleSelect("note", tempNote)}
+                    className="w-full py-1.5 bg-teal hover:bg-teal-dark text-white rounded-xl font-semibold transition text-xs active:scale-95 cursor-pointer animate-in fade-in"
+                  >
+                    {t("wellness.nextStep", "Next Step")}
+                  </button>
+                </div>
+              )}
+            </div>
           ) : (
             <div className="flex items-center gap-4">
               {wellnessScore !== undefined && wellnessScore !== null && (

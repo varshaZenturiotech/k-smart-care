@@ -43,7 +43,6 @@ const circularSchema = new mongoose.Schema(
       default: "uploaded",
     },
     errorDetails: { type: String, default: "" },
-    chromaDocumentIds: [{ type: String }],
   },
   { timestamps: true }
 );

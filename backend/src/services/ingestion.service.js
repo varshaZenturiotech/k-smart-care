@@ -1,19 +1,15 @@
 import fs from "fs";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { getVectorStore } from "./vectorStore.service.js";
 import { generateMetadataFromText } from "./summary.service.js";
 import Circular from "../models/Circular.model.js";
+import CircularEmbedding from "../models/CircularEmbedding.js";
+import { generateEmbedding } from "./embedding.service.js";
 
 /**
  * Extract text from a PDF (page by page, so every chunk keeps its page
- * number), split into chunks, embed them, and save in ChromaDB.
- *
- * Using PDFLoader with splitPages:true instead of a single pdf-parse() call
- * is the key change here: it returns one Document per PDF page, each with
- * metadata.loc.pageNumber. When we later split those page-documents further,
- * LangChain's splitter carries that page number onto every resulting chunk —
- * which is exactly what lets us cite "Page 4" instead of just a filename.
+ * number), split into chunks, generate embeddings using Hugging Face,
+ * and save in the MongoDB CircularEmbedding collection.
  */
 export async function ingestCircular(circularId) {
   const circular = await Circular.findById(circularId);
@@ -73,7 +69,6 @@ export async function ingestCircular(circularId) {
     circular.aiSuggestedDepartments = metadata.departments;
     if (circular.departments.length === 0 && !circular.departmentConfirmed) {
       circular.departments = metadata.departments;
-      // Also update the single string 'department' field requested in Step 3
       circular.department = metadata.departments[0] || "Local Self Government";
     } else if (circular.departments.length > 0 && !circular.department) {
       circular.department = circular.departments[0];
@@ -132,15 +127,33 @@ export async function ingestCircular(circularId) {
     circular.status = "embedding";
     await circular.save();
 
-    const vectorStore = await getVectorStore();
+    // Remove existing embeddings first for clean idempotency/reprocessing
+    await CircularEmbedding.deleteMany({ circularId: circular._id });
+
+    // Loop through chunks sequentially to generate and save embeddings
+    for (let i = 0; i < chunks.length; i++) {
+      const chunk = chunks[i];
+      console.log(`Generating embedding for chunk ${i + 1}/${chunks.length} of ${circular.title}...`);
+      const embedding = await generateEmbedding(chunk.pageContent);
+
+      await CircularEmbedding.create({
+        circularId: circular._id,
+        chunkIndex: i,
+        page: chunk.metadata.page || 0,
+        text: chunk.pageContent,
+        embedding: embedding,
+        metadata: {
+          source: chunk.metadata.source || circular.title,
+          circularNumber: chunk.metadata.circularNumber || circular.circularNumber,
+          title: circular.title,
+        },
+      });
+    }
 
     circular.status = "saving";
     await circular.save();
 
-    const documentIds = await vectorStore.addDocuments(chunks);
-
     circular.status = "ingested";
-    circular.chromaDocumentIds = documentIds;
     circular.vectorIndexed = true; // Set vectorIndexed=true after successful indexing
     await circular.save();
 

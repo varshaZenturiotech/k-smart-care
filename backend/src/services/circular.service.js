@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import Circular from "../models/Circular.model.js";
-import { getVectorStore } from "./vectorStore.service.js";
+import CircularEmbedding from "../models/CircularEmbedding.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const UPLOADS_DIR = path.join(__dirname, "../../uploads");
@@ -60,15 +60,12 @@ export async function deleteCircular(id) {
     throw new Error("Circular not found");
   }
 
-  // Delete vectors from ChromaDB
-  if (circular.chromaDocumentIds && circular.chromaDocumentIds.length > 0) {
-    try {
-      const vectorStore = await getVectorStore();
-      await vectorStore.delete({ ids: circular.chromaDocumentIds });
-      console.log(`Deleted ${circular.chromaDocumentIds.length} vectors from ChromaDB.`);
-    } catch (err) {
-      console.error(`Failed to delete vectors from ChromaDB for circular ${id}:`, err);
-    }
+  // Delete vectors from MongoDB CircularEmbedding collection
+  try {
+    await CircularEmbedding.deleteMany({ circularId: id });
+    console.log(`Deleted associated vectors from CircularEmbedding for circular ${id}.`);
+  } catch (err) {
+    console.error(`Failed to delete vectors from CircularEmbedding for circular ${id}:`, err);
   }
 
   // Delete file from disk if it exists

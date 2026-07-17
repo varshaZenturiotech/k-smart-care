@@ -42,14 +42,50 @@ export default function WellnessModal({ isOpen, onClose, onRefresh, userId, star
 
   useEffect(() => {
     if (isOpen) {
-      if (startImmediately) {
-        setStep(1);
-      } else {
-        setStep(0);
+      let initialAnswers = {
+        mood: "",
+        sleepHours: "",
+        energy: "",
+        stress: "",
+        workload: "",
+        note: "",
+      };
+      let initialStep = startImmediately ? 1 : 0;
+
+      if (userId) {
+        const key = "wellness_draft_" + userId;
+        try {
+          const raw = localStorage.getItem(key);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            const d = new Date();
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, "0");
+            const day = String(d.getDate()).padStart(2, "0");
+            const todayStr = `${year}-${month}-${day}`;
+
+            if (parsed.date === todayStr && parsed.answers) {
+              initialAnswers = { ...initialAnswers, ...parsed.answers };
+              if (startImmediately) {
+                if (!parsed.answers.mood) initialStep = 1;
+                else if (!parsed.answers.sleepHours) initialStep = 2;
+                else if (!parsed.answers.energy) initialStep = 3;
+                else if (!parsed.answers.stress) initialStep = 4;
+                else if (!parsed.answers.workload) initialStep = 5;
+                else initialStep = 6;
+              }
+            }
+          }
+        } catch (e) {
+          console.error(e);
+        }
       }
+
+      setFormData(initialAnswers);
+      setStep(initialStep);
       setError("");
     }
-  }, [isOpen, startImmediately]);
+  }, [isOpen, startImmediately, userId]);
 
   if (!isOpen) return null;
 
@@ -62,7 +98,27 @@ export default function WellnessModal({ isOpen, onClose, onRefresh, userId, star
   };
 
   const handleSelectOption = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    setFormData((prev) => {
+      const updated = { ...prev, [field]: value };
+      if (userId) {
+        const key = "wellness_draft_" + userId;
+        try {
+          const d = new Date();
+          const year = d.getFullYear();
+          const month = String(d.getMonth() + 1).padStart(2, "0");
+          const day = String(d.getDate()).padStart(2, "0");
+          const todayStr = `${year}-${month}-${day}`;
+          localStorage.setItem(key, JSON.stringify({
+            date: todayStr,
+            answers: updated
+          }));
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      return updated;
+    });
+
     // Automatically transition to the next step for button-based answers
     if (step < 5) {
       setTimeout(() => {
@@ -77,6 +133,9 @@ export default function WellnessModal({ isOpen, onClose, onRefresh, userId, star
       await skipMutation.mutateAsync();
       // Mark as skipped today in localStorage to avoid popping up again
       localStorage.setItem(`wellness_skip_${userId}`, new Date().toDateString());
+      if (userId) {
+        localStorage.removeItem("wellness_draft_" + userId);
+      }
       onRefresh?.();
       onClose();
     } catch (err) {
@@ -95,6 +154,9 @@ export default function WellnessModal({ isOpen, onClose, onRefresh, userId, star
     setError("");
     try {
       await checkinMutation.mutateAsync(formData);
+      if (userId) {
+        localStorage.removeItem("wellness_draft_" + userId);
+      }
       onRefresh?.();
       onClose();
     } catch (err) {
@@ -360,7 +422,29 @@ export default function WellnessModal({ isOpen, onClose, onRefresh, userId, star
                     </label>
                     <textarea
                       value={formData.note}
-                      onChange={(e) => setFormData((prev) => ({ ...prev, note: e.target.value }))}
+                      onChange={(e) => {
+                        const val = e.target.value;
+                        setFormData((prev) => {
+                          const updated = { ...prev, note: val };
+                          if (userId) {
+                            const key = "wellness_draft_" + userId;
+                            try {
+                              const d = new Date();
+                              const year = d.getFullYear();
+                              const month = String(d.getMonth() + 1).padStart(2, "0");
+                              const day = String(d.getDate()).padStart(2, "0");
+                              const todayStr = `${year}-${month}-${day}`;
+                              localStorage.setItem(key, JSON.stringify({
+                                date: todayStr,
+                                answers: updated
+                              }));
+                            } catch (err) {
+                              console.error(err);
+                            }
+                          }
+                          return updated;
+                        });
+                      }}
                       rows={4}
                       placeholder={t("wellness.notePlaceholder", "Share your thoughts, challenges or context...")}
                       className="w-full p-3 rounded-xl border border-border text-sm text-ink placeholder:text-ink-soft/50 focus:outline-none focus:ring-1 focus:ring-teal focus:border-teal font-sans bg-white resize-none"

@@ -160,14 +160,6 @@ async function generateDailyBriefingInternal(data, forceRefresh, currentDate, re
       });
 
       if (cached && cached.inputFingerprint === currentFingerprint) {
-        console.log(`[Daily Briefing Log]:
-          - Cache: HIT
-          - Duration: 0ms
-          - Prompt Token Estimate: 0
-          - Completion Token Estimate: 0
-          - Total Token Usage: 0
-          - Retry Attempts: 0
-        `);
         return cached.briefing;
       }
     } catch (cacheErr) {
@@ -225,7 +217,7 @@ IMPORTANT GUIDELINES:
    - You MUST NOT translate this greeting prefix to Malayalam. It must remain in English.
    - Any text following the emoji can be in the target language: {resolvedLanguage}.
 3. For all other fields ("statusMessage", "briefing", "recommendation", "priority", "smartPriorities", "motivation"), you MUST write them in the target language ({resolvedLanguage}). If the target language is Malayalam, follow the Malayalam Response Style Rules: write complete sentences in Malayalam script, but keep the specific English workplace, government, and technology terms (e.g. Tasks, Meetings, Circular, Deadline, Wellness Score, etc.) in English script/characters. Do not translate them to Malayalam.
-4. Return ONLY a valid JSON object starting with '{{' and ending with '}}'.
+4. Return ONLY a valid JSON object starting with '{' and ending with '}'.
 
 Generate a tailored response matching the requested JSON structure. Keep sentences elegant, calm, and tailored to Kerala public service context.
 `;
@@ -283,28 +275,10 @@ Generate a tailored response matching the requested JSON structure. Keep sentenc
       const retryDuration = Date.now() - startRetry;
       
       parsed = safeParseLLMJson(retryRaw);
-      
-      console.log(`[Daily Briefing Log]:
-        - Cache: MISS
-        - Duration: ${genDuration + retryDuration}ms
-        - Prompt Token Estimate: ${promptTokens + estimateTokens(retryTemplate)}
-        - Completion Token Estimate: ${completionTokens + estimateTokens(retryRaw)}
-        - Total Token Usage: ${promptTokens + estimateTokens(retryTemplate) + completionTokens + estimateTokens(retryRaw)}
-        - Retry Attempts: ${retryRes.attempt + 1}
-      `);
 
       if (!parsed.success) {
         return getLocalFallbackBriefing(data, resolvedLanguage);
       }
-    } else {
-      console.log(`[Daily Briefing Log]:
-        - Cache: MISS
-        - Duration: ${genDuration}ms
-        - Prompt Token Estimate: ${promptTokens}
-        - Completion Token Estimate: ${completionTokens}
-        - Total Token Usage: ${totalTokens}
-        - Retry Attempts: ${attempt}
-      `);
     }
 
     // Cache generated briefing to MongoDB

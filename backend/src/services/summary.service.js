@@ -119,7 +119,7 @@ export async function generateMetadataFromText(text) {
 
   const promptTemplate = `Analyze this Kerala Government Circular.
 
-Return ONLY valid JSON. Do not include any markdown formatting, backticks, or explanation. It must start with '{' and end with '}'.
+Return ONLY valid JSON. Do not include any markdown formatting, backticks, or explanation. It must start with a curly brace and end with a curly brace.
 
 {{
 "title":"",

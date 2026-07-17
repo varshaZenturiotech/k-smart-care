@@ -17,21 +17,6 @@ services:
       retries: 3
       start_period: 10s
 
-  chromadb:
-    image: chromadb/chroma:latest
-    container_name: ksmart_chromadb
-    restart: unless-stopped
-    volumes:
-      - chroma_data:/data
-    networks:
-      - ksmart_network
-    healthcheck:
-      test: ["CMD-SHELL", "bash -c 'cat < /dev/null > /dev/tcp/127.0.0.1/8000' || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
-
   backend:
     build:
       context: ./backend
@@ -40,8 +25,6 @@ services:
     restart: unless-stopped
     depends_on:
       mongodb:
-        condition: service_healthy
-      chromadb:
         condition: service_healthy
     environment:
       PORT: 5000
@@ -53,8 +36,6 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       VLLM_URL: ${VLLM_URL}
       OLLAMA_URL: ${OLLAMA_URL}
-      CHROMA_URL: http://chromadb:8000
-      CHROMA_COLLECTION: ksmart_circulars
       CLIENT_ORIGIN: http://localhost:80
       EMBEDDING_MODEL: Xenova/paraphrase-multilingual-MiniLM-L12-v2
     volumes:
@@ -115,6 +96,5 @@ networks:
 
 volumes:
   mongodb_data:
-  chroma_data:
   circular_uploads:
   embedding_cache:

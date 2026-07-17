@@ -197,8 +197,65 @@ export default function AssistantWidget() {
   };
 
   async function uploadSingleFile(file) {
-    toast.error("toast.error.demoWarning");
-    return;
+    if (file.type !== "application/pdf") {
+      toast.error("toast.upload.pdfOnly");
+      return;
+    }
+    if (file.size > 10 * 1024 * 1024) {
+      toast.error("toast.upload.sizeLimitExceeded");
+      return;
+    }
+
+    const uploadMessageId = `upload-${Date.now()}`;
+    const initialUploadMsg = {
+      id: uploadMessageId,
+      role: "upload",
+      fileName: file.name,
+      status: "uploaded",
+      progress: 20,
+    };
+    setMessages((prev) => [...prev, initialUploadMsg]);
+
+    const formData = new FormData();
+    formData.append("file", file);
+    try {
+      const response = await client.post("/circulars/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+        onUploadProgress: (progressEvent) => {
+          const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+          const mappedProgress = Math.round(percentCompleted * 0.4);
+          setMessages((prev) =>
+            prev.map((msg) =>
+              msg.id === uploadMessageId
+                ? { ...msg, progress: mappedProgress, status: "uploaded" }
+                : msg
+            )
+          );
+        }
+      });
+      
+      const createdCircular = response.data?.circular || response.data?.circulars?.[0] || response.data;
+      if (createdCircular?._id) {
+        pollCircularIngestion(createdCircular._id, uploadMessageId);
+      } else {
+        const { data: circularsList } = await client.get("/circulars");
+        const found = circularsList.find((c) => c.title === file.name || c.filename === file.name);
+        if (found) {
+          pollCircularIngestion(found._id, uploadMessageId);
+        } else {
+          throw new Error("Uploaded record not found.");
+        }
+      }
+    } catch (err) {
+      console.error("Upload error:", err);
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.id === uploadMessageId
+            ? { ...msg, status: "failed", error: "Upload failed." }
+            : msg
+        )
+      );
+    }
   }
 
   async function handleFileUpload(e) {
@@ -240,14 +297,33 @@ export default function AssistantWidget() {
     setMessages((prev) => [...prev, { role: "user", text: question }]);
     setLoading(true);
     try {
+      const qLower = question.toLowerCase();
+      const explicitGk = qLower.includes("use general knowledge") || 
+                         qLower.includes("answer using ai") || 
+                         qLower.includes("not from circulars") || 
+                         qLower.includes("ignore uploaded documents");
+
       const { data } = await client.post("/assistant/ask", {
         question,
         circularId: selectedId || undefined,
         preferredLanguage,
+        allowGeneralKnowledge: explicitGk,
       });
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", text: data.answer, citations: data.citations },
+        { 
+          role: "assistant", 
+          text: data.answer, 
+          citations: data.citations,
+          mode: data.mode,
+          message: data.message,
+          suggestions: data.suggestions,
+          disclaimer: data.disclaimer,
+          usedRAG: data.usedRAG,
+          usedGeneralKnowledge: data.usedGeneralKnowledge,
+          sources: data.sources,
+          confidence: data.confidence
+        },
       ]);
     } catch (err) {
       setMessages((prev) => [
@@ -385,28 +461,6 @@ export default function AssistantWidget() {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Language Preference Selector */}
-          <div className="flex gap-0.5 border border-border rounded-lg overflow-hidden bg-paper p-0.5 mr-2">
-            {[{val:"auto",label:"Auto"},{val:"english",label:"EN"},{val:"malayalam",label:"മലയാളം"}].map(({val,label}) => (
-              <button
-                key={val}
-                onClick={async () => {
-                  setPreferredLanguage(val);
-                  try {
-                    await client.patch("/auth/me/language", { preferredLanguage: val });
-                  } catch {}
-                }}
-                className={`text-[9px] font-bold px-1.5 py-0.5 rounded transition-all cursor-pointer ${
-                  preferredLanguage === val
-                    ? "bg-teal text-white"
-                    : "text-ink-soft hover:text-teal bg-transparent"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-
           {/* Minimize button */}
           <button
             onClick={minimizeAssistant}
@@ -522,8 +576,70 @@ export default function AssistantWidget() {
           }
 
           const isUser = m.role === "user";
+          const isNoDoc = !isUser && m.mode === "no_document_found";
+
+          if (isNoDoc) {
+            return (
+              <div key={i} className="flex flex-col items-start space-y-1 w-full animate-in fade-in duration-200">
+                <div className="flex flex-col gap-3 p-4 bg-blue-50/50 border border-blue-200/50 rounded-2xl max-w-[85%] font-sans shadow-sm">
+                  <div className="flex items-center gap-1.5 text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full w-fit">
+                    <Info size={12} className="text-blue-700 shrink-0" />
+                    ℹ No Relevant Circular Found
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm font-semibold text-blue-900 leading-relaxed animate-in fade-in duration-200">
+                      {m.text}
+                    </p>
+                    {m.message && (
+                      <p className="text-xs text-blue-700/80 leading-relaxed">
+                        {m.message}
+                      </p>
+                    )}
+                  </div>
+                  {m.suggestions && m.suggestions.length > 0 && (
+                    <div className="space-y-2 pt-2.5 border-t border-blue-100">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600/80">
+                        Suggestions
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {m.suggestions.map((suggestion, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => !loading && askQuestion(suggestion)}
+                            disabled={loading}
+                            className="bg-white hover:bg-blue-50 border border-blue-100 hover:border-blue-300 text-xs text-blue-800 font-medium px-3 py-1.5 rounded-xl transition duration-150 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 cursor-pointer"
+                          >
+                            <span className="text-blue-500 font-bold">•</span>
+                            {suggestion}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          }
+
           return (
-            <div key={i} className={`flex flex-col ${isUser ? "items-end" : "items-start"} space-y-1`}>
+            <div key={i} className={`flex flex-col ${isUser ? "items-end" : "items-start"} space-y-1.5`}>
+              {!isUser && m.mode === "official_circular" && (
+                <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full w-fit mb-0.5 font-sans animate-in fade-in duration-200">
+                  <span>✓</span> Official Government Circular
+                </div>
+              )}
+
+              {!isUser && m.mode === "general_knowledge" && (
+                <div className="flex flex-col gap-1 w-fit mb-0.5 font-sans animate-in fade-in duration-200">
+                  <div className="flex items-center gap-1 text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full w-fit">
+                    <span>⚠</span> General AI Knowledge
+                  </div>
+                  <span className="text-[10px] text-amber-600/80 font-medium ml-1">
+                    Not sourced from official government documents.
+                  </span>
+                </div>
+              )}
+
               <div
                 className={`px-4 py-3 rounded-2xl text-sm leading-relaxed max-w-[85%] shadow-sm
                   ${isUser 
@@ -534,8 +650,14 @@ export default function AssistantWidget() {
                 {isUser ? m.text : formatMessage(m.text)}
               </div>
               
+              {!isUser && m.mode === "general_knowledge" && m.disclaimer && (
+                <div className="bg-amber-50/45 border border-amber-200/40 rounded-xl p-3 max-w-[85%] space-y-1 font-sans text-[11px] text-amber-800 leading-normal animate-in fade-in duration-200">
+                  <span className="font-semibold">Disclaimer:</span> {m.disclaimer}
+                </div>
+              )}
+
               {!isUser && m.citations && m.citations.length > 0 && (
-                <div className="bg-ochre-tint border border-ochre/15 rounded-xl p-3 max-w-[85%] space-y-1">
+                <div className="bg-ochre-tint border border-ochre/15 rounded-xl p-3 max-w-[85%] space-y-1 animate-in fade-in duration-200">
                   <span className="text-[10px] font-mono uppercase tracking-wider text-ochre font-semibold flex items-center gap-1">
                     <Info size={10} />
                     Verified Citation Source

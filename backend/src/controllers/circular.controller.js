@@ -1,9 +1,10 @@
 import * as circularService from "../services/circular.service.js";
 import { ingestCircular, extractFullText } from "../services/ingestion.service.js";
 import { generateKeyPointsFromText } from "../services/summary.service.js";
-import { getVectorStore } from "../services/vectorStore.service.js";
 import Circular from "../models/Circular.model.js";
 import User from "../models/User.model.js";
+import CircularEmbedding from "../models/CircularEmbedding.js";
+import { generateEmbedding } from "../services/embedding.service.js";
 import { visibilityQuery } from "../utils/visibility.util.js";
 import { DEPARTMENTS, ALL_DEPARTMENTS } from "../config/departments.js";
 
@@ -250,7 +251,7 @@ export async function updateCircularDepartments(req, res) {
 }
 
 /**
- * Perform semantic search on circulars using vector database (Chroma)
+ * Perform semantic search on circulars using MongoDB Atlas Vector Search
  */
 export async function searchCirculars(req, res) {
   try {
@@ -259,32 +260,37 @@ export async function searchCirculars(req, res) {
       return res.status(400).json({ error: "Search query is required." });
     }
 
-    const vectorStore = await getVectorStore();
-    // Search top 10 chunks to get good coverage
-    const searchResults = await vectorStore.similaritySearchWithScore(query, 10);
+    // Generate embedding for search query via Hugging Face Hosted Inference API
+    const queryVector = await generateEmbedding(query);
 
-    // Group by circularId to return unique matching circulars
-    const uniqueMatches = {};
+    const pipeline = [
+      {
+        $vectorSearch: {
+          index: "circular_vector_index",      // The name of the Atlas Vector Search Index
+          path: "embedding",          // Field containing vector embeddings
+          queryVector: queryVector,
+          numCandidates: 100,
+          limit: 5,
+        },
+      },
+      {
+        $project: {
+          _id: 1,
+          circularId: 1,
+          chunkIndex: 1,
+          page: 1,
+          text: 1,
+          metadata: 1,
+          score: { $meta: "vectorSearchScore" },
+        },
+      },
+    ];
 
-    for (const [doc, score] of searchResults) {
-      const circularId = doc.metadata.circularId;
-      if (!circularId) continue;
+    const results = await CircularEmbedding.aggregate(pipeline);
 
-      const similarityScore = typeof score === "number" ? (1 / (1 + score)) : 1;
-
-      if (!uniqueMatches[circularId] || uniqueMatches[circularId].similarityScore < similarityScore) {
-        uniqueMatches[circularId] = {
-          circularId,
-          similarityScore,
-          excerpt: doc.pageContent,
-          page: doc.metadata.page,
-        };
-      }
-    }
-
-    // Load MongoDB details for each unique circular match
+    // Map details to look like the original output structure for backward compatibility
     const finalResults = [];
-    for (const match of Object.values(uniqueMatches)) {
+    for (const match of results) {
       const circular = await Circular.findById(match.circularId);
       if (!circular) continue;
 
@@ -292,19 +298,16 @@ export async function searchCirculars(req, res) {
         _id: circular._id,
         title: circular.title,
         circularNumber: circular.circularNumber || "",
-        similarityScore: match.similarityScore,
+        similarityScore: match.score,
         summary: circular.summary,
         department: circular.departments[0] || circular.department || "Local Self Government",
         departments: circular.departments,
         category: circular.category || "Circular",
         pdfUrl: circular.pdfUrl || `/uploads/${circular.filename}`,
-        excerpt: match.excerpt,
+        excerpt: match.text,
         page: match.page,
       });
     }
-
-    // Sort by similarityScore DESC
-    finalResults.sort((a, b) => b.similarityScore - a.similarityScore);
 
     res.json(finalResults);
   } catch (err) {

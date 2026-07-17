@@ -76,7 +76,6 @@ docker ps
 
 To prevent data loss, the following volumes are declared in `docker-compose.yml`:
 - `mongodb_data`: Persists all user accounts, tasks, meetings, wellness logs, and cached briefings.
-- `chroma_data`: Persists the vector database collections and circular embeddings.
 - `circular_uploads`: Persists uploaded Government Circular PDFs in `/app/uploads`.
 - `embedding_cache`: Caches downloaded Hugging Face embedding models to prevent repeated downloads on restart.
 

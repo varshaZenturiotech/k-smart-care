@@ -116,7 +116,6 @@ export default function DashboardPage() {
             </span>
             <input
               type="text"
-              onClick={() => toast.error(t("toast.error.demoWarning"))}
               placeholder={t("dashboard.searchPlaceholder", "Search circulars, files, tasks...")}
               className="w-full pl-9 pr-3 py-1.5 rounded-xl border border-border bg-paper/20 text-xs text-ink placeholder:text-ink-soft/60 focus:outline-none focus:ring-1 focus:ring-teal focus:border-teal font-sans"
             />
