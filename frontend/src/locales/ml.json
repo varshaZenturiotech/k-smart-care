@@ -45,7 +45,7 @@
     "departmentFeed": "Department Feed",
     "searchPlaceholder": "Circulars, Files, Tasks എന്നിവ Search ചെയ്യുക...",
     "officialPortal": "Official Portal",
-    "errorLoad": "ನಿಮ್ಮ Dashboard ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
+    "errorLoad": "നിങ്ങളുടെ Dashboard ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
     "sessionReset": "ഡാറ്റാബേസ് റീസെറ്റ് ചെയ്യുകയോ നിങ്ങളുടെ സെഷൻ്റെ കാലാവധി കഴിയുകയോ ചെയ്താൽ ഇത് സംഭവിക്കാം.",
     "signOutReset": "Sign Out & Session Reset ചെയ്യുക",
     "loading": "K-SMART CARE പോർട്ടൽ ലോഡ് ചെയ്യുന്നു...",
@@ -84,7 +84,11 @@
     "hours": "Hours",
     "aiTips": "AI Recommendations & Tips",
     "reflectionNotes": "Reflection Notes",
-    "closeDetails": "Details അടയ്ക്കുക"
+    "closeDetails": "Details അടയ്ക്കുക",
+    "wellnessStatus": "ഇന്നത്തെ വെൽനസ്സ് നില",
+    "wellnessPendingShort": "ഇന്നത്തെ വെൽനസ്സ് പരിശോധന പെൻഡിംഗ് ആണ്",
+    "wellnessPendingDescShort": "സ്കോർ വിവരങ്ങളും ഡയഗ്നോസ്റ്റിക്സും കാണാൻ ഇന്നത്തെ വെൽനസ്സ് പരിശോധന രേഖപ്പെടുത്തുക.",
+    "checkinNow": "ഇപ്പോൾ ചെക്ക്-ഇൻ ചെയ്യുക"
   },
   "feed": {
     "forDept": "{{dept}}-ന് വേണ്ടി",

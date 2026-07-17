@@ -83,7 +83,11 @@
     "hours": "hrs",
     "aiTips": "AI Recommendations & Tips",
     "reflectionNotes": "Reflection Notes",
-    "closeDetails": "Close Details"
+    "closeDetails": "Close Details",
+    "wellnessStatus": "Today's Wellness Status",
+    "wellnessPendingShort": "Today's Wellness Check is Pending",
+    "wellnessPendingDescShort": "Log today's wellness check to view score details and diagnostics.",
+    "checkinNow": "Check-in Now"
   },
     "feed": {
       "forDept": "For {{dept}}",

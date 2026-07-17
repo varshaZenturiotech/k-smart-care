@@ -92,6 +92,6 @@ The JSON object must match this structure:
   "briefing": "Conversational summary of today's workload (e.g. 'You have 5 pending tasks today. Completing the budget approval before lunch is recommended. You also have 1 meeting at 2 PM.')",
   "recommendation": "Practical, supportive wellness/workplace recommendation",
   "priority": "The single most important action item for them today",
-  "smartPriorities": ["① [Ranked Task 1]", "② [Ranked Task 2]", "③ [Ranked Task 3]"],
+  "smartPriorities": ["[Ranked Task 1]", "[Ranked Task 2]", "[Ranked Task 3]"],
   "motivation": "One warm, encouraging message or quote thanking them for their service"
 }}`;

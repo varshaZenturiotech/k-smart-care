@@ -240,7 +240,7 @@ export default function CircularRepositoryPage() {
             </button>
             <div>
               <h2 className="text-sm font-display font-semibold text-ink leading-tight">{t("circular.title", "Circular Repository")}</h2>
-              <p className="text-[10px] text-ink-soft">{t("circular.subHeaderDescription", "Browse, search, and query Kerala Government circulars relevant to your department")}</p>
+              <p className="text-[12px] text-ink-soft">{t("circular.subHeaderDescription", "Browse, search, and query Kerala Government circulars relevant to your department")}</p>
             </div>
           </div>
 

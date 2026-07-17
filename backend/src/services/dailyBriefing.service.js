@@ -126,7 +126,14 @@ export async function generateDailyBriefing(data, forceRefresh = false) {
 
   const promise = (async () => {
     try {
-      return await generateDailyBriefingInternal(data, forceRefresh, currentDate, resolvedLanguage);
+      const res = await generateDailyBriefingInternal(data, forceRefresh, currentDate, resolvedLanguage);
+      if (res && Array.isArray(res.smartPriorities)) {
+        res.smartPriorities = res.smartPriorities.map(item => {
+          if (typeof item !== "string") return item;
+          return item.replace(/^[①②③④⑤⑥⑦⑧⑨⑩\d\.\-\*\s•]+/, "").trim();
+        });
+      }
+      return res;
     } finally {
       inFlightRequests.delete(cacheKey);
     }
@@ -429,14 +436,13 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
     return weightB - weightA;
   });
   
-  const circles = ["①", "②", "③"];
   let smartPriorities = [];
   if (sortedTasks.length > 0) {
-    smartPriorities = sortedTasks.slice(0, 3).map((t, idx) => `${circles[idx]} ${t.title}`);
+    smartPriorities = sortedTasks.slice(0, 3).map(t => t.title);
   } else {
     smartPriorities = isMalayalam 
-      ? ["① നിങ്ങളുടെ Tasks plan ചെയ്യുക", "② പുതിയ Circulars Review ചെയ്യുക", "③ Wellness Status check ചെയ്യുക"]
-      : ["① Plan your tasks", "② Review pending circulars", "③ Check wellness status"];
+      ? ["നിങ്ങളുടെ Tasks plan ചെയ്യുക", "പുതിയ Circulars Review ചെയ്യുക", "Wellness Status check ചെയ്യുക"]
+      : ["Plan your tasks", "Review pending circulars", "Check wellness status"];
   }
 
   // Motivation

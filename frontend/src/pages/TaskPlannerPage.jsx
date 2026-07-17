@@ -528,7 +528,7 @@ export default function TaskPlannerPage() {
             </button>
             <div>
               <h2 className="text-sm font-display font-semibold text-ink leading-tight">{t("taskPlanner.workspaceTitle", "Task & Meeting Workspace")}</h2>
-              <p className="text-[10px] text-ink-soft">{t("taskPlanner.workspaceDesc", "Track milestones, schedule events, and organize circular workflows")}</p>
+              <p className="text-[12px] text-ink-soft">{t("taskPlanner.workspaceDesc", "Track milestones, schedule events, and organize circular workflows")}</p>
             </div>
           </div>
 

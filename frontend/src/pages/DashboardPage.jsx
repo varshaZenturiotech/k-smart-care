@@ -4,7 +4,8 @@ import client from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { useToast } from "../context/ToastContext.jsx";
-import GreetingBanner from "../components/GreetingBanner.jsx";
+import GreetingBanner, { TodayOverviewCards } from "../components/GreetingBanner.jsx";
+import Hero from "../components/Hero.jsx";
 import i18n from "../i18n.js";
 import TaskPlannerWidget from "../components/TaskPlannerWidget.jsx";
 import WellnessModal from "../components/WellnessModal.jsx";
@@ -89,7 +90,7 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-paper flex flex-col font-sans">
 
       {/* ── Sticky Top Navigation ── */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-sm px-4 sm:px-6 lg:px-8 xl:px-10 py-3">
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border/40 shadow-sm px-4 sm:px-6 lg:px-8 xl:px-10 py-3 transition-all duration-300">
         <div className="max-w-[1760px] mx-auto flex items-center justify-between gap-4">
 
           {/* Logo & Title */}
@@ -183,21 +184,30 @@ export default function DashboardPage() {
         </div>
       </nav>
 
-      {/* ── Main Layout ── */}
-      <main className="flex-1 max-w-[1760px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-6">
+      {/* ── Homepage Hero Section ── */}
+      <Hero>
+        <div className="max-w-[1760px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pb-6 md:pb-8">
+          {/* ── Greeting Hero Banner ── */}
+          <GreetingBanner
+            greeting={summary.greeting}
+            wellnessScore={summary.wellnessScore}
+            focusScore={summary.focusScore}
+            user={user}
+            moodData={summary.mood}
+            onOpenCheckin={() => {
+              setStartWellnessImmediately(true);
+              setIsWellnessModalOpen(true);
+            }}
+            briefing={summary.briefing}
+          />
+        </div>
+      </Hero>
 
-        {/* ── Greeting Hero Banner ── */}
-        <GreetingBanner
-          greeting={summary.greeting}
-          wellnessScore={summary.wellnessScore}
-          focusScore={summary.focusScore}
-          user={user}
-          aiTip={summary.aiTip}
-          moodData={summary.mood}
-          onOpenCheckin={() => {
-            setStartWellnessImmediately(true);
-            setIsWellnessModalOpen(true);
-          }}
+      {/* ── Main Layout ── */}
+      <main className="flex-1 max-w-[1760px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-6 space-y-6">
+
+        {/* ── Today's Work Snapshot / Priority / Motivation ── */}
+        <TodayOverviewCards
           briefing={summary.briefing}
           newCircularsCount={summary.newCircularsCount}
           pendingFilesCount={summary.todayTasks?.length || 0}
@@ -229,5 +239,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-
-

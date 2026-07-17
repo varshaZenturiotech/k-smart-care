@@ -153,7 +153,7 @@ export function ToastProvider({ children }) {
         position={isMobile ? "top-center" : "top-right"}
         containerStyle={{
           top: isMobile ? 16 : 24,
-          right: isMobile ? 24 : 24,
+          right: isMobile ? 16 : 24,
           left: isMobile ? 16 : "auto",
           zIndex: 99999,
         }}
@@ -186,19 +186,27 @@ export function ToastProvider({ children }) {
           return (
             <div
               className={`
-                gov-card bg-surface border border-border shadow-custom rounded-xl p-4 max-w-[400px] w-full flex items-start gap-3 text-sm
+                gov-card bg-surface border border-border shadow-custom rounded-xl p-5
+                flex items-start gap-3.5 text-sm text-left
                 border-l-[6px] ${borderClass} text-ink
                 transform transition-all duration-300 ease-out
                 ${toastObj.visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-4 scale-95"}
               `}
               style={{
+                width: isMobile ? "calc(100vw - 32px)" : "420px",
+                maxWidth: isMobile ? "calc(100vw - 32px)" : "450px",
+                minWidth: isMobile ? undefined : "320px",
+                boxSizing: "border-box",
                 transitionDuration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "0ms" : "250ms",
               }}
               role="alert"
               aria-live={type === "error" || type === "warning" ? "assertive" : "polite"}
             >
               {icon}
-              <div className="flex-1 font-sans leading-relaxed break-words">
+              <div 
+                className="flex-1 min-w-0 font-sans text-left whitespace-normal break-words"
+                style={{ lineHeight: 1.55 }}
+              >
                 {displayMessage}
               </div>
               {type !== "loading" && (
