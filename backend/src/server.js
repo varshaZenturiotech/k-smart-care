@@ -21,20 +21,20 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 // Clean and format CORS origin(s) by removing any trailing slashes to prevent browser preflight mismatch
-// const getCorsOrigin = () => {
-//   const originStr = process.env.CLIENT_ORIGIN || "http://localhost:5173";
-//   if (originStr.includes(",")) {
-//     return originStr.split(",").map(o => o.trim().replace(/\/$/, ""));
-//   }
-//   return originStr.trim().replace(/\/$/, "");
-// };
 const getCorsOrigin = () => {
-  const originStr = "http://localhost:5173";
+  const originStr = process.env.CLIENT_ORIGIN || "http://localhost:5173";
   if (originStr.includes(",")) {
     return originStr.split(",").map(o => o.trim().replace(/\/$/, ""));
   }
   return originStr.trim().replace(/\/$/, "");
 };
+// const getCorsOrigin = () => {
+//   const originStr = "http://localhost:5173";
+//   if (originStr.includes(",")) {
+//     return originStr.split(",").map(o => o.trim().replace(/\/$/, ""));
+//   }
+//   return originStr.trim().replace(/\/$/, "");
+// };
 
 app.use(cors({ origin: getCorsOrigin() }));
 app.use(express.json());
