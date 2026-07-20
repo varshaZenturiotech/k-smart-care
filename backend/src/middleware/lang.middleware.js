@@ -5,10 +5,13 @@ import { translate } from "../utils/translate.js";
 export async function detectLanguage(req, res, next) {
   let lang = "en"; // default fallback
 
-  // 1. Check custom header (e.g., x-preferred-language)
+  // 1. Check query param or custom header (e.g., x-preferred-language, ?lang=en, ?language=english)
+  const queryLang = req.query?.lang || req.query?.language;
   const headerLang = req.headers["x-preferred-language"];
-  if (headerLang && (headerLang === "english" || headerLang === "malayalam" || headerLang === "en" || headerLang === "ml")) {
-    lang = (headerLang === "malayalam" || headerLang === "ml") ? "ml" : "en";
+  const langCandidate = queryLang || headerLang;
+
+  if (langCandidate && (langCandidate === "english" || langCandidate === "malayalam" || langCandidate === "en" || langCandidate === "ml")) {
+    lang = (langCandidate === "malayalam" || langCandidate === "ml") ? "ml" : "en";
   } else {
     // 2. Check token in Authorization header to resolve user language preference
     const authHeader = req.headers.authorization;

@@ -54,8 +54,34 @@ export default function AssistantWidget() {
     () => user?.preferredLanguage || "auto"
   );
   const [messages, setMessages] = useState([
-    { role: "assistant", text: "Hi, I am K-SMART CARE AI Assistant. You can upload local government circulars or government orders (PDF format), and ask general questions or specific circular-related queries." },
+    { role: "assistant", text: "Good day! How can I assist you with your work today?" },
   ]);
+
+  // Fetch dynamic, time-sensitive and language-aware welcome greeting
+  useEffect(() => {
+    let isMounted = true;
+    async function loadGreeting() {
+      try {
+        const { data } = await client.post("/assistant/welcome", {
+          language: preferredLanguage,
+        });
+        if (isMounted && data?.text) {
+          setMessages((prev) => {
+            if (prev.length <= 1 && (prev.length === 0 || prev[0].role === "assistant")) {
+              return [{ role: "assistant", text: data.text }];
+            }
+            return prev;
+          });
+        }
+      } catch (err) {
+        console.error("Failed to load dynamic welcome greeting:", err);
+      }
+    }
+    loadGreeting();
+    return () => {
+      isMounted = false;
+    };
+  }, [preferredLanguage]);
   const { 
     input, 
     setInput, 
@@ -103,9 +129,35 @@ export default function AssistantWidget() {
 
   const selectedCircular = circulars.find((c) => c._id === selectedId) || null;
 
-  function toggleSelect(circular) {
+  async function toggleSelect(circular) {
     if (circular.status !== "ingested") return;
-    setSelectedId((prev) => (prev === circular._id ? null : circular._id));
+    const isSelecting = selectedId !== circular._id;
+    setSelectedId(isSelecting ? circular._id : null);
+
+    if (isSelecting) {
+      let dynamicActions = [];
+      try {
+        const { data: sugRes } = await client.post("/assistant/suggestions", {
+          circularId: circular._id,
+          preferredLanguage,
+        });
+        if (sugRes?.suggestions || sugRes?.options) {
+          dynamicActions = sugRes.suggestions || sugRes.options;
+        }
+      } catch (err) {
+        console.error("Failed to fetch circular suggestions:", err);
+      }
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          text: `📄 Selected document: **${circular.title}**`,
+          suggestedActions: dynamicActions,
+          options: dynamicActions,
+        },
+      ]);
+    }
   }
 
   const detectLanguage = (circular) => {
@@ -170,12 +222,27 @@ export default function AssistantWidget() {
         if (circular.status === "ingested") {
           clearInterval(interval);
           setSelectedId(circularId);
+
+          let dynamicActions = [];
+          try {
+            const { data: sugRes } = await client.post("/assistant/suggestions", {
+              circularId,
+              preferredLanguage,
+            });
+            if (sugRes?.suggestions || sugRes?.options) {
+              dynamicActions = sugRes.suggestions || sugRes.options;
+            }
+          } catch (sugErr) {
+            console.error("Failed to fetch suggestions for ingested circular:", sugErr);
+          }
+
           setMessages((prev) => [
             ...prev,
             {
               role: "assistant",
-              text: `✅ Government Circular processed successfully.\n\nI can now help you with:\n• Summarize this circular\n• Explain the key objectives\n• Important deadlines\n• Department responsibilities\n• Translate to Malayalam\n• Translate to English\n• Draft implementation plan`,
-              showCircularSuggestions: true,
+              text: `✅ Government Circular processed successfully.\n\nHere are some relevant actions you can take:`,
+              suggestedActions: dynamicActions,
+              options: dynamicActions,
             },
           ]);
           queryClient.invalidateQueries({ queryKey: ["circulars"] });
@@ -303,26 +370,34 @@ export default function AssistantWidget() {
                          qLower.includes("not from circulars") || 
                          qLower.includes("ignore uploaded documents");
 
+      const chatHistory = messages
+        .slice(-10)
+        .map((m) => ({ role: m.role, text: m.text || "" }));
+
       const { data } = await client.post("/assistant/ask", {
         question,
         circularId: selectedId || undefined,
         preferredLanguage,
         allowGeneralKnowledge: explicitGk,
+        history: chatHistory,
       });
       setMessages((prev) => [
         ...prev,
         { 
           role: "assistant", 
           text: data.answer, 
+          type: data.type,
           citations: data.citations,
           mode: data.mode,
           message: data.message,
           suggestions: data.suggestions,
+          options: data.options,
           disclaimer: data.disclaimer,
           usedRAG: data.usedRAG,
           usedGeneralKnowledge: data.usedGeneralKnowledge,
           sources: data.sources,
-          confidence: data.confidence
+          confidence: data.confidence,
+          structuredData: data.structuredData,
         },
       ]);
     } catch (err) {
@@ -484,17 +559,21 @@ export default function AssistantWidget() {
 
       {/* ── Active Focus Chip Alert ── */}
       {selectedCircular && (
-        <div className="bg-teal-tint/30 border border-teal/20 rounded-xl p-3 flex items-center gap-2.5 font-sans">
-          <FileCheck size={16} className="text-teal shrink-0" />
-          <div className="text-xs text-teal-dark">
-            <span className="font-semibold">Focused Query Mode:</span> AI search is focused strictly on <span className="font-semibold truncate max-w-[200px] inline-block align-middle">{selectedCircular.title}</span>.
+        <div className="bg-teal-tint/30 border border-teal/20 rounded-xl p-3 flex flex-col gap-2 font-sans animate-in fade-in duration-200">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs text-teal-dark">
+              <FileCheck size={16} className="text-teal shrink-0" />
+              <span>
+                <span className="font-semibold">Focused Query Mode:</span> AI search is focused strictly on <span className="font-semibold truncate max-w-[200px] inline-block align-middle">{selectedCircular.title}</span>.
+              </span>
+            </div>
+            <button 
+              onClick={() => setSelectedId(null)}
+              className="text-[10px] font-bold text-teal hover:underline hover:text-teal-dark shrink-0 cursor-pointer"
+            >
+              Clear
+            </button>
           </div>
-          <button 
-            onClick={() => setSelectedId(null)}
-            className="ml-auto text-[10px] font-bold text-teal hover:underline hover:text-teal-dark"
-          >
-            Clear
-          </button>
         </div>
       )}
 
@@ -577,6 +656,61 @@ export default function AssistantWidget() {
 
           const isUser = m.role === "user";
           const isNoDoc = !isUser && m.mode === "no_document_found";
+          const isCrisis = !isUser && m.type === "crisis_support";
+          const isBreathing = !isUser && m.type === "breathing_exercise";
+
+          if (isCrisis) {
+            return (
+              <div key={i} className="flex flex-col items-start space-y-1 w-full animate-in fade-in duration-200">
+                <div className="flex flex-col gap-3 p-4 bg-rose-50 border border-rose-200 rounded-2xl max-w-[90%] font-sans shadow-sm">
+                  <div className="flex items-center gap-1.5 text-[11px] font-bold text-rose-700 bg-rose-100 border border-rose-300 px-2.5 py-0.5 rounded-full w-fit">
+                    <AlertCircle size={14} className="text-rose-600 shrink-0" />
+                    Mental Health & Emotional Support
+                  </div>
+                  <p className="text-sm font-medium text-rose-900 leading-relaxed whitespace-pre-line">
+                    {m.text}
+                  </p>
+                  {m.structuredData?.helplines && (
+                    <div className="space-y-1.5 pt-2 border-t border-rose-200/60">
+                      <p className="text-[10px] font-bold text-rose-700 uppercase tracking-wider">Direct Helplines</p>
+                      <div className="grid grid-cols-1 gap-1.5">
+                        {m.structuredData.helplines.map((h, idx) => (
+                          <div key={idx} className="bg-white/80 border border-rose-200 rounded-xl p-2 flex items-center justify-between">
+                            <div>
+                              <p className="text-xs font-bold text-rose-900">{h.name}</p>
+                              <p className="text-[10px] text-rose-600">{h.desc}</p>
+                            </div>
+                            <a 
+                              href={`tel:${h.number.replace(/[^0-9]/g, "")}`}
+                              className="bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs px-2.5 py-1 rounded-lg transition"
+                            >
+                              Call {h.number}
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          }
+
+          if (isBreathing) {
+            return (
+              <div key={i} className="flex flex-col items-start space-y-1 w-full animate-in fade-in duration-200">
+                <div className="flex flex-col gap-3 p-4 bg-teal-tint/30 border border-teal/30 rounded-2xl max-w-[85%] font-sans shadow-sm">
+                  <div className="flex items-center gap-1.5 text-[10px] font-bold text-teal-dark bg-teal-tint border border-teal/20 px-2.5 py-0.5 rounded-full w-fit">
+                    <Sparkles size={12} className="text-teal shrink-0" />
+                    🫁 Breathing & Grounding Exercise
+                  </div>
+                  <div className="text-xs text-ink space-y-2 leading-relaxed whitespace-pre-line">
+                    {formatMessage(m.text)}
+                  </div>
+                </div>
+              </div>
+            );
+          }
 
           if (isNoDoc) {
             return (
@@ -621,25 +755,10 @@ export default function AssistantWidget() {
             );
           }
 
+          const lastAssistantIdx = messages.reduce((acc, msg, idx) => (msg.role === "assistant" ? idx : acc), -1);
+
           return (
             <div key={i} className={`flex flex-col ${isUser ? "items-end" : "items-start"} space-y-1.5`}>
-              {!isUser && m.mode === "official_circular" && (
-                <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full w-fit mb-0.5 font-sans animate-in fade-in duration-200">
-                  <span>✓</span> Official Government Circular
-                </div>
-              )}
-
-              {!isUser && m.mode === "general_knowledge" && (
-                <div className="flex flex-col gap-1 w-fit mb-0.5 font-sans animate-in fade-in duration-200">
-                  <div className="flex items-center gap-1 text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full w-fit">
-                    <span>⚠</span> General AI Knowledge
-                  </div>
-                  <span className="text-[10px] text-amber-600/80 font-medium ml-1">
-                    Not sourced from official government documents.
-                  </span>
-                </div>
-              )}
-
               <div
                 className={`px-4 py-3 rounded-2xl text-sm leading-relaxed max-w-[85%] shadow-sm
                   ${isUser 
@@ -648,55 +767,69 @@ export default function AssistantWidget() {
                   }`}
               >
                 {isUser ? m.text : formatMessage(m.text)}
+
+                {/* ── Contextual Suggested Actions rendered inside assistant message card ── */}
+                {!isUser && i === lastAssistantIdx && (() => {
+                  const actionsToRender = (m.suggestedActions?.length > 0 || m.options?.length > 0)
+                    ? (m.suggestedActions || m.options)
+                    : (selectedId && aiSuggestions?.length > 0 ? aiSuggestions : []);
+
+                  if (!actionsToRender || actionsToRender.length === 0) return null;
+
+                  const isDocRelated = Boolean(
+                    selectedId ||
+                    m.type === "document_answer" ||
+                    m.mode === "official_circular" ||
+                    (m.citations && m.citations.length > 0) ||
+                    (m.sources && m.sources.length > 0)
+                  );
+
+                  return (
+                    <div className="mt-3 pt-3 border-t border-slate-100 font-sans space-y-2 animate-in fade-in duration-200">
+                      <span className="text-[11px] font-semibold text-teal-dark/80 flex items-center gap-1">
+                        {isDocRelated ? "💡 Suggested questions for this document:" : "What would you like to do next?"}
+                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {actionsToRender.map((action, idx) => {
+                          const label = typeof action === "string" ? action : (action.label || action.text || "Option");
+                          const actionVal = typeof action === "string" ? action : (action.intent || action.label || action.id);
+                          return (
+                            <button
+                              key={action.id || actionVal || idx}
+                              onClick={() => !loading && askQuestion(actionVal || label)}
+                              disabled={loading}
+                              className="bg-white hover:bg-teal-50 border border-teal/30 hover:border-teal text-teal-dark font-medium text-xs px-3 py-1.5 rounded-xl shadow-xs transition-all duration-150 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 cursor-pointer"
+                            >
+                              <span>{label}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })()}
               </div>
               
-              {!isUser && m.mode === "general_knowledge" && m.disclaimer && (
-                <div className="bg-amber-50/45 border border-amber-200/40 rounded-xl p-3 max-w-[85%] space-y-1 font-sans text-[11px] text-amber-800 leading-normal animate-in fade-in duration-200">
-                  <span className="font-semibold">Disclaimer:</span> {m.disclaimer}
-                </div>
-              )}
-
-              {!isUser && m.citations && m.citations.length > 0 && (
-                <div className="bg-ochre-tint border border-ochre/15 rounded-xl p-3 max-w-[85%] space-y-1 animate-in fade-in duration-200">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-ochre font-semibold flex items-center gap-1">
-                    <Info size={10} />
-                    Verified Citation Source
+              {!isUser && (m.citations?.length > 0 || m.sources?.length > 0) && (
+                <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3 max-w-[85%] space-y-1 font-sans text-[11px] text-slate-700 animate-in fade-in duration-200">
+                  <span className="font-semibold flex items-center gap-1 text-slate-800">
+                    📄 Sources
                   </span>
-                  {m.citations.map((c, ci) => (
-                    <div key={ci} className="text-[11px] text-ink leading-normal font-sans">
-                      📄 <span className="font-semibold">{c.title}</span>
-                      {c.page ? ` · Page ${c.page}` : ""}
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Suggestions chips immediately below the success message */}
-              {m.showCircularSuggestions && aiSuggestions.length > 0 && (
-                <div className="flex flex-wrap gap-1.5 mt-2 max-w-[85%]">
-                  {aiSuggestions.map((suggestion, idx) => {
-                    let displayText = "";
-                    if (typeof suggestion === "string") {
-                      displayText = suggestion;
-                    } else if (suggestion && typeof suggestion === "object") {
-                      if (typeof suggestion.text === "string") displayText = suggestion.text;
-                      else if (typeof suggestion.label === "string") displayText = suggestion.label;
-                      else if (typeof suggestion.question === "string") displayText = suggestion.question;
-                      else displayText = JSON.stringify(suggestion);
-                    }
-                    if (!displayText) return null;
-                    return (
-                      <button
-                        key={idx}
-                        onClick={() => !loading && askQuestion(displayText)}
-                        disabled={loading}
-                        className="bg-sage-tint/40 hover:bg-sage-tint border border-teal/10 hover:border-teal/30 text-[11px] text-teal-dark px-2.5 py-1 rounded-full font-sans transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1 active:scale-95"
-                      >
-                        <MessageCircle size={11} className="text-teal opacity-60 shrink-0" />
-                        {displayText}
-                      </button>
-                    );
-                  })}
+                  {m.citations && m.citations.length > 0 ? (
+                    m.citations.map((c, ci) => (
+                      <div key={ci} className="text-slate-600 leading-normal">
+                        • <span className="font-medium text-slate-800">{c.title || c.circularNumber || "Official Document"}</span>
+                        {c.circularNumber ? ` (${c.circularNumber})` : ""}
+                        {c.page ? ` · Page ${c.page}` : ""}
+                      </div>
+                    ))
+                  ) : (
+                    m.sources.map((s, si) => (
+                      <div key={si} className="text-slate-600 font-medium">
+                        • {s}
+                      </div>
+                    ))
+                  )}
                 </div>
               )}
             </div>
@@ -707,53 +840,6 @@ export default function AssistantWidget() {
           <div className="flex items-center gap-2 bg-white border border-border px-4 py-3 rounded-2xl rounded-tl-none text-xs text-ink-soft w-fit">
             <Loader2 size={14} className="animate-spin text-teal" />
             <span>Consulting intelligence pipeline...</span>
-          </div>
-        )}
-
-        {/* ── AI-Generated Suggestions — lives inside the same scroll region, right after the conversation ── */}
-        {(suggestionsLoading || aiSuggestions.length > 0) && (
-          <div className="space-y-2 font-sans pt-3 mt-1 ">
-            <div className="flex items-center gap-1.5 text-[10px] text-teal font-mono uppercase tracking-wider font-semibold">
-              <Sparkles size={12} className="text-teal" />
-              {selectedCircular ? "Suggested for this Circular" : "Suggested Prompts"}
-            </div>
-
-            {suggestionsLoading ? (
-              <div className="flex flex-wrap gap-1.5">
-                {[1, 2, 3].map((n) => (
-                  <div
-                    key={n}
-                    className="h-7 w-28 rounded-full bg-sage-tint/60 animate-pulse"
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="flex flex-wrap gap-1.5">
-                {aiSuggestions.map((suggestion, idx) => {
-                  let displayText = "";
-                  if (typeof suggestion === "string") {
-                    displayText = suggestion;
-                  } else if (suggestion && typeof suggestion === "object") {
-                    if (typeof suggestion.text === "string") displayText = suggestion.text;
-                    else if (typeof suggestion.label === "string") displayText = suggestion.label;
-                    else if (typeof suggestion.question === "string") displayText = suggestion.question;
-                    else displayText = JSON.stringify(suggestion);
-                  }
-                  if (!displayText) return null;
-                  return (
-                    <button
-                      key={idx}
-                      onClick={() => !loading && askQuestion(displayText)}
-                      disabled={loading}
-                      className="bg-sage-tint/40 hover:bg-sage-tint border border-teal/10 hover:border-teal/30 text-[11px] text-teal-dark px-2.5 py-1.5 rounded-full font-sans transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1 active:scale-95"
-                    >
-                      <MessageCircle size={11} className="text-teal opacity-60 shrink-0" />
-                      {displayText}
-                    </button>
-                  );
-                })}
-              </div>
-            )}
           </div>
         )}
       </div>

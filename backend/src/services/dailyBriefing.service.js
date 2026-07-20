@@ -130,7 +130,7 @@ export async function generateDailyBriefing(data, forceRefresh = false) {
       if (res && Array.isArray(res.smartPriorities)) {
         res.smartPriorities = res.smartPriorities.map(item => {
           if (typeof item !== "string") return item;
-          return item.replace(/^[①②③④⑤⑥⑦⑧⑨⑩\d\.\-\*\s•]+/, "").trim();
+          return item.replace(/^[①②③④⑤⑥⑦⑧⑨⑩\d\.\-\*\s•\[]+/, "").replace(/\]+$/, "").trim();
         });
       }
       return res;
@@ -160,7 +160,11 @@ async function generateDailyBriefingInternal(data, forceRefresh, currentDate, re
       });
 
       if (cached && cached.inputFingerprint === currentFingerprint) {
-        return cached.briefing;
+        const sanitized = sanitizeBriefingLanguage(cached.briefing, resolvedLanguage);
+        if (sanitized.motivation !== cached.briefing?.motivation) {
+          DailyBriefing.updateOne({ _id: cached._id }, { briefing: sanitized }).catch(() => {});
+        }
+        return sanitized;
       }
     } catch (cacheErr) {
       console.error("[Daily Briefing Cache Error]:", cacheErr);
@@ -170,7 +174,7 @@ async function generateDailyBriefingInternal(data, forceRefresh, currentDate, re
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey || apiKey === "your_groq_api_key_here") {
     console.warn("GROQ_API_KEY is not configured. Returning local rule-based fallback briefing.");
-    return getLocalFallbackBriefing(data, resolvedLanguage);
+    return sanitizeBriefingLanguage(getLocalFallbackBriefing(data, resolvedLanguage), resolvedLanguage);
   }
 
   try {
@@ -216,7 +220,7 @@ IMPORTANT GUIDELINES:
    - It MUST start with the English time-based greeting prefix (exactly "Good Morning" or "Good Afternoon" or "Good Evening" or "Good Night" depending on the Current Local Hour), followed by a comma, the employee's English name ("{name}") exactly, and the waving emoji: e.g. "Good Morning, {name} 👋" or "Good Night, {name} 👋".
    - You MUST NOT translate this greeting prefix to Malayalam. It must remain in English.
    - Any text following the emoji can be in the target language: {resolvedLanguage}.
-3. For all other fields ("statusMessage", "briefing", "recommendation", "priority", "smartPriorities", "motivation"), you MUST write them in the target language ({resolvedLanguage}). If the target language is Malayalam, follow the Malayalam Response Style Rules: write complete sentences in Malayalam script, but keep the specific English workplace, government, and technology terms (e.g. Tasks, Meetings, Circular, Deadline, Wellness Score, etc.) in English script/characters. Do not translate them to Malayalam.
+3. For all other fields ("statusMessage", "briefing", "recommendation", "priority", "smartPriorities", "motivation"), you MUST write them strictly in the target language ({resolvedLanguage}). If the target language is English, write ALL fields in English. If the target language is Malayalam, follow the Malayalam Response Style Rules: write complete sentences in Malayalam script, but keep the specific English workplace, government, and technology terms in English script/characters.
 4. Return ONLY a valid JSON object starting with '{{' and ending with '}}'.
 
 Generate a tailored response matching the requested JSON structure. Keep sentences elegant, calm, and tailored to Kerala public service context.
@@ -278,26 +282,58 @@ Generate a tailored response matching the requested JSON structure. Keep sentenc
       parsed = safeParseLLMJson(retryRaw);
 
       if (!parsed.success) {
-        return getLocalFallbackBriefing(data, resolvedLanguage);
+        return sanitizeBriefingLanguage(getLocalFallbackBriefing(data, resolvedLanguage), resolvedLanguage);
       }
     }
+
+    const sanitizedBriefing = sanitizeBriefingLanguage(parsed.data, resolvedLanguage);
 
     // Cache generated briefing to MongoDB
     try {
       await DailyBriefing.findOneAndUpdate(
         { employeeId, dateString: currentDate, language: resolvedLanguage },
-        { inputFingerprint: currentFingerprint, briefing: parsed.data },
+        { inputFingerprint: currentFingerprint, briefing: sanitizedBriefing },
         { upsert: true, new: true }
       );
     } catch (cacheSaveErr) {
       console.error("[Daily Briefing Cache Save Error]:", cacheSaveErr);
     }
 
-    return parsed.data;
+    return sanitizedBriefing;
   } catch (err) {
     console.error("Failed to generate AI Daily Briefing, falling back:", err);
-    return getLocalFallbackBriefing(data, resolvedLanguage);
+    return sanitizeBriefingLanguage(getLocalFallbackBriefing(data, resolvedLanguage), resolvedLanguage);
   }
+}
+
+/**
+ * Ensures that all text fields (specifically motivation) strictly match the requested target language.
+ */
+function sanitizeBriefingLanguage(briefing, resolvedLanguage) {
+  if (!briefing || typeof briefing !== "object") return briefing;
+
+  const isMl = resolvedLanguage === "malayalam";
+  const hasMalayalamScript = (str) => typeof str === "string" && /[\u0D00-\u0D7F]/.test(str);
+
+  const motivationVal = briefing.motivation || briefing["പ്രചോദനം"] || briefing["മോട്ടിവേഷൻ"];
+  let motivation = typeof motivationVal === "string" ? motivationVal : "";
+
+  if (!isMl) {
+    // Target is English: Replace if motivation contains Malayalam or is empty
+    if (hasMalayalamScript(motivation) || !motivation.trim()) {
+      motivation = "Every completed task helps deliver better public services to the people of Kerala.";
+    }
+  } else {
+    // Target is Malayalam: Replace if motivation lacks Malayalam script or is empty
+    if (!hasMalayalamScript(motivation) || !motivation.trim()) {
+      motivation = "ഓരോ ഫയൽ തീർപ്പാക്കലും കേരള ജനതയ്ക്ക് മെച്ചപ്പെട്ട സേവനം നൽകാൻ സഹായിക്കുന്നു.";
+    }
+  }
+
+  return {
+    ...briefing,
+    motivation
+  };
 }
 
 /**

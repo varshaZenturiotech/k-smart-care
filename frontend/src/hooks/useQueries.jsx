@@ -146,7 +146,7 @@ export function useSuggestedPrompts(circularId) {
   const { user } = useAuth();
   return useQuery({
     queryKey: ["suggestedPrompts", circularId, language],
-    queryFn: () => client.post("/assistant/suggestions", { circularId: circularId || null }).then((r) => r.data.suggestions),
+    queryFn: () => client.post("/assistant/suggestions", { circularId: circularId || null }).then((r) => r.data?.suggestions || r.data?.options || []),
     enabled: !!user,
   });
 }

@@ -52,13 +52,13 @@ function renderPriority(priorityStr) {
         {lines.map((line, idx) => (
           <li key={idx} className="flex items-start gap-1.5">
             <span className="text-[10px] text-ochre shrink-0 mt-0.5">⚡</span>
-            <span className="text-ink-soft leading-normal">{line.replace(/^-\s*|^⚡\s*/, "")}</span>
+            <span className="text-ink-soft leading-normal">{line.replace(/^-\s*|^⚡\s*|^\[|\]$/g, "").trim()}</span>
           </li>
         ))}
       </ul>
     );
   }
-  return <p className="text-ink-soft leading-normal font-medium">{priorityStr}</p>;
+  return <p className="text-ink-soft leading-normal font-medium">{priorityStr.replace(/^\[+|\]+$/g, "").trim()}</p>;
 }
 
 // Dynamically switches AI recommendation prefixes based on the language toggle
@@ -266,30 +266,30 @@ export default function GreetingBanner({
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-4 items-stretch w-full animate-slide-up-fade">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 w-full animate-slide-up-fade">
 
-        {/* Greeting panel — solid dark overlay, on the photo */}
+        {/* Greeting panel — no card, text sits directly on the photo */}
         <div
-          className="w-full lg:w-[68%] rounded-2xl px-6 py-5 md:px-8 md:py-6 flex flex-col justify-center gap-2.5"
-          style={{ background: "rgba(15,23,42,0.55)" }}
+          className="w-full lg:w-[40%] xl:w-[38%] px-1 lg:px-0 flex flex-col justify-center gap-2.5"
+          style={{ textShadow: "0 2px 14px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.95)" }}
         >
           {/* Metadata & clock row */}
-          <div className="hidden sm:flex flex-wrap items-center justify-between gap-2 text-[10px] font-mono text-white/70 uppercase tracking-wider pb-2.5 border-b border-white/15">
+          <div className="hidden sm:flex flex-wrap items-center justify-between gap-2 text-[10px] font-mono text-white/80 uppercase tracking-wider pb-2.5">
             <div className="flex flex-wrap items-center gap-2">
               <span className="flex items-center gap-1 text-white text-xs">
-                <Shield size={11} className="text-white/70" />
+                <Shield size={11} className="text-white/80 drop-shadow-md" />
                 {t("departments." + user?.department, user?.department || t("greeting.lsgDept", "LSG Department"))}
               </span>
-              <span className="text-white/40">•</span>
+              <span className="text-white/50">•</span>
               <span className="flex items-center gap-1 text-white text-xs">
-                <UserCheck size={11} className="text-white/70" />
+                <UserCheck size={11} className="text-white/80 drop-shadow-md" />
                 {t("designations." + user?.designation, user?.designation)}
               </span>
             </div>
-            <div className="flex items-center gap-2 text-white/80">
+            <div className="flex items-center gap-2 text-white/90">
               <span className="font-semibold text-white text-xs">{clockWeekday},</span>
               <span className="text-xs">{clockDate}</span>
-              <span className="text-white/40">•</span>
+              <span className="text-white/50">•</span>
               <span className="font-semibold text-white tabular-nums text-xs">{clockTime}</span>
             </div>
           </div>
@@ -300,28 +300,28 @@ export default function GreetingBanner({
           </h1>
 
           {/* AI Daily Briefing — condensed to one line */}
-          <div className="flex items-start gap-1.5 text-xs md:text-sm text-white/85 leading-relaxed pt-1">
-            <Sparkles size={13} className="text-white/80 shrink-0 mt-0.5" />
+          <div className="flex items-start gap-1.5 text-xs md:text-sm text-white/95 leading-relaxed pt-1">
+            <Sparkles size={13} className="text-white/90 drop-shadow-md shrink-0 mt-0.5" />
             <span>
               {briefing?.briefing || t("greeting.analyzingBriefing", "Analyzing today's schedule and preparing your custom briefing...")}
             </span>
           </div>
         </div>
 
-        {/* Wellness quick card — solid dark overlay, compact */}
+        {/* Wellness quick card — no card background, controls float directly on the photo */}
         <div
-          className="w-full lg:w-[32%] rounded-2xl px-5 py-5 flex flex-col justify-center gap-3"
-          style={{ background: "rgba(15,23,42,0.55)" }}
+          className="w-full lg:w-[30%] xl:w-[28%] px-1 lg:px-0 flex flex-col justify-center gap-3"
+          style={{ textShadow: "0 2px 14px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.95)" }}
         >
           <div className="flex items-center justify-between">
             <span className="flex items-center gap-1.5 font-display font-semibold text-sm text-white">
-              <Heart size={15} className="text-white" />
+              <Heart size={15} className="text-white drop-shadow-md" />
               {t("greeting.wellnessStatus", "Today's Wellness")}
             </span>
             {isCompleted && (
               <button
                 onClick={() => setShowDetails(true)}
-                className="text-[12px] font-semibold text-white/70 hover:text-white flex items-center gap-0.5 cursor-pointer"
+                className="text-[12px] font-semibold text-white/80 hover:text-white flex items-center gap-0.5 cursor-pointer"
               >
                 {t("greeting.viewDetails", "Details")} 
               </button>
@@ -330,7 +330,7 @@ export default function GreetingBanner({
 
           {!isCompleted ? (
             <div className="flex flex-col gap-2 animate-in fade-in duration-300">
-              <span className="text-[11px] font-sans text-white/80 leading-normal font-medium block">
+              <span className="text-[11px] font-sans text-white/90 leading-normal font-medium block">
                 {unanswered.title}
               </span>
               
@@ -341,10 +341,10 @@ export default function GreetingBanner({
                       key={m.key}
                       onClick={() => handleSelect("mood", m.key)}
                       title={t("wellness." + m.key, m.label)}
-                      className="flex flex-col items-center justify-center p-1.5 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white transition active:scale-95 cursor-pointer"
+                      className="flex flex-col items-center justify-center p-1.5 rounded-xl border border-white/25 hover:border-teal/50 bg-white/15 hover:bg-white/25 text-white shadow-lg backdrop-blur-sm transition active:scale-95 cursor-pointer"
                     >
                       <span className="text-xl md:text-2xl">{m.emoji}</span>
-                      <span className="text-[9px] text-white/70 mt-1 truncate max-w-full">{t("wellness." + m.key, m.label)}</span>
+                      <span className="text-[9px] text-white/80 mt-1 truncate max-w-full">{t("wellness." + m.key, m.label)}</span>
                     </button>
                   ))}
                 </div>
@@ -356,7 +356,7 @@ export default function GreetingBanner({
                     <button
                       key={opt}
                       onClick={() => handleSelect("sleepHours", opt)}
-                      className="py-2.5 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white text-xs font-semibold transition active:scale-95 cursor-pointer text-center"
+                      className="py-2.5 px-1 rounded-xl border border-white/25 hover:border-teal/50 bg-white/15 hover:bg-white/25 text-white text-xs font-semibold shadow-lg backdrop-blur-sm transition active:scale-95 cursor-pointer text-center"
                     >
                       {opt} {t("greeting.hoursShort", "hrs")}
                     </button>
@@ -370,7 +370,7 @@ export default function GreetingBanner({
                     <button
                       key={opt}
                       onClick={() => handleSelect("energy", opt)}
-                      className="py-2 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white font-semibold transition active:scale-95 cursor-pointer text-center animate-in fade-in"
+                      className="py-2 px-1 rounded-xl border border-white/25 hover:border-teal/50 bg-white/15 hover:bg-white/25 text-white font-semibold shadow-lg backdrop-blur-sm transition active:scale-95 cursor-pointer text-center animate-in fade-in"
                     >
                       {t("wellness." + opt.toLowerCase().replace(" ", ""), opt)}
                     </button>
@@ -384,7 +384,7 @@ export default function GreetingBanner({
                     <button
                       key={opt}
                       onClick={() => handleSelect("stress", opt)}
-                      className="py-2 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white font-semibold transition active:scale-95 cursor-pointer text-center animate-in fade-in"
+                      className="py-2 px-1 rounded-xl border border-white/25 hover:border-teal/50 bg-white/15 hover:bg-white/25 text-white font-semibold shadow-lg backdrop-blur-sm transition active:scale-95 cursor-pointer text-center animate-in fade-in"
                     >
                       {t("wellness." + opt.toLowerCase().replace(" ", ""), opt)}
                     </button>
@@ -398,7 +398,7 @@ export default function GreetingBanner({
                     <button
                       key={opt}
                       onClick={() => handleSelect("workload", opt)}
-                      className="py-2 px-1 rounded-xl border border-white/10 hover:border-teal/40 bg-white/5 hover:bg-white/15 text-white font-semibold transition active:scale-95 cursor-pointer text-center animate-in fade-in"
+                      className="py-2 px-1 rounded-xl border border-white/25 hover:border-teal/50 bg-white/15 hover:bg-white/25 text-white font-semibold shadow-lg backdrop-blur-sm transition active:scale-95 cursor-pointer text-center animate-in fade-in"
                     >
                       {t("wellness." + opt.toLowerCase().replace(" ", ""), opt)}
                     </button>
@@ -412,12 +412,12 @@ export default function GreetingBanner({
                     value={tempNote}
                     onChange={(e) => setTempNote(e.target.value)}
                     placeholder={t("wellness.notePlaceholder", "Share your thoughts...")}
-                    className="w-full p-2 rounded-xl border border-white/10 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-teal focus:border-teal text-xs font-sans resize-none"
+                    className="w-full p-2 rounded-xl border border-white/25 bg-white/15 text-white placeholder:text-white/50 shadow-lg backdrop-blur-sm focus:outline-none focus:ring-1 focus:ring-teal focus:border-teal text-xs font-sans resize-none"
                     rows={2}
                   />
                   <button
                     onClick={() => handleSelect("note", tempNote)}
-                    className="w-full py-1.5 bg-teal hover:bg-teal-dark text-white rounded-xl font-semibold transition text-xs active:scale-95 cursor-pointer animate-in fade-in"
+                    className="w-full py-1.5 bg-teal hover:bg-teal-dark text-white rounded-xl font-semibold shadow-lg transition text-xs active:scale-95 cursor-pointer animate-in fade-in"
                   >
                     {t("wellness.nextStep", "Next Step")}
                   </button>
@@ -432,17 +432,17 @@ export default function GreetingBanner({
               {focusScore !== undefined && focusScore !== null && (
                 <MiniGauge value={focusScore} label={t("greeting.focusCapacityShort", "Focus")} />
               )}
-              <div className="flex-1 text-xs text-white/85 space-y-1">
+              <div className="flex-1 text-xs text-white/95 space-y-1">
                 {data?.mood && (
                   <div className="flex gap-5">
-                    <span className="text-white/60 ">{t("greeting.mood", "Mood")}:</span>
+                    <span className="text-white/70 ">{t("greeting.mood", "Mood")}:</span>
                     <span className="font-semibold">{getMoodEmoji(data.mood, t)}</span>
                   </div>
                 )}
                 {data?.burnoutRisk && (
                   <div className="flex gap-5 items-center">
-                    <span className="text-white/60">{t("greeting.burnout", "Burnout")}</span>
-                    <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full border ${getBurnoutColor(data.burnoutRisk)}`}>
+                    <span className="text-white/70">{t("greeting.burnout", "Burnout")}</span>
+                    <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full border shadow-md ${getBurnoutColor(data.burnoutRisk)}`}>
                       {t("wellness." + data.burnoutRisk?.toLowerCase()?.replace(" ", ""), data.burnoutRisk)}
                     </span>
                   </div>
@@ -613,10 +613,10 @@ function MiniGauge({ value, label }) {
   const strokeDashoffset = circumference - (value / 100) * circumference;
 
   return (
-    <div className="flex flex-col items-center shrink-0">
+    <div className="flex flex-col items-center shrink-0 drop-shadow-lg">
       <div className="relative w-12 h-12 flex items-center justify-center">
         <svg className="w-full h-full transform -rotate-90">
-          <circle cx="24" cy="24" r={radius} className="text-white/20 stroke-current" strokeWidth="4" fill="transparent" />
+          <circle cx="24" cy="24" r={radius} className="text-white/30 stroke-current" strokeWidth="4" fill="transparent" />
           <circle
             cx="24" cy="24" r={radius}
             className="text-teal-500 stroke-current transition-all duration-500 ease-out"
@@ -638,35 +638,45 @@ function MiniGauge({ value, label }) {
    by DashboardPage just under <Hero>, not inside it.
    ============================================================ */
 
-export function TodayOverviewCards({ briefing, newCircularsCount, pendingFilesCount, todayMeetingsCount }) {
+export function TodayOverviewCards({
+  briefing,
+  newCircularsCount,
+  pendingTasksCount = 0,
+  totalTasksCount = 0,
+  pendingFilesCount = 0,
+  todayMeetingsCount = 0
+}) {
   const { t } = useLanguage();
 
+  const effectivePending = pendingTasksCount || pendingFilesCount || 0;
   const hasPriority = (briefing?.smartPriorities && briefing.smartPriorities.length > 0) || briefing?.priority;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
       {/* Today's Work Snapshot */}
-      <div className="bg-white border border-border rounded-2xl shadow-custom p-4">
+      <div className="bg-white/55 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg p-4 transition-all hover:bg-white/65">
         <span className="text-[15px] font-mono text-ink-soft uppercase tracking-wider block font-semibold mb-3">
           {t("greeting.snapshot", "Today's Work Snapshot")}
         </span>
         <div className="grid grid-cols-3 gap-2.5">
-          <div className="p-2.5 bg-paper/40 border border-border/60 rounded-xl flex items-center gap-2">
-            <span className="text-base">📂</span>
+          <div className="p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-sm">
+            <span className="text-base">📋</span>
             <div>
-              <span className="text-xs font-mono text-ink-soft uppercase block">{t("greeting.pendingFiles", "Files")}</span>
-              <span className="text-xs font-semibold text-ink">{pendingFilesCount}</span>
+              <span className="text-xs font-mono text-ink-soft uppercase block">{t("greeting.pendingTasks", "Pending Tasks")}</span>
+              <span className="text-xs font-semibold text-ink">
+                {effectivePending}{totalTasksCount > 0 ? ` / ${totalTasksCount}` : ""}
+              </span>
             </div>
           </div>
-          <div className="p-2.5 bg-paper/40 border border-border/60 rounded-xl flex items-center gap-2">
+          <div className="p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-sm">
             <span className="text-base">📅</span>
             <div>
               <span className="text-xs font-mono text-ink-soft uppercase block">{t("greeting.meetings", "Meetings")}</span>
               <span className="text-xs font-semibold text-ink">{todayMeetingsCount}</span>
             </div>
           </div>
-          <div className="p-2.5 bg-paper/40 border border-border/60 rounded-xl flex items-center gap-2">
+          <div className="p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-sm">
             <span className="text-base">📢</span>
             <div>
               <span className="text-xs font-mono text-ink-soft uppercase block">{t("greeting.newCirculars", "Circulars")}</span>
@@ -678,18 +688,21 @@ export function TodayOverviewCards({ briefing, newCircularsCount, pendingFilesCo
 
       {/* Priority Ranking */}
       {hasPriority && (
-        <div className="bg-white border border-border rounded-2xl shadow-custom p-4">
+        <div className="bg-white/55 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg p-4 transition-all hover:bg-white/65">
           <span className="text-[15px] font-mono text-ink-soft uppercase tracking-wider block font-semibold mb-3 flex items-center gap-1.5">
             <span className="text-sm leading-none">⚡</span>
             {t("greeting.priorityRanking", "Today's Priority Ranking")}
           </span>
           {briefing?.smartPriorities && briefing.smartPriorities.length > 0 ? (
             <ol className="list-decimal pl-4 space-y-1.5 font-medium text-ink-soft text-xs">
-              {briefing.smartPriorities.map((item, idx) => (
-                <li key={idx} className="pl-1">
-                  <span className="text-ink font-semibold leading-normal">{item}</span>
-                </li>
-              ))}
+              {briefing.smartPriorities.map((item, idx) => {
+                const cleanItem = typeof item === "string" ? item.replace(/^\[+|\]+$/g, "").trim() : item;
+                return (
+                  <li key={idx} className="pl-1">
+                    <span className="text-ink font-semibold leading-normal">{cleanItem}</span>
+                  </li>
+                );
+              })}
             </ol>
           ) : renderPriority(briefing.priority)}
         </div>
@@ -697,7 +710,7 @@ export function TodayOverviewCards({ briefing, newCircularsCount, pendingFilesCo
 
       {/* Motivation */}
       {briefing?.motivation && (
-        <div className="bg-white border border-border rounded-2xl shadow-custom p-4">
+        <div className="bg-white/55 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg p-4 transition-all hover:bg-white/65">
           <span className="text-[15px] font-mono text-ink-soft uppercase tracking-wider block font-semibold mb-3 flex items-center gap-1.5">
             <span className="text-sm leading-none">🌱</span>
             {t("greeting.motivation", "Daily Motivation")}

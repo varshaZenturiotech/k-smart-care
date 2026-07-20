@@ -15,7 +15,7 @@ export default function Hero({ children }) {
         className="absolute inset-0 z-[2]"
         style={{
           background:
-            "linear-gradient(180deg, rgba(15,23,42,0.20) 0%, rgba(15,23,42,0.25) 40%, rgba(15,23,42,0.55) 62%, rgba(15,23,42,0.80) 100%)",
+            "linear-gradient(180deg, rgba(15,23,42,0.38) 0%, rgba(15,23,42,0.28) 28%, rgba(15,23,42,0.50) 62%, rgba(15,23,42,0.80) 100%)",
         }}
       />
 
@@ -24,9 +24,11 @@ export default function Hero({ children }) {
         className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-paper z-[3] pointer-events-none" 
       />
 
-      {/* Children content placed above the background, anchored to the bottom
-          third of the hero rather than centered/filling it */}
-      <div className="relative z-[10] flex flex-col flex-grow justify-end">
+      {/* Children content placed above the background. On desktop the passed-in
+          wrapper stretches to fill this area and splits itself into a top row
+          (greeting) and bottom row (today's cards); on mobile it stays anchored
+          to the bottom as a single stacked block. */}
+      <div className="relative z-[10] flex flex-col flex-grow justify-end lg:justify-start">
         {children}
       </div>
     </div>

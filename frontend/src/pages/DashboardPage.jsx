@@ -185,7 +185,7 @@ export default function DashboardPage() {
 
       {/* ── Homepage Hero Section ── */}
       <Hero>
-        <div className="max-w-[1760px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pb-6 md:pb-8">
+        <div className="max-w-[1760px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pb-6 md:pb-8 lg:pb-6 xl:pb-8 lg:pt-6 xl:pt-8 lg:h-full lg:flex lg:flex-col lg:justify-between lg:gap-6">
           {/* ── Greeting Hero Banner ── */}
           <GreetingBanner
             greeting={summary.greeting}
@@ -201,19 +201,36 @@ export default function DashboardPage() {
             todayTasksCount={summary.todayTasks?.length || 0}
             upcomingMeetingsCount={summary.upcomingMeetings?.length || 0}
           />
+
+          {/* ── Today's Work Snapshot / Priority / Motivation — desktop only,
+                sits in the lower part of the hero where the old bottom-anchored
+                greeting/wellness row used to be ── */}
+          <div className="hidden lg:block">
+            <TodayOverviewCards
+              briefing={summary.briefing}
+              newCircularsCount={summary.newCircularsCount}
+              pendingTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0)}
+              totalTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0) + (summary.completedToday?.length || 0)}
+              todayMeetingsCount={summary.upcomingMeetings?.length || 0}
+            />
+          </div>
         </div>
       </Hero>
 
       {/* ── Main Layout ── */}
       <main className="flex-1 max-w-[1760px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-6 space-y-6">
 
-        {/* ── Today's Work Snapshot / Priority / Motivation ── */}
-        <TodayOverviewCards
-          briefing={summary.briefing}
-          newCircularsCount={summary.newCircularsCount}
-          pendingFilesCount={summary.todayTasks?.length || 0}
-          todayMeetingsCount={summary.upcomingMeetings?.length || 0}
-        />
+        {/* ── Today's Work Snapshot / Priority / Motivation — mobile only,
+              since on desktop this now lives inside the hero itself ── */}
+        <div className="lg:hidden">
+          <TodayOverviewCards
+            briefing={summary.briefing}
+            newCircularsCount={summary.newCircularsCount}
+            pendingTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0)}
+            totalTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0) + (summary.completedToday?.length || 0)}
+            todayMeetingsCount={summary.upcomingMeetings?.length || 0}
+          />
+        </div>
 
         {/* ── Main content ── */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
