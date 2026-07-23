@@ -127,13 +127,16 @@
     "Cache": "കാഷെ",
     "Log": "ലോഗ്",
     "Logs": "ലോഗുകൾ",
-    "Overdue": "സമയപരിധി കഴിഞ്ഞവ",
+    "Overdue": "കാലാവധി കഴിഞ്ഞ",
     "Upcoming": "വരാനിരിക്കുന്നവ",
-    "Completed": "പൂർത്തിയായവ",
-    "Pending": "പെൻഡിംഗ്",
+    "Completed": "പൂർത്തിയാക്കിയ",
+    "Pending": "തീർപ്പാക്കാനുള്ള",
     "High Priority": "ഉയർന്ന മുൻഗണന",
     "Medium Priority": "സാധാരണ മുൻഗണന",
-    "Low Priority": "കുറഞ്ഞ മുൻഗണന"
+    "Low Priority": "കുറഞ്ഞ മുൻഗണന",
+    "Overdue Tasks": "കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ",
+    "In Progress": "പുരോഗമിക്കുന്നു",
+    "Due Today": "ഇന്ന് പൂർത്തിയാക്കേണ്ട"
   },
   "greetings": {
     "Good Morning": "ഗുഡ് മോണിംഗ്",

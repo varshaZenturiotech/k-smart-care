@@ -533,7 +533,7 @@
   },
   {
     "english": "Completed",
-    "malayalam": "പൂർത്തിയായി",
+    "malayalam": "പൂർത്തിയാക്കിയ",
     "type": "translate",
     "category": "Common",
     "reason": "Common term."
@@ -1807,7 +1807,7 @@
   },
   {
     "english": "Overdue Tasks",
-    "malayalam": "സമയപരിധി കഴിഞ്ഞ ടാസ്കുകൾ",
+    "malayalam": "കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ",
     "type": "phrase",
     "category": "Task Management",
     "reason": "Task Management term."

@@ -36,21 +36,21 @@
   },
   {
     "english": "Pending",
-    "malayalam": "പെൻഡിംഗ്",
+    "malayalam": "തീർപ്പാക്കാനുള്ള",
     "type": "transliterate",
     "category": "Task Management",
     "reason": "Universal office term for incomplete work."
   },
   {
     "english": "Completed",
-    "malayalam": "പൂർത്തിയായവ",
+    "malayalam": "പൂർത്തിയാക്കിയ",
     "type": "translate",
     "category": "Task Management",
     "reason": "Finished task status category."
   },
   {
     "english": "Overdue",
-    "malayalam": "സമയപരിധി കഴിഞ്ഞവ",
+    "malayalam": "കാലാവധി കഴിഞ്ഞ",
     "type": "translate",
     "category": "Task Management",
     "reason": "Past-deadline alert category."
@@ -169,7 +169,7 @@
   },
   {
     "english": "In Progress",
-    "malayalam": "നടന്നുകൊണ്ടിരിക്കുന്നു",
+    "malayalam": "പുരോഗമിക്കുന്നു",
     "type": "translate",
     "category": "Task Management",
     "reason": "Active ongoing status indicator."

@@ -2280,7 +2280,7 @@
     "category": "General",
     "executionTimeMs": 0
   },
-  "നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക: 4 അടച്ച ടാസ്കുകൾ ഉണ്ട്::നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക: 4 അടങ്ങിയ ടാസ്കുകൾ ഉണ്ട്::Dashboard": {
+  "നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക: 4 കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ ഉണ്ട്::നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക: 4 അടങ്ങിയ ടാസ്കുകൾ ഉണ്ട്::Dashboard": {
     "passed": true,
     "overall": 100,
     "grade": "A+",
@@ -2310,7 +2310,7 @@
     "category": "General",
     "executionTimeMs": 0
   },
-  "അടച്ച ടാസ്കുകൾ പൂർത്തിയാക്കുക::അടച്ച ടാസ്കുകൾ പൂർത്തിയാക്കുക.::Dashboard": {
+  "കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ പൂർത്തിയാക്കുക::കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ പൂർത്തിയാക്കുക.::Dashboard": {
     "passed": true,
     "overall": 100,
     "grade": "A+",
@@ -2369,5 +2369,71 @@
     "context": "General",
     "category": "General",
     "executionTimeMs": 6
+  },
+  "AI Human Capital & Resilience Intelligence Platform::എ.ഐ മനുഷ്യ സംവിധാന സമൃദ്ധിയും പുനരുദ്ധാരണ പ്രതിഭാന പ്ലാറ്റ്‌ഫോം::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "124%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Overdue Tasks::കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ::Task": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 95,
+    "uiLengthRatio": "177%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 95,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 74
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 177% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 4
   }
 }

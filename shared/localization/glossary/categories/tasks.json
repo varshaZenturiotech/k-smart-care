@@ -78,14 +78,14 @@
   },
   {
     "english": "Overdue Tasks",
-    "malayalam": "സമയപരിധി കഴിഞ്ഞ ടാസ്കുകൾ",
+    "malayalam": "കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ",
     "type": "phrase",
     "category": "Task Management",
     "reason": "Task Management term."
   },
   {
     "english": "Completed Tasks",
-    "malayalam": "പൂർത്തിയായ ടാസ്കുകൾ",
+    "malayalam": "പൂർത്തിയാക്കിയ ടാസ്കുകൾ",
     "type": "phrase",
     "category": "Task Management",
     "reason": "Task Management term."

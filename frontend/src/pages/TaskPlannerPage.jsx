@@ -40,6 +40,7 @@ import {
   LogOut,
   Shield
 } from "lucide-react";
+import HeaderNav from "../components/HeaderNav.jsx";
 import LanguageSelector from "../components/LanguageSelector.jsx";
 import {
   formatTime12,
@@ -417,99 +418,8 @@ export default function TaskPlannerPage() {
 
   return (
     <div className="min-h-screen bg-paper flex flex-col font-sans">
-      {/* ── Sticky Top Navigation ── */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-sm px-4 sm:px-6 lg:px-8 xl:px-10 py-3">
-        <div className="max-w-[1760px] mx-auto flex items-center justify-between gap-4">
-
-          {/* Logo & Title */}
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-teal-tint flex items-center justify-center text-teal font-display font-bold text-lg border border-teal/10 shrink-0">
-              G
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-display font-medium text-base text-ink tracking-tight">K-SMART CARE</span>
-                <span className="text-[9px] font-mono font-semibold text-ink-soft bg-paper border border-border px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">Official Portal</span>
-              </div>
-              <span className="hidden sm:block text-[9px] text-ink-soft font-mono uppercase tracking-wider">
-                {t("auth.platformSubtitle", "AI Human Capital & Resilience Intelligence Platform")}
-              </span>
-            </div>
-          </div>
-
-          {/* Search bar */}
-          <div className="hidden md:block relative w-64">
-            <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-ink-soft/70">
-              <Search size={14} />
-            </span>
-            <input
-              type="text"
-              placeholder="Search circulars, files, tasks..."
-              className="w-full pl-9 pr-3 py-1.5 rounded-xl border border-border bg-paper/20 text-xs text-ink placeholder:text-ink-soft/60 focus:outline-none focus:ring-1 focus:ring-teal focus:border-teal font-sans"
-            />
-          </div>
-
-          {/* Navigation Controls */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => navigate("/planner")}
-              className="text-xs font-semibold text-teal bg-teal-tint px-3 py-1.5 rounded-xl border border-teal/20 transition-all active:scale-95 flex items-center gap-1.5 shrink-0"
-            >
-              <ListTodo size={13} />
-              Task Planner
-            </button>
-            <button
-              onClick={() => navigate("/repository")}
-              className="text-xs font-semibold text-teal-dark hover:text-teal bg-teal-tint px-3 py-1.5 rounded-xl border border-teal/10 hover:border-teal/20 transition-all active:scale-95 flex items-center gap-1.5 shrink-0"
-            >
-              <FileText size={13} />
-              Circular Repository
-            </button>
-            {user?.role === "Admin" && (
-              <button
-                onClick={() => navigate("/admin/circulars")}
-                className="text-xs font-semibold text-amber-900 hover:text-amber-800 bg-amber-100 hover:bg-amber-200 px-3 py-1.5 rounded-xl border border-amber-200/50 transition-all active:scale-95 flex items-center gap-1.5 shrink-0"
-              >
-                <Shield size={13} />
-                Admin Console
-              </button>
-            )}
-            {/* Language Selector */}
-            <LanguageSelector />
-
-            {/* Theme Toggle (Calm Light Mode default) */}
-            <button className="p-2 rounded-lg text-ink-soft hover:bg-paper/50 transition cursor-pointer" title="Toggle Theme (Calm Mode)">
-              <Sun size={18} />
-            </button>
-
-            {/* Notification Bell */}
-            <div className="relative">
-              <button className="p-2 rounded-lg text-ink-soft hover:bg-paper/50 transition cursor-pointer">
-                <Bell size={18} />
-              </button>
-              <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-alert" />
-            </div>
-
-            {/* User Profile Info & Sign Out */}
-            <div className="flex items-center gap-2 border-l border-border pl-3">
-              <div className="w-8 h-8 rounded-full bg-teal text-white flex items-center justify-center font-semibold text-xs shrink-0 shadow-sm border border-teal-dark/15">
-                {user?.name ? user.name.split(" ")[0][0] : "U"}
-              </div>
-              <div className="hidden lg:block text-left min-w-0">
-                <p className="text-xs font-semibold text-ink truncate leading-tight">{user?.name}</p>
-                <p className="text-[9px] text-ink-soft truncate font-mono uppercase tracking-wider">{user?.designation}</p>
-              </div>
-              <button
-                onClick={logout}
-                className="ml-2 bg-white border border-border hover:bg-alert-tint hover:text-alert hover:border-alert/30 px-3 py-1.5 rounded-xl text-xs font-semibold text-ink-soft transition flex items-center gap-1.5 cursor-pointer active:scale-95"
-              >
-                <LogOut size={13} />
-                <span className="hidden sm:inline">Sign Out</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {/* ── Sticky Responsive Navigation Header ── */}
+      <HeaderNav />
 
       {/* Sub-navigation bar for Planner actions */}
       <div className="bg-paper border-b border-border/80 px-4 sm:px-6 lg:px-8 xl:px-10 py-3.5">
@@ -590,7 +500,7 @@ export default function TaskPlannerPage() {
 
           {/* Tasks Tabs Filter */}
           <div className="bg-white border border-border rounded-2xl shadow-custom overflow-hidden">
-            <div className="flex border-b border-border bg-paper/10">
+            <div className="flex border-b border-border bg-paper/10 overflow-x-auto whitespace-nowrap scrollbar-none">
               {[
                 { id: "today", label: t("taskPlanner.todayTasks", "Today's Tasks"), icon: <Calendar size={14} /> },
                 { id: "upcoming", label: t("taskPlanner.upcoming", "Upcoming"), icon: <CalendarCheck size={14} /> },
@@ -600,7 +510,7 @@ export default function TaskPlannerPage() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex-1 py-3 px-4 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all border-b-2 ${activeTab === tab.id
+                  className={`flex-1 min-w-[110px] py-3 px-3 sm:px-4 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all border-b-2 ${activeTab === tab.id
                       ? "border-teal text-teal bg-white"
                       : "border-transparent text-ink-soft hover:text-ink hover:bg-paper/20"
                     }`}
@@ -612,7 +522,7 @@ export default function TaskPlannerPage() {
             </div>
 
             {/* Task list container */}
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               {isLoading ? (
                 <div className="flex justify-center py-10">
                   <Loader2 size={24} className="animate-spin text-teal" />
@@ -626,20 +536,20 @@ export default function TaskPlannerPage() {
                   {tasks.map((task, taskIndex) => (
                     <div
                       key={task._id || `task-${task.title || 'item'}-${taskIndex}`}
-                      className={`py-3.5 flex items-start justify-between gap-4 transition-all ${task.status === "Completed" ? "opacity-60" : ""
+                      className={`py-3.5 flex flex-col sm:flex-row sm:items-start justify-between gap-3 transition-all ${task.status === "Completed" ? "opacity-60" : ""
                         }`}
                     >
-                      <div className="flex items-start gap-3 min-w-0">
+                      <div className="flex items-start gap-3 min-w-0 flex-1">
                         <button
                           onClick={() => handleToggleStatus(task._id, task.status)}
-                          className={`mt-0.5 w-5 h-5 rounded-md border flex items-center justify-center transition-colors ${task.status === "Completed"
+                          className={`mt-0.5 w-5 h-5 rounded-md border flex items-center justify-center transition-colors shrink-0 ${task.status === "Completed"
                               ? "bg-teal border-teal text-white"
                               : "border-border hover:border-teal bg-white"
                             }`}
                         >
                           {task.status === "Completed" && <CheckCircle size={13} className="fill-current" />}
                         </button>
-                        <div className="space-y-1 min-w-0">
+                        <div className="space-y-1 min-w-0 flex-1">
                           <p
                             className={`text-sm font-medium text-ink leading-snug break-words ${task.status === "Completed" ? "line-through text-ink-soft" : ""
                               }`}
@@ -668,13 +578,13 @@ export default function TaskPlannerPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-3 shrink-0">
+                      <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-border/40">
                         <span className={`text-[10px] uppercase font-mono font-semibold px-2 py-0.5 rounded border ${getPriorityStyle(task.priority)}`}>
                           {language === "ml" ? (PRIORITY_LABELS_ML[task.priority] || task.priority) : task.priority}
                         </span>
                         <button
                           onClick={() => handleDeleteTask(task._id)}
-                          className="p-1.5 text-ink-soft hover:text-alert hover:bg-alert-tint rounded-lg transition-colors"
+                          className="p-1.5 text-ink-soft hover:text-alert hover:bg-alert-tint rounded-lg transition-colors min-w-[32px] min-h-[32px] flex items-center justify-center"
                         >
                           <Trash2 size={14} />
                         </button>

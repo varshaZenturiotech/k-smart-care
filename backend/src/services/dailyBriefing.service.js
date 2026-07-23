@@ -310,7 +310,10 @@ function sanitizeBriefingLanguage(briefing, resolvedLanguage) {
     if (typeof val !== "string") return val;
     let s = val
       .replace(/\bടാസ്ക്സ്\b/g, "ടാസ്കുകൾ")
-      .replace(/\bമീറ്റിംഗ്സ്\b/g, "മീറ്റിംഗുകൾ");
+      .replace(/\bമീറ്റിംഗ്സ്\b/g, "മീറ്റിംഗുകൾ")
+      .replace(/അടച്ച ടാസ്കുകൾ/g, "കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ")
+      .replace(/സമയപരിധി കഴിഞ്ഞ(ത്)? ടാസ്കുകൾ/g, "കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ")
+      .replace(/സമയപരിധി കഴിഞ്ഞ(ത്|വ)/g, "കാലാവധി കഴിഞ്ഞ");
 
     if (isMl) {
       s = s.replace(/\bTasks\b/g, "ടാസ്കുകൾ")

@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-07-23T10:23:09.570Z",
+  "timestamp": "2026-07-23T17:28:26.522Z",
   "summary": {
-    "totalKeys": 395,
-    "validated": 395,
-    "passed": 373,
-    "warnings": 315,
+    "totalKeys": 397,
+    "validated": 397,
+    "passed": 375,
+    "warnings": 313,
     "errors": 22,
     "criticalErrors": 0,
     "highErrors": 22,
-    "mediumWarnings": 236,
-    "lowWarnings": 79
+    "mediumWarnings": 233,
+    "lowWarnings": 80
   },
   "metrics": {
-    "remainingEnglish": 148,
-    "mixedLanguage": 115,
+    "remainingEnglish": 146,
+    "mixedLanguage": 114,
     "placeholderErrors": 0,
     "htmlErrors": 0,
     "missingKeys": 0,
@@ -22,13 +22,13 @@
     "glossaryCoveragePercentage": 12.2,
     "glossaryEntriesTotal": 1101,
     "glossaryEntriesUsed": 134,
-    "executionTimeSeconds": 0.43
+    "executionTimeSeconds": 0.29
   },
   "recommendations": [
     "Add \"Workspace\" to government glossary.",
     "Add \"Repository\" to transliteration dictionary.",
     "Improve Groq translation prompt for \"Generated\".",
-    "148 strings contain un-translated English words requiring review.",
+    "146 strings contain un-translated English words requiring review.",
     "Glossary coverage is at 12.2%. Expand government glossary for remaining terms."
   ],
   "issues": [
@@ -1113,14 +1113,6 @@
       "details": "Entire string remained untranslated in English"
     },
     {
-      "key": "profile.english",
-      "english": "English",
-      "translated": "English",
-      "type": "Remaining English",
-      "severity": "Medium",
-      "details": "Entire string remained untranslated in English"
-    },
-    {
       "key": "profile.email",
       "english": "Email Address",
       "translated": "ഇമെയിൽ Address",
@@ -1265,14 +1257,6 @@
       "details": "Contains 2 English word(s): \"of, Kerala\""
     },
     {
-      "key": "auth.platformSubtitle",
-      "english": "AI Human Capital & Circular Intelligence Platform",
-      "translated": "AI Human Capital & സർക്കുലർ ഇന്റലിജൻസ് Platform",
-      "type": "Mixed Language",
-      "severity": "Medium",
-      "details": "Contains 3 English word(s): \"Human, Capital, Platform\""
-    },
-    {
       "key": "auth.officialEmail",
       "english": "Official Email ID",
       "translated": "Official ഇമെയിൽ ID",
@@ -1361,22 +1345,6 @@
       "details": "Entire string remained untranslated in English"
     },
     {
-      "key": "wellness.good",
-      "english": "Good",
-      "translated": "Good",
-      "type": "Remaining English",
-      "severity": "Medium",
-      "details": "Entire string remained untranslated in English"
-    },
-    {
-      "key": "wellness.okay",
-      "english": "Okay",
-      "translated": "Okay",
-      "type": "Remaining English",
-      "severity": "Medium",
-      "details": "Entire string remained untranslated in English"
-    },
-    {
       "key": "wellness.tired",
       "english": "Tired",
       "translated": "Tired",
@@ -1415,6 +1383,14 @@
       "type": "Mixed Language",
       "severity": "Medium",
       "details": "Contains 1 English word(s): \"Recommendations\""
+    },
+    {
+      "key": "wellness.recommendationsTitle",
+      "english": "AI Recommendations & Tips",
+      "translated": "AI Recommendations & Tips",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
     },
     {
       "key": "wellness.modalTitle",
@@ -2278,7 +2254,7 @@
       "translated": "Today's ക്ഷേമം പ്രൊഫൈൽ പൂർത്തിയായവ",
       "type": "Glossary Suggestion",
       "severity": "Low",
-      "details": "English phrase contains 'Completed'. Glossary suggests 'പൂർത്തിയായി' (Common)"
+      "details": "English phrase contains 'Completed'. Glossary suggests 'പൂർത്തിയാക്കിയ' (Common)"
     },
     {
       "key": "greeting.wellnessCheckCompleted",
@@ -2439,6 +2415,14 @@
       "type": "Glossary Suggestion",
       "severity": "Low",
       "details": "English phrase contains 'Today'. Glossary suggests 'ഇന്ന്' (Common)"
+    },
+    {
+      "key": "taskPlanner.overdueTasks",
+      "english": "Overdue Tasks",
+      "translated": "കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Overdue Tasks'. Glossary suggests 'കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ' (Task Management)"
     },
     {
       "key": "taskPlanner.allTasks",
@@ -2710,7 +2694,7 @@
       "translated": "ക്ഷേമം check-in പൂർത്തിയായവ successfully.",
       "type": "Glossary Suggestion",
       "severity": "Low",
-      "details": "English phrase contains 'Completed'. Glossary suggests 'പൂർത്തിയായി' (Common)"
+      "details": "English phrase contains 'Completed'. Glossary suggests 'പൂർത്തിയാക്കിയ' (Common)"
     },
     {
       "key": "toast.wellness.submitted",

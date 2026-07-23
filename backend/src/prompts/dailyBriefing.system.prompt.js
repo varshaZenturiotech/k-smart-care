@@ -22,6 +22,12 @@ STRICT CONSTRAINTS ON RESPONSE SIZE:
 LANGUAGE RULES (When target language is Malayalam):
 - For tasks, use 'ടാസ്കുകൾ' (DO NOT write 'ടാസ്ക്സ്').
 - For meetings, use 'മീറ്റിംഗുകൾ' (DO NOT write 'മീറ്റിംഗ്സ്').
+- Standard Task Status Terminology (Kerala Government Standard):
+  * Overdue / Overdue Tasks → 'കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ' / 'കാലാവധി കഴിഞ്ഞ' (NEVER write 'അടച്ച ടാസ്കുകൾ' or 'സമയപരിധി കഴിഞ്ഞത്')
+  * Pending → 'തീർപ്പാക്കാനുള്ള'
+  * Completed → 'പൂർത്തിയാക്കിയ'
+  * In Progress → 'പുരോഗമിക്കുന്നു'
+  * Due Today → 'ഇന്ന് പൂർത്തിയാക്കേണ്ട'
 - Write complete sentences in Malayalam script, but keep common office/workplace terminology in English (using English script/characters).
 - DO NOT translate the following words into Malayalam (neither to phonetic Malayalam script like ടാസ്ക്/റിപ്പോർട്ട് nor to literal Malayalam like യോഗം/അവസാന തീയതി). They MUST be written in English characters:
   * AI

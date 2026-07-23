@@ -677,35 +677,35 @@ export function TodayOverviewCards({
   const hasPriority = (activeSmartPriorities && activeSmartPriorities.length > 0) || singlePriority;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
 
       {/* Today's Work Snapshot */}
-      <div className="bg-white/55 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg p-4 transition-all hover:bg-white/65">
-        <span className="text-[15px] font-mono text-ink-soft uppercase tracking-wider block font-semibold mb-3">
+      <div className="bg-white/55 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg p-3.5 sm:p-4 transition-all hover:bg-white/65">
+        <span className="text-xs sm:text-sm font-mono text-ink-soft uppercase tracking-wider block font-semibold mb-2.5">
           {t("greeting.snapshot", "Today's Work Snapshot")}
         </span>
-        <div className="grid grid-cols-3 gap-2.5">
-          <div className="p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-sm">
-            <span className="text-base">📋</span>
-            <div>
-              <span className="text-xs font-mono text-ink-soft uppercase block">{t("greeting.pendingTasks", "Pending Tasks")}</span>
-              <span className="text-xs font-semibold text-ink">
+        <div className="grid grid-cols-1 xs:grid-cols-3 gap-2 sm:gap-2.5">
+          <div className="p-2 sm:p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-xs">
+            <span className="text-sm sm:text-base">📋</span>
+            <div className="min-w-0">
+              <span className="text-[10px] sm:text-xs font-mono text-ink-soft uppercase block truncate">{t("greeting.pendingTasks", "Pending Tasks")}</span>
+              <span className="text-xs font-semibold text-ink truncate block">
                 {effectivePending}{totalTasksCount > 0 ? ` / ${totalTasksCount}` : ""}
               </span>
             </div>
           </div>
-          <div className="p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-sm">
-            <span className="text-base">📅</span>
-            <div>
-              <span className="text-xs font-mono text-ink-soft uppercase block">{t("greeting.meetings", "Meetings")}</span>
-              <span className="text-xs font-semibold text-ink">{todayMeetingsCount}</span>
+          <div className="p-2 sm:p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-xs">
+            <span className="text-sm sm:text-base">📅</span>
+            <div className="min-w-0">
+              <span className="text-[10px] sm:text-xs font-mono text-ink-soft uppercase block truncate">{t("greeting.meetings", "Meetings")}</span>
+              <span className="text-xs font-semibold text-ink truncate block">{todayMeetingsCount}</span>
             </div>
           </div>
-          <div className="p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-sm">
-            <span className="text-base">📢</span>
-            <div>
-              <span className="text-xs font-mono text-ink-soft uppercase block">{t("greeting.newCirculars", "Circulars")}</span>
-              <span className="text-xs font-semibold text-ink">{newCircularsCount}</span>
+          <div className="p-2 sm:p-2.5 bg-white/40 border border-white/60 rounded-xl flex items-center gap-2 shadow-xs">
+            <span className="text-sm sm:text-base">📢</span>
+            <div className="min-w-0">
+              <span className="text-[10px] sm:text-xs font-mono text-ink-soft uppercase block truncate">{t("greeting.newCirculars", "Circulars")}</span>
+              <span className="text-xs font-semibold text-ink truncate block">{newCircularsCount}</span>
             </div>
           </div>
         </div>

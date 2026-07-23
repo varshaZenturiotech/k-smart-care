@@ -37,7 +37,9 @@
   }
 
   html, body, #root {
-    height: 100%;
+    min-height: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     background-color: var(--paper);
     color: var(--ink);
   }
@@ -48,19 +50,20 @@
     font-size: 15px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* ── Malayalam Typography Scaling & Font Family ── */
   html[lang="ml"], .lang-ml, [data-lang="ml"] {
     font-family: var(--font-ml);
-    font-size: 17px;
-    line-height: 1.75;
+    font-size: 16.5px;
+    line-height: 1.7;
   }
 
   html[lang="ml"] body, .lang-ml body, [data-lang="ml"] body {
     font-family: var(--font-ml);
-    font-size: 17px;
-    line-height: 1.75;
+    font-size: 16.5px;
+    line-height: 1.7;
   }
 
   html[lang="ml"] h1, .lang-ml h1,
@@ -68,19 +71,19 @@
   html[lang="ml"] h3, .lang-ml h3,
   html[lang="ml"] h4, .lang-ml h4 {
     font-family: var(--font-ml);
-    line-height: 1.5;
+    line-height: 1.45;
     letter-spacing: 0.01em;
   }
 
   /* Proportional font-size scaling for Tailwind text classes in Malayalam mode */
-  html[lang="ml"] .text-\[10px\], .lang-ml .text-\[10px\] { font-size: 11.5px; }
-  html[lang="ml"] .text-\[11px\], .lang-ml .text-\[11px\] { font-size: 12.5px; }
-  html[lang="ml"] .text-xs, .lang-ml .text-xs { font-size: 0.85rem; line-height: 1.5rem; }
-  html[lang="ml"] .text-sm, .lang-ml .text-sm { font-size: 0.975rem; line-height: 1.6rem; }
-  html[lang="ml"] .text-base, .lang-ml .text-base { font-size: 1.1rem; line-height: 1.7rem; }
-  html[lang="ml"] .text-lg, .lang-ml .text-lg { font-size: 1.25rem; line-height: 1.85rem; }
-  html[lang="ml"] .text-xl, .lang-ml .text-xl { font-size: 1.375rem; line-height: 1.95rem; }
-  html[lang="ml"] .text-2xl, .lang-ml .text-2xl { font-size: 1.68rem; line-height: 2.2rem; }
+  html[lang="ml"] .text-\[10px\], .lang-ml .text-\[10px\] { font-size: 11px; }
+  html[lang="ml"] .text-\[11px\], .lang-ml .text-\[11px\] { font-size: 12px; }
+  html[lang="ml"] .text-xs, .lang-ml .text-xs { font-size: 0.85rem; line-height: 1.45rem; }
+  html[lang="ml"] .text-sm, .lang-ml .text-sm { font-size: 0.95rem; line-height: 1.55rem; }
+  html[lang="ml"] .text-base, .lang-ml .text-base { font-size: 1.08rem; line-height: 1.65rem; }
+  html[lang="ml"] .text-lg, .lang-ml .text-lg { font-size: 1.22rem; line-height: 1.8rem; }
+  html[lang="ml"] .text-xl, .lang-ml .text-xl { font-size: 1.35rem; line-height: 1.9rem; }
+  html[lang="ml"] .text-2xl, .lang-ml .text-2xl { font-size: 1.65rem; line-height: 2.15rem; }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
@@ -91,10 +94,16 @@
     font-family: inherit;
   }
 
+  /* Touch accessibility target utility */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
   /* Custom scrollbars matching the earthy, calm tone */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background: var(--paper);

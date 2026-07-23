@@ -47,8 +47,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-paper flex items-center justify-center p-6 font-sans">
-      <div className="w-full max-w-md bg-white border border-border rounded-2xl shadow-custom p-8 md:p-10 relative overflow-hidden">
+    <div className="min-h-screen bg-paper flex items-center justify-center p-3 sm:p-6 font-sans">
+      <div className="w-full max-w-md bg-white border border-border rounded-2xl shadow-custom p-5 sm:p-8 md:p-10 relative overflow-hidden">
         {/* Subtle top decoration */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-teal" />
         
