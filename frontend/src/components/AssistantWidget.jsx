@@ -474,8 +474,9 @@ export default function AssistantWidget() {
     setExpandedSummaries((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  const filteredCirculars = circulars.filter((c) =>
-    c.title.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredCirculars = (circulars || []).filter((c) =>
+    Boolean(c && (c.title || c.filename)) &&
+    (c.title || c.filename || "").toLowerCase().includes((searchQuery || "").toLowerCase())
   );
 
   // Markdown bullet lists and headers custom formatter

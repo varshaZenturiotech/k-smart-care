@@ -1,0 +1,8 @@
+{
+  "name": "k-smart-care-root",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate:ml": "node shared/localization/scripts/generateMalayalam.js"
+  }
+}

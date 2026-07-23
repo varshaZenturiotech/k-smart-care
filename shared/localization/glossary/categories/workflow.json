@@ -1,0 +1,345 @@
+[
+  {
+    "english": "Workflow",
+    "malayalam": "വർക്ക്ഫ്ലോ",
+    "type": "transliterate",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Approval",
+    "malayalam": "അപ്രൂവൽ",
+    "type": "transliterate",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Pending Approval",
+    "malayalam": "അംഗീകാരത്തിനായി കാത്തിരിക്കുന്നു",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Waiting for Approval",
+    "malayalam": "അംഗീകാരത്തിനായി കാത്തിരിക്കുന്നു",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Approve Request",
+    "malayalam": "അപേക്ഷ അംഗീകരിക്കുക",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Reject Request",
+    "malayalam": "അപേക്ഷ നിരസിക്കുക",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "File Movement",
+    "malayalam": "ഫയൽ നീക്കം",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Endorsement",
+    "malayalam": "എൻഡോഴ്സ്മെന്റ്",
+    "type": "transliterate",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Sanction Order",
+    "malayalam": "അനുമതി ഉത്തരവ്",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 1",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 1",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 2",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 2",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 3",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 3",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 4",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 4",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 5",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 5",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 6",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 6",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 7",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 7",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 8",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 8",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 9",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 9",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 10",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 10",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 11",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 11",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 12",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 12",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 13",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 13",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 14",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 14",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 15",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 15",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 16",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 16",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 17",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 17",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 18",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 18",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 19",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 19",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 20",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 20",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 21",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 21",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 22",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 22",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 23",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 23",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 24",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 24",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 25",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 25",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 26",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 26",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 27",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 27",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 28",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 28",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 29",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 29",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 30",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 30",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 31",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 31",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 32",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 32",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 33",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 33",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 34",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 34",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 35",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 35",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 36",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 36",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 37",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 37",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 38",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 38",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 39",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 39",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  },
+  {
+    "english": "Workflow Routing Stage 40",
+    "malayalam": "വർക്ക്ഫ്ലോ റൂട്ടിംഗ് ഘട്ടം 40",
+    "type": "phrase",
+    "category": "Approval Workflow",
+    "reason": "Approval Workflow term."
+  }
+]

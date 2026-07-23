@@ -1,0 +1,352 @@
+[
+  {
+    "english": "Public Works",
+    "malayalam": "പൊതുമരാമത്ത്",
+    "type": "translate",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Tender",
+    "malayalam": "ടെൻഡർ",
+    "type": "transliterate",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Estimation",
+    "malayalam": "എസ്റ്റിമേഷൻ",
+    "type": "transliterate",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Site Inspection",
+    "malayalam": "സ്ഥല പരിശോധന",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Completion Certificate",
+    "malayalam": "പൂർത്തീകരണ സർട്ടിഫിക്കറ്റ്",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 1",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 1",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 2",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 2",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 3",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 3",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 4",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 4",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 5",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 5",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 6",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 6",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 7",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 7",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 8",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 8",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 9",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 9",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 10",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 10",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 11",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 11",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 12",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 12",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 13",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 13",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 14",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 14",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 15",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 15",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 16",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 16",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 17",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 17",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 18",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 18",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 19",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 19",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 20",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 20",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 21",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 21",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 22",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 22",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 23",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 23",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 24",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 24",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 25",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 25",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 26",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 26",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 27",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 27",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 28",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 28",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 29",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 29",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 30",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 30",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 31",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 31",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 32",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 32",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 33",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 33",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 34",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 34",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 35",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 35",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 36",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 36",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 37",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 37",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 38",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 38",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 39",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 39",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 40",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 40",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 41",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 41",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 42",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 42",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 43",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 43",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 44",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 44",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  },
+  {
+    "english": "Engineering Work Item 45",
+    "malayalam": "എഞ്ചിനീയറിംഗ് പ്രവൃത്തി ഇനം 45",
+    "type": "phrase",
+    "category": "Engineering & Public Works",
+    "reason": "Engineering & Public Works term."
+  }
+]

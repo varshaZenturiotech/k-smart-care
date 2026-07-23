@@ -23,6 +23,7 @@
   --font-display: "Fraunces", serif;
   --font-body: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --font-ml: "Noto Sans Malayalam", "Inter", system-ui, sans-serif;
 
   /* Layout */
   --radius: 14px;

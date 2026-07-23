@@ -107,17 +107,15 @@ export async function createTaskFromNlp(req, res) {
   try {
     const employeeId = req.user.id;
     const { text } = req.body;
-    if (!text || typeof text !== "string" || !text.trim()) {
-      return res.status(400).json({ error: "Missing or invalid 'text' in request body." });
+    if (!text || typeof text !== 'string') {
+      return res.status(400).json({ error: "Text prompt is required." });
     }
-    // preferredLanguage ("auto" | "english" | "malayalam") lives on the employee profile.
-    // req.user is expected to already carry it (populated by the auth middleware/JWT payload).
-    // Falls back to "auto" if the profile hasn't set a preference yet.
-    const preferredLanguage = req.user.preferredLanguage || "auto";
-    const taskDetails = await taskService.createTaskFromNlp(employeeId, text, preferredLanguage);
-    return res.status(200).json(taskDetails);
+    const taskData = await taskService.createTaskFromNlp(employeeId, text);
+    return res.status(200).json(taskData);
   } catch (err) {
     console.error("Error in createTaskFromNlp controller:", err);
-    return res.status(500).json({ error: err.message || "Failed to create task from NLP." });
+    return res.status(500).json({ error: err.message || "Failed to extract task from text." });
   }
 }
+
+export const createNlpTask = createTaskFromNlp;

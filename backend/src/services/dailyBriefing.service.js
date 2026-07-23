@@ -50,10 +50,27 @@ function estimateTokens(text) {
  */
 function computeInputFingerprint(data) {
   const wellness = `${data.wellnessStatus || ""}_${data.wellnessScore || 0}_${data.focusScore || 0}_${data.burnoutRisk || ""}`;
-  const tasks = `${data.todayTasksCount || 0}_${(data.todayTasksList || []).join(",")}`;
+  const todayTasks = `${data.todayTasksCount || 0}_${(data.todayTasksList || []).join(",")}`;
+  const overdueTasks = `${data.overdueTasksCount || 0}_${(data.overdueTasksList || []).join(",")}`;
   const meetings = `${data.upcomingMeetingsCount || 0}_${(data.upcomingMeetingsList || []).join(",")}`;
   const circulars = `${data.newCircularsCount || 0}_${(data.newCircularsList || []).join(",")}`;
-  return `${wellness}::${tasks}::${meetings}::${circulars}`;
+  return `${wellness}::today:${todayTasks}::overdue:${overdueTasks}::${meetings}::${circulars}`;
+}
+
+/**
+ * Invalidate cached Daily Briefing records for an employee for today's date.
+ */
+export async function invalidateDailyBriefingCache(employeeId) {
+  if (!employeeId) return;
+  try {
+    const currentDate = getLocalDateString();
+    await DailyBriefing.deleteMany({
+      employeeId: employeeId.toString(),
+      dateString: currentDate,
+    });
+  } catch (err) {
+    console.error("[Daily Briefing Cache Invalidation Error]:", err);
+  }
 }
 
 /**
@@ -81,76 +98,40 @@ async function invokeLlmWithRetry(chain, variables, maxRetries = 3) {
 
       if (status === 429 || (err.message && err.message.includes("429"))) {
         let retryAfter = null;
-        if (err.headers) {
-          if (typeof err.headers.get === "function") {
-            retryAfter = err.headers.get("retry-after");
-          } else {
-            retryAfter = err.headers["retry-after"] || err.headers["Retry-After"];
-          }
+        if (err.headers && (err.headers.get("retry-after") || err.headers["retry-after"])) {
+          retryAfter = err.headers.get ? err.headers.get("retry-after") : err.headers["retry-after"];
         }
         if (retryAfter) {
-          const seconds = parseFloat(retryAfter);
-          if (!isNaN(seconds)) {
-            waitMs = seconds * 1000;
-          } else {
-            const date = Date.parse(retryAfter);
-            if (!isNaN(date)) {
-              waitMs = Math.max(0, date - Date.now());
-            }
+          const parsed = parseInt(retryAfter, 10);
+          if (!isNaN(parsed) && parsed > 0) {
+            waitMs = parsed * 1000;
           }
+        } else {
+          waitMs = 5000; // fallback 5s wait for 429
         }
-        console.warn(`[Daily Briefing] Groq rate limit hit (429). Waiting ${waitMs}ms before retrying (attempt ${attempt}/${maxRetries}).`);
-      } else {
-        console.warn(`[Daily Briefing] Transient error hit (${status || err.message}). Waiting ${waitMs}ms before retrying (attempt ${attempt}/${maxRetries}).`);
       }
 
-      await new Promise((resolve) => setTimeout(resolve, waitMs));
+      console.warn(`[Daily Briefing LLM Transient Error] Attempt ${attempt}/${maxRetries} failed with status ${status || "unknown"}: ${err.message}. Retrying in ${waitMs}ms...`);
+      await new Promise((res) => setTimeout(res, waitMs));
     }
   }
 }
 
 /**
- * Entrypoint: Handles simultaneous request deduplication and delegates to generation logic.
+ * Generates an AI Daily Briefing for a specific employee.
+ * Uses 24-hour persistent MongoDB caching with in-memory deduplication for concurrent calls.
  */
 export async function generateDailyBriefing(data, forceRefresh = false) {
-  const employeeId = data.employeeId || "unknown";
-  const resolvedLanguage = data.resolvedLanguage || "english";
+  const employeeId = data.employeeId?.toString();
   const currentDate = getLocalDateString();
-
-  const cacheKey = `${employeeId}_${currentDate}_${resolvedLanguage}`;
-
-  if (inFlightRequests.has(cacheKey)) {
-    console.log(`[Daily Briefing] Reusing in-flight request for cacheKey: ${cacheKey}`);
-    return inFlightRequests.get(cacheKey);
-  }
-
-  const promise = (async () => {
-    try {
-      const res = await generateDailyBriefingInternal(data, forceRefresh, currentDate, resolvedLanguage);
-      if (res && Array.isArray(res.smartPriorities)) {
-        res.smartPriorities = res.smartPriorities.map(item => {
-          if (typeof item !== "string") return item;
-          return item.replace(/^[①②③④⑤⑥⑦⑧⑨⑩\d\.\-\*\s•\[]+/, "").replace(/\]+$/, "").trim();
-        });
-      }
-      return res;
-    } finally {
-      inFlightRequests.delete(cacheKey);
-    }
-  })();
-
-  inFlightRequests.set(cacheKey, promise);
-  return promise;
-}
-
-/**
- * Internal logic for Daily Briefing generation (caching, LLM invocation, logging).
- */
-async function generateDailyBriefingInternal(data, forceRefresh, currentDate, resolvedLanguage) {
-  const employeeId = data.employeeId || "unknown";
+  const resolvedLanguage = data.resolvedLanguage || (data.preferredLanguage === "malayalam" ? "malayalam" : "english");
   const currentFingerprint = computeInputFingerprint(data);
 
-  // 1. Caching & Lazy Generation validation
+  if (!employeeId) {
+    return sanitizeBriefingLanguage(getLocalFallbackBriefing(data, resolvedLanguage), resolvedLanguage);
+  }
+
+  // 1. Check MongoDB Cache (unless forceRefresh is true)
   if (!forceRefresh) {
     try {
       const cached = await DailyBriefing.findOne({
@@ -159,53 +140,67 @@ async function generateDailyBriefingInternal(data, forceRefresh, currentDate, re
         language: resolvedLanguage,
       });
 
-      if (cached && cached.inputFingerprint === currentFingerprint) {
-        const sanitized = sanitizeBriefingLanguage(cached.briefing, resolvedLanguage);
-        if (sanitized.motivation !== cached.briefing?.motivation) {
-          DailyBriefing.updateOne({ _id: cached._id }, { briefing: sanitized }).catch(() => {});
+      if (cached && cached.briefing) {
+        if (cached.inputFingerprint === currentFingerprint) {
+          return sanitizeBriefingLanguage(cached.briefing, resolvedLanguage);
+        } else {
+          console.log(`[Daily Briefing Cache Stale] Input fingerprint changed for employee ${employeeId}. Regenerating briefing...`);
         }
-        return sanitized;
       }
     } catch (cacheErr) {
-      console.error("[Daily Briefing Cache Error]:", cacheErr);
+      console.error("[Daily Briefing Cache Lookup Error]:", cacheErr);
     }
   }
 
-  const apiKey = process.env.GROQ_API_KEY;
-  if (!apiKey || apiKey === "your_groq_api_key_here") {
-    console.warn("GROQ_API_KEY is not configured. Returning local rule-based fallback briefing.");
-    return sanitizeBriefingLanguage(getLocalFallbackBriefing(data, resolvedLanguage), resolvedLanguage);
+  // 2. In-Memory Request Deduplication for Concurrent Calls
+  const lockKey = `${employeeId}_${currentDate}_${resolvedLanguage}`;
+  if (inFlightRequests.has(lockKey)) {
+    console.log(`[Daily Briefing Request Deduplicated] Reusing active promise for ${lockKey}`);
+    return inFlightRequests.get(lockKey);
   }
 
+  const briefingPromise = (async () => {
+    try {
+      return await executeLlmBriefingGeneration(data, employeeId, currentDate, currentFingerprint, resolvedLanguage);
+    } finally {
+      inFlightRequests.delete(lockKey);
+    }
+  })();
+
+  inFlightRequests.set(lockKey, briefingPromise);
+  return briefingPromise;
+}
+
+/**
+ * Internal execution helper for LLM generation
+ */
+async function executeLlmBriefingGeneration(data, employeeId, currentDate, currentFingerprint, resolvedLanguage) {
   try {
+    const groqApiKey = process.env.GROQ_API_KEY;
+    if (!groqApiKey) {
+      console.warn("[Daily Briefing] GROQ_API_KEY missing. Using fallback briefing.");
+      return sanitizeBriefingLanguage(getLocalFallbackBriefing(data, resolvedLanguage), resolvedLanguage);
+    }
+
+    const modelName = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
     const llm = new ChatGroq({
-      apiKey: process.env.GROQ_API_KEY,
-      model: "llama-3.1-8b-instant",
-      temperature: 0.5,
-      maxTokens: 512, // Reduced to support compact 120-word response format
+      apiKey: groqApiKey,
+      modelName,
+      temperature: 0.3,
+      maxTokens: 500,
     });
 
-    const isMl = resolvedLanguage === "malayalam";
-    const department = isMl ? getMalayalamDepartment(data.department) : data.department;
-    const district = isMl ? getMalayalamDistrict(data.district) : data.district;
-    const wellnessStatus = isMl ? getMalayalamWellnessStatus(data.wellnessStatus) : data.wellnessStatus;
-    const burnoutRisk = isMl ? getMalayalamBurnoutRisk(data.burnoutRisk) : data.burnoutRisk;
+    const department = getMalayalamDepartment(data.department);
+    const district = getMalayalamDistrict(data.district);
+    const wellnessStatus = getMalayalamWellnessStatus(data.wellnessStatus);
+    const burnoutRisk = getMalayalamBurnoutRisk(data.burnoutRisk);
 
-    const userPromptTemplate = `
-Employee Profile & Context:
-- Name: {name}
+    const userPromptTemplate = `Here is today's employee profile and workload status:
+- Employee Name: {name}
 - Department: {department}
 - District: {district}
-- Resolved Target Language: {resolvedLanguage}
-- Current Local Time: {currentTime}
-- Current Local Hour (24h): {localHour} — use this to determine the English greeting prefix:
-  - If 5 <= localHour < 12: Good Morning
-  - If 12 <= localHour < 17: Good Afternoon
-  - If 17 <= localHour < 21: Good Evening
-  - Otherwise: Good Night
-
-Today's Statistics:
-- Wellness Status: {wellnessStatus}
+- Current Time: {currentTime} (Local Hour: {localHour})
+- Wellness Check Status: {wellnessStatus}
 - Wellness Score: {wellnessScore}/100
 - Focus Score: {focusScore}/100
 - Burnout Risk: {burnoutRisk}
@@ -220,7 +215,7 @@ IMPORTANT GUIDELINES:
    - It MUST start with the English time-based greeting prefix (exactly "Good Morning" or "Good Afternoon" or "Good Evening" or "Good Night" depending on the Current Local Hour), followed by a comma, the employee's English name ("{name}") exactly, and the waving emoji: e.g. "Good Morning, {name} 👋" or "Good Night, {name} 👋".
    - You MUST NOT translate this greeting prefix to Malayalam. It must remain in English.
    - Any text following the emoji can be in the target language: {resolvedLanguage}.
-3. For all other fields ("statusMessage", "briefing", "recommendation", "priority", "smartPriorities", "motivation"), you MUST write them strictly in the target language ({resolvedLanguage}). If the target language is English, write ALL fields in English. If the target language is Malayalam, follow the Malayalam Response Style Rules: write complete sentences in Malayalam script, but keep the specific English workplace, government, and technology terms in English script/characters.
+3. For all other fields ("statusMessage", "briefing", "recommendation", "priority", "smartPriorities", "motivation"), you MUST write them strictly in the target language ({resolvedLanguage}). If the target language is English, write ALL fields in English. If the target language is Malayalam, follow the Malayalam Response Style Rules: write complete sentences in Malayalam script, using 'ടാസ്കുകൾ' for tasks and 'മീറ്റിംഗുകൾ' for meetings.
 4. Return ONLY a valid JSON object starting with '{{' and ending with '}}'.
 
 Generate a tailored response matching the requested JSON structure. Keep sentences elegant, calm, and tailored to Kerala public service context.
@@ -232,7 +227,6 @@ Generate a tailored response matching the requested JSON structure. Keep sentenc
     const parser = new StringOutputParser();
     const chain = prompt.pipe(llm).pipe(parser);
 
-    // Limit lists and counts to prevent rate limit and token bloat (prompt size reduction)
     const slicedTasks = (data.todayTasksList || []).slice(0, 5);
     const slicedOverdue = (data.overdueTasksList || []).slice(0, 5);
     const slicedMeetings = (data.upcomingMeetingsList || []).slice(0, 3);
@@ -266,7 +260,6 @@ Generate a tailored response matching the requested JSON structure. Keep sentenc
     const { raw, duration, attempt } = await invokeLlmWithRetry(chain, variables);
     const genDuration = Date.now() - startGen;
     const completionTokens = estimateTokens(raw);
-    const totalTokens = promptTokens + completionTokens;
 
     let parsed = safeParseLLMJson(raw);
     if (!parsed.success) {
@@ -274,10 +267,8 @@ Generate a tailored response matching the requested JSON structure. Keep sentenc
       const retryTemplate = `${fullTemplate}\n\nIMPORTANT: The previous output failed JSON validation. You MUST return ONLY a valid, properly escaped and fully terminated JSON object. Do not include markdown code fences, and escape all special characters properly.`;
       const retryPrompt = PromptTemplate.fromTemplate(retryTemplate);
       const retryChain = retryPrompt.pipe(llm).pipe(parser);
-      const startRetry = Date.now();
       const retryRes = await invokeLlmWithRetry(retryChain, variables);
       const retryRaw = retryRes.raw;
-      const retryDuration = Date.now() - startRetry;
       
       parsed = safeParseLLMJson(retryRaw);
 
@@ -307,7 +298,7 @@ Generate a tailored response matching the requested JSON structure. Keep sentenc
 }
 
 /**
- * Ensures that all text fields (specifically motivation) strictly match the requested target language.
+ * Ensures that all text fields strictly match target language and standard Malayalam plural terms.
  */
 function sanitizeBriefingLanguage(briefing, resolvedLanguage) {
   if (!briefing || typeof briefing !== "object") return briefing;
@@ -315,16 +306,32 @@ function sanitizeBriefingLanguage(briefing, resolvedLanguage) {
   const isMl = resolvedLanguage === "malayalam";
   const hasMalayalamScript = (str) => typeof str === "string" && /[\u0D00-\u0D7F]/.test(str);
 
+  const cleanString = (val) => {
+    if (typeof val !== "string") return val;
+    let s = val
+      .replace(/\bടാസ്ക്സ്\b/g, "ടാസ്കുകൾ")
+      .replace(/\bമീറ്റിംഗ്സ്\b/g, "മീറ്റിംഗുകൾ");
+
+    if (isMl) {
+      s = s.replace(/\bTasks\b/g, "ടാസ്കുകൾ")
+           .replace(/\bMeetings\b/g, "മീറ്റിംഗുകൾ");
+    }
+    return s;
+  };
+
+  const cleanArray = (arr) => {
+    if (!Array.isArray(arr)) return arr;
+    return arr.map(item => typeof item === "string" ? cleanString(item) : item);
+  };
+
   const motivationVal = briefing.motivation || briefing["പ്രചോദനം"] || briefing["മോട്ടിവേഷൻ"];
   let motivation = typeof motivationVal === "string" ? motivationVal : "";
 
   if (!isMl) {
-    // Target is English: Replace if motivation contains Malayalam or is empty
     if (hasMalayalamScript(motivation) || !motivation.trim()) {
       motivation = "Every completed task helps deliver better public services to the people of Kerala.";
     }
   } else {
-    // Target is Malayalam: Replace if motivation lacks Malayalam script or is empty
     if (!hasMalayalamScript(motivation) || !motivation.trim()) {
       motivation = "ഓരോ ഫയൽ തീർപ്പാക്കലും കേരള ജനതയ്ക്ക് മെച്ചപ്പെട്ട സേവനം നൽകാൻ സഹായിക്കുന്നു.";
     }
@@ -332,7 +339,13 @@ function sanitizeBriefingLanguage(briefing, resolvedLanguage) {
 
   return {
     ...briefing,
-    motivation
+    greeting: cleanString(briefing.greeting),
+    statusMessage: cleanString(briefing.statusMessage),
+    briefing: cleanString(briefing.briefing),
+    recommendation: cleanString(briefing.recommendation),
+    priority: cleanString(briefing.priority),
+    smartPriorities: cleanArray(briefing.smartPriorities),
+    motivation: cleanString(motivation)
   };
 }
 
@@ -344,10 +357,9 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
 
   const isMalayalam = resolvedLanguage === "malayalam";
 
-  // Determine time-aware greeting using local hour
   let timeGreeting = "Good Morning";
   let greetingSuffix = isMalayalam 
-    ? "ഇന്നത്തെ നിങ്ങളുടെ Tasks plan ചെയ്യാൻ സഹായിക്കുന്ന വിവരങ്ങൾ താഴെ നൽകുന്നു."
+    ? "ഇന്നത്തെ നിങ്ങളുടെ ടാസ്കുകൾ പ്ലാൻ ചെയ്യാൻ സഹായിക്കുന്ന വിവരങ്ങൾ താഴെ നൽകുന്നു."
     : "Hope you have a productive day ahead.";
   
   try {
@@ -379,8 +391,7 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
 
   const greeting = `${timeGreeting}, ${name} 👋\n\n${greetingSuffix}`;
 
-  // Status message
-  let statusMessage = isMalayalam ? "നിങ്ങളുടെ Status പരിശോധിക്കുന്നു..." : "Checking your daily status...";
+  let statusMessage = isMalayalam ? "നിങ്ങളുടെ സ്റ്റാറ്റസ് പരിശോധിക്കുന്നു..." : "Checking your daily status...";
   if (wellnessStatus === "pending") {
     statusMessage = isMalayalam ? "ഇന്നത്തെ നിങ്ങളുടെ Wellness Check-in pending ആണ്." : "Your Daily Wellness check-in is pending.";
   } else if (wellnessScore >= 80) {
@@ -389,27 +400,26 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
       : "You have stable energy and excellent focus capacity today.";
   } else {
     statusMessage = isMalayalam 
-      ? "ഇന്ന് നിങ്ങളുടെ Tasks പതുക്കെ ചെയ്യാനും Breaks എടുക്കാനും Recommendation ചെയ്യുന്നു." 
+      ? "ഇന്ന് നിങ്ങളുടെ ടാസ്കുകൾ പതുക്കെ ചെയ്യാനും ഇടവേളകൾ എടുക്കാനും നിർദ്ദേശിക്കുന്നു." 
       : "Pacing yourself and taking regular breaks is recommended today.";
   }
 
-  // Briefing
   let briefing = "";
   if (isMalayalam) {
     if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) === 0) {
       briefing = "ഇന്നത്തേക്കായി ടാസ്കുകൾ ഷെഡ്യൂൾ ചെയ്തിട്ടില്ല, മീറ്റിംഗുകൾ ഒന്നും തന്നെയില്ല.";
     } else if ((todayTasksCount || 0) > 0 && (upcomingMeetingsCount || 0) === 0) {
-      briefing = `ഇന്ന് നിങ്ങൾക്ക് ചെയ്യേണ്ട ${todayTasksCount} Tasks ഉണ്ട്. മീറ്റിംഗുകൾ ഒന്നും തന്നെയില്ല.`;
+      briefing = `നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക ഇതാ: ${todayTasksCount} ടാസ്കുകൾ ഉണ്ട്. മീറ്റിംഗുകൾ ഒന്നും തന്നെയില്ല.`;
     } else if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) > 0) {
-      briefing = `ടാസ്കുകൾ ഒന്നും തന്നെയില്ല. ഇന്ന് നിങ്ങൾക്ക് Schedule ചെയ്ത ${upcomingMeetingsCount} Meetings ഉണ്ട്.`;
+      briefing = `ടാസ്കുകൾ ഒന്നും തന്നെയില്ല. ഇന്ന് നിങ്ങൾക്ക് ${upcomingMeetingsCount} മീറ്റിംഗുകൾ ഉണ്ട്.`;
     } else {
-      briefing = `ഇന്ന് നിങ്ങൾക്ക് ചെയ്യേണ്ട ${todayTasksCount} Tasks-ഉം Schedule ചെയ്ത ${upcomingMeetingsCount} Meetings-ഉമുണ്ട്.`;
+      briefing = `നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക ഇതാ: ${todayTasksCount} ടാസ്കുകൾ, ${upcomingMeetingsCount} മീറ്റിംഗുകൾ ഉണ്ട്.`;
     }
     if (overdueTasksCount > 0) {
-      briefing += ` അതിൽ നിങ്ങളുടെ അടിയന്തിര ശ്രദ്ധ ആവശ്യമുള്ള ${overdueTasksCount} Tasks Pending ആണ്.`;
+      briefing += ` അതിൽ നിങ്ങളുടെ അടിയന്തിര ശ്രദ്ധ ആവശ്യമുള്ള ${overdueTasksCount} ടാസ്കുകൾ ബാക്കിയാണ്.`;
     }
     if (newCircularsCount > 0) {
-      briefing += ` കൂടാതെ നിങ്ങളുടെ Department-മായി ബന്ധപ്പെട്ട ${newCircularsCount} പുതിയ Circulars-ഉമുണ്ട്.`;
+      briefing += ` കൂടാതെ നിങ്ങളുടെ വകുപ്പുമായി ബന്ധപ്പെട്ട ${newCircularsCount} പുതിയ സർക്കുലറുകളുമുണ്ട്.`;
     }
   } else {
     const taskWord = todayTasksCount === 1 ? "task" : "tasks";
@@ -434,35 +444,37 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
     }
   }
 
-  // Recommendation
   let recommendation = "";
   if (wellnessStatus === "pending") {
     recommendation = isMalayalam 
-      ? "ദയവായി ഇന്നത്തെ Wellness Check-in പൂർത്തിയാക്കൂ, അതിലൂടെ നിങ്ങൾക്ക് അനുയോജ്യമായ Recommendations തരാൻ സാധിക്കും." 
+      ? "ദയവായി ഇന്നത്തെ Wellness Check-in പൂർത്തിയാക്കൂ, അതിലൂടെ നിങ്ങൾക്ക് അനുയോജ്യമായ നിർദ്ദേശങ്ങൾ നൽകാൻ സാധിക്കും." 
       : "Please complete today's wellness check so we can customize your focus recommendations.";
   } else if (focusScore > 80) {
     recommendation = isMalayalam 
-      ? "കൂടുതൽ Focus ആവശ്യമുള്ള Files ഇന്ന് തന്നെ ചെയ്യാൻ ശ്രമിക്കുക." 
+      ? "കൂടുതൽ ശ്രദ്ധ ആവശ്യമുള്ള ഫയലുകൾ ഇന്ന് തന്നെ ചെയ്യാൻ ശ്രമിക്കുക." 
       : "With high focus capacity, tackle complex file clearances first.";
   } else {
     recommendation = isMalayalam 
-      ? "Stress കുറയ്ക്കുന്നതിനായി ഓരോ മണിക്കൂറിലും 5 minutes Stretch ചെയ്യുക." 
+      ? "സമ്മർദ്ദം കുറയ്ക്കുന്നതിനായി ഓരോ മണിക്കൂറിലും 5 മിനിറ്റ് ഇടവേള എടുക്കുക." 
       : "Make sure to schedule 5-minute stretch breaks to manage stress levels effectively.";
   }
 
-  // Priority
   let priority = "";
   if (overdueTasksCount > 0) {
-    priority = isMalayalam ? "Pending Tasks എത്രയും വേഗം പൂർത്തിയാക്കുക." : "Clear overdue planner tasks immediately.";
+    priority = isMalayalam ? "ബാക്കിയുള്ള ടാസ്കുകൾ എത്രയും വേഗം പൂർത്തിയാക്കുക." : "Clear overdue planner tasks immediately.";
   } else if (newCircularsCount > 0) {
-    priority = isMalayalam ? "പുതിയ Department Circulars Review ചെയ്യുക." : "Review the newly issued departmental circulars.";
+    priority = isMalayalam ? "പുതിയ വകുപ്പ് സർക്കുലറുകൾ പരിശോധിച്ച് വിലയിരുത്തുക." : "Review the newly issued departmental circulars.";
   } else {
-    priority = isMalayalam ? "ഇന്നത്തെ നിങ്ങളുടെ Tasks-ഉം Meetings-ഉം കൃത്യമായി plan ചെയ്യുക." : "Plan your schedule and tasks for the day.";
+    priority = isMalayalam ? "ഇന്നത്തെ നിങ്ങളുടെ ടാസ്കുകളും മീറ്റിംഗുകളും കൃത്യമായി പ്ലാൻ ചെയ്യുക." : "Plan your schedule and tasks for the day.";
   }
 
-  // Smart Priorities List
   const priorityWeight = { "High": 3, "Medium": 2, "Low": 1 };
-  const sortedTasks = (data.todayTasksObjects || []).sort((a, b) => {
+  const allActiveTasks = [
+    ...(data.todayTasksObjects || []),
+    ...(data.overdueTasksObjects || [])
+  ].filter(t => t.status === "Pending" || t.status === "In Progress");
+
+  const sortedTasks = allActiveTasks.sort((a, b) => {
     const weightA = priorityWeight[a.priority] || 2;
     const weightB = priorityWeight[b.priority] || 2;
     return weightB - weightA;
@@ -473,13 +485,12 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
     smartPriorities = sortedTasks.slice(0, 3).map(t => t.title);
   } else {
     smartPriorities = isMalayalam 
-      ? ["നിങ്ങളുടെ Tasks plan ചെയ്യുക", "പുതിയ Circulars Review ചെയ്യുക", "Wellness Status check ചെയ്യുക"]
+      ? ["നിങ്ങളുടെ ടാസ്കുകൾ പ്ലാൻ ചെയ്യുക", "പുതിയ സർക്കുലറുകൾ പരിശോധിക്കുക", "Wellness Status നോക്കുക"]
       : ["Plan your tasks", "Review pending circulars", "Check wellness status"];
   }
 
-  // Motivation
   const motivation = isMalayalam 
-    ? "ഓരോ File clearance-ഉം കേരളത്തിലെ ജനങ്ങൾക്ക് മികച്ച സർക്കാർ സേവനം നൽകാൻ സഹായിക്കുന്നു."
+    ? "ഓരോ ഫയൽ തീർപ്പാക്കലും കേരള ജനതയ്ക്ക് മെച്ചപ്പെട്ട സേവനം നൽകാൻ സഹായിക്കുന്നു."
     : "Every completed task helps deliver better public services to the people of Kerala.";
 
   return {
@@ -492,3 +503,5 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
     motivation
   };
 }
+
+export default generateDailyBriefing;

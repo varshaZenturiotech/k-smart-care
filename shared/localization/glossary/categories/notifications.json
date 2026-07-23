@@ -1,0 +1,317 @@
+[
+  {
+    "english": "Notification",
+    "malayalam": "നോട്ടിഫിക്കേഷൻ",
+    "type": "transliterate",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "Notifications",
+    "malayalam": "നോട്ടിഫിക്കേഷനുകൾ",
+    "type": "transliterate",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "Mark as Read",
+    "malayalam": "വായിച്ചതായി അടയാളപ്പെടുത്തുക",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "Clear Notifications",
+    "malayalam": "നോട്ടിഫിക്കേഷനുകൾ ഒഴിവാക്കുക",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "Broadcast Alert",
+    "malayalam": "ബ്രോഡ്കാസ്റ്റ് അറിയിപ്പ്",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 1",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 1",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 2",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 2",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 3",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 3",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 4",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 4",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 5",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 5",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 6",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 6",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 7",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 7",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 8",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 8",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 9",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 9",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 10",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 10",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 11",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 11",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 12",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 12",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 13",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 13",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 14",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 14",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 15",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 15",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 16",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 16",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 17",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 17",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 18",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 18",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 19",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 19",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 20",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 20",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 21",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 21",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 22",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 22",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 23",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 23",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 24",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 24",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 25",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 25",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 26",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 26",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 27",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 27",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 28",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 28",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 29",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 29",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 30",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 30",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 31",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 31",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 32",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 32",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 33",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 33",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 34",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 34",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 35",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 35",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 36",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 36",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 37",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 37",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 38",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 38",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 39",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 39",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  },
+  {
+    "english": "System Alert Category 40",
+    "malayalam": "സിസ്റ്റം അലർട്ട് വിഭാഗം 40",
+    "type": "phrase",
+    "category": "Notification System",
+    "reason": "Notification System term."
+  }
+]

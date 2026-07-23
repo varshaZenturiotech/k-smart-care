@@ -1,6 +1,7 @@
 import Task from "../models/Task.model.js";
 import User from "../models/User.model.js";
 import { safeParseLLMJson } from "../utils/safeParseLLMJson.js";
+import { invalidateDailyBriefingCache } from "./dailyBriefing.service.js";
 
 // Helper to parse dueTime string (e.g., "10:00 AM" or "14:30") to minutes for sorting
 function getDueTimeMinutes(dueTime) {
@@ -105,7 +106,8 @@ export async function getOverdueTasks(employeeId) {
  */
 export async function getScheduledMeetingTasks(employeeId) {
   const now = new Date();
-  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
+  const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
 
   const tasks = await Task.find({
     employee: employeeId,
@@ -113,40 +115,16 @@ export async function getScheduledMeetingTasks(employeeId) {
     status: { $in: ["Pending", "In Progress"] },
     dueDate: { $gte: startOfToday }
   })
-    .sort({ dueDate: 1, dueTime: 1 })
-    .limit(10);
+    .sort({ dueDate: 1, dueTime: 1 });
 
-  // Secondary client-side filter: for tasks due TODAY, exclude ones whose dueTime has
-  // already passed (with a 15-minute grace window so a meeting at 10:00 doesn't
-  // vanish at exactly 10:00).
-  const GRACE_MS = 15 * 60 * 1000; // 15 minutes
-  const todayStr = now.toISOString().split("T")[0];
-
-  return tasks.filter((task) => {
-    const taskDateStr = task.dueDate
-      ? new Date(task.dueDate).toISOString().split("T")[0]
-      : null;
-
-    // Not today → always include (future date)
-    if (taskDateStr !== todayStr) return true;
-
-    // Today → check if dueTime has passed (+ grace)
-    if (!task.dueTime) return true; // no time set → include all day
-
-    // Parse "HH:MM" or "HH:MM AM/PM"
-    const timeParts = task.dueTime.match(/^(\d{1,2}):(\d{2})(?:\s*(AM|PM))?$/i);
-    if (!timeParts) return true;
-
-    let hours = parseInt(timeParts[1], 10);
-    const minutes = parseInt(timeParts[2], 10);
-    const ampm = timeParts[3];
-    if (ampm) {
-      if (ampm.toUpperCase() === "PM" && hours < 12) hours += 12;
-      if (ampm.toUpperCase() === "AM" && hours === 12) hours = 0;
-    }
-
-    const meetingMs = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hours, minutes).getTime();
-    return meetingMs + GRACE_MS >= now.getTime();
+  return tasks.map(t => {
+    const taskObj = t.toObject();
+    const taskDate = t.dueDate ? new Date(t.dueDate) : null;
+    const isToday = taskDate && taskDate >= startOfToday && taskDate <= endOfToday;
+    return {
+      ...taskObj,
+      meetingType: isToday ? "today" : "upcoming"
+    };
   });
 }
 
@@ -232,7 +210,9 @@ export async function createTask(employeeId, taskData) {
     ...normalizedData,
     employee: employeeId
   });
-  return await task.save();
+  const saved = await task.save();
+  await invalidateDailyBriefingCache(employeeId);
+  return saved;
 }
 
 /**
@@ -244,7 +224,9 @@ export async function updateTask(employeeId, taskId, taskData) {
 
   const normalizedData = normalizeTaskDataToEnglish(taskData);
   Object.assign(task, normalizedData);
-  return await task.save();
+  const saved = await task.save();
+  await invalidateDailyBriefingCache(employeeId);
+  return saved;
 }
 
 
@@ -256,7 +238,9 @@ export async function updateTaskStatus(employeeId, taskId, status) {
   if (!task) throw new Error("Task not found or access denied");
 
   task.status = status;
-  return await task.save();
+  const saved = await task.save();
+  await invalidateDailyBriefingCache(employeeId);
+  return saved;
 }
 
 /**
@@ -265,6 +249,7 @@ export async function updateTaskStatus(employeeId, taskId, status) {
 export async function deleteTask(employeeId, taskId) {
   const result = await Task.deleteOne({ _id: taskId, employee: employeeId });
   if (result.deletedCount === 0) throw new Error("Task not found or access denied");
+  await invalidateDailyBriefingCache(employeeId);
   return { success: true };
 }
 

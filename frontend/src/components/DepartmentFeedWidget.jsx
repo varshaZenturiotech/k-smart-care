@@ -65,12 +65,12 @@ export default function DepartmentFeedWidget() {
   return (
     <div className="bg-white border border-border rounded-2xl shadow-custom p-6 transition-all duration-300 hover:shadow-custom-sm hover:-translate-y-0.5 flex flex-col gap-4">
       <div className="flex items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
           <div className="p-1.5 rounded-lg bg-teal-tint text-teal">
             <Megaphone size={18} />
           </div>
           <h2 className="text-base font-display font-medium text-ink">
-            {t("feed.forDept", "For {{dept}}", { dept: user?.department || t("feed.yourDept", "Your Department") })}
+            {t("feed.forDept", "For {{dept}}", { dept: t("departments." + user?.department, user?.department || t("feed.yourDept", "Your Department")) })}
           </h2>
         </div>
         {canPost && (

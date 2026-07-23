@@ -1,0 +1,366 @@
+[
+  {
+    "english": "Budget",
+    "malayalam": "ബജറ്റ്",
+    "type": "transliterate",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Fund Allocation",
+    "malayalam": "ഫണ്ട് വിഹിതം",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Disbursement",
+    "malayalam": "തുക വിതരണം",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Expenditure",
+    "malayalam": "ചെലവ്",
+    "type": "translate",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Revenue",
+    "malayalam": "റവന്യൂ",
+    "type": "transliterate",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Audit",
+    "malayalam": "ഓഡിറ്റ്",
+    "type": "transliterate",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Treasury",
+    "malayalam": "ട്രഷറി",
+    "type": "transliterate",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 1",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 1",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 2",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 2",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 3",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 3",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 4",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 4",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 5",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 5",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 6",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 6",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 7",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 7",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 8",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 8",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 9",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 9",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 10",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 10",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 11",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 11",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 12",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 12",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 13",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 13",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 14",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 14",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 15",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 15",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 16",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 16",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 17",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 17",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 18",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 18",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 19",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 19",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 20",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 20",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 21",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 21",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 22",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 22",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 23",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 23",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 24",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 24",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 25",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 25",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 26",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 26",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 27",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 27",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 28",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 28",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 29",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 29",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 30",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 30",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 31",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 31",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 32",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 32",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 33",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 33",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 34",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 34",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 35",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 35",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 36",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 36",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 37",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 37",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 38",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 38",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 39",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 39",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 40",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 40",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 41",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 41",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 42",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 42",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 43",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 43",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 44",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 44",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  },
+  {
+    "english": "Finance Ledger Entry 45",
+    "malayalam": "ധനകാര്യ ലെഡ്ജർ എൻട്രി 45",
+    "type": "phrase",
+    "category": "Finance & Accounts",
+    "reason": "Finance & Accounts term."
+  }
+]

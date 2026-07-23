@@ -1,0 +1,2101 @@
+{
+  "timestamp": "2026-07-21T12:07:21.840Z",
+  "summary": {
+    "issuesFound": 208,
+    "retried": 204,
+    "improved": 187,
+    "manualReview": 17,
+    "cacheUpdated": 187
+  },
+  "issuesBeforeVsAfter": {
+    "remainingEnglishBefore": 109,
+    "remainingEnglishAfter": 10,
+    "mixedLanguageBefore": 99,
+    "mixedLanguageAfter": 9
+  },
+  "qualityScore": {
+    "before": 93,
+    "after": 99
+  },
+  "executionTimeSeconds": 927.82,
+  "glossarySuggestions": [
+    {
+      "english": "dept",
+      "suggestedMalayalam": "dept",
+      "type": "transliterate",
+      "category": "UI"
+    },
+    {
+      "english": "title",
+      "suggestedMalayalam": "title",
+      "type": "transliterate",
+      "category": "UI"
+    },
+    {
+      "english": "count",
+      "suggestedMalayalam": "count",
+      "type": "transliterate",
+      "category": "UI"
+    },
+    {
+      "english": "and",
+      "suggestedMalayalam": "and",
+      "type": "transliterate",
+      "category": "UI"
+    },
+    {
+      "english": "name",
+      "suggestedMalayalam": "name",
+      "type": "transliterate",
+      "category": "UI"
+    },
+    {
+      "english": "10MB",
+      "suggestedMalayalam": "10MB",
+      "type": "transliterate",
+      "category": "UI"
+    }
+  ],
+  "changes": [
+    {
+      "key": "dashboard.errorLoad",
+      "english": "Could not load your dashboard. Please try again.",
+      "before": "Could not load your ഡാഷ്ബോർഡ്. Please try again.",
+      "after": "ഡാഷ്ബോർഡ് ലോഡ് ചെയ്യാൻ കഴിയാതെ വന്നു. പിന്നീട് ശ്രമിക്കുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "dashboard.sessionReset",
+      "english": "This can happen if the database was reset or your session expired.",
+      "before": "This can happen if the database was റീസെറ്റ് ചെയ്യുക or your സെഷൻ കാലാവധി കഴിഞ്ഞു.",
+      "after": "ഇത് സംഭവിക്കാം എന്നാൽ ഡാറ്റാബേസ് റിസെറ്റ് ചെയ്തിട്ടുണ്ടോ എന്നാണ് പരിശോധിക്കേണ്ടത് അല്ലെങ്കിൽ നിങ്ങളുടെ സെഷൻ കാലാവധി കഴിഞ്ഞു.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.analyzingBriefing",
+      "english": "Analyzing today's schedule and preparing your custom briefing...",
+      "before": "Analyzing today's ഷെഡ്യൂൾ and preparing your custom briefing...",
+      "after": "ഇന്നത്തെ സമയപട്ടിക വിശകലിച്ച് നിങ്ങളുടെ സ്വതന്ത്ര അവലോകനം തയ്യാറാക്കുന്നു...",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.viewDetails",
+      "english": "View Details & Diagnostics →",
+      "before": "കാണുക വിശദാംശങ്ങൾ & Diagnostics →",
+      "after": "കാണുക വിശദാംശങ്ങൾ & Diagnostics →",
+      "oldScore": 85,
+      "newScore": 85,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "greeting.wellnessPendingDesc",
+      "english": "Log today's wellness check to populate score diagnostics, circular charts, and customized colleague tips.",
+      "before": "Log today's ക്ഷേമം check to populate score diagnostics, സർക്കുലർ charts, and customized colleague tips.",
+      "after": "ഇന്നത്തെ ആരോഗ്യപരിശോധന ലോഗ് ചെയ്യുക, സ്കോർ ഡയഗ്നോസ്റ്റിക്സ്, വൃത്താകാര ചാർട്ടുകൾ, മറ്റും പൂപ്പുലേറ്റ് ചെയ്യുക, സമ്മതിച്ച സഹപ്രവർത്തക സൂചനകൾ.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.modalTitle",
+      "english": "Today's Wellness Details & Diagnostics",
+      "before": "Today's ക്ഷേമം വിശദാംശങ്ങൾ & Diagnostics",
+      "after": "ഇന്നത്തെ ആരോഗ്യക്ഷേമ വിവരങ്ങൾ & ഡയഗ്നോസ്റ്റിക്സ്",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.hours",
+      "english": "hrs",
+      "before": "hrs",
+      "after": "hrs",
+      "oldScore": 60,
+      "newScore": 60,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "greeting.wellnessStatus",
+      "english": "Today's Wellness Status",
+      "before": "Today's ക്ഷേമം സ്റ്റാറ്റസ്",
+      "after": "ഇന്നത്തെ ആരോഗ്യകാര്യം",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.wellnessPendingDescShort",
+      "english": "Log today's wellness check to view score details and diagnostics.",
+      "before": "Log today's ക്ഷേമം check to കാണുക score വിശദാംശങ്ങൾ and diagnostics.",
+      "after": "Log today's ക്ഷേമം check to കാണുക score വിശദാംശങ്ങൾ and diagnostics.",
+      "oldScore": 0,
+      "newScore": 0,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "greeting.noTasksDueHelper",
+      "english": "Your schedule will appear here once tasks are assigned.",
+      "before": "Your ഷെഡ്യൂൾ will appear here once tasks are assigned.",
+      "after": "നിങ്ങളുടെ സമയപട്ടിക ഇവിടെ കാണാൻ കഴിയും ആഗിരണം ചെയ്ത ചെയ്തികൾ ഉണ്ടാകുമ്പോൾ.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.oneTaskDue",
+      "english": "1 task due today",
+      "before": "1 ടാസ്ക് due today",
+      "after": "1 ടാസ്ക് ഇന്ന് അവസാനിക്കേണ്ടത്",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.manyTasksDue",
+      "english": "{{count}} tasks due today",
+      "before": "{{count}} tasks due today",
+      "after": "{{count}} tasks due today",
+      "oldScore": 30,
+      "newScore": 30,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "greeting.noMeetingsScheduled",
+      "english": "No meetings scheduled today",
+      "before": "No meetings scheduled today",
+      "after": "ഇന്ന് ഏതെങ്കിലും മീറ്റിംഗുകൾ നിയമിച്ചിട്ടില്ല.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.noMeetingsScheduledHelper",
+      "english": "Your schedule will appear here once meetings are scheduled.",
+      "before": "Your ഷെഡ്യൂൾ will appear here once meetings are scheduled.",
+      "after": "നിങ്ങളുടെ സമയപട്ടിക ഇവിടെ കാണാൻ കഴിയും ഒരുമിച്ചുള്ള മീറ്റിംഗുകൾ നിശ്ചിതമാകുമ്പോൾ.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.oneMeetingScheduled",
+      "english": "1 meeting scheduled today",
+      "before": "1 മീറ്റിംഗ് scheduled today",
+      "after": "1 മീറ്റിംഗ് ഇന്ന് നിശ്ചയിച്ചിരിക്കുന്നു",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "greeting.manyMeetingsScheduled",
+      "english": "{{count}} meetings scheduled today",
+      "before": "{{count}} meetings scheduled today",
+      "after": "{{count}} meetings scheduled today",
+      "oldScore": 30,
+      "newScore": 30,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "feed.forDept",
+      "english": "For {{dept}}",
+      "before": "For {{dept}}",
+      "after": "ആവർത്തിക്കാൻ ശ്രമിക്കുന്നതിനായി {{dept}}",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.yourDept",
+      "english": "Your Department",
+      "before": "Your വകുപ്പ്",
+      "after": "Your വകുപ്പ്",
+      "oldScore": 85,
+      "newScore": 85,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "feed.postNews",
+      "english": "Post News",
+      "before": "Post News",
+      "after": "പോസ്റ്റ് വാർത്ത",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.empty",
+      "english": "Nothing here yet for your department or district.",
+      "before": "Nothing here yet for your വകുപ്പ് or ജില്ല.",
+      "after": "Nothing here yet for your വകുപ്പ് or ജില്ല.",
+      "oldScore": 0,
+      "newScore": 0,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "feed.viewAll",
+      "english": "View All Circulars & News",
+      "before": "കാണുക All Circulars & News",
+      "after": "കാണുക എല്ലാ സമാഹാരങ്ങളും & വാർത്തകൾ",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.news",
+      "english": "News",
+      "before": "News",
+      "after": "വാർത്ത",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.editTags",
+      "english": "Edit tags",
+      "before": "എഡിറ്റ് ചെയ്യുക tags",
+      "after": "ടാഗുകൾ എഡിറ്റ് ചെയ്യുക",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.addToPlanner",
+      "english": "Add to Planner",
+      "before": "Add to Planner",
+      "after": "Add to Planner",
+      "oldScore": 30,
+      "newScore": 30,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "feed.editDistribution",
+      "english": "Edit Distribution",
+      "before": "എഡിറ്റ് ചെയ്യുക Distribution",
+      "after": "എഡിറ്റ് ചെയ്യുക പംപ്",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.departments",
+      "english": "Departments",
+      "before": "Departments",
+      "after": "വിഭാഗങ്ങൾ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.districtPlaceholder",
+      "english": "District (or 'All Districts')",
+      "before": "ജില്ല (or 'All Districts')",
+      "after": "ജില്ല (or 'All Districts')",
+      "oldScore": 30,
+      "newScore": 30,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "feed.createNews",
+      "english": "Create News Announcement",
+      "before": "ക്രിയേറ്റ് ചെയ്യുക News Announcement",
+      "after": "വാർത്താ പ്രകടനം സൃഷ്ടിക്കുക",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.headline",
+      "english": "Headline",
+      "before": "Headline",
+      "after": "ഷീർഷിക",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.shortAnnouncement",
+      "english": "Short announcement...",
+      "before": "Short announcement...",
+      "after": "ചുരുക്കിയ അറിയിപ്പ്...",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.targetDepartments",
+      "english": "Target Departments",
+      "before": "Target Departments",
+      "after": "ലക്ഷ്യ വിഭാഗങ്ങൾ",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.targetDistrict",
+      "english": "Target District",
+      "before": "Target ജില്ല",
+      "after": "Target ജില്ല",
+      "oldScore": 60,
+      "newScore": 60,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "feed.targetDistrictPlaceholder",
+      "english": "District (e.g. All Districts)",
+      "before": "ജില്ല (e.g. All Districts)",
+      "after": "ജില്ല (e.g. All Districts)",
+      "oldScore": 45,
+      "newScore": 45,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "feed.posting",
+      "english": "Posting...",
+      "before": "Posting...",
+      "after": "പോസ്റ്റ് ചെയ്യുന്നു...",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.postAnnouncement",
+      "english": "Post Announcement",
+      "before": "Post Announcement",
+      "after": "പോസ്റ്റ് പ്രകടനം",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.validationError",
+      "english": "Title, body, and at least one department are required.",
+      "before": "Title, body, and at least one വകുപ്പ് are required.",
+      "after": "ടൈറ്റിൽ, ബോഡി, ഒരു വകുപ്പ് കമ്പനിയും അടിവരയിടേണ്ടതാണ്.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.postFailed",
+      "english": "Failed to post news.",
+      "before": "Failed to post news.",
+      "after": "വാർത്തയുടെ പോസ്റ്റിംഗിൽ പരാജയപ്പെട്ടു.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.aiSuggestedFollowUp",
+      "english": "AI Suggested follow-up for: \"{{title}}\"",
+      "before": "എ.ഐ Suggested follow-up for: \"{{title}}\"",
+      "after": "എ.ഐ സൂചിപ്പിച്ച പിന്തുടരൽ കുറിപ്പുകൾക്കായി: \"{{title}}\"",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.aiFollowUpAdded",
+      "english": "AI Follow-up task added: \"{{title}}\"",
+      "before": "എ.ഐ ഫോളോ-അപ്പ് ടാസ്ക് added: \"{{title}}\"",
+      "after": "എ.ഐ പിന്തുടരൽ ടാസ്ക് ചേർത്തു: \"{{title}}\"",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "feed.aiFollowUpFailed",
+      "english": "Failed to generate AI follow-up task.",
+      "before": "Failed to generate എ.ഐ ഫോളോ-അപ്പ് ടാസ്ക്.",
+      "after": "പരാജയപ്പെട്ടു എ.ഐ പിന്തുടരുന്ന ടാസ്ക് സൃഷ്ടിക്കുന്നത്.",
+      "oldScore": 55,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.noTasks",
+      "english": "No tasks found in this category.",
+      "before": "No tasks found in this വിഭാഗം.",
+      "after": "ഇതിന്റെ വിഭാഗത്തിൽ ഏതെങ്കിലും ചെയിതെടുക്കലുകൾ കണ്ടെത്തിയില്ല.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.validationTitle",
+      "english": "Task title is required.",
+      "before": "ടാസ്ക് title is required.",
+      "after": "ടാസ്ക് പേര് ആവശ്യമാണ്.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.workspaceTitle",
+      "english": "Task & Meeting Workspace",
+      "before": "ടാസ്ക് & മീറ്റിംഗ് Workspace",
+      "after": "ടാസ്ക് & മീറ്റിംഗ് വർക്ക്സ്പേസ്",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.workspaceDesc",
+      "english": "Track milestones, schedule events, and organize circular workflows",
+      "before": "Track milestones, ഷെഡ്യൂൾ events, and organize സർക്കുലർ workflows",
+      "after": "മൈൽസ്റ്റോൺകൾ ട്രാക്ക് ചെയ്യുക, സംഭവങ്ങൾ നിശ്ചയിക്കുക, ചക്രാകൃതിയിലുള്ള പ്രവർത്തനങ്ങൾ സംഘടിപ്പിക്കുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.circularFollowups",
+      "english": "Circular Follow-ups",
+      "before": "സർക്കുലർ Follow-ups",
+      "after": "സർക്കുലർ പിന്തുടരൽ",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.circularFollowupsDesc",
+      "english": "AI detects circulars that need actionable follow-ups. Click to prefill task creation.",
+      "before": "എ.ഐ detects circulars that need actionable follow-ups. Click to prefill ടാസ്ക് creation.",
+      "after": "എ.ഐ സംവിധാനം സമയപ്പെടുത്തിയ ചക്രങ്ങൾ കണ്ടെത്തുന്നു. ക്ലിക്ക് ചെയ്യുന്നതിന് മുമ്പ് ടാസ്ക് സൃഷ്ടിക്കൽ പ്രാപ്തമാക്കുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.noCirculars",
+      "english": "No active circulars to monitor.",
+      "before": "No active circulars to monitor.",
+      "after": "ഏറ്റവും പുതിയ വ്യവസ്ഥകൾ കണ്ടെത്താൻ കഴിയില്ല.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.aiGenerated",
+      "english": "AI Generated",
+      "before": "എ.ഐ Generated",
+      "after": "എ.ഐ സൃഷ്ടിച്ചത്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.startsIn",
+      "english": "Starts in {{count}} min",
+      "before": "Starts in {{count}} min",
+      "after": "ആരംഭിക്കുന്നു ഇതിനിടെ {{count}} മിനിറ്റിൽ",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.ongoing",
+      "english": "Ongoing",
+      "before": "Ongoing",
+      "after": "നടക്കുന്നത്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.tomorrow",
+      "english": "Tomorrow",
+      "before": "Tomorrow",
+      "after": "നാളെ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.inDays",
+      "english": "In {{count}} days",
+      "before": "In {{count}} days",
+      "after": "In {{count}} days",
+      "oldScore": 45,
+      "newScore": 45,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "taskPlanner.todaysPriorities",
+      "english": "Today's Priorities",
+      "before": "Today's Priorities",
+      "after": "ഇന്നത്തെ പ്രാധാന്യങ്ങൾ",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.scheduledCount",
+      "english": "{{count}} scheduled",
+      "before": "{{count}} scheduled",
+      "after": "{{count}} ശേഖരിച്ചു",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.noTasksToday",
+      "english": "No tasks due today.",
+      "before": "No tasks due today.",
+      "after": "ഇന്നു വൈകിയ പ്രവർത്തനങ്ങളില്ല.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "taskPlanner.noMeetingsToday",
+      "english": "No upcoming meetings today.",
+      "before": "No വരാനിരിക്കുന്നവ meetings today.",
+      "after": "ഇന്നു വരാനിരിക്കുന്ന മീറ്റിംഗുകൾ ഇല്ല.",
+      "oldScore": 55,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.originalLanguage",
+      "english": "Original Language",
+      "before": "Original ഭാഷ",
+      "after": "ആസ്ലിഗ് ഭാഷ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.translateToMalayalam",
+      "english": "Translate to Malayalam",
+      "before": "തർജ്ജമ ചെയ്യുക to Malayalam",
+      "after": "മലയാളത്തിലേക്ക് വിവർത്തനം ചെയ്യുക",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.translateToEnglish",
+      "english": "Translate to English",
+      "before": "തർജ്ജമ ചെയ്യുക to English",
+      "after": "ഇംഗ്ലീഷിലേക്ക് മൊഴിമാറ്റ ചെയ്യുക",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.noCirculars",
+      "english": "No circulars found.",
+      "before": "No circulars found.",
+      "after": "കോളിംഗുകൾ കണ്ടെത്തിയില്ല.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.noCircularsUploaded",
+      "english": "No circulars uploaded yet.",
+      "before": "No circulars uploaded yet.",
+      "after": "ഏറ്റവും പഴയ സർക്കുലറുകൾ ഇപ്പോഴും ഉപലോഡ് ചെയ്യാത്തതാണ്.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.confirmDelete",
+      "english": "Are you sure you want to delete this circular?",
+      "before": "Are you sure you want to ഡിലീറ്റ് ചെയ്യുക this സർക്കുലർ?",
+      "after": "നിങ്ങൾ നിശ്ചിതമായും ഈ സർക്കുലർ നശിപ്പിക്കാൻ ആഗ്രഹിക്കുകയാണോ?",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.deleteSuccess",
+      "english": "Circular deleted successfully.",
+      "before": "സർക്കുലർ deleted successfully.",
+      "after": "സർക്കുലർ നശിപ്പിച്ചു.",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.deleteFailed",
+      "english": "Failed to delete circular.",
+      "before": "Failed to ഡിലീറ്റ് ചെയ്യുക സർക്കുലർ.",
+      "after": "പരാജയപ്പെട്ടു ഒരു ചക്രം നീക്കം ചെയ്യുന്നതിൽ.",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.hideSummary",
+      "english": "▲ Hide Summary",
+      "before": "▲ Hide സംഗ്രഹം",
+      "after": "▲ മറയ്ക്കുക സംഗ്രഹം",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.subject",
+      "english": "Subject",
+      "before": "Subject",
+      "after": "വിഷയം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.releaseDate",
+      "english": "Release Date",
+      "before": "Release Date",
+      "after": "പുറത്തിറക്കൽ തീയതി",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.subHeaderDescription",
+      "english": "Browse, search, and query Kerala Government circulars relevant to your department",
+      "before": "Browse, സെർച്ച്, and ചോദ്യം Kerala സർക്കാർ circulars relevant to your വകുപ്പ്",
+      "after": "ബ്രൗസ്, സെർച്ച്, ചോദ്യം കേരള സർക്കാർ സർക്കുലറുകൾ നിങ്ങളുടെ വകുപ്പിനു ബന്ധപ്പെട്ടവ.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.circulars",
+      "english": "Circulars",
+      "before": "Circulars",
+      "after": "സർക്കുലാർമാർ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.filtered",
+      "english": "Filtered",
+      "before": "Filtered",
+      "after": "ഫിൽട്ടർ ചെയ്തത്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.filterRepository",
+      "english": "Filter Repository",
+      "before": "ഫിൽട്ടർ Repository",
+      "after": "ഫിൽട്ടർ റിപ്പോസിറ്ററി",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.searchTitlePlaceholder",
+      "english": "Search title, No...",
+      "before": "സെർച്ച് title, No...",
+      "after": "തിരയുക title, ഇല്ല...",
+      "oldScore": 70,
+      "newScore": 85,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.allDepartments",
+      "english": "All Departments",
+      "before": "All Departments",
+      "after": "എല്ലാ വകുപ്പുകളും",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.allCategories",
+      "english": "All Categories",
+      "before": "All Categories",
+      "after": "എല്ലാ വർഗ്ഗങ്ങളും",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.allPriorities",
+      "english": "All Priorities",
+      "before": "All Priorities",
+      "after": "എല്ലാ പ്രാധാന്യങ്ങളും",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.clearAllFilters",
+      "english": "Clear All Filters",
+      "before": "ക്ലിയർ ചെയ്യുക All Filters",
+      "after": "എല്ലാ ഫിൽട്ടറുകളും വിസ്മരിക്കുക",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.circularDocuments",
+      "english": "Circular Documents",
+      "before": "സർക്കുലർ Documents",
+      "after": "പത്രികാ രേഖകൾ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.noMatches",
+      "english": "No circulars match current filters.",
+      "before": "No circulars match current filters.",
+      "after": "ഏതെങ്കിലും ചട്ടക്കൂടുകൾ ഇപ്പോഴത്തെ ഫിൽട്ടറുകളുമായി താരതമ്യം ചെയ്യുമ്പോൾ ഒന്നും കണ്ടെത്തിയില്ല.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.relaxParams",
+      "english": "Try relaxing search parameters or upload new documents on the dashboard.",
+      "before": "Try relaxing സെർച്ച് parameters or അപ്ലോഡ് new documents on the ഡാഷ്ബോർഡ്.",
+      "after": "ശാന്തമായ തരത്തിൽ തിരഞ്ഞെടുക്കൽ പരിധികൾ മാറ്റുകയോ ഡാഷ്ബോർഡിൽ പുതിയ ഡോക്യുമെന്റുകൾ അപ്ലോഡ് ചെയ്യുകയോ ചെയ്യുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.metadataSummary",
+      "english": "AI-extracted metadata summary profile.",
+      "before": "AI-extracted metadata സംഗ്രഹം പ്രൊഫൈൽ.",
+      "after": "എഐ-എക്സ്ട്രാക്റ്റ് ചെയ്ത ഡാറ്റാ സംഗ്രഹം പ്രൊഫൈൽ.",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.noNumber",
+      "english": "No Number",
+      "before": "No Number",
+      "after": "ഒന്നും ഇല്ല",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.issuedDate",
+      "english": "Issued",
+      "before": "Issued",
+      "after": "പുറപ്പെടുവിച്ചത്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.noTargeting",
+      "english": "No targeting specified",
+      "before": "No targeting specified",
+      "after": "ലക്ഷ്യം നിശ്ചയിക്കാത്തത്",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.aiIngestionSummary",
+      "english": "AI Ingestion Summary",
+      "before": "എ.ഐ Ingestion സംഗ്രഹം",
+      "after": "എ.ഐ സ്വീകരണം സംഗ്രഹം",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.noAiSummary",
+      "english": "No AI Summary available yet.",
+      "before": "No എ.ഐ സംഗ്രഹം available yet.",
+      "after": "എ.ഐ സംഗ്രഹം ഇപ്പോഴും ലഭ്യമല്ല.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.consultAssistant",
+      "english": "Consult Assistant",
+      "before": "Consult Assistant",
+      "after": "കൺസൾട്ട് അസിസ്റ്റന്റ്",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.selectToInspect",
+      "english": "Select a circular document to inspect its profile and AI insights.",
+      "before": "തിരഞ്ഞെടുക്കുക a സർക്കുലർ ഡോക്യുമെന്റ് to inspect its പ്രൊഫൈൽ and എ.ഐ വിവര വിശകലനം.",
+      "after": "ഒരു വൃത്താകൃതിയുള്ള ഡോക്യുമെന്റ് തിരഞ്ഞെടുക്കുക to അതിന്റെ പ്രൊഫൈൽ പരിശോധിക്കുക and എ.ഐ ഉൾക്കാഴ്ചകൾ.",
+      "oldScore": 40,
+      "newScore": 75,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "circular.toggleTheme",
+      "english": "Toggle Theme (Calm Mode)",
+      "before": "ടോഗിൾ തീം (Calm Mode)",
+      "after": "തിരിച്ചറിയൽ തീം (ശാന്തമായ അവസ്ഥ)",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "admin.noUsers",
+      "english": "No users found.",
+      "before": "No users found.",
+      "after": "ഉപയോക്താക്കൾ കണ്ടെത്തിയില്ല.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "admin.console",
+      "english": "Admin Console",
+      "before": "Admin Console",
+      "after": "അഡ്മിൻ കൺസോൾ",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.dontHaveAccount",
+      "english": "Don't have an account?",
+      "before": "Don't have an account?",
+      "after": "ഒരു അക്കൗണ്ട് ഉണ്ടോ?",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.alreadyHaveAccount",
+      "english": "Already have an account?",
+      "before": "Already have an account?",
+      "after": "ഒരു കണക്ക് ഉണ്ടോ?",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.enterBoth",
+      "english": "Please enter both email and password.",
+      "before": "Please enter both ഇമെയിൽ and പാസ്‌വേഡ്.",
+      "after": "ഇമെയിൽ എന്നിരുന്നാലും പാസ്‌വേഡ് എന്നിരുന്നാലും നൽകുക.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.invalidCredentials",
+      "english": "Invalid credentials. Please try again.",
+      "before": "Invalid ലോഗിൻ വിവരങ്ങൾ. Please try again.",
+      "after": "തെറ്റായ രേഖകൾ. പിന്നീട് ശ്രമിക്കുക.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.platformSubtitle",
+      "english": "AI Human Capital & Circular Intelligence Platform",
+      "before": "എ.ഐ Human Capital & സർക്കുലർ ഇന്റലിജൻസ് Platform",
+      "after": "എ.ഐ മനുഷ്യ വനിതാ സംഭാവനാ പ്ലാറ്റ്‌ഫോം",
+      "oldScore": 55,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.verifying",
+      "english": "Verifying Credentials...",
+      "before": "Verifying ലോഗിൻ വിവരങ്ങൾ...",
+      "after": "സിദ്ധാന്തങ്ങൾ തിരിച്ചറിയുന്നു...",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.securePortal",
+      "english": "Secure Portal Environment",
+      "before": "Secure Portal Environment",
+      "after": "സുരക്ഷാ പോർട്ടൽ പരിസ്ഥിതി",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.demoCredentials",
+      "english": "Demonstration Credentials",
+      "before": "Demonstration ലോഗിൻ വിവരങ്ങൾ",
+      "after": "പ്രദർശന അനുമതികൾ",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.passphrase",
+      "english": "Passphrase",
+      "before": "Passphrase",
+      "after": "പാസ്വേർഡ് പ്രതീകം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "auth.resetDemo",
+      "english": "Reset to Demo Credentials",
+      "before": "റീസെറ്റ് ചെയ്യുക to Demo ലോഗിൻ വിവരങ്ങൾ",
+      "after": "ഡെമോ ക്രെഡൻഷ്യൽ വിവരങ്ങൾക്ക് തിരിച്ചുവരുക",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.great",
+      "english": "Great",
+      "before": "Great",
+      "after": "മഹാനായ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.good",
+      "english": "Good",
+      "before": "Good",
+      "after": "മികച്ചത്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.okay",
+      "english": "Okay",
+      "before": "Okay",
+      "after": "Okay",
+      "oldScore": 60,
+      "newScore": 60,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "wellness.tired",
+      "english": "Tired",
+      "before": "Tired",
+      "after": "ചതുരുത്തു",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.overwhelmed",
+      "english": "Overwhelmed",
+      "before": "Overwhelmed",
+      "after": "Overwhelmed",
+      "oldScore": 60,
+      "newScore": 60,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "wellness.checkedIn",
+      "english": "Checked In",
+      "before": "Checked In",
+      "after": "Checked In",
+      "oldScore": 45,
+      "newScore": 45,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "wellness.moodCompleted",
+      "english": "Mood check completed for today.",
+      "before": "മൂഡ് പരിശോധന പൂർത്തിയായവ for today.",
+      "after": "ഇന്നുള്ള മൂഡ് പരിശോധന പൂർത്തിയായി.",
+      "oldScore": 70,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.aiRecommendations",
+      "english": "AI Wellness Recommendations",
+      "before": "എ.ഐ ക്ഷേമം Recommendations",
+      "after": "എ.ഐ ആരോഗ്യകരമായ പരാമർശങ്ങൾ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.modalTitle",
+      "english": "Daily Wellbeing",
+      "before": "Daily Wellbeing",
+      "after": "ദിവസേന ആരോഗ്യകരമായ ജീവിതം",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.stepOf",
+      "english": "Questionnaire · Step {{step}} of {{total}}",
+      "before": "Questionnaire · Step {{step}} of {{total}}",
+      "after": "Questionnaire · Step {{step}} of {{total}}",
+      "oldScore": 30,
+      "newScore": 30,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "wellness.greetingMorning",
+      "english": "Good Morning! 🌿",
+      "before": "Good Morning! 🌿",
+      "after": "നല്ല സന്ധ്യ! 🌿",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.greetingAfternoon",
+      "english": "Good Afternoon! 🌿",
+      "before": "Good Afternoon! 🌿",
+      "after": "നല്ല കാലാവസ്ഥ! 🌿",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.greetingEvening",
+      "english": "Good Evening! 🌿",
+      "before": "Good Evening! 🌿",
+      "after": "ഇന്നലെ നമസ്കാരം! 🌿",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.greetingNight",
+      "english": "Good Night! 🌿",
+      "before": "Good Night! 🌿",
+      "after": "നല്ല രാത്രി! 🌿",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.inviteDesc",
+      "english": "Would you like to complete your Daily Wellness Check? It takes less than one minute and helps personalize your AI recommendations.",
+      "before": "Would you like to complete your ദിവസേനയുള്ള ക്ഷേമ പരിശോധന? It takes less than one minute and helps personalize your എ.ഐ recommendations.",
+      "after": "നിങ്ങൾ ദിവസേന ക്ഷേമ പരിശോധന പൂർത്തിയാക്കാൻ ആഗ്രഹിക്കുകയോ ചെയ്യുക? അത് ഒരു നിമിഷത്തിനുള്ളിൽ കഴിയും എന്നിരിക്കെ, നിങ്ങളുടെ എ.ഐ സൂചനകൾ വ്യക്തിപരമായി പ്രാപ്തമാക്കുന്നു.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.startCheckin",
+      "english": "Start Check-in",
+      "before": "Start Check-in",
+      "after": "ആരംഭിക്കുക ചെക്ക്-ഇൻ",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.remindLater",
+      "english": "Remind Me Later",
+      "before": "Remind Me Later",
+      "after": "എന്നെ ഓർമ്മിക്കാൻ പിന്നീട്",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.skipToday",
+      "english": "Skip for Today",
+      "before": "Skip for Today",
+      "after": "ഇന്ന് ഒഴിവാക്കുക",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.processing",
+      "english": "Processing...",
+      "before": "Processing...",
+      "after": "പ്രക്രിയാവസാനം...",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.howManyHours",
+      "english": "How many hours did you sleep?",
+      "before": "How many hours did you ഉറക്കം?",
+      "after": "എത്ര മണിക്കൂർ നീ ഉറങ്ങിയിരുന്നു?",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.hoursLabel",
+      "english": "{{count}} hours",
+      "before": "{{count}} hours",
+      "after": "{{count}} hours",
+      "oldScore": 60,
+      "newScore": 60,
+      "retry": 2,
+      "status": "Manual Review Required"
+    },
+    {
+      "key": "wellness.energyLevel",
+      "english": "Energy Level",
+      "before": "ഊർജ്ജസ്വലത Level",
+      "after": "ശക്തി നിലവാരം",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.todayWorkload",
+      "english": "Today's Workload",
+      "before": "Today's ജോലിഭാരം",
+      "after": "ഇന്നത്തെ ജോലിഭാരം",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.optionalNote",
+      "english": "Optional Note",
+      "before": "Optional Note",
+      "after": "വായ്പാക്കാവുന്ന ടിപ്പ്",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.noteLabel",
+      "english": "Anything you'd like to share today?",
+      "before": "Anything you'd like to share today?",
+      "after": "ഇന്ന് എന്തെങ്കിലും പങ്കുവെക്കാൻ വേണ്ടെങ്കിൽ?",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.notePlaceholder",
+      "english": "Share your thoughts, challenges or context...",
+      "before": "Share your thoughts, challenges or സന്ദർഭം...",
+      "after": "നിങ്ങളുടെ ആശയങ്ങൾ, ചികിത്സകളോ സന്ദർഭമോ പങ്കുവെക്കുക...",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.nextStep",
+      "english": "Next Step",
+      "before": "അടുത്തത് Step",
+      "after": "അടുത്ത കടമ",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.generatingInsights",
+      "english": "Generating AI Insights...",
+      "before": "Generating എ.ഐ വിവര വിശകലനം...",
+      "after": "ഐ ഉപകരണങ്ങളിലെ ഉൾക്കാഴ്ചകൾ സൃഷ്ടിക്കുന്നു...",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.skipFailed",
+      "english": "Failed to skip check-in. Please try again.",
+      "before": "Failed to skip check-in. Please try again.",
+      "after": "പരിശോധന ഒഴിവാക്കാൻ പാലിച്ചില്ല. പിന്നീട് ശ്രമിക്കുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.submitFailed",
+      "english": "Failed to submit check-in. Please try again.",
+      "before": "Failed to സബ്‌മിറ്റ് ചെയ്യുക check-in. Please try again.",
+      "after": "പാസ് ചെയ്യാൻ കഴിയാത്തപ്പോൾ ചെക്ക്-ഇൻ സബ്‌മിറ്റ് ചെയ്യുക. പിന്നീട് ശ്രമിക്കുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.verylow",
+      "english": "Very Low",
+      "before": "Very Low",
+      "after": "വളരെ താഴ്ന്നത്",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.moderate",
+      "english": "Moderate",
+      "before": "Moderate",
+      "after": "മധ്യസ്ഥായി",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.veryhigh",
+      "english": "Very High",
+      "before": "Very High",
+      "after": "വളരെ ഉയർന്ന",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.excellent",
+      "english": "Excellent",
+      "before": "Excellent",
+      "after": "മികച്ചത്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.light",
+      "english": "Light",
+      "before": "Light",
+      "after": "വെളിച്ചം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.normal",
+      "english": "Normal",
+      "before": "Normal",
+      "after": "സാധാരണമായ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.heavy",
+      "english": "Heavy",
+      "before": "Heavy",
+      "after": "ഭാരം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "wellness.veryheavy",
+      "english": "Very Heavy",
+      "before": "Very Heavy",
+      "after": "വളരെ ഭാരമുള്ളത്",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Local Self Government",
+      "english": "Local Self Government",
+      "before": "Local Self സർക്കാർ",
+      "after": "സ്വയം ഭരണ സംഘടന",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Health",
+      "english": "Health",
+      "before": "Health",
+      "after": "ആരോഗ്യം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Engineering & PWD",
+      "english": "Engineering & PWD",
+      "before": "Engineering & പി.ഡബ്ല്യു.ഡി",
+      "after": "എഞ്ചിനീയറിംഗ് & പി.ഡബ്ല്യു.ഡി",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Education",
+      "english": "Education",
+      "before": "Education",
+      "after": "വിദ്യാഭ്യാസം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Agriculture",
+      "english": "Agriculture",
+      "before": "Agriculture",
+      "after": "കൃഷി",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Disaster Management",
+      "english": "Disaster Management",
+      "before": "Disaster Management",
+      "after": "പ്രകൃതി വൈപരീത്യം നിയന്ത്രണം",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Finance",
+      "english": "Finance",
+      "before": "Finance",
+      "after": "വിലയിരുത്തൽ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.General Administration",
+      "english": "General Administration",
+      "before": "General Administration",
+      "after": "സാമാന്യ ഭരണം",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Engineering",
+      "english": "Engineering",
+      "before": "Engineering",
+      "after": "എഞ്ചിനീയറിംഗ്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Planning",
+      "english": "Planning",
+      "before": "Planning",
+      "after": "പദ്ധതിപട്ടിക",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "departments.Administration",
+      "english": "Administration",
+      "before": "Administration",
+      "after": "നിർവഹണം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "categories.Recruitment",
+      "english": "Recruitment",
+      "before": "Recruitment",
+      "after": "നിയാമകം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.All Districts",
+      "english": "All Districts",
+      "before": "All Districts",
+      "after": "എല്ലാ ജില്ലകളും",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Alappuzha",
+      "english": "Alappuzha",
+      "before": "Alappuzha",
+      "after": "ആലപ്പുഴ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Ernakulam",
+      "english": "Ernakulam",
+      "before": "Ernakulam",
+      "after": "എറണാകുളം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Idukki",
+      "english": "Idukki",
+      "before": "Idukki",
+      "after": "ഇടുക്കി",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Kannur",
+      "english": "Kannur",
+      "before": "Kannur",
+      "after": "കണ്ണൂർ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Kasaragod",
+      "english": "Kasaragod",
+      "before": "Kasaragod",
+      "after": "കാസർഗോഡ്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Kollam",
+      "english": "Kollam",
+      "before": "Kollam",
+      "after": "കൊല്ലം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Kottayam",
+      "english": "Kottayam",
+      "before": "Kottayam",
+      "after": "കോട്ടയം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Kozhikode",
+      "english": "Kozhikode",
+      "before": "Kozhikode",
+      "after": "കോഴിക്കോട്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Malappuram",
+      "english": "Malappuram",
+      "before": "Malappuram",
+      "after": "മലപ്പുറം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Palakkad",
+      "english": "Palakkad",
+      "before": "Palakkad",
+      "after": "പാലക്കാട്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Pathanamthitta",
+      "english": "Pathanamthitta",
+      "before": "Pathanamthitta",
+      "after": "പത്തനംതിട്ട",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Thiruvananthapuram",
+      "english": "Thiruvananthapuram",
+      "before": "Thiruvananthapuram",
+      "after": "തിരുവനന്തപുരം",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Thrissur",
+      "english": "Thrissur",
+      "before": "Thrissur",
+      "after": "തൃശ്ശൂര്‍",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "districts.Wayanad",
+      "english": "Wayanad",
+      "before": "Wayanad",
+      "after": "വയനാട്",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "designations.Panchayat Secretary",
+      "english": "Panchayat Secretary",
+      "before": "Panchayat സെക്രട്ടറി",
+      "after": "ഗ്രാമപഞ്ചായത്ത് സെക്രട്ടറി",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "designations.State IT Administrator",
+      "english": "State IT Administrator",
+      "before": "State ഐ.ടി Administrator",
+      "after": "സംസ്ഥാന ഐ.ടി അഡ്മിനിസ്ട്രേറ്റർ",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "designations.Section Clerk",
+      "english": "Section Clerk",
+      "before": "Section ക്ലർക്ക്",
+      "after": "സെക്ഷൻ ക്ലർക്ക് എന്നത് തെറ്റായതാണ്. കാരണം ക്ലർക്ക് എന്ന ആംഗലേയ വാക്കിനെ വിളിച്ചുപറയാനും ചെയ്യുന്നു. കാര്യാലയ കാര്യദർശി എന്നത് സമാഹാരമായ വാക്കാണ്.",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "designations.Admin",
+      "english": "Admin",
+      "before": "Admin",
+      "after": "അഡ്മിൻ",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.task.created",
+      "english": "Task created successfully.",
+      "before": "ടാസ്ക് created successfully.",
+      "after": "ടാസ്ക് സൃഷ്ടിച്ചത് വിജയകരമായി.",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.task.updated",
+      "english": "Task updated.",
+      "before": "ടാസ്ക് updated.",
+      "after": "ടാസ്ക് പുതുക്കി.",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.task.deleted",
+      "english": "Task deleted.",
+      "before": "ടാസ്ക് deleted.",
+      "after": "ടാസ്ക് നശിപ്പിച്ചു.",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.meeting.created",
+      "english": "Meeting created.",
+      "before": "മീറ്റിംഗ് created.",
+      "after": "മീറ്റിംഗ് സൃഷ്ടിച്ചത്.",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.meeting.deleted",
+      "english": "Meeting deleted.",
+      "before": "മീറ്റിംഗ് deleted.",
+      "after": "മീറ്റിംഗ് നശിപ്പിച്ചു.",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.circular.uploadStarted",
+      "english": "Uploading circular...",
+      "before": "Uploading സർക്കുലർ...",
+      "after": "ഉപലോഡ് ചെയ്യുന്നു...",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.circular.uploadCompleted",
+      "english": "Circular uploaded successfully: {{name}}",
+      "before": "സർക്കുലർ uploaded successfully: {{name}}",
+      "after": "സർക്കുലർ ഉപലോഡിച്ചു: {{name}}",
+      "oldScore": 45,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.circular.summaryGenerated",
+      "english": "AI summary generated.",
+      "before": "എ.ഐ സംഗ്രഹം generated.",
+      "after": "എ.ഐ സംഗ്രഹം സൃഷ്ടിച്ചത്.",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.circular.deleted",
+      "english": "Circular deleted.",
+      "before": "സർക്കുലർ deleted.",
+      "after": "സർക്കുലർ നശിപ്പിച്ചു.",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.ai.generatingBriefing",
+      "english": "Generating AI Daily Briefing...",
+      "before": "Generating എ.ഐ ദിവസേനയുള്ള ബ്രീഫിംഗ്...",
+      "after": "എ.ഐ ദിവസേന സംഗ്രഹം സൃഷ്ടിക്കുന്നു...",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.ai.generatingWellnessInsights",
+      "english": "Generating Wellness Insights...",
+      "before": "Generating ക്ഷേമം വിവര വിശകലനം...",
+      "after": "വെല്ലിംഗ് ഉൾക്കാഴ്ചകൾ സൃഷ്ടിക്കുന്നു...",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.ai.analyzingCircular",
+      "english": "Analyzing Government Circular...",
+      "before": "Analyzing സർക്കാർ സർക്കുലർ...",
+      "after": "വിശകലനം ചെയ്യുന്നു സർക്കാർ കക്ഷാപത്രം...",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.ai.creatingTask",
+      "english": "Creating AI Task...",
+      "before": "Creating എ.ഐ ടാസ്ക്...",
+      "after": "എ.ഐ ടാസ്ക് സൃഷ്ടിക്കുന്നു...",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.ai.generatingSuggestions",
+      "english": "Generating Suggested Questions...",
+      "before": "Generating Suggested Questions...",
+      "after": "സൂചിസിച്ച പ്രശ്നങ്ങൾ സൃഷ്ടിക്കുന്നു...",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.auth.loginSuccess",
+      "english": "Login successful.",
+      "before": "ലോഗിൻ successful.",
+      "after": "ലോഗിൻ വിജയകരമായി.",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.auth.loginFailed",
+      "english": "Login failed.",
+      "before": "ലോഗിൻ failed.",
+      "after": "ലോഗിൻ പ്രയത്നം വിജയിച്ചില്ല.",
+      "oldScore": 60,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.auth.logoutSuccess",
+      "english": "Logged out successfully.",
+      "before": "Logged out successfully.",
+      "after": "ലോഗിൻ ചെയ്തിട്ടില്ല.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.generic",
+      "english": "Unable to complete the request. Please try again.",
+      "before": "Unable to complete the request. Please try again.",
+      "after": "അപേക്ഷ പൂർത്തിയാക്കാൻ കഴിയാത്തത്. പിന്നീട് ശ്രമിക്കുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.network",
+      "english": "Network error. Please check your connection.",
+      "before": "Network error. Please check your connection.",
+      "after": "നെറ്റ്‌വർക്ക് തകരാറ്. നിങ്ങളുടെ ബന്ധം പരിശോധിക്കുക.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.aiUnavailable",
+      "english": "AI service is currently unavailable.",
+      "before": "എ.ഐ service is currently unavailable.",
+      "after": "എ.ഐ സേവനം ഇപ്പോൾ ലഭ്യമല്ല.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.taskLoadFailed",
+      "english": "Failed to load tasks.",
+      "before": "Failed to load tasks.",
+      "after": "ടാസ്കുകൾ ലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.meetingLoadFailed",
+      "english": "Failed to load meetings.",
+      "before": "Failed to load meetings.",
+      "after": "കണ്ടെത്തിയതില്ല.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.feedLoadFailed",
+      "english": "Failed to load department feed.",
+      "before": "Failed to load വകുപ്പ് feed.",
+      "after": "വകുപ്പ് പാത്രം ലഭ്യമാകാത്തതിനാൽ നഷ്ടപ്പെട്ടു.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.aiBriefingFailed",
+      "english": "Failed to refresh AI briefing.",
+      "before": "Failed to റിഫ്രഷ് ചെയ്യുക എ.ഐ briefing.",
+      "after": "പരാജയപ്പെട്ടു എയി ബ്രിഫിംഗ് പുതുക്കിയത്.",
+      "oldScore": 55,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.error.saveFailed",
+      "english": "Failed to save data.",
+      "before": "Failed to സേവ് ചെയ്യുക data.",
+      "after": "ഫലിതം സേവനം ചെയ്യാൻ കഴിഞ്ഞില്ല.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.upload.pdfOnly",
+      "english": "Only PDF documents are supported.",
+      "before": "Only പി.ഡി.എഫ് documents are supported.",
+      "after": "മാത്രമേ പി.ഡി.എഫ് ഡോക്യുമെന്റുകൾ മാത്രമേ പിന്തുണയ്ക്കുന്നു.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.upload.sizeLimitExceeded",
+      "english": "File size exceeds 10MB limit.",
+      "before": "ഫയൽ size exceeds 10MB limit.",
+      "after": "ഫിലിന്റെ വലിപ്പം 10MB പരിധിക്ക് മിണ്ടുന്നു.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.wellness.submitted",
+      "english": "Wellness check-in completed successfully.",
+      "before": "ക്ഷേമം check-in പൂർത്തിയായവ successfully.",
+      "after": "ക്ഷേമാപേക്ഷകൾ പരിശോധന പൂർത്തിയായി.",
+      "oldScore": 30,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.wellness.skipped",
+      "english": "Wellness check-in skipped for today.",
+      "before": "ക്ഷേമം check-in skipped for today.",
+      "after": "ഇന്ന് വൈകല്യം ചെയ്ത ആരോഗ്യപരിശോധന ഒഴിവാക്കി.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.offline",
+      "english": "You are currently offline.",
+      "before": "You are currently offline.",
+      "after": "നിങ്ങൾ ഇപ്പോൾ ഓൺലൈൻ ആയിട്ടില്ല.",
+      "oldScore": 15,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.confirm.deleteTaskTitle",
+      "english": "Delete this task?",
+      "before": "ഡിലീറ്റ് ചെയ്യുക this ടാസ്ക്?",
+      "after": "ഇത് നീക്കം ചെയ്യാൻ നിങ്ങൾ തീരുമാനിക്കുകയാണോ?",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.confirm.deleteTaskBody",
+      "english": "This action cannot be undone.",
+      "before": "This action cannot be undone.",
+      "after": "ഈ പ്രവർത്തനം പിൻവലിക്കാൻ കഴിയില്ല.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 1,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.confirm.deleteMeetingTitle",
+      "english": "Delete this meeting?",
+      "before": "ഡിലീറ്റ് ചെയ്യുക this മീറ്റിംഗ്?",
+      "after": "ഇത് നശിപ്പിക്കണം?",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.confirm.deleteCircularTitle",
+      "english": "Delete this circular?",
+      "before": "ഡിലീറ്റ് ചെയ്യുക this സർക്കുലർ?",
+      "after": "ഇത് നീക്കം ചെയ്യാൻ സാധിക്കും?",
+      "oldScore": 85,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    },
+    {
+      "key": "toast.confirm.deleteCircularBody",
+      "english": "This will permanently remove its text database and vector indexes.",
+      "before": "This will permanently remove its text database and vector indexes.",
+      "after": "ഇത് നിലവിലെ എഴുത്തുവകുപ്പും വെക്ടർ ഇൻഡെക്സുകളും നിലവിലുള്ളതായി മാറ്റും.",
+      "oldScore": 0,
+      "newScore": 100,
+      "retry": 2,
+      "status": "Improved"
+    }
+  ]
+}

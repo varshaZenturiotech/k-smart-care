@@ -1,0 +1,42 @@
+[
+  {
+    "english": "Approve casual leave request",
+    "translation": "Approve കാഷ്വൽ ലീവ് request",
+    "score": 62,
+    "reason": "Contains untranslated English verb(s): \"Approve\".",
+    "suggestion": "Approve → Approve ചെയ്യുക",
+    "context": "Task",
+    "category": "Leave",
+    "timestamp": "2026-07-23T08:52:46.271Z"
+  },
+  {
+    "english": "Dashboard",
+    "translation": "നിയന്ത്രണ പാനൽ",
+    "score": 74,
+    "reason": "Contains dictionary/bookish Malayalam term \"നിയന്ത്രണ പാനൽ\" (Use ഡാഷ്ബോർഡ് instead).",
+    "suggestion": "നിയന്ത്രണ പാനൽ → ഡാഷ്ബോർഡ്",
+    "context": "Dashboard",
+    "category": "General",
+    "timestamp": "2026-07-23T08:52:46.272Z"
+  },
+  {
+    "english": "Dashboard",
+    "translation": "ഡാഷ്ബോർഡ് നിയന്ത്രണ പാനൽ പ്രധാന വർക്കിംഗ് പേജ്",
+    "score": 82,
+    "reason": "Contains dictionary/bookish Malayalam term \"നിയന്ത്രണ പാനൽ\" (Use ഡാഷ്ബോർഡ് instead).",
+    "suggestion": "നിയന്ത്രണ പാനൽ → ഡാഷ്ബോർഡ്",
+    "context": "Dashboard",
+    "category": "General",
+    "timestamp": "2026-07-23T09:04:21.004Z"
+  },
+  {
+    "english": "high",
+    "translation": "High",
+    "score": 72,
+    "reason": "Contains English alphabet without Malayalam script translation (High).",
+    "suggestion": "High → ഉയർന്നത്",
+    "context": "Dashboard",
+    "category": "General",
+    "timestamp": "2026-07-23T09:47:26.975Z"
+  }
+]

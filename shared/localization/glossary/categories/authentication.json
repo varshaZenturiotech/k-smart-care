@@ -1,0 +1,471 @@
+[
+  {
+    "english": "Login",
+    "malayalam": "ലോഗിൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Logout",
+    "malayalam": "ലോഗൗട്ട്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Sign In",
+    "malayalam": "സൈൻ ഇൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Sign Out",
+    "malayalam": "സൈൻ ഔട്ട്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Sign Up",
+    "malayalam": "സൈൻ അപ്പ്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Password",
+    "malayalam": "പാസ്‌വേഡ്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Forgot Password",
+    "malayalam": "പാസ്‌വേഡ് മറന്നോ?",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Reset Password",
+    "malayalam": "പാസ്‌വേഡ് റീസെറ്റ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Change Password",
+    "malayalam": "പാസ്‌വേഡ് മാറ്റുക",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Confirm Password",
+    "malayalam": "പാസ്‌വേഡ് സ്ഥിരീകരിക്കുക",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Email",
+    "malayalam": "ഇമെയിൽ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Email Address",
+    "malayalam": "ഇമെയിൽ വിലാസം",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Username",
+    "malayalam": "യൂസർനെയിം",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "User ID",
+    "malayalam": "യൂസർ ഐ.ഡി",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "OTP",
+    "malayalam": "ഒ.ടി.പി",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "One-Time Password",
+    "malayalam": "വൺ-ടൈം പാസ്‌വേഡ്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Send OTP",
+    "malayalam": "ഒ.ടി.പി അയക്കുക",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Verify OTP",
+    "malayalam": "ഒ.ടി.പി വെരിഫൈ ചെയ്യുക",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Resend OTP",
+    "malayalam": "ഒ.ടി.പി വീണ്ടും അയക്കുക",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Authentication",
+    "malayalam": "ഓതെന്റിക്കേഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Authorization",
+    "malayalam": "ഓഥറൈസേഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Session",
+    "malayalam": "സെഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Session Expired",
+    "malayalam": "സെഷൻ കാലാവധി കഴിഞ്ഞു",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Session Timeout",
+    "malayalam": "സെഷൻ ടൈംഔട്ട്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Remember Me",
+    "malayalam": "ഓർത്തുവെക്കുക",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Access Denied",
+    "malayalam": "ആക്സസ് തടഞ്ഞിരിക്കുന്നു",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Unauthorized",
+    "malayalam": "അനധികൃതം",
+    "type": "translate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Role",
+    "malayalam": "റോൾ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Roles",
+    "malayalam": "റോളുകൾ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Permission",
+    "malayalam": "പെർമിഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Permissions",
+    "malayalam": "പെർമിഷനുകൾ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Single Sign-On",
+    "malayalam": "സിംഗിൾ സൈൻ-ഓൺ (SSO)",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Multi-Factor Authentication",
+    "malayalam": "മൾട്ടി-ഫാക്ടർ ഓതെന്റിക്കേഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Two-Factor Authentication",
+    "malayalam": "ടു-ഫാക്ടർ ഓതെന്റിക്കേഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Biometric Authentication",
+    "malayalam": "ബയോമെട്രിക് ഓതെന്റിക്കേഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Captcha",
+    "malayalam": "ക്യാപ്ച",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Security Code",
+    "malayalam": "സെക്യൂരിറ്റി കോഡ്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Security Question",
+    "malayalam": "സെക്യൂരിറ്റി ചോദ്യം",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Account Lockout",
+    "malayalam": "അക്കൗണ്ട് ലോക്ക്ഔട്ട്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Account Status",
+    "malayalam": "അക്കൗണ്ട് സ്റ്റാറ്റസ്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Credentials",
+    "malayalam": "ലോഗിൻ വിവരങ്ങൾ",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Active User",
+    "malayalam": "ആക്റ്റീവ് യൂസർ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Super Admin",
+    "malayalam": "സൂപ്പർ അഡ്മിൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "System Admin",
+    "malayalam": "സിസ്റ്റം അഡ്മിൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "District Admin",
+    "malayalam": "ജില്ലാ അഡ്മിൻ",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Secretary Role",
+    "malayalam": "സെക്രട്ടറി റോൾ",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Clerk Role",
+    "malayalam": "ക്ലർക്ക് റോൾ",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Audit Log",
+    "malayalam": "ഓഡിറ്റ് ലോഗ്",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "IP Restriction",
+    "malayalam": "ഐ.പി നിയന്ത്രണം",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Device Authorization",
+    "malayalam": "ഡിവൈസ് ഓഥറൈസേഷൻ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Security Token",
+    "malayalam": "സെക്യൂരിറ്റി ടോക്കൺ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "JWT Token",
+    "malayalam": "ജെ.ഡബ്ല്യു.ടി ടോക്കൺ",
+    "type": "transliterate",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 1",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 1",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 2",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 2",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 3",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 3",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 4",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 4",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 5",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 5",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 6",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 6",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 7",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 7",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 8",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 8",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 9",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 9",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 10",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 10",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 11",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 11",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 12",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 12",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 13",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 13",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 14",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 14",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  },
+  {
+    "english": "Auth Setting 15",
+    "malayalam": "ഓതന്റിക്കേഷൻ സെറ്റിംഗ് 15",
+    "type": "phrase",
+    "category": "Authentication",
+    "reason": "Authentication term."
+  }
+]

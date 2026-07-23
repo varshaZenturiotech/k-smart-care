@@ -1,0 +1,317 @@
+[
+  {
+    "english": "Wellness",
+    "malayalam": "വെൽനസ്",
+    "type": "transliterate",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Daily Wellness Check",
+    "malayalam": "ദിവസേനയുള്ള വെൽനസ് പരിശോധന",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Stress Level",
+    "malayalam": "സ്ട്രെസ് ലെവൽ",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Track Your Stress",
+    "malayalam": "സ്ട്രെസ് ട്രാക്ക് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Mood Assessment",
+    "malayalam": "മൂഡ് വിലയിരുത്തൽ",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Work-Life Balance",
+    "malayalam": "വർക്ക്-ലൈഫ് ബാലൻസ്",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Mental Health Support",
+    "malayalam": "മാനസികാരോഗ്യ പിന്തുണ",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Diagnostic",
+    "malayalam": "വെൽനസ് നിർണ്ണയം",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Burnout Risk",
+    "malayalam": "ബേൺഔട്ട് റിസ്ക്",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Score",
+    "malayalam": "വെൽനസ് സ്കോർ",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 1",
+    "malayalam": "വെൽനസ് മെട്രിക് 1",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 2",
+    "malayalam": "വെൽനസ് മെട്രിക് 2",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 3",
+    "malayalam": "വെൽനസ് മെട്രിക് 3",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 4",
+    "malayalam": "വെൽനസ് മെട്രിക് 4",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 5",
+    "malayalam": "വെൽനസ് മെട്രിക് 5",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 6",
+    "malayalam": "വെൽനസ് മെട്രിക് 6",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 7",
+    "malayalam": "വെൽനസ് മെട്രിക് 7",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 8",
+    "malayalam": "വെൽനസ് മെട്രിക് 8",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 9",
+    "malayalam": "വെൽനസ് മെട്രിക് 9",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 10",
+    "malayalam": "വെൽനസ് മെട്രിക് 10",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 11",
+    "malayalam": "വെൽനസ് മെട്രിക് 11",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 12",
+    "malayalam": "വെൽനസ് മെട്രിക് 12",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 13",
+    "malayalam": "വെൽനസ് മെട്രിക് 13",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 14",
+    "malayalam": "വെൽനസ് മെട്രിക് 14",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 15",
+    "malayalam": "വെൽനസ് മെട്രിക് 15",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 16",
+    "malayalam": "വെൽനസ് മെട്രിക് 16",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 17",
+    "malayalam": "വെൽനസ് മെട്രിക് 17",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 18",
+    "malayalam": "വെൽനസ് മെട്രിക് 18",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 19",
+    "malayalam": "വെൽനസ് മെട്രിക് 19",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 20",
+    "malayalam": "വെൽനസ് മെട്രിക് 20",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 21",
+    "malayalam": "വെൽനസ് മെട്രിക് 21",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 22",
+    "malayalam": "വെൽനസ് മെട്രിക് 22",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 23",
+    "malayalam": "വെൽനസ് മെട്രിക് 23",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 24",
+    "malayalam": "വെൽനസ് മെട്രിക് 24",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 25",
+    "malayalam": "വെൽനസ് മെട്രിക് 25",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 26",
+    "malayalam": "വെൽനസ് മെട്രിക് 26",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 27",
+    "malayalam": "വെൽനസ് മെട്രിക് 27",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 28",
+    "malayalam": "വെൽനസ് മെട്രിക് 28",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 29",
+    "malayalam": "വെൽനസ് മെട്രിക് 29",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 30",
+    "malayalam": "വെൽനസ് മെട്രിക് 30",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 31",
+    "malayalam": "വെൽനസ് മെട്രിക് 31",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 32",
+    "malayalam": "വെൽനസ് മെട്രിക് 32",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 33",
+    "malayalam": "വെൽനസ് മെട്രിക് 33",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 34",
+    "malayalam": "വെൽനസ് മെട്രിക് 34",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  },
+  {
+    "english": "Wellness Metric 35",
+    "malayalam": "വെൽനസ് മെട്രിക് 35",
+    "type": "phrase",
+    "category": "Wellness Module",
+    "reason": "Wellness Module term."
+  }
+]

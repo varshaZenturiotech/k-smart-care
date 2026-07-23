@@ -1,0 +1,415 @@
+[
+  {
+    "english": "Good Morning",
+    "malayalam": "ഗുഡ് മോണിംഗ്",
+    "type": "transliterate",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Good Afternoon",
+    "malayalam": "ഗുഡ് ആഫ്റ്റർനൂൺ",
+    "type": "transliterate",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Good Evening",
+    "malayalam": "ഗുഡ് ഈവനിംഗ്",
+    "type": "transliterate",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Good Night",
+    "malayalam": "ഗുഡ് നൈറ്റ്",
+    "type": "transliterate",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Welcome Back",
+    "malayalam": "തിരികെ സ്വാഗതം",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Today's Work Snapshot",
+    "malayalam": "ഇന്നത്തെ ജോലി അവലോകനം",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Pending Files & Tasks",
+    "malayalam": "തീർപ്പാക്കാനുള്ള ഫയലുകളും ടാസ്കുകളും",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Scheduled Meetings",
+    "malayalam": "നിശ്ചയിച്ച മീറ്റിംഗുകൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Daily Briefing",
+    "malayalam": "ദിവസേനയുള്ള ബ്രീഫിംഗ്",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Department Dashboard",
+    "malayalam": "വകുപ്പ് തല ഡാഷ്ബോർഡ്",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Quick AI Task Creator",
+    "malayalam": "എ.ഐ ടാസ്ക് ക്രിയേറ്റർ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Recent Activity",
+    "malayalam": "അടുത്തകാലത്തെ പ്രവർത്തനങ്ങൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Official Portal",
+    "malayalam": "ഔദ്യോഗിക പോർട്ടൽ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Performance Metrics",
+    "malayalam": "പ്രവർത്തന മികവ് മെട്രിക്കുകൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Workload Overview",
+    "malayalam": "ജോലിഭാര അവലോകനം",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Quick Actions",
+    "malayalam": "ദ്രുത ആക്ഷനുകൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "System Notifications",
+    "malayalam": "സിസ്റ്റം നോട്ടിഫിക്കേഷനുകൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Pending Clearances",
+    "malayalam": "തീർപ്പാക്കാനുള്ള അനുമതികൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Active Projects",
+    "malayalam": "ആക്റ്റീവ് പ്രോജക്റ്റുകൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Departmental Highlights",
+    "malayalam": "വകുപ്പ് തല വിശേഷങ്ങൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Today's Priorities",
+    "malayalam": "ഇന്നത്തെ പ്രധാന വിഷയങ്ങൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Upcoming Events",
+    "malayalam": "വരാനിരിക്കുന്ന ഇവന്റുകൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Recent Files",
+    "malayalam": "അടുത്തകാലത്തെ ഫയലുകൾ",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "System Health",
+    "malayalam": "സിസ്റ്റം ഹെൽത്ത്",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 1",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 1",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 2",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 2",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 3",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 3",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 4",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 4",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 5",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 5",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 6",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 6",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 7",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 7",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 8",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 8",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 9",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 9",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 10",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 10",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 11",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 11",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 12",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 12",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 13",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 13",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 14",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 14",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 15",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 15",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 16",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 16",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 17",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 17",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 18",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 18",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 19",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 19",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 20",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 20",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 21",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 21",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 22",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 22",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 23",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 23",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 24",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 24",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 25",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 25",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 26",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 26",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 27",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 27",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 28",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 28",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 29",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 29",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 30",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 30",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 31",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 31",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 32",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 32",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 33",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 33",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 34",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 34",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  },
+  {
+    "english": "Dashboard Widget 35",
+    "malayalam": "ഡാഷ്ബോർഡ് വിഡ്ജറ്റ് 35",
+    "type": "phrase",
+    "category": "Dashboard",
+    "reason": "Dashboard term."
+  }
+]

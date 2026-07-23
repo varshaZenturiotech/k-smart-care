@@ -7,6 +7,7 @@ import CircularEmbedding from "../models/CircularEmbedding.js";
 import { generateEmbedding } from "../services/embedding.service.js";
 import { visibilityQuery } from "../utils/visibility.util.js";
 import { DEPARTMENTS, ALL_DEPARTMENTS } from "../config/departments.js";
+import translationService from "../translation/translationService.js";
 
 /**
  * Handle HTTP request for PDF upload
@@ -40,7 +41,6 @@ export async function uploadCircularFile(req, res) {
 
     const uploadedCirculars = [];
     for (const file of files) {
-      // If title is provided, use it for single file upload; otherwise fall back to filename
       const fileTitle = (files.length === 1 && req.body.title)
         ? req.body.title
         : file.originalname.replace(/\.[^/.]+$/, "");
@@ -62,7 +62,6 @@ export async function uploadCircularFile(req, res) {
         remarks: req.body.remarks || "",
       });
 
-      // Run ingestion synchronously but isolate failures
       try {
         await ingestCircular(circular._id);
       } catch (ingestErr) {
@@ -76,7 +75,7 @@ export async function uploadCircularFile(req, res) {
     res.status(201).json({
       message: `${uploadedCirculars.length} circular(s) uploaded and processed successfully.`,
       circulars: uploadedCirculars,
-      circular: uploadedCirculars[0], // backward compatibility
+      circular: uploadedCirculars[0],
     });
   } catch (err) {
     console.error("Error in uploadCircularFile:", err);
@@ -84,9 +83,6 @@ export async function uploadCircularFile(req, res) {
   }
 }
 
-/**
- * Handle listing all circulars
- */
 export async function listCirculars(req, res) {
   try {
     const circulars = await circularService.getAllCirculars();
@@ -98,7 +94,7 @@ export async function listCirculars(req, res) {
 }
 
 /**
- * Handle deleting a circular (and its file)
+ * Handle deleting a circular
  */
 export async function deleteCircular(req, res) {
   const { id } = req.params;
@@ -118,10 +114,7 @@ export async function deleteCircular(req, res) {
 }
 
 /**
- * Handle "Summarize" / "Key Points" quick actions from the AI Assistant panel.
- * Summary is precomputed at ingestion time and just returned from cache.
- * Key points are generated on first request and then cached on the document,
- * so repeat clicks don't re-call the LLM.
+ * Handle "Summarize" / "Key Points" quick actions
  */
 export async function getCircularInsight(req, res) {
   const { id } = req.params;
@@ -137,20 +130,20 @@ export async function getCircularInsight(req, res) {
       });
     }
 
-    if (type === "summary") {
-      return res.json({ type, title: circular.title, content: circular.summary || "No summary available." });
+    let payload = { type, title: circular.title, content: circular.summary || "No summary available." };
+    if (type === "keypoints") {
+      if (circular.keyPoints) {
+        payload = { type, title: circular.title, content: circular.keyPoints };
+      } else {
+        const fullText = await extractFullText(circular);
+        const keyPoints = await generateKeyPointsFromText(fullText);
+        circular.keyPoints = keyPoints;
+        await circular.save();
+        payload = { type, title: circular.title, content: keyPoints };
+      }
     }
 
-    if (circular.keyPoints) {
-      return res.json({ type, title: circular.title, content: circular.keyPoints });
-    }
-
-    const fullText = await extractFullText(circular);
-    const keyPoints = await generateKeyPointsFromText(fullText);
-    circular.keyPoints = keyPoints;
-    await circular.save();
-
-    res.json({ type, title: circular.title, content: keyPoints });
+    return res.json(payload);
   } catch (err) {
     console.error("Error in getCircularInsight:", err);
     res.status(500).json({ error: "Failed to generate this insight." });
@@ -176,10 +169,6 @@ export async function getCircularStatus(req, res) {
 
 /**
  * GET /api/circulars/feed
- * Returns only circulars relevant to the logged-in employee's department
- * and district — this is the "show circulars based on department" view,
- * distinct from listCirculars() (used by the AI Assistant panel), which
- * intentionally shows everything since Q&A search shouldn't be restricted.
  */
 export async function getCircularFeed(req, res) {
   try {
@@ -216,9 +205,6 @@ export async function getCircularFeed(req, res) {
 
 /**
  * PATCH /api/circulars/:id/department
- * Lets an uploader/admin override the AI-suggested department tag(s).
- * Once this is called, departmentConfirmed=true so a future re-ingestion
- * won't overwrite the human's choice.
  */
 export async function updateCircularDepartments(req, res) {
   const { id } = req.params;
@@ -251,7 +237,7 @@ export async function updateCircularDepartments(req, res) {
 }
 
 /**
- * Perform semantic search on circulars using MongoDB Atlas Vector Search
+ * Semantic search on circulars
  */
 export async function searchCirculars(req, res) {
   try {
@@ -260,14 +246,13 @@ export async function searchCirculars(req, res) {
       return res.status(400).json({ error: "Search query is required." });
     }
 
-    // Generate embedding for search query via Hugging Face Hosted Inference API
     const queryVector = await generateEmbedding(query);
 
     const pipeline = [
       {
         $vectorSearch: {
-          index: "circular_vector_index",      // The name of the Atlas Vector Search Index
-          path: "embedding",          // Field containing vector embeddings
+          index: "circular_vector_index",
+          path: "embedding",
           queryVector: queryVector,
           numCandidates: 100,
           limit: 5,
@@ -288,7 +273,6 @@ export async function searchCirculars(req, res) {
 
     const results = await CircularEmbedding.aggregate(pipeline);
 
-    // Map details to look like the original output structure for backward compatibility
     const finalResults = [];
     for (const match of results) {
       const circular = await Circular.findById(match.circularId);
@@ -317,7 +301,7 @@ export async function searchCirculars(req, res) {
 }
 
 /**
- * Reprocess a circular: runs ingestCircular again.
+ * Reprocess a circular
  */
 export async function reprocessCircular(req, res) {
   const { id } = req.params;
@@ -325,7 +309,6 @@ export async function reprocessCircular(req, res) {
     const circular = await Circular.findById(id);
     if (!circular) return res.status(404).json({ error: "Circular not found" });
 
-    // Re-run ingestion synchronously
     await ingestCircular(circular._id);
 
     const updated = await Circular.findById(circular._id).populate("uploadedBy", "name email designation");
@@ -340,7 +323,7 @@ export async function reprocessCircular(req, res) {
 }
 
 /**
- * Update circular metadata attributes (edit metadata)
+ * Update circular metadata attributes
  */
 export async function updateCircularMetadata(req, res) {
   const { id } = req.params;
@@ -390,7 +373,6 @@ export async function updateCircularMetadata(req, res) {
 
 /**
  * GET /api/circulars/:id/task-suggestion
- * Generates an AI-suggested due date and priority to prefill the Task Planner creation modal.
  */
 export async function getCircularTaskSuggestion(req, res) {
   const { id } = req.params;
@@ -403,23 +385,22 @@ export async function getCircularTaskSuggestion(req, res) {
     defaultDueDate.setDate(defaultDueDate.getDate() + 3);
     const defaultDueDateStr = defaultDueDate.toISOString().split("T")[0];
 
+    let resultPayload = {
+      title: `Review Circular: ${circular.title}`,
+      dueDate: defaultDueDateStr,
+      priority: "Medium",
+      category: "Government Circular",
+      source: "Circular",
+      circularId: circular._id,
+    };
+
     const apiKey = process.env.GROQ_API_KEY;
-    if (!apiKey || apiKey === "your_groq_api_key_here") {
-      return res.json({
-        title: `Review Circular: ${circular.title}`,
-        dueDate: defaultDueDateStr,
-        priority: "Medium",
-        category: "Government Circular",
-        source: "Circular",
-        circularId: circular._id,
-      });
-    }
+    if (apiKey && apiKey !== "your_groq_api_key_here") {
+      const { ChatGroq } = await import("@langchain/groq");
+      const { PromptTemplate } = await import("@langchain/core/prompts");
+      const { StringOutputParser } = await import("@langchain/core/output_parsers");
 
-    const { ChatGroq } = await import("@langchain/groq");
-    const { PromptTemplate } = await import("@langchain/core/prompts");
-    const { StringOutputParser } = await import("@langchain/core/output_parsers");
-
-    const promptTemplate = `You are an AI assistant for Kerala Government Local Self Government employees.
+      const promptTemplate = `You are an AI assistant for Kerala Government Local Self Government employees.
 Analyze the following government circular details:
 Title: {title}
 Summary: {summary}
@@ -435,33 +416,36 @@ Return ONLY a valid JSON object matching this schema:
 }}
 Do NOT return any other text, explanations, or markdown.`;
 
-    const llm = new ChatGroq({
-      apiKey,
-      model: "llama-3.1-8b-instant",
-      temperature: 0.1,
-    });
+      const llm = new ChatGroq({
+        apiKey,
+        model: "llama-3.1-8b-instant",
+        temperature: 0.1,
+      });
 
-    const prompt = PromptTemplate.fromTemplate(promptTemplate);
-    const parser = new StringOutputParser();
-    const chain = prompt.pipe(llm).pipe(parser);
+      const prompt = PromptTemplate.fromTemplate(promptTemplate);
+      const parser = new StringOutputParser();
+      const chain = prompt.pipe(llm).pipe(parser);
 
-    const raw = await chain.invoke({
-      title: circular.title,
-      summary: circular.summary || circular.remarks || "",
-      today: todayStr,
-    });
+      const raw = await chain.invoke({
+        title: circular.title,
+        summary: circular.summary || circular.remarks || "",
+        today: todayStr,
+      });
 
-    const cleaned = raw.trim().replace(/^```json\s*|```$/g, "").trim();
-    const parsed = JSON.parse(cleaned);
+      const cleaned = raw.trim().replace(/^```json\s*|```$/g, "").trim();
+      const parsed = JSON.parse(cleaned);
 
-    return res.json({
-      title: `Review Circular: ${circular.title}`,
-      dueDate: parsed.dueDate || defaultDueDateStr,
-      priority: parsed.priority || "Medium",
-      category: "Government Circular",
-      source: "Circular",
-      circularId: circular._id,
-    });
+      resultPayload = {
+        title: `Review Circular: ${circular.title}`,
+        dueDate: parsed.dueDate || defaultDueDateStr,
+        priority: parsed.priority || "Medium",
+        category: "Government Circular",
+        source: "Circular",
+        circularId: circular._id,
+      };
+    }
+
+    return res.json(resultPayload);
   } catch (err) {
     console.error("Error in getCircularTaskSuggestion:", err);
     try {

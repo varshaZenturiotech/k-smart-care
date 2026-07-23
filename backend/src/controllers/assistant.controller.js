@@ -1,6 +1,7 @@
 import assistantService from "../services/assistant/assistant.service.js";
 import suggestionService from "../services/assistant/suggestion.service.js";
 import { getWelcomeMessage } from "../prompts/greetings.js";
+import translationService from "../translation/translationService.js";
 
 /**
  * Assistant Controller - Thin Controller Implementation.
@@ -35,13 +36,20 @@ export async function askQuestion(req, res) {
       history: history || chatHistory,
       sessionId,
     });
-    return res.json({ question, ...result });
+    
+    const responsePayload = { question, ...result };
+    let translated = responsePayload;
+    try {
+      translated = await translationService.translateResponse(responsePayload, req.language, "/api/assistant/ask");
+    } catch (tErr) {
+      console.warn("[AssistantController] Localization fallback to raw payload:", tErr.message);
+    }
+    return res.json(translated);
   } catch (err) {
     console.error("[AssistantController] Error answering question:", err.message);
     return res.status(500).json({ error: "The assistant failed to generate an answer." });
   }
 }
-
 
 /**
  * POST /api/assistant/suggestions
@@ -57,7 +65,14 @@ export async function getSuggestions(req, res) {
       userId: req.user?.id,
       requestLanguage: req.language || "en",
     });
-    return res.json(result);
+
+    let translated = result;
+    try {
+      translated = await translationService.translateResponse(result, req.language, "/api/assistant/suggestions");
+    } catch (tErr) {
+      console.warn("[AssistantController] Localization fallback to raw suggestions:", tErr.message);
+    }
+    return res.json(translated);
   } catch (err) {
     console.error("[AssistantController] Error generating suggestions:", err.message);
     return res.status(500).json({ error: "Failed to generate prompt suggestions." });
@@ -83,11 +98,19 @@ export async function getWelcomeGreeting(req, res) {
       lastIndex,
     });
 
-    return res.json({
+    const responsePayload = {
       success: true,
       text: typeof greetingResult === "string" ? greetingResult : greetingResult.text,
       greeting: greetingResult,
-    });
+    };
+
+    let translated = responsePayload;
+    try {
+      translated = await translationService.translateResponse(responsePayload, req.language, "/api/assistant/welcome");
+    } catch (tErr) {
+      console.warn("[AssistantController] Localization fallback to raw welcome greeting:", tErr.message);
+    }
+    return res.json(translated);
   } catch (err) {
     console.error("[AssistantController] Welcome greeting error:", err.message);
     return res.status(500).json({ error: "Failed to generate welcome greeting." });

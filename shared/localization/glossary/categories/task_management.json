@@ -1,0 +1,380 @@
+[
+  {
+    "english": "Task",
+    "malayalam": "ടാസ്ക്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Everyday work item term in digital applications."
+  },
+  {
+    "english": "Meeting",
+    "malayalam": "മീറ്റിംഗ്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Universal official conference term."
+  },
+  {
+    "english": "Today's Tasks",
+    "malayalam": "ഇന്നത്തെ ടാസ്കുകൾ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Dashboard daily work item section header."
+  },
+  {
+    "english": "Today's Meetings",
+    "malayalam": "ഇന്നത്തെ മീറ്റിംഗുകൾ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Dashboard daily schedule section header."
+  },
+  {
+    "english": "Upcoming",
+    "malayalam": "വരാനിരിക്കുന്നവ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Future scheduled items category header."
+  },
+  {
+    "english": "Pending",
+    "malayalam": "പെൻഡിംഗ്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Universal office term for incomplete work."
+  },
+  {
+    "english": "Completed",
+    "malayalam": "പൂർത്തിയായവ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Finished task status category."
+  },
+  {
+    "english": "Overdue",
+    "malayalam": "സമയപരിധി കഴിഞ്ഞവ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Past-deadline alert category."
+  },
+  {
+    "english": "Priority",
+    "malayalam": "മുൻഗണന",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Official priority ranking designation."
+  },
+  {
+    "english": "High Priority",
+    "malayalam": "ഉയർന്ന മുൻഗണന",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Urgent priority label."
+  },
+  {
+    "english": "Medium Priority",
+    "malayalam": "ഇടത്തരം മുൻഗണന",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Normal priority label."
+  },
+  {
+    "english": "Low Priority",
+    "malayalam": "കുറഞ്ഞ മുൻഗണന",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Routine priority label."
+  },
+  {
+    "english": "Deadline",
+    "malayalam": "ഡെഡ്‌ലൈൻ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Target completion date spoken term."
+  },
+  {
+    "english": "Due Date",
+    "malayalam": "അവസാന തീയതി",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Official completion target date."
+  },
+  {
+    "english": "Due Time",
+    "malayalam": "അവസാന സമയം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Official completion target time."
+  },
+  {
+    "english": "Reminder",
+    "malayalam": "ഓർമ്മപ്പെടുത്തൽ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Task alert notification term."
+  },
+  {
+    "english": "Schedule",
+    "malayalam": "ഷെഡ്യൂൾ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Event/meeting timing plan."
+  },
+  {
+    "english": "Reschedule",
+    "malayalam": "റീഷെഡ്യൂൾ ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Postpone or change meeting time action."
+  },
+  {
+    "english": "Cancel Meeting",
+    "malayalam": "മീറ്റിംഗ് ക്യാൻസൽ ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Meeting cancellation command."
+  },
+  {
+    "english": "Participants",
+    "malayalam": "പങ്കെടുക്കുന്നവർ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Meeting attendees list header."
+  },
+  {
+    "english": "Location",
+    "malayalam": "സ്ഥലം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Physical or virtual venue descriptor."
+  },
+  {
+    "english": "Agenda",
+    "malayalam": "അജണ്ട",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Everyday meeting discussion points list term."
+  },
+  {
+    "english": "Minutes",
+    "malayalam": "മിനിറ്റ്സ്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Official recorded meeting decisions document term."
+  },
+  {
+    "english": "Action Items",
+    "malayalam": "തുടർനടപടികൾ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Post-meeting follow-up responsibilities."
+  },
+  {
+    "english": "In Progress",
+    "malayalam": "നടന്നുകൊണ്ടിരിക്കുന്നു",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Active ongoing status indicator."
+  },
+  {
+    "english": "Assignee",
+    "malayalam": "ചുമതലപ്പെടുത്തിയയാൾ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Person responsible for task execution."
+  },
+  {
+    "english": "Reporter",
+    "malayalam": "റിപ്പോർട്ട് ചെയ്തയാൾ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Task creator/originator tag."
+  },
+  {
+    "english": "Task Planner",
+    "malayalam": "ടാസ്ക് പ്ലാനർ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Feature section title for daily planning."
+  },
+  {
+    "english": "Daily Priorities",
+    "malayalam": "ദിവസേനയുള്ള മുൻഗണനകൾ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Daily work order list header."
+  },
+  {
+    "english": "Meeting Link",
+    "malayalam": "മീറ്റിംഗ് ലിങ്ക്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Virtual conference URL tag."
+  },
+  {
+    "english": "Online Meeting",
+    "malayalam": "ഓൺലൈൻ മീറ്റിംഗ്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Virtual video conference designation."
+  },
+  {
+    "english": "Offline Meeting",
+    "malayalam": "നേരിട്ടുള്ള മീറ്റിംഗ്",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Physical in-person gathering designation."
+  },
+  {
+    "english": "Hybrid Meeting",
+    "malayalam": "ഹൈബ്രിഡ് മീറ്റിംഗ്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Combined physical/virtual conference."
+  },
+  {
+    "english": "Subtask",
+    "malayalam": "സബ്‌ടാസ്ക്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Child work item component."
+  },
+  {
+    "english": "Checklist",
+    "malayalam": "ചെക്ക്‌ലിസ്റ്റ്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Itemized verification list."
+  },
+  {
+    "english": "Milestone",
+    "malayalam": "മൈൽസ്റ്റോൺ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Major project target stage."
+  },
+  {
+    "english": "Work Plan",
+    "malayalam": "വർക്ക് പ്ലാൻ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Operational work sequence plan."
+  },
+  {
+    "english": "Review Meeting",
+    "malayalam": "അവലോകന യോഗം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Progress review conference."
+  },
+  {
+    "english": "Urgent Task",
+    "malayalam": "അടിയന്തിര ടാസ്ക്",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "High priority immediate work item."
+  },
+  {
+    "english": "Task Category",
+    "malayalam": "ടാസ്ക് വിഭാഗം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Classification label of task."
+  },
+  {
+    "english": "Follow-up Task",
+    "malayalam": "ഫോളോ-അപ്പ് ടാസ്ക്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Sequential follow-up item."
+  },
+  {
+    "english": "Recurring Task",
+    "malayalam": "ആവർത്തിക്കുന്ന ടാസ്ക്",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Periodically repeating task."
+  },
+  {
+    "english": "Task History",
+    "malayalam": "ടാസ്ക് ചരിത്രം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Audit log of task modifications."
+  },
+  {
+    "english": "Task Description",
+    "malayalam": "ടാസ്ക് വിവരണം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Detailed text instructions for task."
+  },
+  {
+    "english": "Task Status",
+    "malayalam": "ടാസ്ക് സ്റ്റാറ്റസ്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Current state of task completion."
+  },
+  {
+    "english": "Time Allocation",
+    "malayalam": "സമയ ക്രമീകരണം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Estimated hours for task completion."
+  },
+  {
+    "english": "Priority Ranking",
+    "malayalam": "മുൻഗണനാ ക്രമം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Ranked list of daily tasks."
+  },
+  {
+    "english": "Meeting Venue",
+    "malayalam": "മീറ്റിംഗ് സ്ഥലം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Room or place assigned for meeting."
+  },
+  {
+    "english": "Meeting Minutes Entry",
+    "malayalam": "മിനിറ്റ്സ് രേഖപ്പെടുത്തൽ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Recording decisions during meeting."
+  },
+  {
+    "english": "Chairman Speech",
+    "malayalam": "അദ്ധ്യക്ഷ പ്രസംഗം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Introductory address by committee head."
+  },
+  {
+    "english": "Welcome Speech",
+    "malayalam": "സ്വാഗത പ്രസംഗം",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Opening welcome speech at meeting."
+  },
+  {
+    "english": "Vote of Thanks",
+    "malayalam": "കൃതജ്ഞത രേഖപ്പെടുത്തൽ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Closing thank you speech at meeting."
+  },
+  {
+    "english": "Quorum",
+    "malayalam": "കോറം",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Minimum member attendance needed for meeting."
+  },
+  {
+    "english": "Reminder Diary",
+    "malayalam": "റിമൈൻഡർ ഡയറി",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Office follow-up calendar diary."
+  }
+]

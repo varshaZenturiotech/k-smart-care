@@ -1,0 +1,317 @@
+[
+  {
+    "english": "Leave Application",
+    "malayalam": "അവധി അപേക്ഷ",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Casual Leave",
+    "malayalam": "കാഷ്വൽ ലീവ്",
+    "type": "transliterate",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Earned Leave",
+    "malayalam": "ആർജ്ജിത അവധി",
+    "type": "translate",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Medical Leave",
+    "malayalam": "മെഡിക്കൽ ലീവ്",
+    "type": "transliterate",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Duty Leave",
+    "malayalam": "ഡ്യൂട്ടി ലീവ്",
+    "type": "transliterate",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 1",
+    "malayalam": "അവധി തര നിയമം 1",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 2",
+    "malayalam": "അവധി തര നിയമം 2",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 3",
+    "malayalam": "അവധി തര നിയമം 3",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 4",
+    "malayalam": "അവധി തര നിയമം 4",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 5",
+    "malayalam": "അവധി തര നിയമം 5",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 6",
+    "malayalam": "അവധി തര നിയമം 6",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 7",
+    "malayalam": "അവധി തര നിയമം 7",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 8",
+    "malayalam": "അവധി തര നിയമം 8",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 9",
+    "malayalam": "അവധി തര നിയമം 9",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 10",
+    "malayalam": "അവധി തര നിയമം 10",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 11",
+    "malayalam": "അവധി തര നിയമം 11",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 12",
+    "malayalam": "അവധി തര നിയമം 12",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 13",
+    "malayalam": "അവധി തര നിയമം 13",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 14",
+    "malayalam": "അവധി തര നിയമം 14",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 15",
+    "malayalam": "അവധി തര നിയമം 15",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 16",
+    "malayalam": "അവധി തര നിയമം 16",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 17",
+    "malayalam": "അവധി തര നിയമം 17",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 18",
+    "malayalam": "അവധി തര നിയമം 18",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 19",
+    "malayalam": "അവധി തര നിയമം 19",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 20",
+    "malayalam": "അവധി തര നിയമം 20",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 21",
+    "malayalam": "അവധി തര നിയമം 21",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 22",
+    "malayalam": "അവധി തര നിയമം 22",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 23",
+    "malayalam": "അവധി തര നിയമം 23",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 24",
+    "malayalam": "അവധി തര നിയമം 24",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 25",
+    "malayalam": "അവധി തര നിയമം 25",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 26",
+    "malayalam": "അവധി തര നിയമം 26",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 27",
+    "malayalam": "അവധി തര നിയമം 27",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 28",
+    "malayalam": "അവധി തര നിയമം 28",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 29",
+    "malayalam": "അവധി തര നിയമം 29",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 30",
+    "malayalam": "അവധി തര നിയമം 30",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 31",
+    "malayalam": "അവധി തര നിയമം 31",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 32",
+    "malayalam": "അവധി തര നിയമം 32",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 33",
+    "malayalam": "അവധി തര നിയമം 33",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 34",
+    "malayalam": "അവധി തര നിയമം 34",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 35",
+    "malayalam": "അവധി തര നിയമം 35",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 36",
+    "malayalam": "അവധി തര നിയമം 36",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 37",
+    "malayalam": "അവധി തര നിയമം 37",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 38",
+    "malayalam": "അവധി തര നിയമം 38",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 39",
+    "malayalam": "അവധി തര നിയമം 39",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  },
+  {
+    "english": "Leave Type Rule 40",
+    "malayalam": "അവധി തര നിയമം 40",
+    "type": "phrase",
+    "category": "Leave Management",
+    "reason": "Leave Management term."
+  }
+]

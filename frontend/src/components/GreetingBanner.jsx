@@ -36,9 +36,9 @@ function getMoodEmoji(mood, t) {
 
 function getBurnoutColor(risk) {
   switch (risk?.toLowerCase()) {
-    case "high": return "text-alert bg-alert-tint border-alert/20";
-    case "medium": return "text-ochre bg-ochre-tint border-ochre/20";
-    case "low": return "text-teal bg-sage-tint border-sage/20";
+    case "high": return "text-red-950 bg-red-100 border-red-400 font-bold";
+    case "medium": return "text-amber-950 bg-amber-200 border-amber-400 font-bold";
+    case "low": return "text-emerald-950 bg-emerald-100 border-emerald-400 font-bold";
     default: return "text-ink-soft bg-paper border-border";
   }
 }
@@ -99,7 +99,7 @@ function formatSummaryStatement(summaryStr, language) {
   return summaryStr;
 }
 
-function getGreetingPrefix(date, user) {
+function getGreetingPrefix(date, user, language = 'en') {
   const tz = user?.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Kolkata";
   let hour = date.getHours();
   try {
@@ -108,10 +108,11 @@ function getGreetingPrefix(date, user) {
   } catch (e) {
     // fallback to local hour
   }
-  if (hour >= 5 && hour < 12) return "Good Morning";
-  if (hour >= 12 && hour < 17) return "Good Afternoon";
-  if (hour >= 17 && hour < 21) return "Good Evening";
-  return "Good Night";
+  const isMl = language === "ml";
+  if (hour >= 5 && hour < 12) return isMl ? "ഗുഡ് മോണിംഗ്" : "Good Morning";
+  if (hour >= 12 && hour < 17) return isMl ? "ഗുഡ് ആഫ്റ്റർനൂൺ" : "Good Afternoon";
+  if (hour >= 17 && hour < 21) return isMl ? "ഗുഡ് ഈവനിംഗ്" : "Good Evening";
+  return isMl ? "ഗുഡ് നൈറ്റ്" : "Good Night";
 }
 
 /* ============================================================
@@ -247,7 +248,7 @@ export default function GreetingBanner({
   const greetingParts = greetingText.split("\n\n");
   const greetingSuffix = greetingParts.slice(1).join("\n\n");
 
-  const prefix = getGreetingPrefix(now, user);
+  const prefix = getGreetingPrefix(now, user, language);
   const employeeName = user?.name || "User";
   const mainGreeting = `${prefix}, ${employeeName} 👋`;
 
@@ -323,7 +324,7 @@ export default function GreetingBanner({
                 onClick={() => setShowDetails(true)}
                 className="text-[12px] font-semibold text-white/80 hover:text-white flex items-center gap-0.5 cursor-pointer"
               >
-                {t("greeting.viewDetails", "Details")} 
+                {t("greeting.viewDetails", "Details")}
               </button>
             )}
           </div>
@@ -333,7 +334,7 @@ export default function GreetingBanner({
               <span className="text-[11px] font-sans text-white/90 leading-normal font-medium block">
                 {unanswered.title}
               </span>
-              
+
               {unanswered.type === "mood" && (
                 <div className="grid grid-cols-5 gap-1.5 pt-0.5">
                   {MOODS.map((m) => (
@@ -442,7 +443,7 @@ export default function GreetingBanner({
                 {data?.burnoutRisk && (
                   <div className="flex gap-5 items-center">
                     <span className="text-white/70">{t("greeting.burnout", "Burnout")}</span>
-                    <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full border shadow-md ${getBurnoutColor(data.burnoutRisk)}`}>
+                    <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border shadow-sm ${getBurnoutColor(data.burnoutRisk)}`}>
                       {t("wellness." + data.burnoutRisk?.toLowerCase()?.replace(" ", ""), data.burnoutRisk)}
                     </span>
                   </div>
@@ -457,7 +458,7 @@ export default function GreetingBanner({
       {showDetails && data && createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/40 backdrop-blur-sm animate-fade-in font-sans">
           <div className="relative w-full max-w-xl bg-surface border border-border rounded-2xl shadow-custom overflow-hidden transition-all duration-300 transform scale-100 flex flex-col max-h-[85vh]">
-            
+
             {/* Modal Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-border bg-paper/20">
               <div className="flex items-center gap-2">
@@ -480,7 +481,7 @@ export default function GreetingBanner({
               {/* Wellness Metrics Grid */}
               <div className="space-y-3 bg-paper/10 border border-border/60 rounded-xl p-4">
                 <span className="text-[10px] font-mono text-ink-soft uppercase tracking-wider block font-semibold">{t("greeting.wellnessIndicators", "Wellness Indicators")}</span>
-                
+
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
                   <div className="flex items-center gap-2 p-2 bg-white rounded-lg border border-border/40 shadow-sm">
                     <span className="text-lg">🎭</span>
@@ -537,7 +538,7 @@ export default function GreetingBanner({
               {/* AI Recommendations */}
               {data.recommendations && data.recommendations.length > 0 && (
                 <div className="space-y-2">
-                  <span className="text-[10px] font-mono text-ink-soft uppercase tracking-wider block font-semibold">{t("greeting.aiTips", "AI Recommendations & Tips")}</span>
+                  <span className="text-[10px] font-mono text-ink-soft uppercase tracking-wider block font-semibold">{t("wellness.recommendationsTitle", "AI Recommendations & Tips")}</span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {data.recommendations.map((rec, idx) => (
                       <div key={idx} className="p-3 bg-sage-tint/40 border border-sage/10 rounded-xl text-xs text-ink leading-relaxed">
@@ -644,12 +645,36 @@ export function TodayOverviewCards({
   pendingTasksCount = 0,
   totalTasksCount = 0,
   pendingFilesCount = 0,
-  todayMeetingsCount = 0
+  todayMeetingsCount = 0,
+  completedTasks = []
 }) {
   const { t } = useLanguage();
 
   const effectivePending = pendingTasksCount || pendingFilesCount || 0;
-  const hasPriority = (briefing?.smartPriorities && briefing.smartPriorities.length > 0) || briefing?.priority;
+
+  // Frontend safeguard: Filter out completed task titles from smartPriorities
+  const completedTitlesSet = new Set(
+    (completedTasks || []).map((t) => (t.title || "").toLowerCase().trim())
+  );
+
+  let activeSmartPriorities = briefing?.smartPriorities;
+  if (Array.isArray(activeSmartPriorities)) {
+    activeSmartPriorities = activeSmartPriorities.filter((item) => {
+      if (!item || typeof item !== "string") return false;
+      const clean = item.replace(/^\[+|\]+$/g, "").trim().toLowerCase();
+      return !completedTitlesSet.has(clean);
+    });
+  }
+
+  let singlePriority = briefing?.priority;
+  if (singlePriority && typeof singlePriority === "string") {
+    const cleanSingle = singlePriority.replace(/^\[+|\]+$/g, "").trim().toLowerCase();
+    if (completedTitlesSet.has(cleanSingle)) {
+      singlePriority = null;
+    }
+  }
+
+  const hasPriority = (activeSmartPriorities && activeSmartPriorities.length > 0) || singlePriority;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -693,9 +718,9 @@ export function TodayOverviewCards({
             <span className="text-sm leading-none">⚡</span>
             {t("greeting.priorityRanking", "Today's Priority Ranking")}
           </span>
-          {briefing?.smartPriorities && briefing.smartPriorities.length > 0 ? (
+          {activeSmartPriorities && activeSmartPriorities.length > 0 ? (
             <ol className="list-decimal pl-4 space-y-1.5 font-medium text-ink-soft text-xs">
-              {briefing.smartPriorities.map((item, idx) => {
+              {activeSmartPriorities.map((item, idx) => {
                 const cleanItem = typeof item === "string" ? item.replace(/^\[+|\]+$/g, "").trim() : item;
                 return (
                   <li key={idx} className="pl-1">
@@ -704,7 +729,7 @@ export function TodayOverviewCards({
                 );
               })}
             </ol>
-          ) : renderPriority(briefing.priority)}
+          ) : renderPriority(singlePriority)}
         </div>
       )}
 

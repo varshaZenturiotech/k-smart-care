@@ -20,6 +20,8 @@ STRICT CONSTRAINTS ON RESPONSE SIZE:
 5. In the "smartPriorities" field, list at most 3 ranked items.
 
 LANGUAGE RULES (When target language is Malayalam):
+- For tasks, use 'ടാസ്കുകൾ' (DO NOT write 'ടാസ്ക്സ്').
+- For meetings, use 'മീറ്റിംഗുകൾ' (DO NOT write 'മീറ്റിംഗ്സ്').
 - Write complete sentences in Malayalam script, but keep common office/workplace terminology in English (using English script/characters).
 - DO NOT translate the following words into Malayalam (neither to phonetic Malayalam script like ടാസ്ക്/റിപ്പോർട്ട് nor to literal Malayalam like യോഗം/അവസാന തീയതി). They MUST be written in English characters:
   * AI
@@ -71,14 +73,13 @@ LANGUAGE RULES (When target language is Malayalam):
 - Do NOT use Manglish (writing Malayalam words in English script). Write Malayalam words in Malayalam script and English words in English script.
 - Sentence structure must remain Malayalam, but the specific English terms must remain in English script/characters.
 - Example correct output:
-  * "ഇന്ന് 2 Tasks pending ഉണ്ട്."
+  * "നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക ഇതാ: 3 ടാസ്കുകൾ, 2 മീറ്റിംഗുകൾ ഉണ്ട്."
   * "ഈ Circular ഇന്ന് വായിക്കുന്നത് നല്ലതാണ്."
   * "Meeting 2 PM ന് Town Hall ൽ ആണ്."
   * "Report submit ചെയ്യാൻ ഇനി 3 മണിക്കൂർ മാത്രം ബാക്കി."
   * "ഇന്നത്തെ AI Briefing നോക്കൂ."
   * "നിങ്ങളുടെ Wellness Score ഇന്നലെക്കാൾ മെച്ചപ്പെട്ടിട്ടുണ്ട്."
   * "Focus Score വളരെ നല്ലതാണ്."
-  * "നിങ്ങളുടെ Wellness Score ഇന്ന് വളരെ നല്ലതാണ്."
   * "Circular Summary വായിക്കാൻ മറക്കരുത്."
 - Tone should sound like how Kerala Government employees naturally communicate in offices and professional conversations (professional, friendly, and encouraging).
 
@@ -89,7 +90,7 @@ The JSON object must match this structure:
 {{
   "greeting": "Dynamic greeting based on time of day and employee name (e.g. 'Good Morning, Varsha 👋\\n\\nHope you have a productive day ahead.')",
   "statusMessage": "Short current status text summarizing wellness/work balance",
-  "briefing": "Conversational summary of today's workload (e.g. 'You have 5 pending tasks today. Completing the budget approval before lunch is recommended. You also have 1 meeting at 2 PM.')",
+  "briefing": "Conversational summary of today's workload (e.g. 'നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക ഇതാ: 3 ടാസ്കുകൾ, 2 മീറ്റിംഗുകൾ ഉണ്ട്.')",
   "recommendation": "Practical, supportive wellness/workplace recommendation",
   "priority": "The single most important action item for them today",
   "smartPriorities": ["Ranked Task 1", "Ranked Task 2", "Ranked Task 3"],

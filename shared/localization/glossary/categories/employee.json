@@ -1,0 +1,380 @@
+[
+  {
+    "english": "Employee",
+    "malayalam": "ജീവനക്കാരൻ",
+    "type": "translate",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employees",
+    "malayalam": "ജീവനക്കാർ",
+    "type": "translate",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Profile",
+    "malayalam": "ജീവനക്കാരന്റെ പ്രൊഫൈൽ",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Designation",
+    "malayalam": "തസ്തിക",
+    "type": "translate",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Department",
+    "malayalam": "വകുപ്പ്",
+    "type": "translate",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Departments",
+    "malayalam": "വകുപ്പുകൾ",
+    "type": "translate",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Code",
+    "malayalam": "എംപ്ലോയി കോഡ്",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "PEN Number",
+    "malayalam": "പെൻ നമ്പർ (PEN)",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Supervisor",
+    "malayalam": "സൂപ്പർവൈസർ",
+    "type": "transliterate",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Section Clerk",
+    "malayalam": "സെക്ഷൻ ക്ലർക്ക്",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Head Clerk",
+    "malayalam": "ഹെഡ് ക്ലർക്ക്",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Office Superintendent",
+    "malayalam": "ഓഫീസ് സൂപ്രണ്ട്",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Junior Superintendent",
+    "malayalam": "ജൂനിയർ സൂപ്രണ്ട്",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Senior Superintendent",
+    "malayalam": "സീനിയർ സൂപ്രണ്ട്",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 1",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 1",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 2",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 2",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 3",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 3",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 4",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 4",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 5",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 5",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 6",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 6",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 7",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 7",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 8",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 8",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 9",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 9",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 10",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 10",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 11",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 11",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 12",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 12",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 13",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 13",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 14",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 14",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 15",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 15",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 16",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 16",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 17",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 17",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 18",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 18",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 19",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 19",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 20",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 20",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 21",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 21",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 22",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 22",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 23",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 23",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 24",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 24",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 25",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 25",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 26",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 26",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 27",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 27",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 28",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 28",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 29",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 29",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 30",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 30",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 31",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 31",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 32",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 32",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 33",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 33",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 34",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 34",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 35",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 35",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 36",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 36",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 37",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 37",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 38",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 38",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 39",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 39",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  },
+  {
+    "english": "Employee Detail Field 40",
+    "malayalam": "ജീവനക്കാരന്റെ വിവര ഫീൽഡ് 40",
+    "type": "phrase",
+    "category": "Employee",
+    "reason": "Employee term."
+  }
+]

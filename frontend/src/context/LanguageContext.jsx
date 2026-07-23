@@ -21,7 +21,7 @@ export function LanguageProvider({ children }) {
   const resolveLanguage = useCallback((pref) => {
     if (pref === "malayalam") return "ml";
     if (pref === "english") return "en";
-    
+
     // Auto-detect based on browser language
     const browserLang = navigator.language || navigator.userLanguage || "";
     const isMl = browserLang.toLowerCase().includes("ml");
@@ -57,9 +57,16 @@ export function LanguageProvider({ children }) {
     }
   }, [user, resolveLanguage]);
 
-  // Sync i18n language setting
+  // Sync i18n language setting & document lang attributes
   useEffect(() => {
     i18n.changeLanguage(language);
+    document.documentElement.lang = language;
+    document.documentElement.setAttribute("data-lang", language);
+    if (language === "ml") {
+      document.documentElement.classList.add("lang-ml");
+    } else {
+      document.documentElement.classList.remove("lang-ml");
+    }
   }, [language]);
 
   // Handle manual preference change

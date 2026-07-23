@@ -50,6 +50,38 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* ── Malayalam Typography Scaling & Font Family ── */
+  html[lang="ml"], .lang-ml, [data-lang="ml"] {
+    font-family: var(--font-ml);
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  html[lang="ml"] body, .lang-ml body, [data-lang="ml"] body {
+    font-family: var(--font-ml);
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  html[lang="ml"] h1, .lang-ml h1,
+  html[lang="ml"] h2, .lang-ml h2,
+  html[lang="ml"] h3, .lang-ml h3,
+  html[lang="ml"] h4, .lang-ml h4 {
+    font-family: var(--font-ml);
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+
+  /* Proportional font-size scaling for Tailwind text classes in Malayalam mode */
+  html[lang="ml"] .text-\[10px\], .lang-ml .text-\[10px\] { font-size: 11.5px; }
+  html[lang="ml"] .text-\[11px\], .lang-ml .text-\[11px\] { font-size: 12.5px; }
+  html[lang="ml"] .text-xs, .lang-ml .text-xs { font-size: 0.85rem; line-height: 1.5rem; }
+  html[lang="ml"] .text-sm, .lang-ml .text-sm { font-size: 0.975rem; line-height: 1.6rem; }
+  html[lang="ml"] .text-base, .lang-ml .text-base { font-size: 1.1rem; line-height: 1.7rem; }
+  html[lang="ml"] .text-lg, .lang-ml .text-lg { font-size: 1.25rem; line-height: 1.85rem; }
+  html[lang="ml"] .text-xl, .lang-ml .text-xl { font-size: 1.375rem; line-height: 1.95rem; }
+  html[lang="ml"] .text-2xl, .lang-ml .text-2xl { font-size: 1.68rem; line-height: 2.2rem; }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     color: var(--ink);

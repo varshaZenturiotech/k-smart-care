@@ -1,10 +1,94 @@
 import Meeting from "../models/Meeting.model.js";
+import Task from "../models/Task.model.js";
 
 /**
- * Get all meetings for an employee
+ * Get all active meetings for an employee from start of today onwards
  */
 export async function getMeetings(employeeId) {
-  return await Meeting.find({ participant: employeeId }).sort({ startTime: 1 });
+  const now = new Date();
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
+  const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+
+  const meetings = await Meeting.find({
+    participant: employeeId,
+    status: { $ne: "Cancelled" },
+    startTime: { $gte: startOfToday }
+  }).sort({ startTime: 1 });
+
+  return meetings.map(m => {
+    const mObj = m.toObject();
+    const mDate = m.startTime ? new Date(m.startTime) : null;
+    const isToday = mDate && mDate >= startOfToday && mDate <= endOfToday;
+    return {
+      ...mObj,
+      meetingType: isToday ? "today" : "upcoming"
+    };
+  });
+}
+
+/**
+ * Get meetings strictly categorized into todayMeetings and upcomingMeetings
+ */
+export async function getCategorizedMeetings(employeeId) {
+  const now = new Date();
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
+  const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+
+  const legacyMeetings = await Meeting.find({
+    participant: employeeId,
+    status: { $ne: "Cancelled" },
+    startTime: { $gte: startOfToday }
+  }).sort({ startTime: 1 });
+
+  const taskMeetings = await Task.find({
+    employee: employeeId,
+    category: "Meeting",
+    status: { $in: ["Pending", "In Progress"] },
+    dueDate: { $gte: startOfToday }
+  }).sort({ dueDate: 1, dueTime: 1 });
+
+  const todayMeetings = [];
+  const upcomingMeetings = [];
+
+  for (const m of legacyMeetings) {
+    const item = m.toObject();
+    item._source = "meeting";
+    item.id = item._id.toString();
+    const mDate = new Date(m.startTime);
+    if (mDate >= startOfToday && mDate <= endOfToday) {
+      item.meetingType = "today";
+      todayMeetings.push(item);
+    } else if (mDate > endOfToday) {
+      item.meetingType = "upcoming";
+      upcomingMeetings.push(item);
+    }
+  }
+
+  for (const t of taskMeetings) {
+    const item = {
+      ...t.toObject(),
+      _source: "task",
+      id: t._id.toString(),
+      title: t.title,
+      description: t.description,
+      startTime: t.dueDate,
+      startTimeStr: t.dueTime,
+      endTimeStr: null,
+      location: t.location || t.meetingType || "Offline",
+      onlineLink: t.meetingLink || null,
+      participants: t.participants || []
+    };
+    const tDate = new Date(t.dueDate);
+    if (tDate >= startOfToday && tDate <= endOfToday) {
+      item.meetingType = "today";
+      todayMeetings.push(item);
+    } else if (tDate > endOfToday) {
+      item.meetingType = "upcoming";
+      upcomingMeetings.push(item);
+    }
+  }
+
+  return { todayMeetings, upcomingMeetings };
 }
 
 /**

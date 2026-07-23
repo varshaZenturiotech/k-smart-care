@@ -79,16 +79,20 @@ export default function CircularRepositoryPage() {
 
   // Filter logic
   const filteredCirculars = circulars.filter((c) => {
+    if (!c) return false;
+    const q = (search || "").toLowerCase();
+
     // Search filter
     const matchesSearch = 
-      c.title.toLowerCase().includes(search.toLowerCase()) ||
-      (c.circularNumber && c.circularNumber.toLowerCase().includes(search.toLowerCase())) ||
-      (c.keywords && c.keywords.some((k) => k.toLowerCase().includes(search.toLowerCase())));
+      !q ||
+      Boolean(c.title && String(c.title).toLowerCase().includes(q)) ||
+      Boolean(c.circularNumber && String(c.circularNumber).toLowerCase().includes(q)) ||
+      Boolean(Array.isArray(c.keywords) && c.keywords.some((k) => k && String(k).toLowerCase().includes(q)));
 
     // Department filter
     const matchesDept = 
       selectedDept === "All" ||
-      c.departments?.includes(selectedDept) ||
+      (Array.isArray(c.departments) && c.departments.includes(selectedDept)) ||
       c.department === selectedDept;
 
     // Category filter
@@ -99,7 +103,7 @@ export default function CircularRepositoryPage() {
     // Priority filter
     const matchesPriority = 
       selectedPriority === "All" || 
-      c.priority?.toLowerCase() === selectedPriority.toLowerCase();
+      (c.priority && String(c.priority).toLowerCase() === selectedPriority.toLowerCase());
 
     // Date filter
     let matchesDate = true;
@@ -148,7 +152,7 @@ export default function CircularRepositoryPage() {
                 <span className="text-[9px] font-mono font-semibold text-ink-soft bg-paper border border-border px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">{t("dashboard.officialPortal", "Official Portal")}</span>
               </div>
               <span className="hidden sm:block text-[9px] text-ink-soft font-mono uppercase tracking-wider">
-                {t("dashboard.platformSubtitle", "AI Human Capital & Circular Intelligence Platform")}
+                {t("auth.platformSubtitle", "AI Human Capital & Resilience Intelligence Platform")}
               </span>
             </div>
           </div>

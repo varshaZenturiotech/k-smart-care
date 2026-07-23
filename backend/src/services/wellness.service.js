@@ -27,12 +27,75 @@ export function getLocalDateString() {
 /**
  * Get wellness status of the employee for today
  */
-export async function getTodayStatus(employeeId) {
+export async function getTodayStatus(employeeId, requestLanguage) {
   const dateString = getLocalDateString();
   const wellnessCheck = await WellnessCheck.findOne({ employeeId, dateString });
 
   if (!wellnessCheck) {
     return { completed: false, status: "pending", data: null };
+  }
+
+  if (wellnessCheck.status === "completed" && requestLanguage) {
+    const isTargetMl = requestLanguage === "ml" || requestLanguage === "malayalam";
+    const firstRec = wellnessCheck.recommendations?.[0] || "";
+    const isCurrentMl = /[\u0D00-\u0D7F]/.test(firstRec);
+
+    // If current language in stored check-in doesn't match requested target language, regenerate natively
+    if (isTargetMl !== isCurrentMl) {
+      try {
+        const User = (await import("../models/User.model.js")).default;
+        const user = await User.findById(employeeId);
+        const resolvedLanguage = isTargetMl ? "malayalam" : "english";
+        const employeeName = user?.name || "Employee";
+        const structuralMetadata = {
+          designation: user?.designation || "Panchayat Secretary",
+          department: user?.department || "Local Self Government",
+          district: user?.district || "Thiruvananthapuram"
+        };
+
+        const answers = {
+          mood: wellnessCheck.mood,
+          sleepHours: wellnessCheck.sleepHours,
+          energy: wellnessCheck.energy,
+          stress: wellnessCheck.stress,
+          workload: wellnessCheck.workload,
+          note: wellnessCheck.note,
+        };
+
+        let aiData;
+        if (!hasGroqKey()) {
+          aiData = getLocalFallbackAI(answers, resolvedLanguage);
+        } else {
+          aiData = await generateAIRecommendations({
+            ...answers,
+            preferredLanguage: user?.preferredLanguage || "auto",
+            employeeName,
+            structuralMetadata,
+            resolvedLanguage
+          });
+        }
+
+        wellnessCheck.aiSummary = aiData.summary;
+        wellnessCheck.recommendations = [
+          isTargetMl ? `ശ്രദ്ധിക്കുക: ${aiData.focusSuggestion}` : `Focus Suggestion: ${aiData.focusSuggestion}`,
+          isTargetMl ? `വെൽനെസ് നിർദ്ദേശം: ${aiData.wellbeingTip}` : `Wellbeing Tip: ${aiData.wellbeingTip}`,
+          isTargetMl ? `പ്രചോദനം: ${aiData.motivation}` : `Motivation: ${aiData.motivation}`,
+          ...(aiData.recommendations || []),
+        ];
+
+        await WellnessCheck.updateOne(
+          { _id: wellnessCheck._id },
+          {
+            $set: {
+              aiSummary: wellnessCheck.aiSummary,
+              recommendations: wellnessCheck.recommendations,
+            },
+          }
+        );
+      } catch (err) {
+        console.error("Failed to regenerate recommendations on language switch:", err);
+      }
+    }
   }
 
   return {

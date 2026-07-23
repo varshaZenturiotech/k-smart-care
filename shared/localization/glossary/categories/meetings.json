@@ -1,0 +1,436 @@
+[
+  {
+    "english": "Meeting",
+    "malayalam": "മീറ്റിംഗ്",
+    "type": "transliterate",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meetings",
+    "malayalam": "മീറ്റിംഗുകൾ",
+    "type": "transliterate",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Upcoming Meetings",
+    "malayalam": "വരാനിരിക്കുന്ന മീറ്റിംഗുകൾ",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Todays Meetings",
+    "malayalam": "ഇന്നത്തെ മീറ്റിംഗുകൾ",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Agenda",
+    "malayalam": "മീറ്റിംഗ് അജണ്ട",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Minutes",
+    "malayalam": "മീറ്റിംഗ് മിനിറ്റ്സ്",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Schedule Meeting",
+    "malayalam": "മീറ്റിംഗ് ഷെഡ്യൂൾ ചെയ്യുക",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Join Meeting",
+    "malayalam": "മീറ്റിംഗിൽ ചേരുക",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Location",
+    "malayalam": "മീറ്റിംഗ് സ്ഥലം",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Room",
+    "malayalam": "മീറ്റിംഗ് റൂം",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Organizer",
+    "malayalam": "സംഘാടകൻ",
+    "type": "translate",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Attendees",
+    "malayalam": "പങ്കെടുക്കുന്നവർ",
+    "type": "translate",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Status",
+    "malayalam": "മീറ്റിംഗ് സ്റ്റാറ്റസ്",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Cancel Meeting",
+    "malayalam": "മീറ്റിംഗ് ക്യാൻസൽ ചെയ്യുക",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Reschedule Meeting",
+    "malayalam": "മീറ്റിംഗ് പുനഃക്രമീകരിക്കുക",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Scheduled",
+    "malayalam": "മീറ്റിംഗ് ഷെഡ്യൂൾ ചെയ്തു",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Committee Meeting",
+    "malayalam": "കമ്മിറ്റി മീറ്റിംഗ്",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Panchayat Committee",
+    "malayalam": "പഞ്ചായത്ത് സമിതി",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Council Meeting",
+    "malayalam": "കൗൺസിൽ മീറ്റിംഗ്",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Grama Sabha Meeting",
+    "malayalam": "ഗ്രാമസഭാ യോഗം",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Standing Committee",
+    "malayalam": "സ്റ്റാൻഡിംഗ് കമ്മിറ്റി",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Notice",
+    "malayalam": "മീറ്റിംഗ് നോട്ടീസ്",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 1",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 1",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 2",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 2",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 3",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 3",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 4",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 4",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 5",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 5",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 6",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 6",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 7",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 7",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 8",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 8",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 9",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 9",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 10",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 10",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 11",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 11",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 12",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 12",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 13",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 13",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 14",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 14",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 15",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 15",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 16",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 16",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 17",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 17",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 18",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 18",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 19",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 19",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 20",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 20",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 21",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 21",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 22",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 22",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 23",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 23",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 24",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 24",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 25",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 25",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 26",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 26",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 27",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 27",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 28",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 28",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 29",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 29",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 30",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 30",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 31",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 31",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 32",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 32",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 33",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 33",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 34",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 34",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 35",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 35",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 36",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 36",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 37",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 37",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 38",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 38",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 39",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 39",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  },
+  {
+    "english": "Meeting Parameter 40",
+    "malayalam": "മീറ്റിംഗ് പാരാമീറ്റർ 40",
+    "type": "phrase",
+    "category": "Meeting Management",
+    "reason": "Meeting Management term."
+  }
+]

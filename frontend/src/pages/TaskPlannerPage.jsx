@@ -127,7 +127,11 @@ export default function TaskPlannerPage() {
   const [error, setError] = useState("");
 
   const { data: tasks = [], isLoading: tasksLoading } = useTasks(activeTab);
-  const { data: meetings = [] } = useMeetings();
+  const { data: meetingsData } = useMeetings();
+  const meetings = meetingsData?.allMeetings || (Array.isArray(meetingsData) ? meetingsData : []);
+
+  // Meetings from start of today onwards are provided directly by the backend response
+  const upcomingMeetings = meetings;
   const { data: circularsFeed = [] } = useCircularsFeed();
   const circulars = circularsFeed.slice(0, 5);
 
@@ -411,15 +415,6 @@ export default function TaskPlannerPage() {
     }
   };
 
-  // upcomingMeetings is already filtered + sorted by loadMeetings (which queries the
-  // dedicated /tasks/meetings/upcoming endpoint with server-side date/time filtering).
-  // We just do a lightweight client-side guard for legacy Meeting docs where endTime exists.
-  const upcomingMeetings = meetings.filter((m) => {
-    if (m._source === "task") return true; // already filtered by backend
-    const endOrStart = m.endTime || m.startTime;
-    return endOrStart && new Date(endOrStart) >= new Date();
-  });
-
   return (
     <div className="min-h-screen bg-paper flex flex-col font-sans">
       {/* ── Sticky Top Navigation ── */}
@@ -437,7 +432,7 @@ export default function TaskPlannerPage() {
                 <span className="text-[9px] font-mono font-semibold text-ink-soft bg-paper border border-border px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">Official Portal</span>
               </div>
               <span className="hidden sm:block text-[9px] text-ink-soft font-mono uppercase tracking-wider">
-                AI Human Capital Intelligence Platform
+                {t("auth.platformSubtitle", "AI Human Capital & Resilience Intelligence Platform")}
               </span>
             </div>
           </div>
@@ -628,9 +623,9 @@ export default function TaskPlannerPage() {
                 </div>
               ) : (
                 <div className="divide-y divide-border">
-                  {tasks.map((task) => (
+                  {tasks.map((task, taskIndex) => (
                     <div
-                      key={task._id}
+                      key={task._id || `task-${task.title || 'item'}-${taskIndex}`}
                       className={`py-3.5 flex items-start justify-between gap-4 transition-all ${task.status === "Completed" ? "opacity-60" : ""
                         }`}
                     >
@@ -710,7 +705,7 @@ export default function TaskPlannerPage() {
               </div>
             ) : (
               <div className="space-y-4 max-h-[420px] overflow-y-auto pr-1 custom-scrollbar">
-              {upcomingMeetings.map((m) => {
+              {upcomingMeetings.map((m, mIndex) => {
                   // Unified date source: task-meetings use dueDate, legacy use startTime
                   const meetingDate = new Date(m._source === "task" ? m.dueDate : m.startTime);
                   const isToday = meetingDate.toDateString() === new Date().toDateString();
@@ -760,7 +755,7 @@ export default function TaskPlannerPage() {
                     : (m.location !== "Online" ? m.location : null);
 
                   return (
-                    <div key={`${m._source}-${m._id}`} className="p-3 border border-border rounded-xl bg-paper/10 hover:bg-paper/20 transition-colors space-y-2">
+                    <div key={m._id ? `${m._source}-${m._id}` : `meeting-${m.title || 'item'}-${mIndex}`} className="p-3 border border-border rounded-xl bg-paper/10 hover:bg-paper/20 transition-colors space-y-2">
                       {/* Header row */}
                       <div className="flex justify-between items-start gap-2">
                         <div className="flex items-center gap-1.5 min-w-0 flex-wrap">
@@ -854,9 +849,9 @@ export default function TaskPlannerPage() {
               </div>
             ) : (
               <div className="space-y-3">
-                {circulars.map((c) => (
+                {circulars.map((c, cIndex) => (
                   <div
-                    key={c._id}
+                    key={c._id || `circular-${c.title || 'item'}-${cIndex}`}
                     onClick={() => handleCircularFollowup(c._id)}
                     className="p-3 border border-border rounded-xl bg-teal-tint/10 hover:bg-teal-tint/40 transition-all cursor-pointer flex items-center justify-between gap-3 group"
                   >

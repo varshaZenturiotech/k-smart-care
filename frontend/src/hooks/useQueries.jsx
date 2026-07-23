@@ -76,46 +76,41 @@ export function useMeetings() {
   return useQuery({
     queryKey: ["meetings", language],
     queryFn: async () => {
-      const [legacyRes, taskRes] = await Promise.allSettled([
-        client.get("/meetings"),
-        client.get("/tasks/meetings/upcoming")
-      ]);
+      const res = await client.get("/meetings");
+      let data = res.data;
+      
+      let todayMeetings = [];
+      let upcomingMeetings = [];
 
-      const legacyMeetings = (legacyRes.status === "fulfilled" ? legacyRes.value.data : []).map((m) => ({
-        ...m,
-        _source: "meeting",
-        _startMs: new Date(m.startTime).getTime()
-      }));
+      if (data && (Array.isArray(data.todayMeetings) || Array.isArray(data.upcomingMeetings))) {
+        todayMeetings = data.todayMeetings || [];
+        upcomingMeetings = data.upcomingMeetings || [];
+      } else if (Array.isArray(data)) {
+        const now = new Date();
+        const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
+        const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
 
-      const taskMeetings = (taskRes.status === "fulfilled" ? taskRes.value.data : []).map((t) => ({
-        ...t,
-        _source: "task",
-        title: t.title,
-        description: t.description,
-        startTime: t.dueDate,
-        startTimeStr: t.dueTime,
-        endTimeStr: null,
-        location: t.location || t.meetingType || null,
-        onlineLink: t.meetingLink || null,
-        participants: t.participants || [],
-        _startMs: (() => {
-          const d = new Date(t.dueDate);
-          if (t.dueTime) {
-            const parts = t.dueTime.match(/^(\d{1,2}):(\d{2})(?:\s*(AM|PM))?$/i);
-            if (parts) {
-              let h = parseInt(parts[1], 10);
-              const min = parseInt(parts[2], 10);
-              const ap = parts[3];
-              if (ap && ap.toUpperCase() === "PM" && h < 12) h += 12;
-              if (ap && ap.toUpperCase() === "AM" && h === 12) h = 0;
-              d.setHours(h, min, 0, 0);
-            }
+        for (const m of data) {
+          const mDate = new Date(m.startTime || m.dueDate);
+          if (mDate >= startOfToday && mDate <= endOfToday) {
+            todayMeetings.push({ ...m, meetingType: "today" });
+          } else if (mDate > endOfToday) {
+            upcomingMeetings.push({ ...m, meetingType: "upcoming" });
           }
-          return d.getTime();
-        })()
-      }));
+        }
+      }
 
-      return [...legacyMeetings, ...taskMeetings].sort((a, b) => a._startMs - b._startMs);
+      const allMeetings = [...todayMeetings, ...upcomingMeetings].sort((a, b) => {
+        const timeA = new Date(a.startTime || a.dueDate).getTime();
+        const timeB = new Date(b.startTime || b.dueDate).getTime();
+        return timeA - timeB;
+      });
+
+      return {
+        todayMeetings,
+        upcomingMeetings,
+        allMeetings
+      };
     },
     enabled: !!user,
   });

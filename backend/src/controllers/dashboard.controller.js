@@ -3,6 +3,7 @@ import Meeting from "../models/Meeting.model.js";
 import WellnessCheck from "../models/WellnessCheck.model.js";
 import User from "../models/User.model.js";
 import Circular from "../models/Circular.model.js";
+import translationService from "../translation/translationService.js";
 
 function getHourInTimezone(date, timeZone) {
   try {
@@ -18,7 +19,6 @@ function getHourInTimezone(date, timeZone) {
 }
 
 // GET /api/dashboard/summary
-// Module 2: Employee Dashboard - Step 1: Return the requested API payload keys
 export async function getDashboardSummary(req, res) {
   try {
     const userId = req.user.id;
@@ -40,35 +40,37 @@ export async function getDashboardSummary(req, res) {
     const endOfToday = new Date();
     endOfToday.setHours(23, 59, 59, 999);
 
-    // 1. Today's pending/in-progress tasks
     const todayTasksDb = await Task.find({
       employee: user._id,
       status: { $in: ["Pending", "In Progress"] },
       dueDate: { $gte: startOfToday, $lte: endOfToday }
     });
 
-    // 2. Overdue tasks
     const overdueTasksDb = await Task.find({
       employee: user._id,
       status: { $in: ["Pending", "In Progress"] },
       dueDate: { $lt: startOfToday }
     });
 
-    // 3. Completed today tasks
     const completedTodayDb = await Task.find({
       employee: user._id,
       status: "Completed",
       completedAt: { $gte: startOfToday, $lte: endOfToday }
     });
 
-    // 4. Upcoming meetings
-    const upcomingMeetingsDb = await Meeting.find({
+    const legacyMeetingsDb = await Meeting.find({
       participant: user._id,
-      status: "Scheduled",
+      status: { $ne: "Cancelled" },
       startTime: { $gte: startOfToday }
     }).sort({ startTime: 1 });
 
-    // Map them for frontend dashboard
+    const taskMeetingsDb = await Task.find({
+      employee: user._id,
+      category: "Meeting",
+      status: { $in: ["Pending", "In Progress"] },
+      dueDate: { $gte: startOfToday }
+    }).sort({ dueDate: 1, dueTime: 1 });
+
     const todayTasks = todayTasksDb.map(t => ({
       id: t._id.toString(),
       _id: t._id.toString(),
@@ -102,32 +104,57 @@ export async function getDashboardSummary(req, res) {
       dueTime: t.dueTime || ""
     }));
 
-    const upcomingMeetings = upcomingMeetingsDb.map(m => ({
-      id: m._id.toString(),
-      _id: m._id.toString(),
-      title: m.title,
-      startTime: m.startTime.toISOString(),
-      endTime: m.endTime.toISOString(),
-      startTimeStr: m.startTimeStr || "",
-      endTimeStr: m.endTimeStr || "",
-      location: m.location,
-      status: m.status,
-      participants: m.participants || []
-    }));
+    const todayMeetings = [];
+    const upcomingMeetings = [];
 
-    // For backward compatibility (map all pending tasks into pendingFiles)
+    const formatMeetingItem = (item, source) => {
+      const isTask = source === "task";
+      return {
+        id: item._id.toString(),
+        _id: item._id.toString(),
+        title: item.title,
+        description: item.description || "",
+        startTime: isTask ? (item.dueDate ? item.dueDate.toISOString() : "") : (item.startTime ? item.startTime.toISOString() : ""),
+        endTime: isTask ? "" : (item.endTime ? item.endTime.toISOString() : ""),
+        startTimeStr: isTask ? (item.dueTime || "") : (item.startTimeStr || ""),
+        endTimeStr: isTask ? "" : (item.endTimeStr || ""),
+        location: item.location || (isTask ? item.meetingType : "Online") || "Online",
+        status: item.status,
+        participants: item.participants || [],
+        _source: source
+      };
+    };
+
+    for (const m of legacyMeetingsDb) {
+      const mDate = new Date(m.startTime);
+      const formatted = formatMeetingItem(m, "meeting");
+      if (mDate >= startOfToday && mDate <= endOfToday) {
+        formatted.meetingType = "today";
+        todayMeetings.push(formatted);
+      } else if (mDate > endOfToday) {
+        formatted.meetingType = "upcoming";
+        upcomingMeetings.push(formatted);
+      }
+    }
+
+    for (const t of taskMeetingsDb) {
+      const tDate = new Date(t.dueDate);
+      const formatted = formatMeetingItem(t, "task");
+      if (tDate >= startOfToday && tDate <= endOfToday) {
+        formatted.meetingType = "today";
+        todayMeetings.push(formatted);
+      } else if (tDate > endOfToday) {
+        formatted.meetingType = "upcoming";
+        upcomingMeetings.push(formatted);
+      }
+    }
+
     const pendingFiles = [...todayTasks, ...overdueTasks];
-    const todaysMeetings = upcomingMeetings.filter(m => new Date(m.startTime).getTime() <= endOfToday.getTime());
 
-    // Compute actual wellness score based on recent checks
     const WellnessCheckModel = (await import("../models/WellnessCheck.model.js")).default;
-    const { getLocalDateString } = await import("../services/wellness.service.js");
-    const dateString = getLocalDateString();
-
-    const todayCheck = await WellnessCheckModel.findOne({
-      employeeId: user._id,
-      dateString
-    });
+    const { getTodayStatus } = await import("../services/wellness.service.js");
+    const todayStatusResult = await getTodayStatus(user._id, req.language);
+    const todayCheck = todayStatusResult.data;
 
     let wellnessScore = 80;
     let focusScore = 75;
@@ -164,7 +191,6 @@ export async function getDashboardSummary(req, res) {
       burnoutRisk,
     };
 
-    // Query department circulars
     const circulars = await Circular.find({
       status: "ingested",
       departments: { $in: [user.department, "All Departments"] }
@@ -205,7 +231,6 @@ export async function getDashboardSummary(req, res) {
 
     const { generateDailyBriefing } = await import("../services/dailyBriefing.service.js");
     
-    // Prioritize req.language over stored user preference for real-time toggling.
     const preferredLang = user.preferredLanguage || "auto";
     let resolvedLang = "english";
     if (req.language === "ml" || req.language === "malayalam") {
@@ -229,12 +254,14 @@ export async function getDashboardSummary(req, res) {
       burnoutRisk,
       todayTasksCount: todayTasks.length,
       todayTasksList: todayTasks.map(t => t.dueTime ? `${t.title} (due by ${formatTimeTo12(t.dueTime)})` : t.title),
-      todayTasksObjects: todayTasksDb, // pass raw docs for fallback sorting
+      todayTasksObjects: todayTasksDb,
       overdueTasksCount: overdueTasks.length,
       overdueTasksList: overdueTasks.map(t => t.dueTime ? `${t.title} (was due by ${formatTimeTo12(t.dueTime)})` : t.title),
-      upcomingMeetingsCount: upcomingMeetings.length,
-      upcomingMeetingsList: upcomingMeetings.map(m => `${m.title} at ${getMeeting12hTime(m)}`),
-      upcomingMeetingsObjects: upcomingMeetingsDb,
+      overdueTasksObjects: overdueTasksDb,
+      completedTaskTitles: completedTodayDb.map(t => t.title),
+      upcomingMeetingsCount: todayMeetings.length,
+      upcomingMeetingsList: todayMeetings.map(m => `${m.title} at ${getMeeting12hTime(m)}`),
+      upcomingMeetingsObjects: todayMeetings,
       newCircularsCount: circulars.length,
       newCircularsList: circulars.map(c => c.title),
       preferredLanguage: preferredLang,
@@ -244,27 +271,24 @@ export async function getDashboardSummary(req, res) {
     const forceRefresh = req.query.refresh === "true";
     const briefing = await generateDailyBriefing(briefingData, forceRefresh);
 
-    res.json({
+    const responsePayload = {
       employee,
       pendingFiles,
-      todayMeetings: todaysMeetings,
+      todayMeetings,
       wellnessScore,
       focusScore,
       burnoutRisk,
       mood,
       aiGreeting,
 
-      // Daily Briefing payload keys
       briefing,
       newCircularsCount: circulars.length,
 
-      // New Task Planner payload keys
       todayTasks,
       completedToday,
       upcomingMeetings,
       overdueTasks,
 
-      // Backward compatibility keys
       greeting: briefing?.greeting || (() => {
         const hour = new Date().getHours();
         let timeGreeting = "Good morning";
@@ -275,9 +299,19 @@ export async function getDashboardSummary(req, res) {
       aiTip: todayCheck?.aiSummary || null,
       moodCheckedInToday: mood.checkedInToday,
       todaysMood: mood.todaysMood,
-      pendingTasks: pendingFiles.map(f => ({ ...f, _id: f.id })), // map id -> _id for tasks widget
-      todaysMeetings: todaysMeetings.map(m => ({ ...m, _id: m.id })), // map id -> _id for meetings widget
-    });
+      pendingTasks: pendingFiles.map(f => ({ ...f, _id: f.id })),
+      todaysMeetings: todayMeetings.map(m => ({ ...m, _id: m.id })),
+    };
+
+    let translated = responsePayload;
+    try {
+      translated = await translationService.translateResponse(responsePayload, req.language, "/api/dashboard/summary");
+    } catch (transErr) {
+      console.warn("[DashboardController] Localization fallback to English:", transErr.message);
+      translated = responsePayload;
+    }
+
+    return res.json(translated);
   } catch (err) {
     console.error("Dashboard summary error:", err);
     res.status(500).json({ error: "Failed to load dashboard." });
@@ -285,7 +319,6 @@ export async function getDashboardSummary(req, res) {
 }
 
 // POST /api/dashboard/mood-check
-// Module 4: Daily Wellness Check (morning check)
 export async function submitMoodCheck(req, res) {
   try {
     const { mood, sleepHours, energyLevel, stressLevel } = req.body;
@@ -314,7 +347,9 @@ export async function submitMoodCheck(req, res) {
       ],
     };
 
-    res.status(201).json({ check, recommendations: recommendations[mood] });
+    const responsePayload = { check, recommendations: recommendations[mood] };
+    const translated = await translationService.translateResponse(responsePayload, req.language, "/api/dashboard/mood-check");
+    return res.status(201).json(translated);
   } catch (err) {
     console.error("Mood check error:", err);
     res.status(500).json({ error: "Failed to save mood check." });
@@ -330,7 +365,6 @@ export async function getDepartmentFeed(req, res) {
 
     const priorityMap = { High: 3, medium: 2, Medium: 2, Low: 1, low: 1 };
 
-    // Find circulars where employee's department exists in departments[] array (or All Departments)
     const circulars = await Circular.find({
       status: "ingested",
       departments: { $in: [user.department, "All Departments"] }
@@ -341,9 +375,9 @@ export async function getDepartmentFeed(req, res) {
         const priorityA = priorityMap[a.priority] || 2;
         const priorityB = priorityMap[b.priority] || 2;
         if (priorityB !== priorityA) {
-          return priorityB - priorityA; // priority DESC
+          return priorityB - priorityA;
         }
-        return new Date(b.issueDate || b.createdAt) - new Date(a.issueDate || a.createdAt); // issueDate DESC
+        return new Date(b.issueDate || b.createdAt) - new Date(a.issueDate || a.createdAt);
       })
       .slice(0, 5);
 
@@ -354,10 +388,11 @@ export async function getDepartmentFeed(req, res) {
       priority: c.priority || "Medium",
       issueDate: c.issueDate || c.createdAt,
       pdfLink: c.pdfUrl || `/uploads/${c.filename}`,
-      pdfUrl: c.pdfUrl || `/uploads/${c.filename}`, // backward compatibility
+      pdfUrl: c.pdfUrl || `/uploads/${c.filename}`,
     }));
 
-    res.json(result);
+    const translated = await translationService.translateResponse(result, req.language, "/api/dashboard/feed");
+    return res.json(translated);
   } catch (err) {
     console.error("Error in getDepartmentFeed:", err);
     res.status(500).json({ error: "Failed to load department feed." });

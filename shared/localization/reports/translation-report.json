@@ -1,0 +1,2732 @@
+{
+  "timestamp": "2026-07-23T10:23:09.570Z",
+  "summary": {
+    "totalKeys": 395,
+    "validated": 395,
+    "passed": 373,
+    "warnings": 315,
+    "errors": 22,
+    "criticalErrors": 0,
+    "highErrors": 22,
+    "mediumWarnings": 236,
+    "lowWarnings": 79
+  },
+  "metrics": {
+    "remainingEnglish": 148,
+    "mixedLanguage": 115,
+    "placeholderErrors": 0,
+    "htmlErrors": 0,
+    "missingKeys": 0,
+    "emptyTranslations": 0,
+    "duplicateTranslations": 0,
+    "glossaryCoveragePercentage": 12.2,
+    "glossaryEntriesTotal": 1101,
+    "glossaryEntriesUsed": 134,
+    "executionTimeSeconds": 0.43
+  },
+  "recommendations": [
+    "Add \"Workspace\" to government glossary.",
+    "Add \"Repository\" to transliteration dictionary.",
+    "Improve Groq translation prompt for \"Generated\".",
+    "148 strings contain un-translated English words requiring review.",
+    "Glossary coverage is at 12.2%. Expand government glossary for remaining terms."
+  ],
+  "issues": [
+    {
+      "key": "common.cancel",
+      "english": "Cancel",
+      "translated": "Cancel",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "common.delete",
+      "english": "Delete",
+      "translated": "Delete",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "common.today",
+      "english": "Today",
+      "translated": "Today",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "dashboard.quickAiTask",
+      "english": "Quick AI Task Creator",
+      "translated": "Quick AI ടാസ്ക് Creator",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Quick, Creator\""
+    },
+    {
+      "key": "dashboard.scheduledMeetings",
+      "english": "Scheduled Meetings",
+      "translated": "Scheduled Meetings",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "dashboard.noMeetingsToday",
+      "english": "No meetings scheduled for today.",
+      "translated": "No meetings scheduled for today.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "dashboard.pendingFilesTasks",
+      "english": "Pending Files & Tasks",
+      "translated": "പെൻഡിംഗ് Files & Tasks",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Files, Tasks\""
+    },
+    {
+      "key": "dashboard.noFilesPending",
+      "english": "No files currently pending approval.",
+      "translated": "No files currently പെൻഡിംഗ് അംഗീകാരം.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"No, files, currently\""
+    },
+    {
+      "key": "dashboard.noTasks",
+      "english": "No tasks for today.",
+      "translated": "No tasks for today.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "dashboard.noMeetings",
+      "english": "No scheduled meetings.",
+      "translated": "No scheduled meetings.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "dashboard.wellness",
+      "english": "Wellness Tracker",
+      "translated": "ക്ഷേമം Tracker",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Tracker\""
+    },
+    {
+      "key": "dashboard.moodCheck",
+      "english": "How are you feeling today?",
+      "translated": "How are you feeling today?",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "dashboard.departmentFeed",
+      "english": "Department Feed",
+      "translated": "വകുപ്പ് Feed",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Feed\""
+    },
+    {
+      "key": "dashboard.searchPlaceholder",
+      "english": "Search circulars, files, tasks...",
+      "translated": "സർക്കുലറുകൾ തിരയുക, files, tasks...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"files, tasks\""
+    },
+    {
+      "key": "dashboard.officialPortal",
+      "english": "Official Portal",
+      "translated": "Official Portal",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "dashboard.errorLoad",
+      "english": "Could not load your dashboard. Please try again.",
+      "translated": "Could not load your ഡാഷ്ബോർഡ്. Please try again.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 7 English word(s): \"Could, not, load, your, Please, try, again\""
+    },
+    {
+      "key": "dashboard.sessionReset",
+      "english": "This can happen if the database was reset or your session expired.",
+      "translated": "This can happen if the database was റീസെറ്റ് ചെയ്യുക or your സെഷൻ കാലാവധി കഴിഞ്ഞു.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 9 English word(s): \"This, can, happen, if, the, database, was, or, your\""
+    },
+    {
+      "key": "dashboard.loading",
+      "english": "Loading K-SMART CARE Portal...",
+      "translated": "Loading കെ-സ്മാർട്ട് CARE Portal...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Loading, Portal\""
+    },
+    {
+      "key": "greeting.lsgDept",
+      "english": "LSG Department",
+      "translated": "LSG വകുപ്പ്",
+      "type": "Mixed Language",
+      "severity": "Low",
+      "details": "Contains 1 English word(s): \"LSG\""
+    },
+    {
+      "key": "greeting.analyzingBriefing",
+      "english": "Analyzing today's schedule and preparing your custom briefing...",
+      "translated": "Analyzing today's ഷെഡ്യൂൾ and preparing your custom briefing...",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 7 English word(s): \"Analyzing, today, and, preparing, your, custom, briefing\""
+    },
+    {
+      "key": "greeting.newCirculars",
+      "english": "New Circulars",
+      "translated": "New Circulars",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.scheduledCount",
+      "english": "scheduled",
+      "translated": "scheduled",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.newCount",
+      "english": "new",
+      "translated": "new",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.priorityRanking",
+      "english": "Today's Priority Ranking",
+      "translated": "Today's മുൻഗണനാ ക്രമം",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Today\""
+    },
+    {
+      "key": "greeting.priority",
+      "english": "Today's Priority",
+      "translated": "Today's മുൻഗണന",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Today\""
+    },
+    {
+      "key": "greeting.motivation",
+      "english": "Daily Motivation",
+      "translated": "Daily Motivation",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.wellnessCheckCompleted",
+      "english": "Today's Wellness Profile Completed",
+      "translated": "Today's ക്ഷേമം പ്രൊഫൈൽ പൂർത്തിയായവ",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Today\""
+    },
+    {
+      "key": "greeting.viewDetails",
+      "english": "View Details & Diagnostics →",
+      "translated": "കാണുക വിശദാംശങ്ങൾ & Diagnostics →",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Diagnostics\""
+    },
+    {
+      "key": "greeting.wellnessPending",
+      "english": "Today's Wellness Check is pending",
+      "translated": "Today's ക്ഷേമം Check is പെൻഡിംഗ്",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"Today, Check, is\""
+    },
+    {
+      "key": "greeting.wellnessPendingDesc",
+      "english": "Log today's wellness check to populate score diagnostics, circular charts, and customized colleague tips.",
+      "translated": "Log today's ക്ഷേമം check to populate score diagnostics, സർക്കുലർ charts, and customized colleague tips.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 12 English word(s): \"Log, today, check, to, populate, score, diagnostics, charts, and, customized, colleague, tips\""
+    },
+    {
+      "key": "greeting.modalTitle",
+      "english": "Today's Wellness Details & Diagnostics",
+      "translated": "Today's ക്ഷേമം വിശദാംശങ്ങൾ & Diagnostics",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Today, Diagnostics\""
+    },
+    {
+      "key": "greeting.focusCapacity",
+      "english": "Focus Capacity",
+      "translated": "Focus Capacity",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.wellnessIndicators",
+      "english": "Wellness Indicators",
+      "translated": "ക്ഷേമം Indicators",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Indicators\""
+    },
+    {
+      "key": "greeting.mood",
+      "english": "Mood",
+      "translated": "Mood",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.sleep",
+      "english": "Sleep",
+      "translated": "Sleep",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.energy",
+      "english": "Energy",
+      "translated": "Energy",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.stress",
+      "english": "Stress",
+      "translated": "Stress",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.workload",
+      "english": "Workload",
+      "translated": "Workload",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.burnout",
+      "english": "Burnout",
+      "translated": "Burnout",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.hours",
+      "english": "hrs",
+      "translated": "hrs",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.aiTips",
+      "english": "AI Recommendations & Tips",
+      "translated": "AI Recommendations & Tips",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.reflectionNotes",
+      "english": "Reflection Notes",
+      "translated": "ആത്മപരിശോധന Notes",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Notes\""
+    },
+    {
+      "key": "greeting.wellnessStatus",
+      "english": "Today's Wellness Status",
+      "translated": "Today's ക്ഷേമം സ്റ്റാറ്റസ്",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Today\""
+    },
+    {
+      "key": "greeting.wellnessPendingShort",
+      "english": "Today's Wellness Check is Pending",
+      "translated": "Today's ക്ഷേമം Check is പെൻഡിംഗ്",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"Today, Check, is\""
+    },
+    {
+      "key": "greeting.wellnessPendingDescShort",
+      "english": "Log today's wellness check to view score details and diagnostics.",
+      "translated": "Log today's ക്ഷേമം check to കാണുക score വിശദാംശങ്ങൾ and diagnostics.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 7 English word(s): \"Log, today, check, to, score, and, diagnostics\""
+    },
+    {
+      "key": "greeting.checkinNow",
+      "english": "Check-in Now",
+      "translated": "Check-in Now",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.noTasksDue",
+      "english": "No tasks due today",
+      "translated": "No tasks due today",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.noTasksDueHelper",
+      "english": "Your schedule will appear here once tasks are assigned.",
+      "translated": "Your ഷെഡ്യൂൾ will appear here once tasks are assigned.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 8 English word(s): \"Your, will, appear, here, once, tasks, are, assigned\""
+    },
+    {
+      "key": "greeting.oneTaskDue",
+      "english": "1 task due today",
+      "translated": "1 ടാസ്ക് due today",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"due, today\""
+    },
+    {
+      "key": "greeting.manyTasksDue",
+      "english": "{{count}} tasks due today",
+      "translated": "{{count}} tasks due today",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.noMeetingsScheduled",
+      "english": "No meetings scheduled today",
+      "translated": "No meetings scheduled today",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "greeting.noMeetingsScheduledHelper",
+      "english": "Your schedule will appear here once meetings are scheduled.",
+      "translated": "Your ഷെഡ്യൂൾ will appear here once meetings are scheduled.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 8 English word(s): \"Your, will, appear, here, once, meetings, are, scheduled\""
+    },
+    {
+      "key": "greeting.oneMeetingScheduled",
+      "english": "1 meeting scheduled today",
+      "translated": "1 മീറ്റിംഗ് scheduled today",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"scheduled, today\""
+    },
+    {
+      "key": "greeting.manyMeetingsScheduled",
+      "english": "{{count}} meetings scheduled today",
+      "translated": "{{count}} meetings scheduled today",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.forDept",
+      "english": "For {{dept}}",
+      "translated": "For {{dept}}",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.yourDept",
+      "english": "Your Department",
+      "translated": "Your വകുപ്പ്",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Your\""
+    },
+    {
+      "key": "feed.postNews",
+      "english": "Post News",
+      "translated": "Post News",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.empty",
+      "english": "Nothing here yet for your department or district.",
+      "translated": "Nothing here yet for your വകുപ്പ് or ജില്ല.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 6 English word(s): \"Nothing, here, yet, for, your, or\""
+    },
+    {
+      "key": "feed.viewAll",
+      "english": "View All Circulars & News",
+      "translated": "കാണുക All Circulars & News",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"All, Circulars, News\""
+    },
+    {
+      "key": "feed.news",
+      "english": "News",
+      "translated": "News",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.circular",
+      "english": "Circular",
+      "translated": "Circular",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.editTags",
+      "english": "Edit tags",
+      "translated": "എഡിറ്റ് ചെയ്യുക tags",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"tags\""
+    },
+    {
+      "key": "feed.addToPlanner",
+      "english": "Add to Planner",
+      "translated": "Add to Planner",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.editDistribution",
+      "english": "Edit Distribution",
+      "translated": "എഡിറ്റ് ചെയ്യുക Distribution",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Distribution\""
+    },
+    {
+      "key": "feed.districtPlaceholder",
+      "english": "District (or 'All Districts')",
+      "translated": "ജില്ല (or 'All Districts')",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"or, All, Districts\""
+    },
+    {
+      "key": "feed.createNews",
+      "english": "Create News Announcement",
+      "translated": "ക്രിയേറ്റ് ചെയ്യുക News Announcement",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"News, Announcement\""
+    },
+    {
+      "key": "feed.headline",
+      "english": "Headline",
+      "translated": "Headline",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.shortAnnouncement",
+      "english": "Short announcement...",
+      "translated": "Short announcement...",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.targetDepartments",
+      "english": "Target Departments",
+      "translated": "Target Departments",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.targetDistrict",
+      "english": "Target District",
+      "translated": "Target ജില്ല",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Target\""
+    },
+    {
+      "key": "feed.targetDistrictPlaceholder",
+      "english": "District (e.g. All Districts)",
+      "translated": "ജില്ല (e.g. All Districts)",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"All, Districts\""
+    },
+    {
+      "key": "feed.posting",
+      "english": "Posting...",
+      "translated": "Posting...",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.postAnnouncement",
+      "english": "Post Announcement",
+      "translated": "Post Announcement",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.validationError",
+      "english": "Title, body, and at least one department are required.",
+      "translated": "Title, body, and at least one വകുപ്പ് are required.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 8 English word(s): \"Title, body, and, at, least, one, are, required\""
+    },
+    {
+      "key": "feed.postFailed",
+      "english": "Failed to post news.",
+      "translated": "Failed to post news.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.aiSuggestedFollowUp",
+      "english": "AI Suggested follow-up for: \"{{title}}\"",
+      "translated": "AI Suggested follow-up for: \"{{title}}\"",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "feed.aiFollowUpAdded",
+      "english": "AI Follow-up task added: \"{{title}}\"",
+      "translated": "AI ഫോളോ-അപ്പ് ടാസ്ക് added: \"{{title}}\"",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"added\""
+    },
+    {
+      "key": "feed.aiFollowUpFailed",
+      "english": "Failed to generate AI follow-up task.",
+      "translated": "Failed to generate AI ഫോളോ-അപ്പ് ടാസ്ക്.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"Failed, to, generate\""
+    },
+    {
+      "key": "taskPlanner.noTasks",
+      "english": "No tasks found in this category.",
+      "translated": "No tasks found in this വിഭാഗം.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 5 English word(s): \"No, tasks, found, in, this\""
+    },
+    {
+      "key": "taskPlanner.due",
+      "english": "Due",
+      "translated": "Due",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.validationTitle",
+      "english": "Task title is required.",
+      "translated": "ടാസ്ക് title is required.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"title, is, required\""
+    },
+    {
+      "key": "taskPlanner.workspaceTitle",
+      "english": "Task & Meeting Workspace",
+      "translated": "ടാസ്ക് & മീറ്റിംഗ് Workspace",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Workspace\""
+    },
+    {
+      "key": "taskPlanner.workspaceDesc",
+      "english": "Track milestones, schedule events, and organize circular workflows",
+      "translated": "Track milestones, ഷെഡ്യൂൾ events, and organize സർക്കുലർ workflows",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 6 English word(s): \"Track, milestones, events, and, organize, workflows\""
+    },
+    {
+      "key": "taskPlanner.newTask",
+      "english": "New Task",
+      "translated": "New ടാസ്ക്",
+      "type": "Mixed Language",
+      "severity": "Low",
+      "details": "Contains 1 English word(s): \"New\""
+    },
+    {
+      "key": "taskPlanner.newMeeting",
+      "english": "New Meeting",
+      "translated": "New മീറ്റിംഗ്",
+      "type": "Mixed Language",
+      "severity": "Low",
+      "details": "Contains 1 English word(s): \"New\""
+    },
+    {
+      "key": "taskPlanner.quickAiCreator",
+      "english": "Quick AI Task Creator",
+      "translated": "Quick AI ടാസ്ക് Creator",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Quick, Creator\""
+    },
+    {
+      "key": "taskPlanner.circularFollowups",
+      "english": "Circular Follow-ups",
+      "translated": "സർക്കുലർ Follow-ups",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Follow, ups\""
+    },
+    {
+      "key": "taskPlanner.circularFollowupsDesc",
+      "english": "AI detects circulars that need actionable follow-ups. Click to prefill task creation.",
+      "translated": "AI detects circulars that need actionable follow-ups. Click to prefill ടാസ്ക് creation.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 11 English word(s): \"detects, circulars, that, need, actionable, follow, ups, Click, to, prefill, creation\""
+    },
+    {
+      "key": "taskPlanner.noCirculars",
+      "english": "No active circulars to monitor.",
+      "translated": "No active circulars to monitor.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.aiGenerated",
+      "english": "AI Generated",
+      "translated": "AI Generated",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.startsIn",
+      "english": "Starts in {{count}} min",
+      "translated": "Starts in {{count}} min",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.ongoing",
+      "english": "Ongoing",
+      "translated": "Ongoing",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.tomorrow",
+      "english": "Tomorrow",
+      "translated": "Tomorrow",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.inDays",
+      "english": "In {{count}} days",
+      "translated": "In {{count}} days",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.viewAll",
+      "english": "View All",
+      "translated": "കാണുക All",
+      "type": "Mixed Language",
+      "severity": "Low",
+      "details": "Contains 1 English word(s): \"All\""
+    },
+    {
+      "key": "taskPlanner.todaysPriorities",
+      "english": "Today's Priorities",
+      "translated": "Today's Priorities",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.scheduledCount",
+      "english": "{{count}} scheduled",
+      "translated": "{{count}} scheduled",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.noTasksToday",
+      "english": "No tasks due today.",
+      "translated": "No tasks due today",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "taskPlanner.noMeetingsToday",
+      "english": "No upcoming meetings today.",
+      "translated": "No വരാനിരിക്കുന്നവ meetings today.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"No, meetings, today\""
+    },
+    {
+      "key": "circular.originalLanguage",
+      "english": "Original Language",
+      "translated": "Original ഭാഷ",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Original\""
+    },
+    {
+      "key": "circular.translateToMalayalam",
+      "english": "Translate to Malayalam",
+      "translated": "തർജ്ജമ ചെയ്യുക to Malayalam",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"to, Malayalam\""
+    },
+    {
+      "key": "circular.translateToEnglish",
+      "english": "Translate to English",
+      "translated": "തർജ്ജമ ചെയ്യുക to English",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"to, English\""
+    },
+    {
+      "key": "circular.noCirculars",
+      "english": "No circulars found.",
+      "translated": "No circulars found.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.noCircularsUploaded",
+      "english": "No circulars uploaded yet.",
+      "translated": "No circulars uploaded yet.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.confirmDelete",
+      "english": "Are you sure you want to delete this circular?",
+      "translated": "Are you sure you want to ഡിലീറ്റ് ചെയ്യുക this സർക്കുലർ?",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 7 English word(s): \"Are, you, sure, you, want, to, this\""
+    },
+    {
+      "key": "circular.deleteSuccess",
+      "english": "Circular deleted successfully.",
+      "translated": "സർക്കുലർ deleted successfully.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"deleted, successfully\""
+    },
+    {
+      "key": "circular.deleteFailed",
+      "english": "Failed to delete circular.",
+      "translated": "Failed to ഡിലീറ്റ് ചെയ്യുക സർക്കുലർ.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Failed, to\""
+    },
+    {
+      "key": "circular.hideSummary",
+      "english": "▲ Hide Summary",
+      "translated": "▲ Hide സംഗ്രഹം",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Hide\""
+    },
+    {
+      "key": "circular.subject",
+      "english": "Subject",
+      "translated": "Subject",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.releaseDate",
+      "english": "Release Date",
+      "translated": "Release Date",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.subHeaderDescription",
+      "english": "Browse, search, and query Kerala Government circulars relevant to your department",
+      "translated": "Browse, സെർച്ച്, and ചോദ്യം Kerala സർക്കാർ circulars relevant to your വകുപ്പ്",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 7 English word(s): \"Browse, and, Kerala, circulars, relevant, to, your\""
+    },
+    {
+      "key": "circular.circulars",
+      "english": "Circulars",
+      "translated": "Circulars",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.filtered",
+      "english": "Filtered",
+      "translated": "Filtered",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.filterRepository",
+      "english": "Filter Repository",
+      "translated": "ഫിൽട്ടർ Repository",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Repository\""
+    },
+    {
+      "key": "circular.searchTitlePlaceholder",
+      "english": "Search title, No...",
+      "translated": "സെർച്ച് title, No...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"title, No\""
+    },
+    {
+      "key": "circular.allDepartments",
+      "english": "All Departments",
+      "translated": "All Departments",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.allCategories",
+      "english": "All Categories",
+      "translated": "All Categories",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.allPriorities",
+      "english": "All Priorities",
+      "translated": "All Priorities",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.clearAllFilters",
+      "english": "Clear All Filters",
+      "translated": "ക്ലിയർ ചെയ്യുക All Filters",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"All, Filters\""
+    },
+    {
+      "key": "circular.circularDocuments",
+      "english": "Circular Documents",
+      "translated": "സർക്കുലർ Documents",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Documents\""
+    },
+    {
+      "key": "circular.noMatches",
+      "english": "No circulars match current filters.",
+      "translated": "No circulars match current filters.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.relaxParams",
+      "english": "Try relaxing search parameters or upload new documents on the dashboard.",
+      "translated": "Try relaxing സെർച്ച് parameters or അപ്ലോഡ് new documents on the ഡാഷ്ബോർഡ്.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 8 English word(s): \"Try, relaxing, parameters, or, new, documents, on, the\""
+    },
+    {
+      "key": "circular.metadataSummary",
+      "english": "AI-extracted metadata summary profile.",
+      "translated": "AI-extracted metadata സംഗ്രഹം പ്രൊഫൈൽ.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"extracted, metadata\""
+    },
+    {
+      "key": "circular.noNumber",
+      "english": "No Number",
+      "translated": "No Number",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.issuedDate",
+      "english": "Issued",
+      "translated": "Issued",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.targetDepartments",
+      "english": "Target Departments",
+      "translated": "Target Departments",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.noTargeting",
+      "english": "No targeting specified",
+      "translated": "No targeting specified",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.aiIngestionSummary",
+      "english": "AI Ingestion Summary",
+      "translated": "AI Ingestion സംഗ്രഹം",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Ingestion\""
+    },
+    {
+      "key": "circular.noAiSummary",
+      "english": "No AI Summary available yet.",
+      "translated": "No എ.ഐ സംഗ്രഹം available yet.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"No, available, yet\""
+    },
+    {
+      "key": "circular.consultAssistant",
+      "english": "Consult Assistant",
+      "translated": "Consult Assistant",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "circular.selectToInspect",
+      "english": "Select a circular document to inspect its profile and AI insights.",
+      "translated": "തിരഞ്ഞെടുക്കുക a സർക്കുലർ ഡോക്യുമെന്റ് to inspect its പ്രൊഫൈൽ and AI വിവര വിശകലനം.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 4 English word(s): \"to, inspect, its, and\""
+    },
+    {
+      "key": "circular.toggleTheme",
+      "english": "Toggle Theme (Calm Mode)",
+      "translated": "ടോഗിൾ തീം (Calm Mode)",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Calm, Mode\""
+    },
+    {
+      "key": "profile.preferredLanguage",
+      "english": "Preferred Language",
+      "translated": "Preferred ഭാഷ",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Preferred\""
+    },
+    {
+      "key": "profile.autoDetect",
+      "english": "Auto Detect",
+      "translated": "Auto Detect",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "profile.malayalam",
+      "english": "Malayalam",
+      "translated": "Malayalam",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "profile.english",
+      "english": "English",
+      "translated": "English",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "profile.email",
+      "english": "Email Address",
+      "translated": "ഇമെയിൽ Address",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Address\""
+    },
+    {
+      "key": "profile.phone",
+      "english": "Phone Number",
+      "translated": "Phone Number",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.title",
+      "english": "Admin Portal",
+      "translated": "Admin Portal",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.users",
+      "english": "User Management",
+      "translated": "User Management",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.logs",
+      "english": "System Logs",
+      "translated": "System Logs",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.addUser",
+      "english": "Add User",
+      "translated": "Add User",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.active",
+      "english": "Active",
+      "translated": "Active",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.inactive",
+      "english": "Inactive",
+      "translated": "Inactive",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.name",
+      "english": "Name",
+      "translated": "Name",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.noUsers",
+      "english": "No users found.",
+      "translated": "No users found.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "admin.console",
+      "english": "Admin Console",
+      "translated": "Admin Console",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "auth.email",
+      "english": "Email Address",
+      "translated": "ഇമെയിൽ Address",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Address\""
+    },
+    {
+      "key": "auth.dontHaveAccount",
+      "english": "Don't have an account?",
+      "translated": "Don't have an account?",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "auth.alreadyHaveAccount",
+      "english": "Already have an account?",
+      "translated": "Already have an account?",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "auth.sendResetLink",
+      "english": "Send Reset Link",
+      "translated": "Send റീസെറ്റ് ചെയ്യുക ലിങ്ക്",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Send\""
+    },
+    {
+      "key": "auth.enterBoth",
+      "english": "Please enter both email and password.",
+      "translated": "Please enter both ഇമെയിൽ and പാസ്‌വേഡ്.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 4 English word(s): \"Please, enter, both, and\""
+    },
+    {
+      "key": "auth.invalidCredentials",
+      "english": "Invalid credentials. Please try again.",
+      "translated": "Invalid ലോഗിൻ വിവരങ്ങൾ. Please try again.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 4 English word(s): \"Invalid, Please, try, again\""
+    },
+    {
+      "key": "auth.keralaGov",
+      "english": "Government of Kerala",
+      "translated": "സർക്കാർ of Kerala",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"of, Kerala\""
+    },
+    {
+      "key": "auth.platformSubtitle",
+      "english": "AI Human Capital & Circular Intelligence Platform",
+      "translated": "AI Human Capital & സർക്കുലർ ഇന്റലിജൻസ് Platform",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"Human, Capital, Platform\""
+    },
+    {
+      "key": "auth.officialEmail",
+      "english": "Official Email ID",
+      "translated": "Official ഇമെയിൽ ID",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Official\""
+    },
+    {
+      "key": "auth.verifying",
+      "english": "Verifying Credentials...",
+      "translated": "Verifying ലോഗിൻ വിവരങ്ങൾ...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Verifying\""
+    },
+    {
+      "key": "auth.signInPlatform",
+      "english": "Sign In to Platform",
+      "translated": "സൈൻ ഇൻ to Platform",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"to, Platform\""
+    },
+    {
+      "key": "auth.securePortal",
+      "english": "Secure Portal Environment",
+      "translated": "Secure Portal Environment",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "auth.demoCredentials",
+      "english": "Demonstration Credentials",
+      "translated": "Demonstration ലോഗിൻ വിവരങ്ങൾ",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Demonstration\""
+    },
+    {
+      "key": "auth.passphrase",
+      "english": "Passphrase",
+      "translated": "Passphrase",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "auth.resetDemo",
+      "english": "Reset to Demo Credentials",
+      "translated": "റീസെറ്റ് ചെയ്യുക to Demo ലോഗിൻ വിവരങ്ങൾ",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"to, Demo\""
+    },
+    {
+      "key": "assistant.askSomething",
+      "english": "Ask K-SMART Assistant...",
+      "translated": "Ask കെ-സ്മാർട്ട് Assistant...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Ask, Assistant\""
+    },
+    {
+      "key": "assistant.suggestedPrompts",
+      "english": "Suggested Prompts",
+      "translated": "Suggested Prompts",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "assistant.thinking",
+      "english": "Assistant is thinking...",
+      "translated": "Assistant is thinking...",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.great",
+      "english": "Great",
+      "translated": "Great",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.good",
+      "english": "Good",
+      "translated": "Good",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.okay",
+      "english": "Okay",
+      "translated": "Okay",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.tired",
+      "english": "Tired",
+      "translated": "Tired",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.overwhelmed",
+      "english": "Overwhelmed",
+      "translated": "Overwhelmed",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.checkedIn",
+      "english": "Checked In",
+      "translated": "Checked In",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.moodCompleted",
+      "english": "Mood check completed for today.",
+      "translated": "Mood check completed for today.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.aiRecommendations",
+      "english": "AI Wellness Recommendations",
+      "translated": "AI ക്ഷേമം Recommendations",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Recommendations\""
+    },
+    {
+      "key": "wellness.modalTitle",
+      "english": "Daily Wellbeing",
+      "translated": "Daily Wellbeing",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.stepOf",
+      "english": "Questionnaire · Step {{step}} of {{total}}",
+      "translated": "Questionnaire · Step {{step}} of {{total}}",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.greetingMorning",
+      "english": "Good Morning! 🌿",
+      "translated": "Good Morning! 🌿",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.greetingAfternoon",
+      "english": "Good Afternoon! 🌿",
+      "translated": "Good Afternoon! 🌿",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.greetingEvening",
+      "english": "Good Evening! 🌿",
+      "translated": "Good Evening! 🌿",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.greetingNight",
+      "english": "Good Night! 🌿",
+      "translated": "Good Night! 🌿",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.inviteDesc",
+      "english": "Would you like to complete your Daily Wellness Check? It takes less than one minute and helps personalize your AI recommendations.",
+      "translated": "Would you like to complete your ദിവസേനയുള്ള ക്ഷേമ പരിശോധന? It takes less than one minute and helps personalize your AI recommendations.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 17 English word(s): \"Would, you, like, to, complete, your, It, takes, less, than, one, minute, and, helps, personalize, your, recommendations\""
+    },
+    {
+      "key": "wellness.startCheckin",
+      "english": "Start Check-in",
+      "translated": "Start Check-in",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.remindLater",
+      "english": "Remind Me Later",
+      "translated": "Remind Me Later",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.skipToday",
+      "english": "Skip for Today",
+      "translated": "Skip for Today",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.howFeeling",
+      "english": "How are you feeling today?",
+      "translated": "How are you feeling today?",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.howManyHours",
+      "english": "How many hours did you sleep?",
+      "translated": "How many hours did you sleep?",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.hoursLabel",
+      "english": "{{count}} hours",
+      "translated": "{{count}} hours",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.energyLevel",
+      "english": "Energy Level",
+      "translated": "Energy Level",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.stressLevel",
+      "english": "Stress Level",
+      "translated": "Stress Level",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.todayWorkload",
+      "english": "Today's Workload",
+      "translated": "Today's Workload",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.optionalNote",
+      "english": "Optional Note",
+      "translated": "Optional Note",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.noteLabel",
+      "english": "Anything you'd like to share today?",
+      "translated": "Anything you'd like to share today?",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.notePlaceholder",
+      "english": "Share your thoughts, challenges or context...",
+      "translated": "Share your thoughts, challenges or സന്ദർഭം...",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 5 English word(s): \"Share, your, thoughts, challenges, or\""
+    },
+    {
+      "key": "wellness.nextStep",
+      "english": "Next Step",
+      "translated": "അടുത്തത് Step",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Step\""
+    },
+    {
+      "key": "wellness.generatingInsights",
+      "english": "Generating AI Insights...",
+      "translated": "Generating AI വിവര വിശകലനം...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Generating\""
+    },
+    {
+      "key": "wellness.skipFailed",
+      "english": "Failed to skip check-in. Please try again.",
+      "translated": "Failed to skip check-in. Please try again.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.submitFailed",
+      "english": "Failed to submit check-in. Please try again.",
+      "translated": "Failed to skip check-in. Please try again.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.verylow",
+      "english": "Very Low",
+      "translated": "Very Low",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.moderate",
+      "english": "Moderate",
+      "translated": "Moderate",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.veryhigh",
+      "english": "Very High",
+      "translated": "Very High",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.excellent",
+      "english": "Excellent",
+      "translated": "Excellent",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.light",
+      "english": "Light",
+      "translated": "Light",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.normal",
+      "english": "Normal",
+      "translated": "Normal",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.heavy",
+      "english": "Heavy",
+      "translated": "Heavy",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "wellness.veryheavy",
+      "english": "Very Heavy",
+      "translated": "Very Heavy",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "departments.Engineering & PWD",
+      "english": "Engineering & PWD",
+      "translated": "എൻജിനീയറിംഗ് & PWD",
+      "type": "Mixed Language",
+      "severity": "Low",
+      "details": "Contains 1 English word(s): \"PWD\""
+    },
+    {
+      "key": "departments.Administration",
+      "english": "Administration",
+      "translated": "Administration",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "departments.IT",
+      "english": "IT",
+      "translated": "IT",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "categories.Circular",
+      "english": "Circular",
+      "translated": "Circular",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.All Districts",
+      "english": "All Districts",
+      "translated": "All Districts",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Alappuzha",
+      "english": "Alappuzha",
+      "translated": "Alappuzha",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Ernakulam",
+      "english": "Ernakulam",
+      "translated": "Ernakulam",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Idukki",
+      "english": "Idukki",
+      "translated": "Idukki",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Kannur",
+      "english": "Kannur",
+      "translated": "Kannur",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Kasaragod",
+      "english": "Kasaragod",
+      "translated": "Kasaragod",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Kollam",
+      "english": "Kollam",
+      "translated": "Kollam",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Kottayam",
+      "english": "Kottayam",
+      "translated": "Kottayam",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Kozhikode",
+      "english": "Kozhikode",
+      "translated": "Kozhikode",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Malappuram",
+      "english": "Malappuram",
+      "translated": "Malappuram",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Palakkad",
+      "english": "Palakkad",
+      "translated": "Palakkad",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Pathanamthitta",
+      "english": "Pathanamthitta",
+      "translated": "Pathanamthitta",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Thiruvananthapuram",
+      "english": "Thiruvananthapuram",
+      "translated": "Thiruvananthapuram",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Thrissur",
+      "english": "Thrissur",
+      "translated": "Thrissur",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "districts.Wayanad",
+      "english": "Wayanad",
+      "translated": "Wayanad",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "designations.State IT Administrator",
+      "english": "State IT Administrator",
+      "translated": "സംസ്ഥാനം IT Administrator",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"IT, Administrator\""
+    },
+    {
+      "key": "designations.Section Clerk",
+      "english": "Section Clerk",
+      "translated": "Section ക്ലർക്ക്",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Section\""
+    },
+    {
+      "key": "designations.Admin",
+      "english": "Admin",
+      "translated": "Admin",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.task.created",
+      "english": "Task created successfully.",
+      "translated": "ടാസ്ക് created successfully.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"created, successfully\""
+    },
+    {
+      "key": "toast.task.updated",
+      "english": "Task updated.",
+      "translated": "ടാസ്ക് updated.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"updated\""
+    },
+    {
+      "key": "toast.task.deleted",
+      "english": "Task deleted.",
+      "translated": "ടാസ്ക് deleted.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"deleted\""
+    },
+    {
+      "key": "toast.meeting.created",
+      "english": "Meeting created.",
+      "translated": "മീറ്റിംഗ് created.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"created\""
+    },
+    {
+      "key": "toast.meeting.deleted",
+      "english": "Meeting deleted.",
+      "translated": "മീറ്റിംഗ് deleted.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"deleted\""
+    },
+    {
+      "key": "toast.circular.uploadStarted",
+      "english": "Uploading circular...",
+      "translated": "Uploading സർക്കുലർ...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Uploading\""
+    },
+    {
+      "key": "toast.circular.uploadCompleted",
+      "english": "Circular uploaded successfully: {{name}}",
+      "translated": "സർക്കുലർ uploaded successfully: {{name}}",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"uploaded, successfully\""
+    },
+    {
+      "key": "toast.circular.summaryGenerated",
+      "english": "AI summary generated.",
+      "translated": "എ.ഐ സംഗ്രഹം generated.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"generated\""
+    },
+    {
+      "key": "toast.circular.deleted",
+      "english": "Circular deleted.",
+      "translated": "സർക്കുലർ deleted.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"deleted\""
+    },
+    {
+      "key": "toast.ai.generatingBriefing",
+      "english": "Generating AI Daily Briefing...",
+      "translated": "Generating AI ദിവസേനയുള്ള ബ്രീഫിംഗ്...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Generating\""
+    },
+    {
+      "key": "toast.ai.generatingWellnessInsights",
+      "english": "Generating Wellness Insights...",
+      "translated": "Generating ക്ഷേമം വിവര വിശകലനം...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Generating\""
+    },
+    {
+      "key": "toast.ai.analyzingCircular",
+      "english": "Analyzing Government Circular...",
+      "translated": "Analyzing സർക്കാർ സർക്കുലർ...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Analyzing\""
+    },
+    {
+      "key": "toast.ai.creatingTask",
+      "english": "Creating AI Task...",
+      "translated": "Creating AI ടാസ്ക്...",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"Creating\""
+    },
+    {
+      "key": "toast.ai.generatingSuggestions",
+      "english": "Generating Suggested Questions...",
+      "translated": "Generating Suggested Questions...",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.auth.loginSuccess",
+      "english": "Login successful.",
+      "translated": "ലോഗിൻ successful.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"successful\""
+    },
+    {
+      "key": "toast.auth.loginFailed",
+      "english": "Login failed.",
+      "translated": "ലോഗിൻ failed.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"failed\""
+    },
+    {
+      "key": "toast.auth.logoutSuccess",
+      "english": "Logged out successfully.",
+      "translated": "Logged out successfully.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.error.generic",
+      "english": "Unable to complete the request. Please try again.",
+      "translated": "Unable to complete the request. Please try again.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.error.network",
+      "english": "Network error. Please check your connection.",
+      "translated": "Network error. Please check your connection.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.error.aiUnavailable",
+      "english": "AI service is currently unavailable.",
+      "translated": "AI service is currently unavailable.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.error.circularDeleteFailed",
+      "english": "Failed to delete circular.",
+      "translated": "Failed to ഡിലീറ്റ് ചെയ്യുക സർക്കുലർ.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 2 English word(s): \"Failed, to\""
+    },
+    {
+      "key": "toast.error.taskLoadFailed",
+      "english": "Failed to load tasks.",
+      "translated": "Failed to load tasks.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.error.meetingLoadFailed",
+      "english": "Failed to load meetings.",
+      "translated": "Failed to load meetings.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.error.feedLoadFailed",
+      "english": "Failed to load department feed.",
+      "translated": "Failed to load വകുപ്പ് feed.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 4 English word(s): \"Failed, to, load, feed\""
+    },
+    {
+      "key": "toast.error.aiBriefingFailed",
+      "english": "Failed to refresh AI briefing.",
+      "translated": "Failed to റിഫ്രഷ് ചെയ്യുക AI briefing.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"Failed, to, briefing\""
+    },
+    {
+      "key": "toast.error.saveFailed",
+      "english": "Failed to save data.",
+      "translated": "Failed to സേവ് ചെയ്യുക data.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"Failed, to, data\""
+    },
+    {
+      "key": "toast.upload.pdfOnly",
+      "english": "Only PDF documents are supported.",
+      "translated": "Only PDF documents are supported.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.upload.sizeLimitExceeded",
+      "english": "File size exceeds 10MB limit.",
+      "translated": "ഫയൽ size exceeds 10MB limit.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"size, exceeds, limit\""
+    },
+    {
+      "key": "toast.wellness.submitted",
+      "english": "Wellness check-in completed successfully.",
+      "translated": "ക്ഷേമം check-in പൂർത്തിയായവ successfully.",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 3 English word(s): \"check, in, successfully\""
+    },
+    {
+      "key": "toast.wellness.skipped",
+      "english": "Wellness check-in skipped for today.",
+      "translated": "ക്ഷേമം check-in skipped for today.",
+      "type": "Mixed Language",
+      "severity": "High",
+      "details": "Contains 5 English word(s): \"check, in, skipped, for, today\""
+    },
+    {
+      "key": "toast.offline",
+      "english": "You are currently offline.",
+      "translated": "You are currently offline.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.confirm.deleteTaskTitle",
+      "english": "Delete this task?",
+      "translated": "ഡിലീറ്റ് ചെയ്യുക this ടാസ്ക്?",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"this\""
+    },
+    {
+      "key": "toast.confirm.deleteTaskBody",
+      "english": "This action cannot be undone.",
+      "translated": "This action cannot be undone.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.confirm.deleteMeetingTitle",
+      "english": "Delete this meeting?",
+      "translated": "ഡിലീറ്റ് ചെയ്യുക this മീറ്റിംഗ്?",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"this\""
+    },
+    {
+      "key": "toast.confirm.deleteMeetingBody",
+      "english": "This action cannot be undone.",
+      "translated": "This action cannot be undone.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "toast.confirm.deleteCircularTitle",
+      "english": "Delete this circular?",
+      "translated": "ഡിലീറ്റ് ചെയ്യുക this സർക്കുലർ?",
+      "type": "Mixed Language",
+      "severity": "Medium",
+      "details": "Contains 1 English word(s): \"this\""
+    },
+    {
+      "key": "toast.confirm.deleteCircularBody",
+      "english": "This will permanently remove its text database and vector indexes.",
+      "translated": "This will permanently remove its text database and vector indexes.",
+      "type": "Remaining English",
+      "severity": "Medium",
+      "details": "Entire string remained untranslated in English"
+    },
+    {
+      "key": "common.search",
+      "english": "Search...",
+      "translated": "തിരയുക... എന്നത് തിരയുക... എന്നാണ് സംസ്കരിച്ചത്.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Search'. Glossary suggests 'സെർച്ച്' (Common)"
+    },
+    {
+      "key": "common.loading",
+      "english": "Loading...",
+      "translated": "ലോഡ് ചെയ്യുന്നു...",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Loading'. Glossary suggests 'ലോഡിംഗ് നടക്കുന്നു...' (Common)"
+    },
+    {
+      "key": "common.action",
+      "english": "Action",
+      "translated": "പ്രവർത്തനം",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Action'. Glossary suggests 'ആക്ഷൻ' (Common)"
+    },
+    {
+      "key": "common.actions",
+      "english": "Actions",
+      "translated": "നടപടികൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Actions'. Glossary suggests 'ആക്ഷനുകൾ' (Common)"
+    },
+    {
+      "key": "common.dueDate",
+      "english": "Due Date",
+      "translated": "അവസാന തീയതി",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Due Date'. Glossary suggests 'പൂർത്തിയാക്കേണ്ട തീയതി' (Task Management)"
+    },
+    {
+      "key": "dashboard.todayTasks",
+      "english": "Today's Tasks",
+      "translated": "ഇന്നത്തെ ടാസ്കുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Today'. Glossary suggests 'ഇന്ന്' (Common)"
+    },
+    {
+      "key": "dashboard.quickAiTask",
+      "english": "Quick AI Task Creator",
+      "translated": "Quick AI ടാസ്ക് Creator",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Quick AI Task Creator'. Glossary suggests 'എ.ഐ ടാസ്ക് ക്രിയേറ്റർ' (Dashboard)"
+    },
+    {
+      "key": "dashboard.todaysMeetings",
+      "english": "Today's Meetings",
+      "translated": "ഇന്നത്തെ മീറ്റിംഗുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Today'. Glossary suggests 'ഇന്ന്' (Common)"
+    },
+    {
+      "key": "dashboard.pendingFilesTasks",
+      "english": "Pending Files & Tasks",
+      "translated": "പെൻഡിംഗ് Files & Tasks",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Pending Files & Tasks'. Glossary suggests 'തീർപ്പാക്കാനുള്ള ഫയലുകളും ടാസ്കുകളും' (Dashboard)"
+    },
+    {
+      "key": "dashboard.noFilesPending",
+      "english": "No files currently pending approval.",
+      "translated": "No files currently പെൻഡിംഗ് അംഗീകാരം.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Approval'. Glossary suggests 'അപ്രൂവൽ' (Approval Workflow)"
+    },
+    {
+      "key": "dashboard.noFilesPending",
+      "english": "No files currently pending approval.",
+      "translated": "No files currently പെൻഡിംഗ് അംഗീകാരം.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Pending Approval'. Glossary suggests 'അംഗീകാരത്തിനായി കാത്തിരിക്കുന്നു' (Approval Workflow)"
+    },
+    {
+      "key": "dashboard.circularRepo",
+      "english": "Circular Repository",
+      "translated": "സർക്കുലർ റിപ്പോസിറ്ററി",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Circular Repository'. Glossary suggests 'സർക്കുലർ ശേഖരം' (Circular Repository)"
+    },
+    {
+      "key": "dashboard.wellness",
+      "english": "Wellness Tracker",
+      "translated": "ക്ഷേമം Tracker",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "dashboard.searchPlaceholder",
+      "english": "Search circulars, files, tasks...",
+      "translated": "സർക്കുലറുകൾ തിരയുക, files, tasks...",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Search'. Glossary suggests 'സെർച്ച്' (Common)"
+    },
+    {
+      "key": "greeting.snapshot",
+      "english": "Today's Work Snapshot",
+      "translated": "ഇന്നത്തെ വർക്ക് സ്നാപ്പ്ഷോട്ട്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Today'. Glossary suggests 'ഇന്ന്' (Common)"
+    },
+    {
+      "key": "greeting.snapshot",
+      "english": "Today's Work Snapshot",
+      "translated": "ഇന്നത്തെ വർക്ക് സ്നാപ്പ്ഷോട്ട്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Today's Work Snapshot'. Glossary suggests 'ഇന്നത്തെ ജോലി അവലോകനം' (Dashboard)"
+    },
+    {
+      "key": "greeting.pendingTasks",
+      "english": "Pending Tasks",
+      "translated": "പെൻഡിംഗ് ടാസ്കുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Pending Tasks'. Glossary suggests 'തീർപ്പാക്കാനുള്ള ടാസ്കുകൾ' (Task Management)"
+    },
+    {
+      "key": "greeting.wellnessCheckCompleted",
+      "english": "Today's Wellness Profile Completed",
+      "translated": "Today's ക്ഷേമം പ്രൊഫൈൽ പൂർത്തിയായവ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Completed'. Glossary suggests 'പൂർത്തിയായി' (Common)"
+    },
+    {
+      "key": "greeting.wellnessCheckCompleted",
+      "english": "Today's Wellness Profile Completed",
+      "translated": "Today's ക്ഷേമം പ്രൊഫൈൽ പൂർത്തിയായവ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.viewDetails",
+      "english": "View Details & Diagnostics →",
+      "translated": "കാണുക വിശദാംശങ്ങൾ & Diagnostics →",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Details'. Glossary suggests 'വിവരങ്ങൾ' (Common)"
+    },
+    {
+      "key": "greeting.wellnessPending",
+      "english": "Today's Wellness Check is pending",
+      "translated": "Today's ക്ഷേമം Check is പെൻഡിംഗ്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.wellnessPendingDesc",
+      "english": "Log today's wellness check to populate score diagnostics, circular charts, and customized colleague tips.",
+      "translated": "Log today's ക്ഷേമം check to populate score diagnostics, സർക്കുലർ charts, and customized colleague tips.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.wellnessCheckBtn",
+      "english": "Daily Wellness Check",
+      "translated": "ദിവസേനയുള്ള ക്ഷേമ പരിശോധന",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.wellnessCheckBtn",
+      "english": "Daily Wellness Check",
+      "translated": "ദിവസേനയുള്ള ക്ഷേമ പരിശോധന",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Daily Wellness Check'. Glossary suggests 'ദിവസേനയുള്ള വെൽനസ് പരിശോധന' (Wellness Module)"
+    },
+    {
+      "key": "greeting.modalTitle",
+      "english": "Today's Wellness Details & Diagnostics",
+      "translated": "Today's ക്ഷേമം വിശദാംശങ്ങൾ & Diagnostics",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Details'. Glossary suggests 'വിവരങ്ങൾ' (Common)"
+    },
+    {
+      "key": "greeting.modalTitle",
+      "english": "Today's Wellness Details & Diagnostics",
+      "translated": "Today's ക്ഷേമം വിശദാംശങ്ങൾ & Diagnostics",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.wellnessIndex",
+      "english": "Wellness Index",
+      "translated": "ക്ഷേമ സൂചിക",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.wellnessIndicators",
+      "english": "Wellness Indicators",
+      "translated": "ക്ഷേമം Indicators",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.closeDetails",
+      "english": "Close Details",
+      "translated": "ക്ലോസ് ചെയ്യുക വിശദാംശങ്ങൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Close'. Glossary suggests 'അടയ്ക്കുക' (Common)"
+    },
+    {
+      "key": "greeting.closeDetails",
+      "english": "Close Details",
+      "translated": "ക്ലോസ് ചെയ്യുക വിശദാംശങ്ങൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Details'. Glossary suggests 'വിവരങ്ങൾ' (Common)"
+    },
+    {
+      "key": "greeting.wellnessStatus",
+      "english": "Today's Wellness Status",
+      "translated": "Today's ക്ഷേമം സ്റ്റാറ്റസ്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.wellnessPendingShort",
+      "english": "Today's Wellness Check is Pending",
+      "translated": "Today's ക്ഷേമം Check is പെൻഡിംഗ്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.wellnessPendingDescShort",
+      "english": "Log today's wellness check to view score details and diagnostics.",
+      "translated": "Log today's ക്ഷേമം check to കാണുക score വിശദാംശങ്ങൾ and diagnostics.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Details'. Glossary suggests 'വിവരങ്ങൾ' (Common)"
+    },
+    {
+      "key": "greeting.wellnessPendingDescShort",
+      "english": "Log today's wellness check to view score details and diagnostics.",
+      "translated": "Log today's ക്ഷേമം check to കാണുക score വിശദാംശങ്ങൾ and diagnostics.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "greeting.oneMeetingScheduled",
+      "english": "1 meeting scheduled today",
+      "translated": "1 മീറ്റിംഗ് scheduled today",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Meeting Scheduled'. Glossary suggests 'മീറ്റിംഗ് ഷെഡ്യൂൾ ചെയ്തു' (Meeting Management)"
+    },
+    {
+      "key": "feed.viewAll",
+      "english": "View All Circulars & News",
+      "translated": "കാണുക All Circulars & News",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'View All'. Glossary suggests 'എല്ലാം കാണുക' (Common)"
+    },
+    {
+      "key": "feed.departments",
+      "english": "Departments",
+      "translated": "വകുപ്പ്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Departments'. Glossary suggests 'വകുപ്പുകൾ' (Employee)"
+    },
+    {
+      "key": "taskPlanner.todayTasks",
+      "english": "Today's Tasks",
+      "translated": "ഇന്നത്തെ ടാസ്കുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Today'. Glossary suggests 'ഇന്ന്' (Common)"
+    },
+    {
+      "key": "taskPlanner.allTasks",
+      "english": "All Tasks",
+      "translated": "എല്ലാ ടാസ്കുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'All'. Glossary suggests 'എല്ലാം' (Common)"
+    },
+    {
+      "key": "taskPlanner.meetingDetails",
+      "english": "Meeting Details",
+      "translated": "മീറ്റിംഗ് വിശദാംശങ്ങൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Details'. Glossary suggests 'വിവരങ്ങൾ' (Common)"
+    },
+    {
+      "key": "taskPlanner.priorityLow",
+      "english": "Low",
+      "translated": "ലോ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Low'. Glossary suggests 'കുറഞ്ഞത്' (Common)"
+    },
+    {
+      "key": "taskPlanner.priorityMedium",
+      "english": "Medium",
+      "translated": "മീഡിയം",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Medium'. Glossary suggests 'സാധാരണ' (Common)"
+    },
+    {
+      "key": "taskPlanner.priorityHigh",
+      "english": "High",
+      "translated": "ഹൈ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'High'. Glossary suggests 'ഉയർന്നത്' (Common)"
+    },
+    {
+      "key": "taskPlanner.validationTitle",
+      "english": "Task title is required.",
+      "translated": "ടാസ്ക് title is required.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Task Title'. Glossary suggests 'ടാസ്ക് ശീർഷകം' (Task Management)"
+    },
+    {
+      "key": "taskPlanner.quickAiCreator",
+      "english": "Quick AI Task Creator",
+      "translated": "Quick AI ടാസ്ക് Creator",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Quick AI Task Creator'. Glossary suggests 'എ.ഐ ടാസ്ക് ക്രിയേറ്റർ' (Dashboard)"
+    },
+    {
+      "key": "taskPlanner.confirmAiTask",
+      "english": "Confirm AI Task",
+      "translated": "ഉറപ്പാക്കുക AI ടാസ്ക്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Confirm'. Glossary suggests 'സ്ഥിരീകരിക്കുക' (Common)"
+    },
+    {
+      "key": "taskPlanner.viewAll",
+      "english": "View All",
+      "translated": "കാണുക All",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'View All'. Glossary suggests 'എല്ലാം കാണുക' (Common)"
+    },
+    {
+      "key": "taskPlanner.todaysMeetings",
+      "english": "Today's Meetings",
+      "translated": "ഇന്നത്തെ മീറ്റിംഗുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Today'. Glossary suggests 'ഇന്ന്' (Common)"
+    },
+    {
+      "key": "taskPlanner.noMeetingsToday",
+      "english": "No upcoming meetings today.",
+      "translated": "No വരാനിരിക്കുന്നവ meetings today.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Upcoming Meetings'. Glossary suggests 'വരാനിരിക്കുന്ന മീറ്റിംഗുകൾ' (Meeting Management)"
+    },
+    {
+      "key": "circular.title",
+      "english": "Circular Repository",
+      "translated": "സർക്കുലർ റിപ്പോസിറ്ററി",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Circular Repository'. Glossary suggests 'സർക്കുലർ ശേഖരം' (Circular Repository)"
+    },
+    {
+      "key": "circular.searchPlaceholder",
+      "english": "Search circulars...",
+      "translated": "സർക്കുലറുകൾ തിരയുക...",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Search'. Glossary suggests 'സെർച്ച്' (Common)"
+    },
+    {
+      "key": "circular.clearAllFilters",
+      "english": "Clear All Filters",
+      "translated": "ക്ലിയർ ചെയ്യുക All Filters",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Clear All'. Glossary suggests 'എല്ലാം ഒഴിവാക്കുക' (Common)"
+    },
+    {
+      "key": "profile.title",
+      "english": "Employee Profile",
+      "translated": "ജീവനക്കാരൻ പ്രൊഫൈൽ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Employee Profile'. Glossary suggests 'ജീവനക്കാരന്റെ പ്രൊഫൈൽ' (Employee)"
+    },
+    {
+      "key": "profile.profileDetails",
+      "english": "Profile Details",
+      "translated": "പ്രൊഫൈൽ വിശദാംശങ്ങൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Details'. Glossary suggests 'വിവരങ്ങൾ' (Common)"
+    },
+    {
+      "key": "profile.email",
+      "english": "Email Address",
+      "translated": "ഇമെയിൽ Address",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Email Address'. Glossary suggests 'ഇമെയിൽ വിലാസം' (Authentication)"
+    },
+    {
+      "key": "admin.departments",
+      "english": "Departments",
+      "translated": "വകുപ്പ്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Departments'. Glossary suggests 'വകുപ്പുകൾ' (Employee)"
+    },
+    {
+      "key": "auth.forgotPassword",
+      "english": "Forgot Password",
+      "translated": "പാസ്‌വേഡ് മറന്നുപോയോ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Forgot Password'. Glossary suggests 'പാസ്‌വേഡ് മറന്നോ?' (Authentication)"
+    },
+    {
+      "key": "auth.email",
+      "english": "Email Address",
+      "translated": "ഇമെയിൽ Address",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Email Address'. Glossary suggests 'ഇമെയിൽ വിലാസം' (Authentication)"
+    },
+    {
+      "key": "auth.keralaGov",
+      "english": "Government of Kerala",
+      "translated": "സർക്കാർ of Kerala",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Government of Kerala'. Glossary suggests 'കേരള സർക്കാർ' (Government)"
+    },
+    {
+      "key": "wellness.aiRecommendations",
+      "english": "AI Wellness Recommendations",
+      "translated": "AI ക്ഷേമം Recommendations",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "wellness.inviteTitle",
+      "english": "Daily Wellness Check",
+      "translated": "ദിവസേനയുള്ള ക്ഷേമ പരിശോധന",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "wellness.inviteTitle",
+      "english": "Daily Wellness Check",
+      "translated": "ദിവസേനയുള്ള ക്ഷേമ പരിശോധന",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Daily Wellness Check'. Glossary suggests 'ദിവസേനയുള്ള വെൽനസ് പരിശോധന' (Wellness Module)"
+    },
+    {
+      "key": "wellness.inviteDesc",
+      "english": "Would you like to complete your Daily Wellness Check? It takes less than one minute and helps personalize your AI recommendations.",
+      "translated": "Would you like to complete your ദിവസേനയുള്ള ക്ഷേമ പരിശോധന? It takes less than one minute and helps personalize your AI recommendations.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "wellness.inviteDesc",
+      "english": "Would you like to complete your Daily Wellness Check? It takes less than one minute and helps personalize your AI recommendations.",
+      "translated": "Would you like to complete your ദിവസേനയുള്ള ക്ഷേമ പരിശോധന? It takes less than one minute and helps personalize your AI recommendations.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Daily Wellness Check'. Glossary suggests 'ദിവസേനയുള്ള വെൽനസ് പരിശോധന' (Wellness Module)"
+    },
+    {
+      "key": "wellness.submitFailed",
+      "english": "Failed to submit check-in. Please try again.",
+      "translated": "Failed to skip check-in. Please try again.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Submit'. Glossary suggests 'സബ്മിറ്റ് ചെയ്യുക' (Common)"
+    },
+    {
+      "key": "wellness.low",
+      "english": "Low",
+      "translated": "ലോ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Low'. Glossary suggests 'കുറഞ്ഞത്' (Common)"
+    },
+    {
+      "key": "wellness.high",
+      "english": "High",
+      "translated": "ഹൈ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'High'. Glossary suggests 'ഉയർന്നത്' (Common)"
+    },
+    {
+      "key": "categories.Government Order",
+      "english": "Government Order",
+      "translated": "സർക്കാർ ഉത്തരവ്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Government Order'. Glossary suggests 'സർക്കാർ ഉത്തരവ് (G.O)' (Government)"
+    },
+    {
+      "key": "categories.Notification",
+      "english": "Notification",
+      "translated": "അറിയിപ്പുകൾ",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Notification'. Glossary suggests 'നോട്ടിഫിക്കേഷൻ' (Notification System)"
+    },
+    {
+      "key": "designations.Section Clerk",
+      "english": "Section Clerk",
+      "translated": "Section ക്ലർക്ക്",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Section Clerk'. Glossary suggests 'സെക്ഷൻ ക്ലർക്ക്' (Employee)"
+    },
+    {
+      "key": "toast.ai.generatingWellnessInsights",
+      "english": "Generating Wellness Insights...",
+      "translated": "Generating ക്ഷേമം വിവര വിശകലനം...",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "toast.wellness.submitted",
+      "english": "Wellness check-in completed successfully.",
+      "translated": "ക്ഷേമം check-in പൂർത്തിയായവ successfully.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Completed'. Glossary suggests 'പൂർത്തിയായി' (Common)"
+    },
+    {
+      "key": "toast.wellness.submitted",
+      "english": "Wellness check-in completed successfully.",
+      "translated": "ക്ഷേമം check-in പൂർത്തിയായവ successfully.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    },
+    {
+      "key": "toast.wellness.skipped",
+      "english": "Wellness check-in skipped for today.",
+      "translated": "ക്ഷേമം check-in skipped for today.",
+      "type": "Glossary Suggestion",
+      "severity": "Low",
+      "details": "English phrase contains 'Wellness'. Glossary suggests 'വെൽനസ്' (Wellness Module)"
+    }
+  ]
+}

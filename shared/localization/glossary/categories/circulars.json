@@ -1,0 +1,380 @@
+[
+  {
+    "english": "Circular",
+    "malayalam": "സർക്കുലർ",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circulars",
+    "malayalam": "സർക്കുലറുകൾ",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Repository",
+    "malayalam": "സർക്കുലർ ശേഖരം",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "View Circular",
+    "malayalam": "സർക്കുലർ കാണുക",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Upload Circular",
+    "malayalam": "സർക്കുലർ അപ്ലോഡ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Search Circulars",
+    "malayalam": "സർക്കുലറുകൾ തിരയുക",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Number",
+    "malayalam": "സർക്കുലർ നമ്പർ",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Issued Date",
+    "malayalam": "പുറപ്പെടുവിച്ച തീയതി",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Issuing Authority",
+    "malayalam": "പുറപ്പെടുവിച്ച അധികാരി",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Subject Index",
+    "malayalam": "വിഷയ സൂചിക",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Download Circular",
+    "malayalam": "സർക്കുലർ ഡൗൺലോഡ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Summary",
+    "malayalam": "സർക്കുലർ സംഗ്രഹം",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Related Circulars",
+    "malayalam": "ബന്ധപ്പെട്ട സർക്കുലറുകൾ",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Archive",
+    "malayalam": "സർക്കുലർ ആർക്കൈവ്",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 1",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 1",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 2",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 2",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 3",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 3",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 4",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 4",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 5",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 5",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 6",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 6",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 7",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 7",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 8",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 8",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 9",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 9",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 10",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 10",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 11",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 11",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 12",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 12",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 13",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 13",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 14",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 14",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 15",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 15",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 16",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 16",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 17",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 17",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 18",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 18",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 19",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 19",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 20",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 20",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 21",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 21",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 22",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 22",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 23",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 23",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 24",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 24",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 25",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 25",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 26",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 26",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 27",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 27",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 28",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 28",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 29",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 29",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 30",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 30",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 31",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 31",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 32",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 32",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 33",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 33",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 34",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 34",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 35",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 35",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 36",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 36",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 37",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 37",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 38",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 38",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 39",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 39",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  },
+  {
+    "english": "Circular Directive 40",
+    "malayalam": "സർക്കുലർ മാർഗ്ഗനിർദ്ദേശം 40",
+    "type": "phrase",
+    "category": "Circular Repository",
+    "reason": "Circular Repository term."
+  }
+]

@@ -104,7 +104,7 @@ export default function DashboardPage() {
                 <span className="text-[9px] font-mono font-semibold text-ink-soft bg-paper border border-border px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">{t("dashboard.officialPortal", "Official Portal")}</span>
               </div>
               <span className="hidden sm:block text-[9px] text-ink-soft font-mono uppercase tracking-wider">
-                {t("auth.platformSubtitle", "AI Human Capital & Circular Intelligence Platform")}
+                {t("auth.platformSubtitle", "AI Human Capital & Resilience Intelligence Platform")}
               </span>
             </div>
           </div>
@@ -212,6 +212,7 @@ export default function DashboardPage() {
               pendingTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0)}
               totalTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0) + (summary.completedToday?.length || 0)}
               todayMeetingsCount={summary.upcomingMeetings?.length || 0}
+              completedTasks={summary.completedToday}
             />
           </div>
         </div>
@@ -229,6 +230,7 @@ export default function DashboardPage() {
             pendingTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0)}
             totalTasksCount={(summary.todayTasks?.length || 0) + (summary.overdueTasks?.length || 0) + (summary.completedToday?.length || 0)}
             todayMeetingsCount={summary.upcomingMeetings?.length || 0}
+            completedTasks={summary.completedToday}
           />
         </div>
 
@@ -239,6 +241,7 @@ export default function DashboardPage() {
           <TaskPlannerWidget
             todayTasks={summary.todayTasks}
             completedToday={summary.completedToday}
+            todayMeetings={summary.todayMeetings}
             upcomingMeetings={summary.upcomingMeetings}
             overdueTasks={summary.overdueTasks}
             onRefresh={refetch}

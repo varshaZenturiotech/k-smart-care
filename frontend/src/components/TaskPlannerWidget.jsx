@@ -65,10 +65,12 @@ function TimePicker12({ value, onChange }) {
 export default function TaskPlannerWidget({
   todayTasks = [],
   completedToday = [],
+  todayMeetings = [],
   upcomingMeetings = [],
   overdueTasks = [],
   onRefresh
 }) {
+  const displayMeetings = todayMeetings.length > 0 ? todayMeetings : upcomingMeetings;
   const navigate = useNavigate();
   const { language, t } = useLanguage();
   const [nlpText, setNlpText] = useState("");
@@ -149,7 +151,7 @@ export default function TaskPlannerWidget({
       
       {/* Header */}
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
           <div className="p-1.5 rounded-lg bg-teal-tint text-teal">
             <ListTodo size={18} />
           </div>
@@ -251,7 +253,7 @@ export default function TaskPlannerWidget({
                   className="w-full bg-white border border-border px-2.5 py-1.5 rounded-lg focus:outline-none focus:border-teal text-ink"
                 >
                   {["Official Work", "Government Circular", "Meeting", "Follow-up", "Personal Reminder", "Training", "Other"].map(c => (
-                    <option key={c} value={c}>{c}</option>
+                    <option key={c} value={c}>{t("categories." + c, c)}</option>
                   ))}
                 </select>
               </div>
@@ -264,7 +266,7 @@ export default function TaskPlannerWidget({
                   className="w-full bg-white border border-border px-2.5 py-1.5 rounded-lg focus:outline-none focus:border-teal text-ink"
                 >
                   {["High", "Medium", "Low"].map(p => (
-                    <option key={p} value={p}>{p}</option>
+                    <option key={p} value={p}>{t("taskPlanner.priority" + p, p)}</option>
                   ))}
                 </select>
               </div>
@@ -375,16 +377,16 @@ export default function TaskPlannerWidget({
         <div className="space-y-2.5">
           <h4 className="text-xs font-display font-medium text-ink flex items-center justify-between">
             <span>{t("taskPlanner.todaysMeetings", "Today's Meetings")}</span>
-            <span className="text-[10px] font-mono text-ink-soft">{t("taskPlanner.scheduledCount", "{{count}} scheduled", { count: upcomingMeetings.length })}</span>
+            <span className="text-[10px] font-mono text-ink-soft">{t("taskPlanner.scheduledCount", "{{count}} scheduled", { count: displayMeetings.length })}</span>
           </h4>
 
-          {upcomingMeetings.length === 0 ? (
+          {displayMeetings.length === 0 ? (
             <p className="text-xs text-ink-soft italic py-2">{t("taskPlanner.noMeetingsToday", "No upcoming meetings today.")}</p>
           ) : (
             <div className="space-y-2">
-              {upcomingMeetings.slice(0, 2).map((m) => (
+              {displayMeetings.slice(0, 2).map((m) => (
                 <div
-                  key={m.id}
+                  key={m.id || m._id}
                   className="flex items-center justify-between gap-3 p-2.5 border border-border/50 rounded-xl bg-paper/10 hover:bg-paper/20 transition-colors"
                 >
                   <span className="text-xs font-medium text-ink truncate">{m.title}</span>

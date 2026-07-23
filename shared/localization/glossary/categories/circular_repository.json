@@ -1,0 +1,163 @@
+[
+  {
+    "english": "Circular Repository",
+    "malayalam": "സർക്കുലർ ശേഖരം",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Central archive section title for official circulars."
+  },
+  {
+    "english": "Recent Circulars",
+    "malayalam": "അടുത്തകാലത്തെ സർക്കുലറുകൾ",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Latest published circulars feed header."
+  },
+  {
+    "english": "Search Circulars",
+    "malayalam": "സർക്കുലറുകൾ തിരയുക",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Circular search bar placeholder text."
+  },
+  {
+    "english": "Category",
+    "malayalam": "വിഭാഗം",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Subject matter classification."
+  },
+  {
+    "english": "Keywords",
+    "malayalam": "കീവേഡുകൾ",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Search index terms tag list."
+  },
+  {
+    "english": "Upload Circular",
+    "malayalam": "സർക്കുലർ അപ്ലോഡ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Add new document command button."
+  },
+  {
+    "english": "Document Profile",
+    "malayalam": "ഡോക്യുമെന്റ് പ്രൊഫൈൽ",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Detailed metadata view card for circular."
+  },
+  {
+    "english": "Extracted Keywords",
+    "malayalam": "കണ്ടെത്തിയ കീവേഡുകൾ",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "AI-parsed search index terms."
+  },
+  {
+    "english": "Translate",
+    "malayalam": "തർജ്ജമ ചെയ്യുക",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Convert language action button."
+  },
+  {
+    "english": "Ask AI",
+    "malayalam": "എ.ഐ-യോട് ചോദിക്കുക",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Query assistant action button."
+  },
+  {
+    "english": "Circular Number",
+    "malayalam": "സർക്കുലർ നമ്പർ",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Official unique circular index code."
+  },
+  {
+    "english": "Issued Date",
+    "malayalam": "പുറപ്പെടുവിച്ച തീയതി",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Date when circular was published."
+  },
+  {
+    "english": "Issuing Authority",
+    "malayalam": "പുറപ്പെടുവിച്ച അധികാരി",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Official body issuing circular."
+  },
+  {
+    "english": "Subject Index",
+    "malayalam": "വിഷയ സൂചിക",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Subject classification index list."
+  },
+  {
+    "english": "Full Text Search",
+    "malayalam": "ഫുൾ ടെക്സ്റ്റ് സെർച്ച്",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Deep text content search mode."
+  },
+  {
+    "english": "Filter by Year",
+    "malayalam": "വർഷം അനുസരിച്ച് ഫിൽട്ടർ ചെയ്യുക",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Annual publication filter."
+  },
+  {
+    "english": "Download Circular",
+    "malayalam": "സർക്കുലർ ഡൗൺലോഡ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Fetch PDF copy of circular."
+  },
+  {
+    "english": "View PDF",
+    "malayalam": "പി.ഡി.എഫ് കാണുക",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Open PDF viewer window."
+  },
+  {
+    "english": "Department Order",
+    "malayalam": "വകുപ്പ് തല ഉത്തരവ്",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Internal departmental order."
+  },
+  {
+    "english": "Standing Instruction",
+    "malayalam": "സ്ഥിരം നിർദ്ദേശം",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Permanent guideline directive."
+  },
+  {
+    "english": "Circular Summary",
+    "malayalam": "സർക്കുലർ സംഗ്രഹം",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Short summary of circular contents."
+  },
+  {
+    "english": "Related Circulars",
+    "malayalam": "ബന്ധപ്പെട്ട സർക്കുലറുകൾ",
+    "type": "translate",
+    "category": "Circular Repository",
+    "reason": "Cross-referenced related documents."
+  },
+  {
+    "english": "Circular Archive",
+    "malayalam": "സർക്കുലർ ആർക്കൈവ്",
+    "type": "transliterate",
+    "category": "Circular Repository",
+    "reason": "Historical circular repository."
+  }
+]

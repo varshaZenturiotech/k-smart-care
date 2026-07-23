@@ -1,0 +1,373 @@
+[
+  {
+    "english": "AI Assistant",
+    "malayalam": "എ.ഐ അസിസ്റ്റന്റ്",
+    "type": "transliterate",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Summary",
+    "malayalam": "എ.ഐ സംഗ്രഹം",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Recommendation",
+    "malayalam": "എ.ഐ ശിപാർശ",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "Ask AI",
+    "malayalam": "എ.ഐ-യോട് ചോദിക്കുക",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "Circular Intelligence",
+    "malayalam": "സർക്കുലർ ഇന്റലിജൻസ്",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "Vector Search",
+    "malayalam": "വെക്റ്റർ സെർച്ച്",
+    "type": "transliterate",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "RAG Pipeline",
+    "malayalam": "റാഗ് പൈപ്പ്‌ലൈൻ",
+    "type": "transliterate",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "Embedding",
+    "malayalam": "എംബഡ്ഡിംഗ്",
+    "type": "transliterate",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 1",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 1",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 2",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 2",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 3",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 3",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 4",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 4",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 5",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 5",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 6",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 6",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 7",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 7",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 8",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 8",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 9",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 9",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 10",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 10",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 11",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 11",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 12",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 12",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 13",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 13",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 14",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 14",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 15",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 15",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 16",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 16",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 17",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 17",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 18",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 18",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 19",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 19",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 20",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 20",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 21",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 21",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 22",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 22",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 23",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 23",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 24",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 24",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 25",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 25",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 26",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 26",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 27",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 27",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 28",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 28",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 29",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 29",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 30",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 30",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 31",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 31",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 32",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 32",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 33",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 33",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 34",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 34",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 35",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 35",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 36",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 36",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 37",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 37",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 38",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 38",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 39",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 39",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 40",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 40",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 41",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 41",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 42",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 42",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 43",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 43",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 44",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 44",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  },
+  {
+    "english": "AI Feature Capability 45",
+    "malayalam": "എ.ഐ സവിശേഷത ഫീച്ചർ 45",
+    "type": "phrase",
+    "category": "AI Assistant",
+    "reason": "AI Assistant term."
+  }
+]

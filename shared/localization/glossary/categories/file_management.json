@@ -1,0 +1,352 @@
+[
+  {
+    "english": "File",
+    "malayalam": "ഫയൽ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Universal office document folder/file term."
+  },
+  {
+    "english": "Folder",
+    "malayalam": "ഫോൾഡർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Standard digital document container term."
+  },
+  {
+    "english": "Document",
+    "malayalam": "ഡോക്യുമെന്റ്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Everyday official document term."
+  },
+  {
+    "english": "Attachment",
+    "malayalam": "അറ്റാച്ച്മെന്റ്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "File enclosed with email/circular."
+  },
+  {
+    "english": "Summary",
+    "malayalam": "സംഗ്രഹം",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official brief summary of document/circular."
+  },
+  {
+    "english": "Review",
+    "malayalam": "പരിശോധന",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official document scrutiny process."
+  },
+  {
+    "english": "Approval",
+    "malayalam": "അംഗീകാരം",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official sanction or clearance status."
+  },
+  {
+    "english": "Reject",
+    "malayalam": "നിരസിക്കുക",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official rejection of proposal/file."
+  },
+  {
+    "english": "Revision",
+    "malayalam": "തിരുത്തൽ",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Document amendment/correction process."
+  },
+  {
+    "english": "Archive",
+    "malayalam": "ആർക്കൈവ്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Historical record storage section."
+  },
+  {
+    "english": "Reference Number",
+    "malayalam": "റഫറൻസ് നമ്പർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official file/circular tracking number."
+  },
+  {
+    "english": "File Number",
+    "malayalam": "ഫയൽ നമ്പർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official office file index identifier."
+  },
+  {
+    "english": "Dispatch Number",
+    "malayalam": "ഡിസ്പാച്ച് നമ്പർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official outgoing document registry number."
+  },
+  {
+    "english": "Inward Number",
+    "malayalam": "ഇൻവേർഡ് നമ്പർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official incoming document registry number."
+  },
+  {
+    "english": "Note File",
+    "malayalam": "നോട്ട് ഫയൽ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official internal office discussion file."
+  },
+  {
+    "english": "Current File",
+    "malayalam": "കറന്റ് ഫയൽ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Active working document file."
+  },
+  {
+    "english": "Draft",
+    "malayalam": "ഡ്രാഫ്റ്റ്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Unfinalized document version."
+  },
+  {
+    "english": "Endorsement",
+    "malayalam": "എൻഡോഴ്സ്മെന്റ്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official forwarding note on file."
+  },
+  {
+    "english": "Sanction Order",
+    "malayalam": "അനുമതി ഉത്തരവ്",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official financial/administrative approval order."
+  },
+  {
+    "english": "Gazette Notification",
+    "malayalam": "ഗസറ്റ് വിജ്ഞാപനം",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official state gazette publishing."
+  },
+  {
+    "english": "Tapal",
+    "malayalam": "തപാൽ",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official mail and incoming correspondence."
+  },
+  {
+    "english": "Dispatch",
+    "malayalam": "ഡിസ്പാച്ച്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Outgoing mail registration process."
+  },
+  {
+    "english": "File Disposal",
+    "malayalam": "ഫയൽ തീർപ്പാക്കൽ",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Final closure of office file."
+  },
+  {
+    "english": "Fair Copy",
+    "malayalam": "ഫെയർ കോപ്പി",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Clean final signed version for dispatch."
+  },
+  {
+    "english": "Office Copy",
+    "malayalam": "ഓഫീസ് കോപ്പി",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Retained record copy of letter."
+  },
+  {
+    "english": "Proceedings",
+    "malayalam": "പ്രൊസീഡിംഗ്സ്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official formal executive decision order."
+  },
+  {
+    "english": "Notification Letter",
+    "malayalam": "അറിയിപ്പ് കത്ത്",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official written intimation document."
+  },
+  {
+    "english": "Memo",
+    "malayalam": "മെമ്മോ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official internal office directive."
+  },
+  {
+    "english": "Show Cause Notice",
+    "malayalam": "കാരണം കാണിക്കൽ നോട്ടീസ്",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official disciplinary explanation request."
+  },
+  {
+    "english": "Voucher",
+    "malayalam": "വൗച്ചർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official financial payment document."
+  },
+  {
+    "english": "Bill",
+    "malayalam": "ബില്ല്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Financial demand/payment claim form."
+  },
+  {
+    "english": "Receipt",
+    "malayalam": "രസീത്",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Official acknowledgment of payment."
+  },
+  {
+    "english": "Register",
+    "malayalam": "രജിസ്റ്റർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official bound record book."
+  },
+  {
+    "english": "Stock Register",
+    "malayalam": "സ്റ്റോക്ക് രജിസ്റ്റർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Inventory record book."
+  },
+  {
+    "english": "Movement Register",
+    "malayalam": "മൂവ്‌മെന്റ് രജിസ്റ്റർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Official duty movement log book."
+  },
+  {
+    "english": "Peon Book",
+    "malayalam": "പിയൂൺ ബുക്ക്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Local document delivery acknowledgment book."
+  },
+  {
+    "english": "Stamp Register",
+    "malayalam": "സ്റ്റാമ്പ് രജിസ്റ്റർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Postal dispatch stamp expenditure record."
+  },
+  {
+    "english": "File Movement",
+    "malayalam": "ഫയൽ നീക്കം",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Tracking movement of file across desks."
+  },
+  {
+    "english": "Personal File",
+    "malayalam": "പേഴ്സണൽ ഫയൽ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Individual employee confidential service file."
+  },
+  {
+    "english": "Confidential Report",
+    "malayalam": "രഹസ്യ റിപ്പോർട്ട് (CR)",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Annual confidential evaluation report."
+  },
+  {
+    "english": "Acknowledge Receipt",
+    "malayalam": "കൈപ്പറ്റിയതായി അറിയിക്കുക",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Confirm receipt of official letter."
+  },
+  {
+    "english": "File Subject",
+    "malayalam": "ഫയൽ വിഷയം",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Main topic title of official file."
+  },
+  {
+    "english": "File Enclosure",
+    "malayalam": "ഉള്ളടക്കം",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Enclosed documents inside file."
+  },
+  {
+    "english": "Urgent File",
+    "malayalam": "അടിയന്തിര ഫയൽ",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "High priority file requiring immediate decision."
+  },
+  {
+    "english": "Immediate File",
+    "malayalam": "ഉടൻ തീർപ്പാക്കേണ്ട ഫയൽ",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Top priority immediate disposal file."
+  },
+  {
+    "english": "Routine File",
+    "malayalam": "സാധാരണ ഫയൽ",
+    "type": "translate",
+    "category": "File Management",
+    "reason": "Standard non-urgent office file."
+  },
+  {
+    "english": "Despatch Book",
+    "malayalam": "ഡിസ്പാച്ച് ബുക്ക്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Outgoing mail register book."
+  },
+  {
+    "english": "Personal Register",
+    "malayalam": "പേഴ്സണൽ രജിസ്റ്റർ (PR)",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Clerk section file movement tracking register."
+  },
+  {
+    "english": "Distribution Register",
+    "malayalam": "ഡിസ്ട്രിബ്യൂഷൻ രജിസ്റ്റർ",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Tapal allotment register to clerks."
+  },
+  {
+    "english": "Local Delivery Book",
+    "malayalam": "ലോക്കൽ ഡെലിവറി ബുക്ക്",
+    "type": "transliterate",
+    "category": "File Management",
+    "reason": "Local messenger delivery record."
+  }
+]

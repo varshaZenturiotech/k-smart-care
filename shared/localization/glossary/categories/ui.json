@@ -1,0 +1,737 @@
+[
+  {
+    "english": "Dashboard",
+    "malayalam": "ഡാഷ്ബോർഡ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Commonly used software term in Kerala offices."
+  },
+  {
+    "english": "Home",
+    "malayalam": "ഹോം",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard UI navigation label."
+  },
+  {
+    "english": "Settings",
+    "malayalam": "സെറ്റിംഗ്സ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard software setting panel term."
+  },
+  {
+    "english": "Profile",
+    "malayalam": "പ്രൊഫൈൽ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Widely recognized user profile term."
+  },
+  {
+    "english": "Search",
+    "malayalam": "സെർച്ച്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Commonly spoken search action in digital systems."
+  },
+  {
+    "english": "Notification",
+    "malayalam": "നോട്ടിഫിക്കേഷൻ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Everyday software notification term."
+  },
+  {
+    "english": "Menu",
+    "malayalam": "മെനു",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard navigation menu term."
+  },
+  {
+    "english": "Sidebar",
+    "malayalam": "സൈഡ്ബാർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "UI layout element name."
+  },
+  {
+    "english": "Header",
+    "malayalam": "ഹെഡർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Page top section designator."
+  },
+  {
+    "english": "Footer",
+    "malayalam": "ഫൂട്ടർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Page bottom section designator."
+  },
+  {
+    "english": "Save",
+    "malayalam": "സേവ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Natural action verb in digital tools."
+  },
+  {
+    "english": "Cancel",
+    "malayalam": "ക്യാൻസൽ ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Spoken form preferred over formal 'റദ്ദാക്കുക'."
+  },
+  {
+    "english": "Delete",
+    "malayalam": "ഡിലീറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard digital removal action."
+  },
+  {
+    "english": "Edit",
+    "malayalam": "എഡിറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard text or data editing term."
+  },
+  {
+    "english": "Create",
+    "malayalam": "ക്രിയേറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Common creation action in web software."
+  },
+  {
+    "english": "Update",
+    "malayalam": "അപ്ഡേറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard data updating term."
+  },
+  {
+    "english": "View",
+    "malayalam": "കാണുക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Clear and direct Malayalam action word."
+  },
+  {
+    "english": "Close",
+    "malayalam": "ക്ലോസ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard modal/window closing term."
+  },
+  {
+    "english": "Refresh",
+    "malayalam": "റിഫ്രഷ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard page/data reload action."
+  },
+  {
+    "english": "Filter",
+    "malayalam": "ഫിൽട്ടർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Everyday data narrowing term."
+  },
+  {
+    "english": "Sort",
+    "malayalam": "സോർട്ട് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard data ordering term."
+  },
+  {
+    "english": "Export",
+    "malayalam": "എക്സ്പോർട്ട് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Technical file export command."
+  },
+  {
+    "english": "Import",
+    "malayalam": "ഇമ്പോർട്ട് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Technical file import command."
+  },
+  {
+    "english": "Download",
+    "malayalam": "ഡൗൺലോഡ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Universal digital file fetching term."
+  },
+  {
+    "english": "Upload",
+    "malayalam": "അപ്ലോഡ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Universal digital file submission term."
+  },
+  {
+    "english": "Print",
+    "malayalam": "പ്രിന്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard physical output action in offices."
+  },
+  {
+    "english": "Preview",
+    "malayalam": "പ്രിവ്യൂ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard document viewing before print/save."
+  },
+  {
+    "english": "Submit",
+    "malayalam": "സബ്‌മിറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Common application/form submission command."
+  },
+  {
+    "english": "Back",
+    "malayalam": "പിന്നോട്ട്",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Simple directional navigation word."
+  },
+  {
+    "english": "Next",
+    "malayalam": "അടുത്തത്",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Simple forward navigation word."
+  },
+  {
+    "english": "Previous",
+    "malayalam": "മുൻപത്തേത്",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Simple backward navigation word."
+  },
+  {
+    "english": "Confirm",
+    "malayalam": "ഉറപ്പാക്കുക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Standard confirmation action in official applications."
+  },
+  {
+    "english": "Select",
+    "malayalam": "തിരഞ്ഞെടുക്കുക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Standard selection choice verb."
+  },
+  {
+    "english": "Select All",
+    "malayalam": "എല്ലാം തിരഞ്ഞെടുക്കുക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Standard multi-select action."
+  },
+  {
+    "english": "Clear",
+    "malayalam": "ക്ലിയർ ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard form reset action in web forms."
+  },
+  {
+    "english": "Reset",
+    "malayalam": "റീസെറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard settings restore term."
+  },
+  {
+    "english": "Details",
+    "malayalam": "വിശദാംശങ്ങൾ",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Official word for detailed information."
+  },
+  {
+    "english": "Overview",
+    "malayalam": "അവലോകനം",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Standard summary overview title."
+  },
+  {
+    "english": "Status",
+    "malayalam": "സ്റ്റാറ്റസ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Universally spoken progress indicator in offices."
+  },
+  {
+    "english": "Actions",
+    "malayalam": "നടപടികൾ",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Official office action items designator."
+  },
+  {
+    "english": "Options",
+    "malayalam": "ഓപ്ഷനുകൾ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard menu/selection choices term."
+  },
+  {
+    "english": "Help",
+    "malayalam": "സഹായം",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Universal user support text."
+  },
+  {
+    "english": "FAQ",
+    "malayalam": "ചോദ്യോത്തരങ്ങൾ",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Clear translation for frequently asked questions."
+  },
+  {
+    "english": "Feedback",
+    "malayalam": "അഭിപ്രായം",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Standard user opinion submission tag."
+  },
+  {
+    "english": "Language",
+    "malayalam": "ഭാഷ",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Standard language selection header."
+  },
+  {
+    "english": "Theme",
+    "malayalam": "തീം",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Visual appearance mode designator."
+  },
+  {
+    "english": "Dark Mode",
+    "malayalam": "ഡാർക്ക് മോഡ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard UI theme toggle option."
+  },
+  {
+    "english": "Light Mode",
+    "malayalam": "ലൈറ്റ് മോഡ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard UI theme toggle option."
+  },
+  {
+    "english": "Tab",
+    "malayalam": "ടാബ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "UI navigation bar component."
+  },
+  {
+    "english": "Card",
+    "malayalam": "കാർഡ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "UI container element."
+  },
+  {
+    "english": "Modal",
+    "malayalam": "മോഡൽ വിൻഡോ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "UI popup dialog component."
+  },
+  {
+    "english": "Tooltip",
+    "malayalam": "ടൂൾടിപ്പ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Hover information box element."
+  },
+  {
+    "english": "Badge",
+    "malayalam": "ബാഡ്ജ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "UI status or count indicator."
+  },
+  {
+    "english": "Banner",
+    "malayalam": "ബാനർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Top alert/greeting component."
+  },
+  {
+    "english": "Widget",
+    "malayalam": "വിജറ്റ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Dashboard modular component."
+  },
+  {
+    "english": "Table",
+    "malayalam": "പട്ടിക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Standard tabular data structure term."
+  },
+  {
+    "english": "Row",
+    "malayalam": "വരി",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Table row descriptor."
+  },
+  {
+    "english": "Column",
+    "malayalam": "കോളം",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Table column descriptor spoken in offices."
+  },
+  {
+    "english": "Grid",
+    "malayalam": "ഗ്രിഡ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Layout structure designation."
+  },
+  {
+    "english": "List",
+    "malayalam": "ലിസ്റ്റ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Standard data series layout term."
+  },
+  {
+    "english": "Form",
+    "malayalam": "ഫോം",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Data entry document element."
+  },
+  {
+    "english": "Input",
+    "malayalam": "ഇൻപുട്ട്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Form field entry element."
+  },
+  {
+    "english": "Dropdown",
+    "malayalam": "ഡ്രോപ്ഡൗൺ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Selection menu element."
+  },
+  {
+    "english": "Checkbox",
+    "malayalam": "ചെക്ക്ബോക്സ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Toggle selection box element."
+  },
+  {
+    "english": "Radio Button",
+    "malayalam": "റേഡിയോ ബട്ടൺ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Single-choice selection element."
+  },
+  {
+    "english": "Toggle",
+    "malayalam": "ടോഗിൾ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "On/off switch element."
+  },
+  {
+    "english": "Button",
+    "malayalam": "ബട്ടൺ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Clickable action element."
+  },
+  {
+    "english": "Icon",
+    "malayalam": "ഐക്കൺ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Visual graphic indicator."
+  },
+  {
+    "english": "Avatar",
+    "malayalam": "അവതാർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "User profile picture element."
+  },
+  {
+    "english": "Link",
+    "malayalam": "ലിങ്ക്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Hyperlink web element."
+  },
+  {
+    "english": "Dialog",
+    "malayalam": "ഡയലോഗ് ബോക്സ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Interactive popup prompt box."
+  },
+  {
+    "english": "Placeholder",
+    "malayalam": "പ്ലേസ് ഹോൾഡർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Sample text inside empty form fields."
+  },
+  {
+    "english": "Label",
+    "malayalam": "ലേബൽ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Field description text label."
+  },
+  {
+    "english": "Toast",
+    "malayalam": "ടോസ്റ്റ് നോട്ടിഫിക്കേഷൻ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Transient banner alert message."
+  },
+  {
+    "english": "Alert",
+    "malayalam": "മുന്നറിയിപ്പ്",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Important system warning banner."
+  },
+  {
+    "english": "Breadcrumb",
+    "malayalam": "ബ്രെഡ്ക്രംബ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Hierarchical page path link bar."
+  },
+  {
+    "english": "Pagination",
+    "malayalam": "പേജിനേഷൻ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Page number navigation bar."
+  },
+  {
+    "english": "Accordion",
+    "malayalam": "അക്കോർഡിയൻ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Expandable content section."
+  },
+  {
+    "english": "Slider",
+    "malayalam": "സ്ലൈഡർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Range selection drag bar."
+  },
+  {
+    "english": "Switch",
+    "malayalam": "സ്വിച്ച്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Binary on/off toggle control."
+  },
+  {
+    "english": "Divider",
+    "malayalam": "ഡിവൈഡർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Section separation line."
+  },
+  {
+    "english": "Spinner",
+    "malayalam": "സ്പിന്നർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Loading indicator graphic."
+  },
+  {
+    "english": "Progress Bar",
+    "malayalam": "പ്രോഗ്രസ് ബാർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Completion percentage bar."
+  },
+  {
+    "english": "Skeleton",
+    "malayalam": "സ്കെലിറ്റൺ ലോഡർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Shimmer placeholder loading state."
+  },
+  {
+    "english": "Drawer",
+    "malayalam": "ഡ്രോയർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Slide-out side panel."
+  },
+  {
+    "english": "Segment",
+    "malayalam": "സെഗ്‌മെന്റ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Multi-option switch button."
+  },
+  {
+    "english": "Layout",
+    "malayalam": "ലേഔട്ട്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Page structural design."
+  },
+  {
+    "english": "Container",
+    "malayalam": "കണ്ടെയ്നർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Content wrapping box."
+  },
+  {
+    "english": "Chip",
+    "malayalam": "ചിപ്പ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Compact tag label element."
+  },
+  {
+    "english": "Tag",
+    "malayalam": "ടാഗ്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Categorization label."
+  },
+  {
+    "english": "Multi-select",
+    "malayalam": "മൾട്ടി-സെലക്ട്",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Multiple choice input field."
+  },
+  {
+    "english": "Dropzone",
+    "malayalam": "ഡ്രോപ്‌സോൺ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Drag and drop file upload box."
+  },
+  {
+    "english": "Datepicker",
+    "malayalam": "ഡേറ്റ് പിക്കർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Calendar date selector widget."
+  },
+  {
+    "english": "Timepicker",
+    "malayalam": "ടൈം പിക്കർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Clock time selector widget."
+  },
+  {
+    "english": "Color Picker",
+    "malayalam": "കളർ പിക്കർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Theme color selection widget."
+  },
+  {
+    "english": "Rich Text Editor",
+    "malayalam": "റിച്ച് ടെക്സ്റ്റ് എഡിറ്റർ",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Formatted text drafting input area."
+  },
+  {
+    "english": "Expand",
+    "malayalam": "വികസിപ്പിക്കുക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Open accordion or panel action."
+  },
+  {
+    "english": "Collapse",
+    "malayalam": "ചുരുക്കുക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Close accordion or panel action."
+  },
+  {
+    "english": "Maximize",
+    "malayalam": "മാക്സിമൈസ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Expand window to full screen."
+  },
+  {
+    "english": "Minimize",
+    "malayalam": "മിനിമൈസ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Shrink window to taskbar."
+  },
+  {
+    "english": "Copy",
+    "malayalam": "കോപ്പി ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Duplicate text or element to clipboard."
+  },
+  {
+    "english": "Paste",
+    "malayalam": "പേസ്റ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Insert copied element from clipboard."
+  },
+  {
+    "english": "Cut",
+    "malayalam": "കട്ട് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "UI",
+    "reason": "Remove and copy text to clipboard."
+  },
+  {
+    "english": "Undo",
+    "malayalam": "മുൻപത്തെ അവസ്ഥ",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Revert last user action."
+  },
+  {
+    "english": "Redo",
+    "malayalam": "വീണ്ടും ചെയ്യുക",
+    "type": "translate",
+    "category": "UI",
+    "reason": "Re-apply reverted action."
+  }
+]

@@ -272,12 +272,14 @@ export default function AdminCircularPage() {
   const departmentsCovered = distinctDeps.size;
 
   const filteredCirculars = circulars.filter(c => {
-    const q = searchQuery.toLowerCase();
+    if (!c) return false;
+    const q = (searchQuery || "").toLowerCase();
+    if (!q) return true;
     return (
-      c.title.toLowerCase().includes(q) ||
-      (c.circularNumber && c.circularNumber.toLowerCase().includes(q)) ||
-      (c.category && c.category.toLowerCase().includes(q)) ||
-      (c.departments && c.departments.some(d => d.toLowerCase().includes(q)))
+      Boolean(c.title && String(c.title).toLowerCase().includes(q)) ||
+      Boolean(c.circularNumber && String(c.circularNumber).toLowerCase().includes(q)) ||
+      Boolean(c.category && String(c.category).toLowerCase().includes(q)) ||
+      Boolean(Array.isArray(c.departments) && c.departments.some(d => d && String(d).toLowerCase().includes(q)))
     );
   });
 
@@ -311,7 +313,7 @@ export default function AdminCircularPage() {
                 <span className="text-[9px] font-mono font-semibold text-ink-soft bg-paper border border-border px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">Official Portal</span>
               </div>
               <span className="hidden sm:block text-[9px] text-ink-soft font-mono uppercase tracking-wider">
-                AI Human Capital Intelligence Platform
+                {t("auth.platformSubtitle", "AI Human Capital & Resilience Intelligence Platform")}
               </span>
             </div>
           </div>

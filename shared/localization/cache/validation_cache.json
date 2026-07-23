@@ -1,0 +1,2373 @@
+{
+  "Approve casual leave request::Approve കാഷ്വൽ ലീവ് request::Task": {
+    "passed": false,
+    "overall": 62,
+    "grade": "D",
+    "confidence": "LOW",
+    "status": "Manual Review Required",
+    "badge": "★☆☆☆☆",
+    "description": "Manual Review Required",
+    "scores": {
+      "overall": 62,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 92,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 70,
+      "literalTranslation": 100
+    },
+    "score": 62,
+    "issues": [
+      {
+        "severity": "Critical",
+        "type": "EnglishAlphabet",
+        "message": "Contains untranslated English verb(s): \"Approve\"."
+      },
+      {
+        "severity": "High",
+        "type": "MixedLanguage",
+        "message": "Contains mixed English and Malayalam (2 word(s): \"Approve, request\")."
+      },
+      {
+        "severity": "Medium",
+        "type": "MissingGlossary",
+        "message": "Untranslated glossary term \"Approve\" remaining in translation for context \"Task\"."
+      }
+    ],
+    "suggestions": [
+      "Approve → Approve ചെയ്യുക",
+      "Approve → അപ്രൂവ് ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 20,
+        "reason": "Contains untranslated English verb",
+        "detail": "Approve"
+      },
+      {
+        "points": 10,
+        "reason": "Mixed language text",
+        "detail": "Approve, request"
+      },
+      {
+        "points": 8,
+        "reason": "Missing glossary term",
+        "detail": "Approve"
+      }
+    ],
+    "context": "Task",
+    "category": "Leave",
+    "executionTimeMs": 3
+  },
+  "Dashboard::നിയന്ത്രണ പാനൽ::Dashboard": {
+    "passed": false,
+    "overall": 74,
+    "grade": "C",
+    "confidence": "MEDIUM",
+    "status": "Needs Review",
+    "badge": "★★☆☆☆",
+    "description": "Needs Review",
+    "scores": {
+      "overall": 74,
+      "grammar": 100,
+      "officeStyle": 84,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 90
+    },
+    "score": 74,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "LiteralTranslation",
+        "message": "Contains dictionary/bookish Malayalam term \"നിയന്ത്രണ പാനൽ\" (Use ഡാഷ്ബോർഡ് instead)."
+      },
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"Dashboard\" was translated into non-office term instead of preferred \"ഡാഷ്ബോർഡ്\" in \"Dashboard\" context."
+      },
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Avoid word \"നിയന്ത്രണ പാനൽ\" used in \"Dashboard\" context."
+      }
+    ],
+    "suggestions": [
+      "നിയന്ത്രണ പാനൽ → ഡാഷ്ബോർഡ്",
+      "Dashboard → ഡാഷ്ബോർഡ്"
+    ],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Literal dictionary translation",
+        "detail": "നിയന്ത്രണ പാനൽ"
+      },
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "Dashboard (Dashboard)"
+      },
+      {
+        "points": 8,
+        "reason": "Avoid word in context",
+        "detail": "നിയന്ത്രണ പാനൽ"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Review flood relief fund disbursement file::പ്രളയ ദുരിതാശ്വാസ ഫണ്ട് തുക വിതരണ ഫയൽ റിവ്യൂ ചെയ്യുക::Task": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "Task",
+    "category": "Disbursement",
+    "executionTimeMs": 0
+  },
+  "Welcome::സ്വാഗതം എന്നെങ്കിലും വേണം::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 6
+  },
+  "Search...::തിരയുക... എന്നത് തിരയുക... എന്നാണ് സംസ്കരിച്ചത്.::General": {
+    "passed": true,
+    "overall": 95,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "scores": {
+      "overall": 95,
+      "grammar": 100,
+      "officeStyle": 95,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 95,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "WrongOfficeStyle",
+        "message": "Bookish term 'തിരയുക' used instead of office term 'സെർച്ച് ചെയ്യുക'."
+      }
+    ],
+    "suggestions": [
+      "തിരയുക → സെർച്ച് ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 5,
+        "reason": "Wrong office search term",
+        "detail": "തിരയുക"
+      }
+    ],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Save::സേവ് ചെയ്യുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Cancel::റദ്ദാക്കൽ::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Delete::ഡിലീറ്റ് ചെയ്യുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Create::ക്രിയേറ്റ് ചെയ്യുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Edit::എഡിറ്റ് ചെയ്യുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Loading...::ലോഡിംഗ് നടക്കുന്നു...::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Something went wrong.::ഒരു പ്രശ്നമുണ്ടെന്നു.::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Action::പ്രവർത്തനം::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Actions::നടപടികൾ::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Status::സ്റ്റാറ്റസ്::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Priority::മുൻഗണന::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Due Date::അവസാന തീയതി::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Department::വകുപ്പ്::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Description::വിവരണം::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "Title::ശീർഷകം::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Close::ക്ലോസ് ചെയ്യുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "None::ഒന്നും ഇല്ലാത്തത്.::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Review flood relief fund disbursement file::വെള്ളപ്പെയർ പ്രതിസംഭാവന തുക വിതരണം ഫയലിൽ റിവ്യൂ ചെയ്യുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 6
+  },
+  "Panchayat Steering Committee Review::പഞ്ചായത്ത് സ്റ്റീയറിംഗ് സമിതി പരിശോധന::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Approve casual leave request - S. Kumar::കസറി വിരമം അനുമതി അപേക്ഷ അനുവദിക്കുക - എസ്. കുമാർ.::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Submit monthly sanitation report::സബ്മിറ്റ് ചെയ്യുക monthly sanitation report::General": {
+    "passed": true,
+    "overall": 90,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "scores": {
+      "overall": 90,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 90,
+      "literalTranslation": 100
+    },
+    "score": 90,
+    "issues": [
+      {
+        "severity": "High",
+        "type": "MixedLanguage",
+        "message": "Contains mixed English and Malayalam (3 word(s): \"monthly, sanitation, report\")."
+      }
+    ],
+    "suggestions": [
+      "report → റിപ്പോർട്ട്"
+    ],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Mixed language text",
+        "detail": "monthly, sanitation, report"
+      }
+    ],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Submit monthly sanitation report::മാസിക സാഹചര്യ റിപ്പോർട്ട് സമർപ്പിക്കുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "ഒരു മിനിറ്റ് വിശ്രമിക്കുക, ഒരു ഗ്ലാസ് വെള്ളം കുടിക്കുക::ഒരു മിനിറ്റ് വിശ്രമിക്കുക, ഒരു ഗ്ലാസ് വെള്ളം കുടിക്കുക.::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "scores": {
+      "overall": 100,
+      "grammar": 100,
+      "officeStyle": 100,
+      "glossary": 100,
+      "naturalness": 100,
+      "consistency": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "Dashboard::ഡാഷ്ബോർഡ് നിയന്ത്രണ പാനൽ പ്രധാന വർക്കിംഗ് പേജ്::Dashboard": {
+    "passed": false,
+    "overall": 82,
+    "grade": "B",
+    "confidence": "MEDIUM",
+    "status": "Good",
+    "badge": "★★★☆☆",
+    "description": "Good",
+    "readabilityScore": 86,
+    "uiLengthRatio": "511%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 82,
+      "officeStyle": 92,
+      "readability": 86,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 90,
+      "uiLength": 50
+    },
+    "score": 82,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "LiteralTranslation",
+        "message": "Contains dictionary/bookish Malayalam term \"നിയന്ത്രണ പാനൽ\" (Use ഡാഷ്ബോർഡ് instead)."
+      },
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Avoid word \"നിയന്ത്രണ പാനൽ\" used in \"Dashboard\" context."
+      },
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 511% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [
+      "നിയന്ത്രണ പാനൽ → ഡാഷ്ബോർഡ്"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   നിയന്ത്രണ പാനൽ → ഡാഷ്ബോർഡ്"
+    ],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Literal dictionary translation",
+        "detail": "നിയന്ത്രണ പാനൽ"
+      },
+      {
+        "points": 8,
+        "reason": "Avoid word in context",
+        "detail": "നിയന്ത്രണ പാനൽ"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 4
+  },
+  "Approve casual leave request::കാഷ്വൽ ലീവ് അപേക്ഷ അനുവദിക്കുക.::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "111%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"Approve\" was translated into non-office term instead of preferred \"അപ്രൂവ് ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "Approve → അപ്രൂവ് ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   Approve → അപ്രൂവ് ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "Approve (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "Review flood relief file::വെള്ളപ്പൊക്ക പ്രതിസന്ധി ഫയൽ റിവ്യൂ ചെയ്യുക::Task": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 95,
+    "uiLengthRatio": "175%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 95,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 75
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 175% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 8
+  },
+  "Custom Department Special Circular Review::സ്വതന്ത്ര വകുപ്പ് സ്പെഷ്യൽ സർക്കുലർ പരിശോധന::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "105%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"Review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "Review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 8
+  },
+  "custom department special circular review::സ്വതന്ത്ര വകുപ്പ് സ്പെഷ്യൽ സർക്കുലർ പരിശോധന::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "105%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "custom department special circular review::സ്പെഷ്യൽ വകുപ്പ് സർക്കുലർ പരിശോധന::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "80%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Custom Department Special Circular Review::സ്പെഷ്യൽ വകുപ്പ് സർക്കുലർ പരിശോധന::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "80%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"Review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "Review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 3
+  },
+  "Custom Department Special Circular Review::സ്വകാര്യ വകുപ്പിനുള്ള പ്രത്യേക സർക്കുലർ റിവ്യൂ::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "112%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"Review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "Review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "custom department special circular review::സ്വകാര്യ വകുപ്പിനുള്ള പ്രത്യേക സർക്കുലർ റിവ്യൂ::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "112%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "Custom Department Special Circular Review::സ്വതന്ത്ര വകുപ്പിനുള്ള പ്രത്യേക സർക്കുലർ റിവ്യൂ::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "115%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"Review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   Review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "Review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "custom department special circular review::സ്വതന്ത്ര വകുപ്പിനുള്ള പ്രത്യേക സർക്കുലർ റിവ്യൂ::Task": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 98,
+    "uiLengthRatio": "115%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 98,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"review\" was translated into non-office term instead of preferred \"റിവ്യൂ ചെയ്യുക\" in \"Task\" context."
+      }
+    ],
+    "suggestions": [
+      "review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   review → റിവ്യൂ ചെയ്യുക"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "review (Task)"
+      }
+    ],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "ഈ സർക്കുലർ സംഗ്രഹിക്കൂ::ഈ സർക്കുലർ സംഗ്രഹിക്കുക::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "105%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 3
+  },
+  "Anjali Nair::അഞ്ജലി നായർ.::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "109%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Local Self Government::തദ്ദേശ സ്വയംഭരണം::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "76%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Thiruvananthapuram::തിരുവനന്തപുരം::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "72%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Employee::ജീവനക്കാരൻ::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "125%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Panchayat Secretary::പഞ്ചായത്ത് സെക്രട്ടറി::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "111%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Review flood relief fund disbursement file::വെള്ളപ്പെയർ പ്രതിസംഭാവന തുക വിതരണം ഫയലിൽ റിവ്യൂ ചെയ്യുക::Task": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 99,
+    "uiLengthRatio": "131%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 99,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 97
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 131% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Task",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "high::High::Dashboard": {
+    "passed": false,
+    "overall": 72,
+    "grade": "C",
+    "confidence": "MEDIUM",
+    "status": "Needs Review",
+    "badge": "★★☆☆☆",
+    "description": "Needs Review",
+    "readabilityScore": 94,
+    "uiLengthRatio": "100%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 72,
+      "officeStyle": 100,
+      "readability": 94,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 80,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 72,
+    "issues": [
+      {
+        "severity": "Critical",
+        "type": "EnglishAlphabet",
+        "message": "Contains English alphabet without Malayalam script translation (High)."
+      },
+      {
+        "severity": "Medium",
+        "type": "MissingGlossary",
+        "message": "Untranslated glossary term \"high\" remaining in translation for context \"Dashboard\"."
+      }
+    ],
+    "suggestions": [
+      "High → ഉയർന്നത്",
+      "high → ഉയർന്നത്"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   High → ഉയർന്നത്",
+      "★★★★☆   high → ഉയർന്നത്"
+    ],
+    "deductions": [
+      {
+        "points": 20,
+        "reason": "Entire text in English script",
+        "detail": "High"
+      },
+      {
+        "points": 8,
+        "reason": "Missing glossary term",
+        "detail": "high"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "പ്രധാന പോയിന്റുകൾ എന്തൊക്കെയാണ്?::പ്രധാന പോയിന്റുകൾ എന്താണ്?::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "81%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "ഏതൊക്കെ വകുപ്പുകൾ ബാധിക്കപ്പെടും?::ഡാഷ്ബോർഡ് വകുപ്പുകൾ ബാധിക്കപ്പെടും.::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "106%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "ജീവനക്കാർ എന്ത് നടപടി സ്വീകരിക്കണം?::ജീവനക്കാർക്ക് എന്തെങ്കിലും പ്രശ്നമുണ്ടെങ്കിൽ ഏത് പരിഹാരമുണ്ടാകുന്നു?::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 93,
+    "uiLengthRatio": "194%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 93,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 65
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 194% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "high::ഉയർന്നത് എന്നത്::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 90,
+    "uiLengthRatio": "375%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 90,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 50
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 375% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "അനുസരണ ആവശ്യകതകൾ എന്തൊക്കെ?::അനുസരണ ആവശ്യകതകൾ എന്തെങ്കിൽ?::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "104%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 7
+  },
+  "പ്രധാന സമയപരിധികൾ ഏതൊക്കെ?::പ്രധാന സമയപരിധികൾ ഇതാ:\n\n- ദിവസപ്രതി സമയപരിധി\n- ആഴ്ചപ്രതി സമയപരിധി\n- മാസപ്രതി സമയപരിധി\n- വർഷപ്രതി സമയപരിധി::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 90,
+    "uiLengthRatio": "404%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 90,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 50
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 404% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Pending::തീർപ്പാക്കാനുള്ള പക്വത::Dashboard": {
+    "passed": true,
+    "overall": 92,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 88,
+    "uiLengthRatio": "314%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 92,
+      "officeStyle": 92,
+      "readability": 88,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 50
+    },
+    "score": 92,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "WrongOfficeStyle",
+        "message": "Glossary term \"Pending\" was translated into non-office term instead of preferred \"പെൻഡിംഗ്\" in \"Dashboard\" context."
+      },
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 314% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [
+      "Pending → പെൻഡിംഗ്"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   Pending → പെൻഡിംഗ്"
+    ],
+    "deductions": [
+      {
+        "points": 8,
+        "reason": "Context style mismatch",
+        "detail": "Pending (Dashboard)"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "Official Work::ഔദ്യോഗിക പ്രവൃത്തികൾ::Dashboard": {
+    "passed": true,
+    "overall": 90,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 95,
+    "uiLengthRatio": "154%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 90,
+      "officeStyle": 100,
+      "readability": 95,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 90,
+      "uiLength": 85
+    },
+    "score": 90,
+    "issues": [
+      {
+        "severity": "Medium",
+        "type": "LiteralTranslation",
+        "message": "Contains dictionary/bookish Malayalam term \"പ്രവൃത്തി\" (Use ടാസ്ക് instead)."
+      },
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 154% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [
+      "പ്രവൃത്തി → ടാസ്ക്"
+    ],
+    "rankedSuggestions": [
+      "★★★★★   പ്രവൃത്തി → ടാസ്ക്"
+    ],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Literal dictionary translation",
+        "detail": "പ്രവൃത്തി"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "Official Work::ഔദ്യോഗിക ടാസ്ക്കൾ::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 99,
+    "uiLengthRatio": "131%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 99,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 97
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 131% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Meeting::മീറ്റിംഗ്::Meeting": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "129%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 98
+    },
+    "score": 100,
+    "issues": [
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 129% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Meeting",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "ഗുഡ് ആഫ്റ്റർനൂൺ! ബാക്കി ജോലികൾ പെട്ടെന്ന് തീർക്കാം. എങ്ങനെ സഹായിക്കണം?::ഗുഡ് ആഫ്റ്റർനൂൺ! ബാക്കി ടാസ്ക്കൾ പതിവായി തീർക്കാം. എങ്ങനെ അസിസ്റ്റന്റ്ക്കാം?::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "109%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 9
+  },
+  "afternoon::രാത്രിയോടെ::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "111%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Good morning, Anjali. Complete your Daily Wellness Check to personalize your K-SMART CARE recommendations!::ഗുഡ് മോണിംഗ്, Anjali. ദിവസേന നിങ്ങളുടെ വെൽനസ് പരിശോധന പൂർത്തിയാക്കുക. അതിനുശേഷം നിങ്ങളുടെ കെ-സ്മാർട്ട് CARE സൂചനകൾ വ്യക്തിപരമായി തിരഞ്ഞെടുക്കാം.::Dashboard": {
+    "passed": true,
+    "overall": 90,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 96,
+    "uiLengthRatio": "136%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 90,
+      "officeStyle": 100,
+      "readability": 96,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 90,
+      "literalTranslation": 100,
+      "uiLength": 94
+    },
+    "score": 90,
+    "issues": [
+      {
+        "severity": "High",
+        "type": "MixedLanguage",
+        "message": "Contains mixed English and Malayalam (1 word(s): \"Anjali\")."
+      },
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 136% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Mixed language text",
+        "detail": "Anjali"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 1
+  },
+  "Good Morning, Anjali Nair 👋::നല്ല സന്ധ്യയെത്തിയല്ലോ, Anjali Nair 👋::Dashboard": {
+    "passed": true,
+    "overall": 90,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 96,
+    "uiLengthRatio": "136%",
+    "uiLengthWarning": true,
+    "scores": {
+      "overall": 90,
+      "officeStyle": 100,
+      "readability": 96,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 90,
+      "literalTranslation": 100,
+      "uiLength": 94
+    },
+    "score": 90,
+    "issues": [
+      {
+        "severity": "High",
+        "type": "MixedLanguage",
+        "message": "Contains mixed English and Malayalam (2 word(s): \"Anjali, Nair\")."
+      },
+      {
+        "severity": "Low",
+        "type": "UILengthWarning",
+        "message": "UI Length Warning: Translation length is 136% of English original (Recommended <125%). May overflow UI buttons or cards."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Mixed language text",
+        "detail": "Anjali, Nair"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Good morning, Anjali. Complete your Daily Wellness Check to personalize your K-SMART CARE recommendations!::ഗുഡ് മോണിംഗ്, അന്ജലി. ദിവസേന വെൽനസ് പരിശോധന പൂർത്തിയാക്കുക, കെ-സ്മാർട്ട് കെയർ അനുകൂലനങ്ങൾ വ്യക്തിഗതമായി സമന്വയിപ്പിക്കുക!::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "114%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Good Morning, Anjali Nair 👋::നല്ല ഓണം, Anjali Nair 👋::Dashboard": {
+    "passed": true,
+    "overall": 90,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 97,
+    "uiLengthRatio": "86%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 90,
+      "officeStyle": 100,
+      "readability": 97,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 90,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 90,
+    "issues": [
+      {
+        "severity": "High",
+        "type": "MixedLanguage",
+        "message": "Contains mixed English and Malayalam (2 word(s): \"Anjali, Nair\")."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Mixed language text",
+        "detail": "Anjali, Nair"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Good Morning, Anjali Nair 👋::നല്ല സന്ധ്യയും, Anjali Nair 👋::Dashboard": {
+    "passed": true,
+    "overall": 90,
+    "grade": "A",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★☆",
+    "description": "Very Good",
+    "readabilityScore": 97,
+    "uiLengthRatio": "107%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 90,
+      "officeStyle": 100,
+      "readability": 97,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 90,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 90,
+    "issues": [
+      {
+        "severity": "High",
+        "type": "MixedLanguage",
+        "message": "Contains mixed English and Malayalam (2 word(s): \"Anjali, Nair\")."
+      }
+    ],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [
+      {
+        "points": 10,
+        "reason": "Mixed language text",
+        "detail": "Anjali, Nair"
+      }
+    ],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "നിങ്ങളുടെ ആരോഗ്യ പരിശോധന പൂർത്തിയാക്കാൻ മറക്കരുത്::നിങ്ങളുടെ ആരോഗ്യ പരിശോധന പൂർത്തിയാക്കാൻ മറക്കരുത്.::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "102%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക: 4 അടച്ച ടാസ്കുകൾ ഉണ്ട്::നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക: 4 അടങ്ങിയ ടാസ്കുകൾ ഉണ്ട്::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "103%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "അടച്ച ടാസ്കുകൾ പൂർത്തിയാക്കുക::അടച്ച ടാസ്കുകൾ പൂർത്തിയാക്കുക.::Dashboard": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "103%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "Dashboard",
+    "category": "General",
+    "executionTimeMs": 0
+  },
+  "Success::വിജയകരം::General": {
+    "passed": true,
+    "overall": 100,
+    "grade": "A+",
+    "confidence": "HIGH",
+    "status": "Production Ready",
+    "badge": "★★★★★",
+    "description": "Excellent",
+    "readabilityScore": 100,
+    "uiLengthRatio": "100%",
+    "uiLengthWarning": false,
+    "scores": {
+      "overall": 100,
+      "officeStyle": 100,
+      "readability": 100,
+      "consistency": 100,
+      "grammar": 100,
+      "mixedLanguage": 100,
+      "literalTranslation": 100,
+      "uiLength": 100
+    },
+    "score": 100,
+    "issues": [],
+    "suggestions": [],
+    "rankedSuggestions": [],
+    "deductions": [],
+    "context": "General",
+    "category": "General",
+    "executionTimeMs": 6
+  }
+}

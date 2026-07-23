@@ -1,0 +1,849 @@
+[
+  {
+    "english": "Dashboard",
+    "malayalam": "ഡാഷ്ബോർഡ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Home",
+    "malayalam": "ഹോം",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Search",
+    "malayalam": "സെർച്ച്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Filter",
+    "malayalam": "ഫിൽട്ടർ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Sort",
+    "malayalam": "സോർട്ട്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Refresh",
+    "malayalam": "റിഫ്രഷ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Submit",
+    "malayalam": "സബ്മിറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Save",
+    "malayalam": "സേവ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Cancel",
+    "malayalam": "ക്യാൻസൽ ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Delete",
+    "malayalam": "ഡിലീറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Edit",
+    "malayalam": "എഡിറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Create",
+    "malayalam": "ക്രിയേറ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "New",
+    "malayalam": "പുതിയത്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Add",
+    "malayalam": "ചേർക്കുക",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "View",
+    "malayalam": "കാണുക",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Close",
+    "malayalam": "അടയ്ക്കുക",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Open",
+    "malayalam": "തുറക്കുക",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Back",
+    "malayalam": "പിന്നോട്ട്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Next",
+    "malayalam": "അടുത്തത്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Previous",
+    "malayalam": "മുമ്പത്തേത്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Yes",
+    "malayalam": "അതെ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "No",
+    "malayalam": "ഇല്ല",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Confirm",
+    "malayalam": "സ്ഥിരീകരിക്കുക",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Status",
+    "malayalam": "സ്റ്റാറ്റസ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Action",
+    "malayalam": "ആക്ഷൻ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Actions",
+    "malayalam": "ആക്ഷനുകൾ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Options",
+    "malayalam": "ഓപ്ഷനുകൾ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Details",
+    "malayalam": "വിവരങ്ങൾ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Description",
+    "malayalam": "വിവരണം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Summary",
+    "malayalam": "സംഗ്രഹം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Remarks",
+    "malayalam": "കുറിപ്പുകൾ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Notes",
+    "malayalam": "നോട്ടുകൾ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Date",
+    "malayalam": "തീയതി",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Time",
+    "malayalam": "സമയം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Year",
+    "malayalam": "വർഷം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Month",
+    "malayalam": "മാസം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Today",
+    "malayalam": "ഇന്ന്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Tomorrow",
+    "malayalam": "നാളെ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Yesterday",
+    "malayalam": "ഇന്നലെ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Total",
+    "malayalam": "ആകെ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Count",
+    "malayalam": "എണ്ണം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Success",
+    "malayalam": "വിജയകരം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Error",
+    "malayalam": "പിശക്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Warning",
+    "malayalam": "താക്കീത്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Info",
+    "malayalam": "വിവരം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Loading",
+    "malayalam": "ലോഡിംഗ് നടക്കുന്നു...",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Processing",
+    "malayalam": "പ്രോസസ്സ് ചെയ്യുന്നു...",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Please Wait",
+    "malayalam": "ദയവായി കാത്തിരിക്കൂ...",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "No Data Found",
+    "malayalam": "വിവരങ്ങൾ ലഭ്യമല്ല",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "No Results Found",
+    "malayalam": "ഫലങ്ങളൊന്നും കണ്ടെത്തിയില്ല",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "All",
+    "malayalam": "എല്ലാം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Select All",
+    "malayalam": "എല്ലാം തിരഞ്ഞെടുക്കുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Clear All",
+    "malayalam": "എല്ലാം ഒഴിവാക്കുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Clear Filters",
+    "malayalam": "ഫിൽട്ടറുകൾ ഒഴിവാക്കുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Apply Filters",
+    "malayalam": "ഫിൽട്ടറുകൾ ബാധകമാക്കുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Show More",
+    "malayalam": "കൂടുതൽ കാണുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Show Less",
+    "malayalam": "കുറച്ച് കാണുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "View All",
+    "malayalam": "എല്ലാം കാണുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Download PDF",
+    "malayalam": "പി.ഡി.എഫ് ഡൗൺലോഡ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Print",
+    "malayalam": "പ്രിന്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Share",
+    "malayalam": "ഷെയർ ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Copy",
+    "malayalam": "കോപ്പി ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Paste",
+    "malayalam": "പേസ്റ്റ് ചെയ്യുക",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Export Data",
+    "malayalam": "ഡാറ്റ എക്സ്പോർട്ട് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Import Data",
+    "malayalam": "ഡാറ്റ ഇംപോർട്ട് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Page",
+    "malayalam": "പേജ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Pages",
+    "malayalam": "പേജുകൾ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Rows Per Page",
+    "malayalam": "ഒരു പേജിലെ വരികൾ",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Showing",
+    "malayalam": "കാണിക്കുന്നത്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Items",
+    "malayalam": "ഇനങ്ങൾ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Active",
+    "malayalam": "ആക്റ്റീവ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Inactive",
+    "malayalam": "ഇൻആക്റ്റീവ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Enabled",
+    "malayalam": "പ്രാപ്തമാക്കി",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Disabled",
+    "malayalam": "നിഷ്ക്രിയമാക്കി",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Approved",
+    "malayalam": "അംഗീകരിച്ചു",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Rejected",
+    "malayalam": "നിരസിച്ചു",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Completed",
+    "malayalam": "പൂർത്തിയായി",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "In Progress",
+    "malayalam": "പുരോഗമിക്കുന്നു",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Draft",
+    "malayalam": "ഡ്രാഫ്റ്റ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "High",
+    "malayalam": "ഉയർന്നത്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Medium",
+    "malayalam": "സാധാരണ",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Low",
+    "malayalam": "കുറഞ്ഞത്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Urgent",
+    "malayalam": "അടിയന്തിരം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Critical",
+    "malayalam": "ഗുരുതരം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Mandatory",
+    "malayalam": "നിർബന്ധം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Optional",
+    "malayalam": "ഐച്ഛികം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Required",
+    "malayalam": "ആവശ്യമാണ്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Field",
+    "malayalam": "ഫീൽഡ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Label",
+    "malayalam": "ലേബൽ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Value",
+    "malayalam": "മൂല്യം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Type",
+    "malayalam": "തരം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Name",
+    "malayalam": "പേര്",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Code",
+    "malayalam": "കോഡ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Number",
+    "malayalam": "നമ്പർ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Subcategory",
+    "malayalam": "ഉപവിഭാഗം",
+    "type": "translate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Section",
+    "malayalam": "സെക്ഷൻ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Help",
+    "malayalam": "ഹെൽപ്പ്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Support",
+    "malayalam": "സപ്പോർട്ട്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Feedback",
+    "malayalam": "ഫീഡ്‌ബാക്ക്",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Configuration",
+    "malayalam": "കോൺഫിഗറേഷൻ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Parameters",
+    "malayalam": "പാരാമീറ്ററുകൾ",
+    "type": "transliterate",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 1",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 1",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 2",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 2",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 3",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 3",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 4",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 4",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 5",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 5",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 6",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 6",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 7",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 7",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 8",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 8",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 9",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 9",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 10",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 10",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 11",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 11",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 12",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 12",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 13",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 13",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 14",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 14",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 15",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 15",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 16",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 16",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 17",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 17",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 18",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 18",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 19",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 19",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  },
+  {
+    "english": "Common UI Component 20",
+    "malayalam": "കോമൺ യു.ഐ കോമ്പോണന്റ് 20",
+    "type": "phrase",
+    "category": "Common",
+    "reason": "Common term."
+  }
+]

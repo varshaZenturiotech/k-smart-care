@@ -3,8 +3,8 @@ import * as meetingService from "../services/meeting.service.js";
 export async function getMeetings(req, res) {
   try {
     const employeeId = req.user.id;
-    const meetings = await meetingService.getMeetings(employeeId);
-    return res.status(200).json(meetings);
+    const categorized = await meetingService.getCategorizedMeetings(employeeId);
+    return res.status(200).json(categorized);
   } catch (err) {
     console.error("Error in getMeetings controller:", err);
     return res.status(500).json({ error: "Failed to retrieve meetings." });

@@ -1,0 +1,136 @@
+{
+  "Task": {
+    "Review": "റിവ്യൂ ചെയ്യുക",
+    "Approve": "അപ്രൂവ് ചെയ്യുക",
+    "Reject": "റിജക്റ്റ് ചെയ്യുക",
+    "Task": "ടാസ്ക്",
+    "Tasks": "ടാസ്കുകൾ",
+    "Pending": "പെൻഡിംഗ്",
+    "Overdue": "സമയപരിധി കഴിഞ്ഞവ",
+    "Deadline": "ഡെഡ്ലൈൻ",
+    "Assign": "അസൈൻ ചെയ്യുക",
+    "Create": "ക്രിയേറ്റ് ചെയ്യുക",
+    "Delete": "ഡിലീറ്റ് ചെയ്യുക",
+    "Edit": "എഡിറ്റ് ചെയ്യുക",
+    "Casual Leave": "കാഷ്വൽ ലീവ്"
+  },
+  "Meeting": {
+    "Review": "ചർച്ച ചെയ്യുക",
+    "Meeting": "മീറ്റിംഗ്",
+    "Meetings": "മീറ്റിംഗുകൾ",
+    "Agenda": "അജണ്ട",
+    "Minutes": "മിനിറ്റ്സ്",
+    "Schedule": "ഷെഡ്യൂൾ ചെയ്യുക",
+    "Attend": "പങ്കെടുക്കുക",
+    "Organizer": "ഓർഗനൈസർ",
+    "Attendees": "പങ്കെടുക്കുന്നവർ",
+    "Steering Committee": "സ്റ്റീറിംഗ് കമ്മിറ്റി"
+  },
+  "Circular": {
+    "Review": "പരിശോധിക്കുക",
+    "Circular": "സർക്കുലർ",
+    "Circulars": "സർക്കുലറുകൾ",
+    "Government Order": "സർക്കാർ ഉത്തരവ്",
+    "Repository": "റിപ്പോസിറ്ററി",
+    "Subject": "വിഷയം",
+    "Publish": "പ്രസിദ്ധീകരിക്കുക",
+    "Download": "ഡൗൺലോഡ് ചെയ്യുക",
+    "Upload": "അപ്ലോഡ് ചെയ്യുക"
+  },
+  "Notification": {
+    "Review": "കാണുക",
+    "Read": "വായിക്കുക",
+    "Alert": "അറിയിപ്പ്",
+    "Notification": "നോട്ടിഫിക്കേഷൻ",
+    "Notifications": "നോട്ടിഫിക്കേഷനുകൾ",
+    "Received": "ലഭിച്ചു",
+    "Clear": "ക്ലിയർ ചെയ്യുക"
+  },
+  "Dashboard": {
+    "Overview": "ഓവർവ്യൂ",
+    "Summary": "സമ്മറി",
+    "Dashboard": "ഡാഷ്ബോർഡ്",
+    "Status": "സ്റ്റാറ്റസ്",
+    "Snapshot": "സ്നാപ്പ്ഷോട്ട്",
+    "Quick Actions": "ക്വിക് ആക്ഷനുകൾ",
+    "Pending": "പെൻഡിംഗ്"
+  },
+  "AI Assistant": {
+    "Analyze": "വിശകലനം ചെയ്യുക",
+    "Explain": "വിശദീകരിക്കുക",
+    "Assistant": "അസിസ്റ്റന്റ്",
+    "AI": "എ.ഐ",
+    "Chat": "ചാറ്റ്",
+    "Ask": "ചോദിക്കുക",
+    "Prompt": "പ്രോംപ്റ്റ്",
+    "Recommendation": "റെക്കമൻഡേഷൻ"
+  },
+  "Wellness": {
+    "Wellness": "വെൽനസ്",
+    "Health": "ആരോഗ്യം",
+    "Stress": "സ്ട്രെസ്",
+    "Check-in": "ചെക്ക്-ഇൻ",
+    "Assessment": "അസ്സസ്സ്മെന്റ്",
+    "Score": "സ്കോർ",
+    "Tracker": "ട്രാക്കർ"
+  },
+  "Authentication": {
+    "Login": "ലോഗിൻ",
+    "Logout": "ലോഗൗട്ട്",
+    "Sign In": "സൈൻ ഇൻ",
+    "Sign Out": "സൈൻ ഔട്ട്",
+    "Password": "പാസ്‌വേഡ്",
+    "Username": "യൂസർനെയിം",
+    "OTP": "ഒ.ടി.പി"
+  },
+  "Profile": {
+    "Profile": "പ്രൊഫൈൽ",
+    "User": "യൂസർ",
+    "Role": "റോൾ",
+    "Account": "അക്കൗണ്ട്",
+    "Department": "വകുപ്പ്"
+  },
+  "Settings": {
+    "Settings": "സെറ്റിംഗ്സ്",
+    "Preferences": "സെറ്റിംഗ്സ്",
+    "Configuration": "കോൺഫിഗറേഷൻ",
+    "Save": "സേവ് ചെയ്യുക"
+  },
+  "Analytics": {
+    "Analytics": "അനലിറ്റിക്സ്",
+    "Metrics": "മെട്രിക്കുകൾ",
+    "Chart": "ചാർട്ട്",
+    "Performance": "പെർഫോമൻസ്",
+    "Report": "റിപ്പോർട്ട്"
+  },
+  "Reports": {
+    "Report": "റിപ്പോർട്ട്",
+    "Reports": "റിപ്പോർട്ടുകൾ",
+    "Summary": "സംഗ്രഹം",
+    "Download": "ഡൗൺലോഡ് ചെയ്യുക",
+    "Generate": "ജനറേറ്റ് ചെയ്യുക"
+  },
+  "Search": {
+    "Search": "സെർച്ച് ചെയ്യുക",
+    "Filter": "ഫിൽട്ടർ ചെയ്യുക",
+    "Query": "ക്വറി",
+    "Results": "ഫലങ്ങൾ"
+  },
+  "Workflow": {
+    "Workflow": "വർക്ക്ഫ്ലോ",
+    "Process": "പ്രോസസ്സ് ചെയ്യുക",
+    "Stage": "സ്റ്റേജ്",
+    "Movement": "മൂവ്‌മെന്റ്"
+  },
+  "Repository": {
+    "Repository": "റിപ്പോസിറ്ററി",
+    "File": "ഫയൽ",
+    "Files": "ഫയലുകൾ",
+    "Document": "ഡോക്യുമെന്റ്",
+    "Documents": "ഡോക്യുമെന്റുകൾ"
+  },
+  "Branding": {
+    "K-SMART CARE": "K-SMART CARE",
+    "AI Human Capital & Resilience Intelligence Platform": "AI Human Capital & Resilience Intelligence Platform"
+  }
+}

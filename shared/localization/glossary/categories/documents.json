@@ -1,0 +1,345 @@
+[
+  {
+    "english": "Document",
+    "malayalam": "ഡോക്യുമെന്റ്",
+    "type": "transliterate",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Documents",
+    "malayalam": "ഡോക്യുമെന്റുകൾ",
+    "type": "transliterate",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "File",
+    "malayalam": "ഫയൽ",
+    "type": "transliterate",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Files",
+    "malayalam": "ഫയലുകൾ",
+    "type": "transliterate",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Upload Document",
+    "malayalam": "ഡോക്യുമെന്റ് അപ്ലോഡ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Profile",
+    "malayalam": "ഡോക്യുമെന്റ് പ്രൊഫൈൽ",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Attachment",
+    "malayalam": "അറ്റാച്ച്മെന്റ്",
+    "type": "transliterate",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Attachments",
+    "malayalam": "അറ്റാച്ച്മെന്റുകൾ",
+    "type": "transliterate",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "View PDF",
+    "malayalam": "പി.ഡി.എഫ് കാണുക",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 1",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 1",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 2",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 2",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 3",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 3",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 4",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 4",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 5",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 5",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 6",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 6",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 7",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 7",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 8",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 8",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 9",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 9",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 10",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 10",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 11",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 11",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 12",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 12",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 13",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 13",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 14",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 14",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 15",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 15",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 16",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 16",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 17",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 17",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 18",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 18",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 19",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 19",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 20",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 20",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 21",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 21",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 22",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 22",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 23",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 23",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 24",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 24",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 25",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 25",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 26",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 26",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 27",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 27",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 28",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 28",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 29",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 29",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 30",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 30",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 31",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 31",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 32",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 32",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 33",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 33",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 34",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 34",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 35",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 35",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 36",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 36",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 37",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 37",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 38",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 38",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 39",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 39",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  },
+  {
+    "english": "Document Parameter 40",
+    "malayalam": "ഡോക്യുമെന്റ് പാരാമീറ്റർ 40",
+    "type": "phrase",
+    "category": "Document Management",
+    "reason": "Document Management term."
+  }
+]

@@ -68,7 +68,7 @@ export default function LoginPage() {
             K-SMART CARE
           </h1>
           <p className="text-sm text-ink-soft mt-1.5 font-sans">
-            {t("auth.platformSubtitle", "AI Human Capital & Circular Intelligence Platform")}
+            {t("auth.platformSubtitle", "AI Human Capital & Resilience Intelligence Platform")}
           </p>
         </div>
 

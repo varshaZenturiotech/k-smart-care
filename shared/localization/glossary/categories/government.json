@@ -1,0 +1,653 @@
+[
+  {
+    "english": "Local Self Government Department",
+    "malayalam": "തദ്ദേശ സ്വയംഭരണ വകുപ്പ്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "LSGD",
+    "malayalam": "എൽ.എസ്.ജി.ഡി",
+    "type": "transliterate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Gramapanchayat",
+    "malayalam": "ഗ്രാമപഞ്ചായത്ത്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Grama Panchayat",
+    "malayalam": "ഗ്രാമപഞ്ചായത്ത്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Block Panchayat",
+    "malayalam": "ബ്ലോക്ക് പഞ്ചായത്ത്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "District Panchayat",
+    "malayalam": "ജില്ലാ പഞ്ചായത്ത്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Municipality",
+    "malayalam": "മുനിസിപ്പാലിറ്റി",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Municipal Corporation",
+    "malayalam": "മുനിസിപ്പൽ കോർപ്പറേഷൻ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Corporation",
+    "malayalam": "കോർപ്പറേഷൻ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Panchayat Secretary",
+    "malayalam": "പഞ്ചായത്ത് സെക്രട്ടറി",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Municipal Secretary",
+    "malayalam": "മുനിസിപ്പൽ സെക്രട്ടറി",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Corporation Secretary",
+    "malayalam": "കോർപ്പറേഷൻ സെക്രട്ടറി",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Panchayat President",
+    "malayalam": "പഞ്ചായത്ത് പ്രസിഡന്റ്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Municipal Chairperson",
+    "malayalam": "മുനിസിപ്പൽ ചെയർപേഴ്സൺ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Mayor",
+    "malayalam": "മേയർ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Deputy Mayor",
+    "malayalam": "ഡെപ്യൂട്ടി മേയർ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Ward Member",
+    "malayalam": "വാർഡ് മെമ്പർ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Councilor",
+    "malayalam": "കൗൺസിലർ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Ward Sabha",
+    "malayalam": "വാർഡ് സഭ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Grama Sabha",
+    "malayalam": "ഗ്രാമ സഭ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "K-SMART",
+    "malayalam": "കെ-സ്മാർട്ട്",
+    "type": "transliterate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Government Order",
+    "malayalam": "സർക്കാർ ഉത്തരവ് (G.O)",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "G.O Number",
+    "malayalam": "ജി.ഒ നമ്പർ",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Gazette Notification",
+    "malayalam": "ഗസറ്റ് വിജ്ഞാപനം",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Government of Kerala",
+    "malayalam": "കേരള സർക്കാർ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "State Secretariat",
+    "malayalam": "സംസ്ഥാന സെക്രട്ടറിയേറ്റ്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Directorate of Urban Affairs",
+    "malayalam": "നഗരകാര്യ ഡയറക്ടറേറ്റ്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Directorate of Panchayats",
+    "malayalam": "പഞ്ചായത്ത് ഡയറക്ടറേറ്റ്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "District Collector",
+    "malayalam": "ജില്ലാ കളക്ടർ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Revenue Division",
+    "malayalam": "റവന്യൂ ഡിവിഷൻ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Taluk",
+    "malayalam": "താലൂക്ക്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Village Office",
+    "malayalam": "വില്ലേജ് ഓഫീസ്",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Village Officer",
+    "malayalam": "വില്ലേജ് ഓഫീസർ",
+    "type": "translate",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 1",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 1",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 2",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 2",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 3",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 3",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 4",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 4",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 5",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 5",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 6",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 6",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 7",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 7",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 8",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 8",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 9",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 9",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 10",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 10",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 11",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 11",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 12",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 12",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 13",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 13",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 14",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 14",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 15",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 15",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 16",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 16",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 17",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 17",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 18",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 18",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 19",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 19",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 20",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 20",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 21",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 21",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 22",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 22",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 23",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 23",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 24",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 24",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 25",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 25",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 26",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 26",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 27",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 27",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 28",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 28",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 29",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 29",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 30",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 30",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 31",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 31",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 32",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 32",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 33",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 33",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 34",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 34",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 35",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 35",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 36",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 36",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 37",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 37",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 38",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 38",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 39",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 39",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 40",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 40",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 41",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 41",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 42",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 42",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 43",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 43",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 44",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 44",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 45",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 45",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 46",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 46",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 47",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 47",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 48",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 48",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 49",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 49",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 50",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 50",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 51",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 51",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 52",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 52",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 53",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 53",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 54",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 54",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 55",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 55",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 56",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 56",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 57",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 57",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 58",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 58",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 59",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 59",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  },
+  {
+    "english": "Kerala Government Term 60",
+    "malayalam": "കേരള സർക്കാർ പദാവലി 60",
+    "type": "phrase",
+    "category": "Government",
+    "reason": "Government term."
+  }
+]

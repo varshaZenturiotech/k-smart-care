@@ -1,4 +1,5 @@
 import * as wellnessService from "../services/wellness.service.js";
+import translationService from "../translation/translationService.js";
 
 /**
  * GET /api/wellness/today
@@ -8,7 +9,8 @@ export async function getToday(req, res) {
   try {
     const employeeId = req.user.id;
     const status = await wellnessService.getTodayStatus(employeeId);
-    return res.status(200).json(status);
+    const translated = await translationService.translateResponse(status, req.language, "/api/wellness/today");
+    return res.status(200).json(translated);
   } catch (err) {
     console.error("Error in getToday wellness controller:", err);
     return res.status(500).json({ error: "Failed to retrieve today's wellness status." });
@@ -23,7 +25,9 @@ export async function submitCheckin(req, res) {
   try {
     const employeeId = req.user.id;
     const record = await wellnessService.submitCheckin(employeeId, req.body, req.language);
-    return res.status(200).json({ success: true, data: record });
+    const responsePayload = { success: true, data: record };
+    const translated = await translationService.translateResponse(responsePayload, req.language, "/api/wellness/checkin");
+    return res.status(200).json(translated);
   } catch (err) {
     console.error("Error in submitCheckin wellness controller:", err);
     return res.status(500).json({ error: "Failed to submit today's wellness check-in." });
@@ -38,7 +42,8 @@ export async function skipToday(req, res) {
   try {
     const employeeId = req.user.id;
     const result = await wellnessService.skipToday(employeeId);
-    return res.status(200).json(result);
+    const translated = await translationService.translateResponse(result, req.language, "/api/wellness/skip");
+    return res.status(200).json(translated);
   } catch (err) {
     console.error("Error in skipToday wellness controller:", err);
     return res.status(500).json({ error: "Failed to skip today's wellness check-in." });
@@ -53,7 +58,9 @@ export async function getHistory(req, res) {
   try {
     const employeeId = req.user.id;
     const history = await wellnessService.getHistory(employeeId);
-    return res.status(200).json({ success: true, history });
+    const responsePayload = { success: true, history };
+    const translated = await translationService.translateResponse(responsePayload, req.language, "/api/wellness/history");
+    return res.status(200).json(translated);
   } catch (err) {
     console.error("Error in getHistory wellness controller:", err);
     return res.status(500).json({ error: "Failed to retrieve wellness check history." });

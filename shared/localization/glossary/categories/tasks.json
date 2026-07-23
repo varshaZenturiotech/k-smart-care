@@ -1,0 +1,464 @@
+[
+  {
+    "english": "Task",
+    "malayalam": "ടാസ്ക്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Tasks",
+    "malayalam": "ടാസ്കുകൾ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Today's Tasks",
+    "malayalam": "ഇന്നത്തെ ടാസ്കുകൾ",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Title",
+    "malayalam": "ടാസ്ക് ശീർഷകം",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Description",
+    "malayalam": "ടാസ്ക് വിവരണം",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Assignee",
+    "malayalam": "ചുമതലപ്പെടുത്തിയയാൾ",
+    "type": "translate",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Assign To",
+    "malayalam": "അസൈൻ ചെയ്യുക",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Assign Task",
+    "malayalam": "ടാസ്ക് അസൈൻ ചെയ്യുക",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Priority",
+    "malayalam": "ടാസ്ക് മുൻഗണന",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Status",
+    "malayalam": "ടാസ്ക് സ്റ്റാറ്റസ്",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Due Date",
+    "malayalam": "പൂർത്തിയാക്കേണ്ട തീയതി",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Overdue Tasks",
+    "malayalam": "സമയപരിധി കഴിഞ്ഞ ടാസ്കുകൾ",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Completed Tasks",
+    "malayalam": "പൂർത്തിയായ ടാസ്കുകൾ",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Pending Tasks",
+    "malayalam": "തീർപ്പാക്കാനുള്ള ടാസ്കുകൾ",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Create Task",
+    "malayalam": "ടാസ്ക് ക്രിയേറ്റ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Update Task",
+    "malayalam": "ടാസ്ക് അപ്ഡേറ്റ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Delete Task",
+    "malayalam": "ടാസ്ക് ഡിലീറ്റ് ചെയ്യുക",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Completed",
+    "malayalam": "ടാസ്ക് പൂർത്തിയായി",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Assigned",
+    "malayalam": "ടാസ്ക് അസൈൻ ചെയ്തു",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Follow-up Task",
+    "malayalam": "ഫോളോ-അപ്പ് ടാസ്ക്",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Subtask",
+    "malayalam": "സബ്‌ടാസ്ക്",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Subtasks",
+    "malayalam": "സബ്‌ടാസ്കുകൾ",
+    "type": "transliterate",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Planner",
+    "malayalam": "ടാസ്ക് പ്ലാനർ",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Summary",
+    "malayalam": "ടാസ്ക് സംഗ്രഹം",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Review Required",
+    "malayalam": "റിവ്യൂ ആവശ്യമാണ്",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "High Priority Task",
+    "malayalam": "ഉയർന്ന മുൻഗണനയുള്ള ടാസ്ക്",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 1",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 1",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 2",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 2",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 3",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 3",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 4",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 4",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 5",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 5",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 6",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 6",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 7",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 7",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 8",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 8",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 9",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 9",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 10",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 10",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 11",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 11",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 12",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 12",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 13",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 13",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 14",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 14",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 15",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 15",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 16",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 16",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 17",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 17",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 18",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 18",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 19",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 19",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 20",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 20",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 21",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 21",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 22",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 22",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 23",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 23",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 24",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 24",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 25",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 25",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 26",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 26",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 27",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 27",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 28",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 28",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 29",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 29",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 30",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 30",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 31",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 31",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 32",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 32",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 33",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 33",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 34",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 34",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 35",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 35",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 36",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 36",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 37",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 37",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 38",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 38",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 39",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 39",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  },
+  {
+    "english": "Task Action Item 40",
+    "malayalam": "ടാസ്ക് ആക്ഷൻ ഇനം 40",
+    "type": "phrase",
+    "category": "Task Management",
+    "reason": "Task Management term."
+  }
+]
