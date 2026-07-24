@@ -34,6 +34,7 @@ import {
   FileCheck,
 } from "lucide-react";
 import HeaderNav from "../components/HeaderNav.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
 
 const DEPARTMENTS = [
   "Local Self Government",
@@ -64,6 +65,7 @@ const PRIORITIES = ["High", "Medium", "Low"];
 
 export default function AdminCircularPage() {
   const { user, logout } = useAuth();
+  const { t } = useLanguage();
   const navigate = useNavigate();
   const toast = useToast();
   const confirm = useConfirm();
@@ -283,11 +285,11 @@ export default function AdminCircularPage() {
   const getStatusBadge = (status) => {
     switch (status) {
       case "ingested":
-        return <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">Ready</span>;
+        return <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">{t("admin.ready", "Ready")}</span>;
       case "failed":
-        return <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-200">Failed</span>;
+        return <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-200">{t("admin.failed", "Failed")}</span>;
       case "uploaded":
-        return <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200 animate-pulse">Uploaded</span>;
+        return <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200 animate-pulse">{t("admin.uploaded", "Uploaded")}</span>;
       default:
         return <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-200 animate-pulse">{status}</span>;
     }
@@ -310,10 +312,10 @@ export default function AdminCircularPage() {
             </button>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-sm font-display font-semibold text-ink leading-tight">Admin Circular Console</h2>
-                <span className="bg-amber-100 border border-amber-200 text-amber-800 text-[8px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide">Workspace</span>
+                <h2 className="text-sm font-display font-semibold text-ink leading-tight">{t("admin.console", "Admin Circular Console")}</h2>
+                <span className="bg-amber-100 border border-amber-200 text-amber-800 text-[8px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide">{t("admin.workspace", "Workspace")}</span>
               </div>
-              <p className="text-[10px] text-ink-soft">Upload circular orders, audit AI extraction pipeline, and index vectors</p>
+              <p className="text-[10px] text-ink-soft">{t("admin.workspaceDesc", "Upload circular orders, audit AI extraction pipeline, and index vectors")}</p>
             </div>
           </div>
         </div>
@@ -323,27 +325,27 @@ export default function AdminCircularPage() {
         {/* ── Dashboard Stats ── */}
         <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           <div className="bg-white border border-stone-200 rounded-xl p-4 shadow-sm flex flex-col gap-1">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">Total Circulars</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">{t("admin.totalCirculars", "Total Circulars")}</span>
             <span className="text-2xl font-bold font-mono text-[#0B355A]">{totalCirculars}</span>
           </div>
           <div className="bg-white border border-stone-200 rounded-xl p-4 shadow-sm flex flex-col gap-1">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">Today's Uploads</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">{t("admin.todaysUploads", "Today's Uploads")}</span>
             <span className="text-2xl font-bold font-mono text-[#0B355A]">{todayUploads}</span>
           </div>
           <div className="bg-white border border-stone-200 rounded-xl p-4 shadow-sm flex flex-col gap-1">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">Processed</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">{t("admin.processed", "Processed")}</span>
             <span className="text-2xl font-bold font-mono text-emerald-700">{processed}</span>
           </div>
           <div className="bg-white border border-stone-200 rounded-xl p-4 shadow-sm flex flex-col gap-1">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">Pending</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">{t("admin.pending", "Pending")}</span>
             <span className="text-2xl font-bold font-mono text-amber-700">{pending}</span>
           </div>
           <div className="bg-white border border-stone-200 rounded-xl p-4 shadow-sm flex flex-col gap-1">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">Failed</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">{t("admin.failed", "Failed")}</span>
             <span className="text-2xl font-bold font-mono text-rose-700">{failed}</span>
           </div>
           <div className="bg-white border border-stone-200 rounded-xl p-4 shadow-sm flex flex-col gap-1">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">Departments</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500">{t("common.departments", "Departments")}</span>
             <span className="text-2xl font-bold font-mono text-[#0B355A]">{departmentsCovered}</span>
           </div>
         </section>
@@ -354,7 +356,7 @@ export default function AdminCircularPage() {
           <section className="lg:col-span-4 bg-white border border-stone-200 rounded-xl p-6 shadow-sm flex flex-col gap-6">
             <div className="flex items-center gap-2 pb-3 border-b border-stone-100">
               <Upload className="text-[#0B355A]" size={18} />
-              <h2 className="text-sm font-bold uppercase tracking-wider text-slate-800 font-mono">Upload Circulars</h2>
+              <h2 className="text-sm font-bold uppercase tracking-wider text-slate-800 font-mono">{t("admin.uploadCircular", "Upload Circulars")}</h2>
             </div>
 
             <form onSubmit={handleUploadSubmit} className="flex flex-col gap-4 text-xs">
@@ -533,13 +535,13 @@ export default function AdminCircularPage() {
                 <table className="w-full text-left border-collapse text-xs">
                   <thead>
                     <tr className="border-b border-stone-200 bg-stone-50 text-[#0B355A] font-bold">
-                      <th className="p-3">Title / Number</th>
-                      <th className="p-3">Department(s)</th>
-                      <th className="p-3">Category</th>
-                      <th className="p-3">Priority</th>
-                      <th className="p-3">Issue Date</th>
-                      <th className="p-3">Status</th>
-                      <th className="p-3 text-right">Actions</th>
+                      <th className="p-3">{t("common.title", "Title")} / {t("admin.circularNumber", "Number")}</th>
+                      <th className="p-3">{t("common.departments", "Department(s)")}</th>
+                      <th className="p-3">{t("circular.category", "Category")}</th>
+                      <th className="p-3">{t("common.priority", "Priority")}</th>
+                      <th className="p-3">{t("circular.issuedDate", "Issue Date")}</th>
+                      <th className="p-3">{t("common.status", "Status")}</th>
+                      <th className="p-3 text-right">{t("common.actions", "Actions")}</th>
                     </tr>
                   </thead>
                   <tbody>

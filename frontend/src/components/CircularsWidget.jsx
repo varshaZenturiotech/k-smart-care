@@ -11,7 +11,8 @@ export default function CircularsWidget() {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [dragActive, setDragActive] = useState(false);
   const [expandedSummaries, setExpandedSummaries] = useState({});
-  const { t, formatDate } = useLanguage();
+  const { language, t, formatDate } = useLanguage();
+  console.log("[Component Rerender] CircularsWidget | language =", language, "| time =", new Date().toISOString());
   const toast = useToast();
   const confirm = useConfirm();
 
@@ -34,7 +35,7 @@ export default function CircularsWidget() {
 
   useEffect(() => {
     fetchCirculars();
-  }, []);
+  }, [language]);
 
   const handleDrag = (e) => {
     e.preventDefault();

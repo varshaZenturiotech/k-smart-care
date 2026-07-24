@@ -9,7 +9,7 @@ const LANGUAGES = [
 ];
 
 export default function LanguageSelector() {
-  const { preference, changeLanguage } = useLanguage();
+  const { preference, changeLanguage, t } = useLanguage();
   const [open, setOpen] = useState(false);
   const [saving, setSaving] = useState(false);
 
@@ -30,7 +30,7 @@ export default function LanguageSelector() {
     <div className="relative">
       <button
         onClick={() => setOpen((o) => !o)}
-        title="Language Preference"
+        title={t("profile.preferredLanguage", "Preferred Language")}
         className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer active:scale-95 ${
           open
             ? "bg-teal-tint text-teal border-teal/20"
@@ -49,7 +49,7 @@ export default function LanguageSelector() {
           {/* Dropdown */}
           <div className="absolute right-0 top-full mt-1.5 z-50 bg-white border border-border rounded-xl shadow-custom overflow-hidden w-36 font-sans">
             <div className="px-3 py-2 border-b border-border/50">
-              <p className="text-[9px] font-mono uppercase tracking-wider text-ink-soft">Language</p>
+              <p className="text-[9px] font-mono uppercase tracking-wider text-ink-soft">{t("profile.preferredLanguage", "Language")}</p>
             </div>
             {LANGUAGES.map((lang) => (
               <button

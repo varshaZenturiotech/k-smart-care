@@ -22,6 +22,7 @@ import {
 import { useAssistant } from "../context/AssistantContext.jsx";
 import { useToast } from "../context/ToastContext.jsx";
 import { useConfirm } from "../context/ConfirmContext.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
 import { useQueryClient } from "@tanstack/react-query";
 import { useCirculars, useSuggestedPrompts, useDeleteCircularMutation } from "../hooks/useQueries.jsx";
 
@@ -49,10 +50,15 @@ export default function AssistantWidget() {
   const toast = useToast();
   const confirm = useConfirm();
   const queryClient = useQueryClient();
+  const { language, t } = useLanguage();
+  console.log("[Component Rerender] AssistantWidget | language =", language, "| time =", new Date().toISOString());
 
   const [preferredLanguage, setPreferredLanguage] = useState(
-    () => user?.preferredLanguage || "auto"
+    () => language || user?.preferredLanguage || "auto"
   );
+  useEffect(() => {
+    if (language) setPreferredLanguage(language);
+  }, [language]);
   const [messages, setMessages] = useState([
     { role: "assistant", text: "Good day! How can I assist you with your work today?" },
   ]);
@@ -902,7 +908,7 @@ export default function AssistantWidget() {
               ? "bg-teal-tint border-teal text-teal" 
               : "bg-white border-border text-ink-soft hover:border-teal hover:text-teal"
             }`}
-          title="Add attachment"
+          title={t("assistant.addAttachment", "Add attachment")}
         >
           <Plus size={20} className={showAttachmentMenu ? "rotate-45 transition-transform duration-200" : "transition-transform duration-200"} />
         </button>
@@ -919,7 +925,7 @@ export default function AssistantWidget() {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder={selectedCircular ? `Ask about ${selectedCircular.title}...` : "e.g. How many leaves are LSGD employees entitled to?"}
+          placeholder={selectedCircular ? `Ask about ${selectedCircular.title}...` : t("assistant.askSomething", "Ask K-SMART Assistant...")}
           className="flex-1 h-11 px-4 rounded-xl border border-border bg-white text-sm text-ink placeholder:text-ink-soft/60 focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal"
         />
         <button
@@ -928,7 +934,7 @@ export default function AssistantWidget() {
           className="h-11 px-5 rounded-xl bg-teal hover:bg-teal-dark text-white font-semibold text-sm transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Send size={14} />
-          <span>Ask</span>
+          <span>{t("assistant.ask", "Ask")}</span>
         </button>
       </form>
     </div>

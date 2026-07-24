@@ -124,10 +124,11 @@ function getGreetingPrefix(date, user, language = 'en') {
 
 export default function GreetingBanner({
   greeting, wellnessScore, focusScore, user, moodData, onOpenCheckin,
-  briefing, todayTasksCount = 0, upcomingMeetingsCount = 0
+  briefing, todayTasksCount = 0, overdueTasksCount = 0, upcomingMeetingsCount = 0
 }) {
   const [showDetails, setShowDetails] = useState(false);
   const { language, t, formatDate, formatTime } = useLanguage();
+  console.log("[Component Rerender] GreetingBanner | language =", language, "| time =", new Date().toISOString());
 
   const [draftAnswers, setDraftAnswers] = useState({});
   const [tempNote, setTempNote] = useState("");
@@ -300,13 +301,30 @@ export default function GreetingBanner({
             {formatMainGreeting(mainGreeting)}
           </h1>
 
-          {/* AI Daily Briefing — condensed to one line */}
-          <div className="flex items-start gap-1.5 text-xs md:text-sm text-white/95 leading-relaxed pt-1">
-            <Sparkles size={13} className="text-white/90 drop-shadow-md shrink-0 mt-0.5" />
-            <span>
-              {briefing?.briefing || t("greeting.analyzingBriefing", "Analyzing today's schedule and preparing your custom briefing...")}
-            </span>
-          </div>
+          {/* Subtitle — deterministic i18n template interpolation supporting tasks, overdue, and meetings */}
+          {(() => {
+            let subtitleKey = "greeting.subtitle";
+            if (overdueTasksCount > 0 && upcomingMeetingsCount > 0) {
+              subtitleKey = "greeting.subtitleWithOverdueAndMeetings";
+            } else if (overdueTasksCount > 0) {
+              subtitleKey = "greeting.subtitleWithOverdue";
+            } else if (upcomingMeetingsCount > 0) {
+              subtitleKey = "greeting.subtitleWithMeetings";
+            }
+
+            return (
+              <div className="flex items-start gap-1.5 text-xs md:text-sm text-white/95 leading-relaxed pt-1">
+                <Sparkles size={13} className="text-white/90 drop-shadow-md shrink-0 mt-0.5" />
+                <span>
+                  {t(subtitleKey, {
+                    todayTasks: todayTasksCount,
+                    overdueTasks: overdueTasksCount,
+                    meetings: upcomingMeetingsCount
+                  })}
+                </span>
+              </div>
+            );
+          })()}
         </div>
 
         {/* Wellness quick card — no card background, controls float directly on the photo */}
@@ -658,6 +676,8 @@ export function TodayOverviewCards({
   );
 
   let activeSmartPriorities = briefing?.smartPriorities;
+  console.log("[Priority Ranking React Component Debug] Props received (briefing.smartPriorities):", briefing?.smartPriorities);
+
   if (Array.isArray(activeSmartPriorities)) {
     activeSmartPriorities = activeSmartPriorities.filter((item) => {
       if (!item || typeof item !== "string") return false;
@@ -665,6 +685,8 @@ export function TodayOverviewCards({
       return !completedTitlesSet.has(clean);
     });
   }
+
+  console.log("[Priority Ranking React Component Debug] Active priorities rendered:", activeSmartPriorities);
 
   let singlePriority = briefing?.priority;
   if (singlePriority && typeof singlePriority === "string") {

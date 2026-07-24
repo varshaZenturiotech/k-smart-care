@@ -27,7 +27,8 @@ const CAN_POST_ROLES = ["department_head", "district_admin", "state_admin"];
 export default function DepartmentFeedWidget() {
   const { user } = useAuth();
   const navigate = useNavigate();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  console.log("[Component Rerender] DepartmentFeedWidget | language =", language, "| time =", new Date().toISOString());
   const toast = useToast();
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -56,7 +57,7 @@ export default function DepartmentFeedWidget() {
     } finally {
       setLoading(false);
     }
-  }, [toast]);
+  }, [toast, language]);
 
   useEffect(() => {
     loadFeed();

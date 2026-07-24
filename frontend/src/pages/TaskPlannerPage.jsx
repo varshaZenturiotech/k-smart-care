@@ -561,7 +561,7 @@ export default function TaskPlannerPage() {
                           )}
                           <div className="flex flex-wrap items-center gap-2 pt-1">
                             <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-paper border border-border text-ink-soft uppercase">
-                              {language === "ml" ? (CATEGORY_LABELS_ML[task.category] || task.category) : task.category}
+                              {t("categories." + task.category, CATEGORY_LABELS_ML[task.category] || task.category)}
                             </span>
                             {task.dueDate && (
                               <span className="inline-flex items-center gap-1 text-[10px] font-mono text-ink-soft">
@@ -580,7 +580,7 @@ export default function TaskPlannerPage() {
 
                       <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-border/40">
                         <span className={`text-[10px] uppercase font-mono font-semibold px-2 py-0.5 rounded border ${getPriorityStyle(task.priority)}`}>
-                          {language === "ml" ? (PRIORITY_LABELS_ML[task.priority] || task.priority) : task.priority}
+                          {t("taskPlanner.priority" + (task.priority || "Medium"), PRIORITY_LABELS_ML[task.priority] || task.priority)}
                         </span>
                         <button
                           onClick={() => handleDeleteTask(task._id)}
@@ -832,15 +832,13 @@ export default function TaskPlannerPage() {
                   >
                     {CATEGORIES.map((c) => (
                       <option key={c} value={c}>
-                        {resolveDisplayLanguage(user?.preferredLanguage, extractedTask.language) === "Malayalam"
-                          ? (CATEGORY_LABELS_ML[c] || c)
-                          : c}
+                        {t("categories." + c, CATEGORY_LABELS_ML[c] || c)}
                       </option>
                     ))}
                   </select>
                 </div>
                 <div className="space-y-1">
-                  <label className="font-semibold text-ink">Priority</label>
+                  <label className="font-semibold text-ink">{t("common.priority", "Priority")}</label>
                   <select
                     value={extractedTask.priority}
                     onChange={(e) => setExtractedTask({ ...extractedTask, priority: e.target.value })}
@@ -848,9 +846,7 @@ export default function TaskPlannerPage() {
                   >
                     {["High", "Medium", "Low"].map((p) => (
                       <option key={p} value={p}>
-                        {resolveDisplayLanguage(user?.preferredLanguage, extractedTask.language) === "Malayalam"
-                          ? (PRIORITY_LABELS_ML[p] || p)
-                          : p}
+                        {t("taskPlanner.priority" + p, PRIORITY_LABELS_ML[p] || p)}
                       </option>
                     ))}
                   </select>
@@ -1047,23 +1043,23 @@ export default function TaskPlannerPage() {
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <label className="font-semibold text-ink">Category</label>
+                      <label className="font-semibold text-ink">{t("circular.category", "Category")}</label>
                       <select
                         value={taskCategory}
                         onChange={(e) => setTaskCategory(e.target.value)}
                         className="w-full bg-paper/50 border border-border px-3 py-2 rounded-lg focus:outline-none focus:border-teal"
                       >
-                        {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+                        {CATEGORIES.map((c) => <option key={c} value={c}>{t("categories." + c, CATEGORY_LABELS_ML[c] || c)}</option>)}
                       </select>
                     </div>
                     <div className="space-y-1">
-                      <label className="font-semibold text-ink">Priority</label>
+                      <label className="font-semibold text-ink">{t("common.priority", "Priority")}</label>
                       <select
                         value={taskPriority}
                         onChange={(e) => setTaskPriority(e.target.value)}
                         className="w-full bg-paper/50 border border-border px-3 py-2 rounded-lg focus:outline-none focus:border-teal"
                       >
-                        {PRIORITIES.map((p) => <option key={p} value={p}>{p}</option>)}
+                        {PRIORITIES.map((p) => <option key={p} value={p}>{t("taskPlanner.priority" + p, PRIORITY_LABELS_ML[p] || p)}</option>)}
                       </select>
                     </div>
                   </div>

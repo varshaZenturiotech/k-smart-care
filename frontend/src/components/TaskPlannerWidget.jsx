@@ -73,6 +73,7 @@ export default function TaskPlannerWidget({
   const displayMeetings = todayMeetings.length > 0 ? todayMeetings : upcomingMeetings;
   const navigate = useNavigate();
   const { language, t } = useLanguage();
+  console.log("[Component Rerender] TaskPlannerWidget | language =", language, "| time =", new Date().toISOString());
   const [nlpText, setNlpText] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");

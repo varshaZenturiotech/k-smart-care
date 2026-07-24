@@ -141,8 +141,13 @@ export async function generateDailyBriefing(data, forceRefresh = false) {
       });
 
       if (cached && cached.briefing) {
-        if (cached.inputFingerprint === currentFingerprint) {
+        const priorities = cached.briefing.smartPriorities;
+        const isCorrupted = !Array.isArray(priorities) || priorities.length === 0 || priorities.some(item => typeof item === "string" && (item.endsWith("സർക") || item.trim().length < 5));
+
+        if (cached.inputFingerprint === currentFingerprint && !isCorrupted) {
           return sanitizeBriefingLanguage(cached.briefing, resolvedLanguage);
+        } else if (isCorrupted) {
+          console.warn(`[Daily Briefing Cache Corrupted] Invalid/truncated smartPriorities detected in cache for employee ${employeeId}. Regenerating briefing...`);
         } else {
           console.log(`[Daily Briefing Cache Stale] Input fingerprint changed for employee ${employeeId}. Regenerating briefing...`);
         }
@@ -187,7 +192,7 @@ async function executeLlmBriefingGeneration(data, employeeId, currentDate, curre
       apiKey: groqApiKey,
       modelName,
       temperature: 0.3,
-      maxTokens: 500,
+      maxTokens: 1500, // Increased to 1500 to prevent Malayalam output token exhaustion
     });
 
     const department = getMalayalamDepartment(data.department);
@@ -260,6 +265,8 @@ Generate a tailored response matching the requested JSON structure. Keep sentenc
     const { raw, duration, attempt } = await invokeLlmWithRetry(chain, variables);
     const genDuration = Date.now() - startGen;
     const completionTokens = estimateTokens(raw);
+
+    console.log(`[Daily Briefing LLM Response] (${resolvedLanguage}) | Duration: ${genDuration}ms | Est. Tokens: ${completionTokens}/${1500} | Raw:\n${raw}`);
 
     let parsed = safeParseLLMJson(raw);
     if (!parsed.success) {
@@ -409,17 +416,15 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
 
   let briefing = "";
   if (isMalayalam) {
-    if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) === 0) {
+    if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) === 0 && (overdueTasksCount || 0) === 0) {
       briefing = "ഇന്നത്തേക്കായി ടാസ്കുകൾ ഷെഡ്യൂൾ ചെയ്തിട്ടില്ല, മീറ്റിംഗുകൾ ഒന്നും തന്നെയില്ല.";
-    } else if ((todayTasksCount || 0) > 0 && (upcomingMeetingsCount || 0) === 0) {
-      briefing = `നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക ഇതാ: ${todayTasksCount} ടാസ്കുകൾ ഉണ്ട്. മീറ്റിംഗുകൾ ഒന്നും തന്നെയില്ല.`;
-    } else if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) > 0) {
-      briefing = `ടാസ്കുകൾ ഒന്നും തന്നെയില്ല. ഇന്ന് നിങ്ങൾക്ക് ${upcomingMeetingsCount} മീറ്റിംഗുകൾ ഉണ്ട്.`;
-    } else {
+    } else if (overdueTasksCount > 0) {
+      const todayText = todayTasksCount > 0 ? `${todayTasksCount} ടാസ്കും ` : "";
+      briefing = `നിങ്ങൾക്ക് ഇന്ന് ${todayText}${overdueTasksCount} കാലാവധി കഴിഞ്ഞ ടാസ്കുകളും ഉണ്ട്.`;
+    } else if ((upcomingMeetingsCount || 0) > 0) {
       briefing = `നിങ്ങളുടെ ഇന്നത്തെ പ്രവർത്തന പട്ടിക ഇതാ: ${todayTasksCount} ടാസ്കുകൾ, ${upcomingMeetingsCount} മീറ്റിംഗുകൾ ഉണ്ട്.`;
-    }
-    if (overdueTasksCount > 0) {
-      briefing += ` അതിൽ നിങ്ങളുടെ അടിയന്തിര ശ്രദ്ധ ആവശ്യമുള്ള ${overdueTasksCount} ടാസ്കുകൾ ബാക്കിയാണ്.`;
+    } else {
+      briefing = `നിങ്ങൾക്ക് ഇന്ന് ${todayTasksCount} ടാസ്കുകൾ ഉണ്ട്.`;
     }
     if (newCircularsCount > 0) {
       briefing += ` കൂടാതെ നിങ്ങളുടെ വകുപ്പുമായി ബന്ധപ്പെട്ട ${newCircularsCount} പുതിയ സർക്കുലറുകളുമുണ്ട്.`;
@@ -428,19 +433,16 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
     const taskWord = todayTasksCount === 1 ? "task" : "tasks";
     const meetingWord = upcomingMeetingsCount === 1 ? "meeting" : "meetings";
     
-    if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) === 0) {
+    if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) === 0 && (overdueTasksCount || 0) === 0) {
       briefing = "No tasks due today and no meetings scheduled today.";
-    } else if ((todayTasksCount || 0) > 0 && (upcomingMeetingsCount || 0) === 0) {
-      briefing = `You have ${todayTasksCount} ${taskWord} due today and no meetings scheduled today.`;
-    } else if ((todayTasksCount || 0) === 0 && (upcomingMeetingsCount || 0) > 0) {
-      briefing = `You have no tasks due today and ${upcomingMeetingsCount} ${meetingWord} scheduled.`;
-    } else {
-      briefing = `You have ${todayTasksCount} ${taskWord} due today and ${upcomingMeetingsCount} ${meetingWord} scheduled.`;
-    }
-    
-    if (overdueTasksCount > 0) {
+    } else if (overdueTasksCount > 0) {
       const overdueTaskWord = overdueTasksCount === 1 ? "task" : "tasks";
-      briefing += ` Note that you have ${overdueTasksCount} overdue ${overdueTaskWord} needing immediate attention.`;
+      const todayText = todayTasksCount > 0 ? `${todayTasksCount} ${taskWord} and ` : "";
+      briefing = `You have ${todayText}${overdueTasksCount} overdue ${overdueTaskWord} today.`;
+    } else if ((upcomingMeetingsCount || 0) > 0) {
+      briefing = `You have ${todayTasksCount} ${taskWord} due today and ${upcomingMeetingsCount} ${meetingWord} scheduled.`;
+    } else {
+      briefing = `You have ${todayTasksCount} ${taskWord} due today.`;
     }
     if (newCircularsCount > 0) {
       briefing += ` There are also ${newCircularsCount} new Kerala Government circulars relevant to your department.`;
@@ -485,7 +487,12 @@ function getLocalFallbackBriefing(data, resolvedLanguage = "english") {
   
   let smartPriorities = [];
   if (sortedTasks.length > 0) {
-    smartPriorities = sortedTasks.slice(0, 3).map(t => t.title);
+    if (isMalayalam) {
+      // Task titles are stored in English; prefix with a Malayalam action marker.
+      smartPriorities = sortedTasks.slice(0, 3).map(t => `ടാസ്ക്: ${t.title}`);
+    } else {
+      smartPriorities = sortedTasks.slice(0, 3).map(t => t.title);
+    }
   } else {
     smartPriorities = isMalayalam 
       ? ["നിങ്ങളുടെ ടാസ്കുകൾ പ്ലാൻ ചെയ്യുക", "പുതിയ സർക്കുലറുകൾ പരിശോധിക്കുക", "Wellness Status നോക്കുക"]

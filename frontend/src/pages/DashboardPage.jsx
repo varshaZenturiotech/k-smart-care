@@ -29,6 +29,7 @@ import { useDashboard } from "../hooks/useQueries.jsx";
 export default function DashboardPage() {
   const { user, logout } = useAuth();
   const { language, t } = useLanguage();
+  console.log("[Component Rerender] DashboardPage | language =", language, "| time =", new Date().toISOString());
   const toast = useToast();
   const navigate = useNavigate();
 
@@ -109,7 +110,8 @@ export default function DashboardPage() {
             }}
             briefing={summary.briefing}
             todayTasksCount={summary.todayTasks?.length || 0}
-            upcomingMeetingsCount={summary.upcomingMeetings?.length || 0}
+            overdueTasksCount={summary.overdueTasks?.length || 0}
+            upcomingMeetingsCount={(summary.todayMeetings?.length || summary.upcomingMeetings?.length || 0)}
           />
 
           {/* ── Today's Work Snapshot / Priority / Motivation — desktop only,

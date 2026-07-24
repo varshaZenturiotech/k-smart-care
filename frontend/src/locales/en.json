@@ -53,6 +53,10 @@
   "greeting": {
     "lsgDept": "LSG Department",
     "district": "District",
+    "subtitle": "You have {{todayTasks}} task due today.",
+    "subtitleWithOverdue": "You have {{todayTasks}} task and {{overdueTasks}} overdue tasks today.",
+    "subtitleWithMeetings": "You have {{todayTasks}} task and {{meetings}} meeting scheduled today.",
+    "subtitleWithOverdueAndMeetings": "You have {{todayTasks}} task, {{overdueTasks}} overdue tasks, and {{meetings}} meeting scheduled today.",
     "aiBriefing": "AI Daily Briefing",
     "analyzingBriefing": "Analyzing today's schedule and preparing your custom briefing...",
     "snapshot": "Today's Work Snapshot",
@@ -95,7 +99,11 @@
     "noMeetingsScheduled": "No meetings scheduled today",
     "noMeetingsScheduledHelper": "Your schedule will appear here once meetings are scheduled.",
     "oneMeetingScheduled": "1 meeting scheduled today",
-    "manyMeetingsScheduled": "{{count}} meetings scheduled today"
+    "manyMeetingsScheduled": "{{count}} meetings scheduled today",
+    "hoursShort": "hrs",
+    "allSystemsStable": "All systems stable. Keep track of your daily tasks.",
+    "wellnessIndexShort": "Wellness",
+    "focusCapacityShort": "Focus"
   },
     "feed": {
       "forDept": "For {{dept}}",

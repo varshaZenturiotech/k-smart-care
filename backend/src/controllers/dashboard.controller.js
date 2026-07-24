@@ -310,7 +310,6 @@ export async function getDashboardSummary(req, res) {
       console.warn("[DashboardController] Localization fallback to English:", transErr.message);
       translated = responsePayload;
     }
-
     return res.json(translated);
   } catch (err) {
     console.error("Dashboard summary error:", err);

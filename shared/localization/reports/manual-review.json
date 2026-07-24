@@ -38,5 +38,25 @@
     "context": "Dashboard",
     "category": "General",
     "timestamp": "2026-07-23T09:47:26.975Z"
+  },
+  {
+    "english": "List the compliance requirements",
+    "translation": "List the compliance requirements",
+    "score": 80,
+    "reason": "Contains English alphabet without Malayalam script translation (List, the, compliance, requirements).",
+    "suggestion": "",
+    "context": "General",
+    "category": "General",
+    "timestamp": "2026-07-24T05:33:23.916Z"
+  },
+  {
+    "english": "What are the important deadlines?",
+    "translation": "What are the important deadlines?",
+    "score": 80,
+    "reason": "Contains English alphabet without Malayalam script translation (What, are, the, important, deadlines).",
+    "suggestion": "",
+    "context": "General",
+    "category": "General",
+    "timestamp": "2026-07-24T05:33:25.065Z"
   }
 ]

@@ -196,7 +196,14 @@ export async function getCircularFeed(req, res) {
       return cObj;
     });
 
-    res.json(result);
+    let translated = result;
+    try {
+      translated = await translationService.translateResponse(result, req.language, "/api/circulars/feed");
+    } catch (transErr) {
+      console.warn("[CircularFeedController] Translation fallback:", transErr.message);
+    }
+
+    res.json(translated);
   } catch (err) {
     console.error("Error in getCircularFeed:", err);
     res.status(500).json({ error: "Failed to load circular feed." });

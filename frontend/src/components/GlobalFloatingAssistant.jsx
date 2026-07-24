@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useAssistant } from "../context/AssistantContext.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
 import AssistantWidget from "./AssistantWidget.jsx";
 import { MessageSquare, Sparkles } from "lucide-react";
 
 export default function GlobalFloatingAssistant() {
   const { user } = useAuth();
+  const { t } = useLanguage();
   const { 
     isOpen, 
     isMinimized, 
@@ -93,7 +95,7 @@ export default function GlobalFloatingAssistant() {
         
         {/* Government UI Tooltip */}
         <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-ink text-white text-[11px] font-medium px-2.5 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-md border border-border/10">
-          Ask K-SMART CARE AI
+          {t("assistant.askSomething", "Ask K-SMART CARE AI")}
         </span>
       </button>
 

@@ -19,7 +19,8 @@ import LanguageSelector from "./LanguageSelector.jsx";
 
 export default function HeaderNav() {
   const { user, logout } = useAuth();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  console.log("[Component Rerender] HeaderNav | language =", language, "| time =", new Date().toISOString());
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -125,7 +126,7 @@ export default function HeaderNav() {
 
           <LanguageSelector />
 
-          <button className="p-2 rounded-lg text-ink-soft hover:bg-paper/50 transition cursor-pointer" title="Calm Light Mode">
+          <button className="p-2 rounded-lg text-ink-soft hover:bg-paper/50 transition cursor-pointer" title={t("circular.toggleTheme", "Toggle Theme (Calm Mode)")}>
             <Sun size={17} />
           </button>
 

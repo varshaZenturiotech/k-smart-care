@@ -15,7 +15,8 @@ export default function MoodCheckWidget({ checkedInToday, todaysMood, onCheckedI
   const [submitting, setSubmitting] = useState(false);
   const [recommendations, setRecommendations] = useState(null);
   const [selected, setSelected] = useState(todaysMood);
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  console.log("[Component Rerender] MoodCheckWidget | language =", language, "| time =", new Date().toISOString());
 
   async function handleSelect(moodKey) {
     if (checkedInToday || submitting) return;

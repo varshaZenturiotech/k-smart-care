@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, useRef } from "react";
 import { useAuth } from "./AuthContext.jsx";
 import client from "../api/client.js";
 import i18n from "../i18n.js";
@@ -7,7 +7,15 @@ const LanguageContext = createContext(null);
 
 export function LanguageProvider({ children }) {
   const { user } = useAuth();
-  const [preference, setPreference] = useState("auto");
+  const [preference, setPreference] = useState(() => {
+    // Derive initial preference from localStorage so the toggle button
+    // immediately shows the correct language without waiting for /profile GET.
+    const cached = localStorage.getItem("ksmart_language");
+    if (cached === "ml") return "malayalam";
+    if (cached === "en") return "english";
+    return "auto";
+  });
+  const manualOverrideRef = useRef(false);
   const [language, setLanguage] = useState(() => {
     // Detect browser language initially or fallback to stored value
     const cached = localStorage.getItem("ksmart_language");
@@ -30,10 +38,15 @@ export function LanguageProvider({ children }) {
 
   // Sync preference whenever the authenticated user changes
   useEffect(() => {
+    const controller = new AbortController();
+
     if (user) {
-      // Load profile preference from backend to ensure alignment
-      client.get("/profile")
+      // If user manually changed language during session, ignore profile fetches
+      if (manualOverrideRef.current) return;
+
+      client.get("/profile", { signal: controller.signal })
         .then(({ data }) => {
+          if (manualOverrideRef.current) return;
           const pref = data.preferredLanguage || "auto";
           setPreference(pref);
           const resolved = resolveLanguage(pref);
@@ -41,8 +54,9 @@ export function LanguageProvider({ children }) {
           localStorage.setItem("ksmart_language", resolved);
         })
         .catch((err) => {
+          if (err.name === "CanceledError" || err.name === "AbortError") return;
+          if (manualOverrideRef.current) return;
           console.error("Failed to load preferred language from profile API:", err);
-          // Fallback to user object property if API fails
           const pref = user.preferredLanguage || "auto";
           setPreference(pref);
           const resolved = resolveLanguage(pref);
@@ -50,44 +64,65 @@ export function LanguageProvider({ children }) {
           localStorage.setItem("ksmart_language", resolved);
         });
     } else {
+      manualOverrideRef.current = false;
       setPreference("auto");
       const resolved = resolveLanguage("auto");
       setLanguage(resolved);
       localStorage.setItem("ksmart_language", resolved);
     }
-  }, [user, resolveLanguage]);
 
-  // Sync i18n language setting & document lang attributes
-  useEffect(() => {
-    i18n.changeLanguage(language);
-    document.documentElement.lang = language;
-    document.documentElement.setAttribute("data-lang", language);
-    if (language === "ml") {
-      document.documentElement.classList.add("lang-ml");
-    } else {
-      document.documentElement.classList.remove("lang-ml");
-    }
-  }, [language]);
+    return () => {
+      controller.abort();
+    };
+  }, [user, resolveLanguage]);
 
   // Handle manual preference change
   const changeLanguage = useCallback(async (pref) => {
     const valid = ["auto", "malayalam", "english"];
     if (!valid.includes(pref)) return;
 
+    // Mark manual override active so no GET /profile can ever revert state
+    manualOverrideRef.current = true;
+
+    const resolved = resolveLanguage(pref);
+    
+    // Synchronously/Awaiting change i18n language first
+    await i18n.changeLanguage(resolved);
+
+    setPreference(pref);
+    setLanguage(resolved);
+    localStorage.setItem("ksmart_language", resolved);
+
     try {
       if (user) {
         // Persist setting to backend via PUT /api/profile
         await client.put("/profile", { preferredLanguage: pref });
       }
-      setPreference(pref);
-      const resolved = resolveLanguage(pref);
-      setLanguage(resolved);
-      localStorage.setItem("ksmart_language", resolved);
     } catch (err) {
       console.error("Failed to persist preferred language:", err);
-      throw err;
     }
   }, [user, resolveLanguage]);
+
+  // Single authority effect for async i18n & DOM document synchronization
+  useEffect(() => {
+    const handleLanguageChanged = (lng) => {
+      document.documentElement.lang = lng;
+      document.documentElement.setAttribute("data-lang", lng);
+      if (lng === "ml") {
+        document.documentElement.classList.add("lang-ml");
+      } else {
+        document.documentElement.classList.remove("lang-ml");
+      }
+    };
+
+    i18n.changeLanguage(language);
+    handleLanguageChanged(language);
+
+    i18n.on("languageChanged", handleLanguageChanged);
+    return () => {
+      i18n.off("languageChanged", handleLanguageChanged);
+    };
+  }, [language]);
 
   // Translate helper using i18next
   const t = useCallback((key, defaultVal, options) => {

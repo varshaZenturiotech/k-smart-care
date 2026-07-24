@@ -28,6 +28,7 @@ LANGUAGE RULES (When target language is Malayalam):
   * Completed → 'പൂർത്തിയാക്കിയ'
   * In Progress → 'പുരോഗമിക്കുന്നു'
   * Due Today → 'ഇന്ന് പൂർത്തിയാക്കേണ്ട'
+- If overdue tasks exist (overdueTasksCount > 0), you MUST explicitly mention the number of overdue tasks ('കാലാവധി കഴിഞ്ഞ ടാസ്കുകൾ' in Malayalam) in the "briefing" field.
 - Write complete sentences in Malayalam script, but keep common office/workplace terminology in English (using English script/characters).
 - DO NOT translate the following words into Malayalam (neither to phonetic Malayalam script like ടാസ്ക്/റിപ്പോർട്ട് nor to literal Malayalam like യോഗം/അവസാന തീയതി). They MUST be written in English characters:
   * AI
